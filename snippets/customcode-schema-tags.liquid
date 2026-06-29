@@ -1,0 +1,21 @@
+{% if product.handle == 'propod' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Pop On Pro Pod™ Ultrasonic Oral Appliance Cleaner",
+      "image": "{{ product | image_url: width: 480 }}",
+      "description": "The Pop On Pro Pod™ is a dual-action ultrasonic and UV oral appliance cleaner designed to deep clean retainers, aligners, night guards, dentures, and removable veneers in just 5 minutes.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Pop On"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://poponveneers.com/products/propod",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  </script>
+{% endif %}

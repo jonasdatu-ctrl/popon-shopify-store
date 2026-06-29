@@ -1,0 +1,241 @@
+{% style %}
+  c-tabbed-content {display: block; padding: 10px 20px;}
+  c-tabbed-content .inner-container .section-header {text-align: center; color: #003659; position: relative; align-self: center;}
+  c-tabbed-content .inner-container .section-header span {position: absolute; font-size: 14px;}
+  c-tabbed-content .inner-container .section-subheader {margin-bottom: 20px;}
+  c-tabbed-content .inner-container .section-subheader * {margin: 0; text-align: center; color: #003659; font-size: 18px; width: 100%;}
+  c-tabbed-content .inner-container .flex-container {display: flex; flex-direction: column; gap: 20px; max-width: 1000px; margin: auto; flex-wrap: nowrap; flex-direction: column-reverse;}
+  c-tabbed-content .inner-container .flex-container .left-container, c-tabbed-content .inner-container .flex-container .right-container {flex: 1;}
+  c-tabbed-content .inner-container .flex-container .left-container {display: flex; flex-direction: column; justify-content: center; gap: 0px;}
+  c-tabbed-content .inner-container .image-container {border-radius: 20px; overflow: hidden;}
+  c-tabbed-content .inner-container .content * {text-align: center; color: #003659;}
+  c-tabbed-content .inner-container .content h1, c-tabbed-content .inner-container .content h2, c-tabbed-content .inner-container .content h3 {text-decoration: underline;}
+  c-tabbed-content .inner-container .content:not([active]), c-tabbed-content .inner-container .image-container:not([active]) {display: none;}
+  c-tabbed-content .inner-container .content h1, c-tabbed-content .inner-container .content h2, c-tabbed-content .inner-container .content h3, c-tabbed-content .inner-container .content h4, c-tabbed-content .inner-container .content h5 {color: #003659; text-align: center;}
+  c-tabbed-content .inner-container .toggle-container {width: fit-content; display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin: 20px auto 0 auto;}
+  c-tabbed-content .inner-container .toggle-container .toggle {max-width: 90px; min-width: min(calc(80vw / 4), 90px); aspect-ratio: 1; background-color: lightgray; flex: 1; overflow: hidden; border-radius: 8px; cursor: pointer; display: flex; flex-direction: column; height: 100%; padding: 10px 5px;}
+  c-tabbed-content .inner-container .toggle-container .toggle[active] {background-color: #003659;}
+  c-tabbed-content .inner-container .toggle-container .toggle > * {margin: 0;}
+  c-tabbed-content .inner-container .toggle-container .toggle p {text-align: center; color: #003659; font-size: 11px;}
+  c-tabbed-content .inner-container .toggle-container .toggle[active] p {color: white;}
+  c-tabbed-content .inner-container .toggle-container .toggle .icon-container {flex: 1;}
+  c-tabbed-content .inner-container .toggle-container .toggle svg {height: 40px; margin: auto;}
+  c-tabbed-content .inner-container .toggle-container .toggle[active] svg path {fill: white !important;}
+  c-tabbed-content .inner-container .toggle-container .toggle[active] svg ellipse {fill: white !important;}
+  c-tabbed-content .inner-container .toggle-container .toggle svg line {stroke: #003659 !important;}
+  c-tabbed-content .inner-container .toggle-container .toggle[active] svg line {stroke: white !important;}
+  c-tabbed-content .inner-container .toggle-container .toggle svg circle {stroke: #003659 !important;}
+  c-tabbed-content .inner-container .toggle-container .toggle[active] svg circle {stroke: white !important;}
+  @media screen and (min-width: 769px) {
+    c-tabbed-content {padding: 40px;}
+    c-tabbed-content .inner-container .content h1, c-tabbed-content .inner-container .content h2, c-tabbed-content .inner-container .content h3, c-tabbed-content .inner-container .content h4, c-tabbed-content .inner-container .content h5 {}
+    c-tabbed-content .inner-container .flex-container {flex-direction: row;}
+    c-tabbed-content .inner-container .toggle-container {gap: 10px; margin: 20px 0 0 0;}
+    c-tabbed-content .inner-container .content * {text-align: left;}
+  }
+{% endstyle %}
+
+<c-tabbed-content>
+  <div class="inner-container">
+    <h3 class="section-header c-mobile">
+      {{ section.settings.section_header -}}
+    </h3>
+    <div class="section-subheader c-mobile">
+      {{ section.settings.subheader }}
+    </div>
+    <div class="flex-container">
+      <div class="left-container">
+        <h3 class="section-header c-desktop">
+          {{ section.settings.section_header -}}
+        </h3>
+        <div class="section-subheader c-desktop">
+          {{ section.settings.subheader }}
+        </div>
+        <div class="content-container">
+          {% for block in section.blocks %}
+            <div
+              class="content"
+              data-index="{{ forloop.index0 }}"
+              {% if forloop.first %}
+                active
+              {% endif %}
+            >
+              {{ block.settings.content }}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="toggle-container">
+          {% for block in section.blocks %}
+            <div
+              class="toggle"
+              data-index="{{ forloop.index0 }}"
+              {% if forloop.first %}
+                active
+              {% endif %}
+            >
+              <div class="icon-container">
+                {% render 'customcode-icons', icon: block.settings.icon %}
+              </div>
+              <p>{{ block.settings.button_text }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="right-container">
+        {% for block in section.blocks %}
+          <div
+            class="image-container"
+            data-index="{{ forloop.index0 }}"
+            {% if forloop.first %}
+              active
+            {% endif %}
+          >
+            {% if block.settings.image != null %}
+              {{ block.settings.image | image_url: width: 700 | image_tag }}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</c-tabbed-content>
+
+<script>
+  class CTabbedContent extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      this.init();
+    }
+
+    init() {
+      const root = this; // component root
+
+      const toggleButtons = root.querySelectorAll('.toggle');
+      const contentBlocks = root.querySelectorAll('.content');
+      const imageBlocks = root.querySelectorAll('.image-container');
+
+      if (!toggleButtons.length) return;
+
+      // --- Utility: Remove all active attributes ---
+      const clearActive = () => {
+        toggleButtons.forEach((t) => t.removeAttribute('active'));
+        contentBlocks.forEach((c) => c.removeAttribute('active'));
+        imageBlocks.forEach((i) => i.removeAttribute('active'));
+      };
+
+      // --- Main toggle handler ---
+      const activateIndex = (index) => {
+        clearActive();
+
+        toggleButtons[index]?.setAttribute('active', '');
+        contentBlocks[index]?.setAttribute('active', '');
+        imageBlocks[index]?.setAttribute('active', '');
+      };
+
+      // --- Attach click listeners ---
+      toggleButtons.forEach((toggle, index) => {
+        toggle.addEventListener('click', () => activateIndex(index));
+      });
+
+      // --- Ensure at least first block is active ---
+      activateIndex(0);
+    }
+  }
+
+  // Register the component
+  customElements.define('c-tabbed-content', CTabbedContent);
+</script>
+
+{% schema %}
+{
+  "name": "C Tabbed Content",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_header",
+      "label": "Section Header"
+    },
+    {
+      "type": "richtext",
+      "id": "subheader",
+      "label": "Sub Header"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Content",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "header",
+          "content": "Button Toggle Settings"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            {
+              "label": "Natural",
+              "value": "natural"
+            },
+            {
+              "label": "Glow Up",
+              "value": "glow up"
+            },
+            {
+              "label": "Fit",
+              "value": "fit"
+            },
+            {
+              "label": "Eating",
+              "value": "eating"
+            },
+            {
+              "label": "360",
+              "value": "360"
+            },
+            {
+              "label": "Microbubbles",
+              "value": "microbubbles"
+            },
+            {
+              "label": "Ultrasonic",
+              "value": "ultrasonic"
+            },
+            {
+              "label": "UV Light",
+              "value": "uv_light"
+            }
+          ],
+          "default": "eating"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Tabbed Content",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

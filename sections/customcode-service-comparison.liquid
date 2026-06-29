@@ -1,0 +1,184 @@
+{% style %}
+  c-service-comparison[data-section-id="{{ section.id }}"] .center-image {
+    transform: translate(-50%, {{ section.settings.translate_amount }}%);
+  }
+  c-service-comparison .grid-container .grid-item .content-container ul li::before {
+    background-image: url('https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Check_Mark.png');
+  }
+  {% for block in section.blocks %}
+      c-service-comparison .grid-container .grid-item[data-block-id="{{ block.id }}"] .badge-image {
+        max-width: {{ block.settings.max_width }}px;
+        transform: translate(-{{ block.settings.translate_amount }}%, -50%);
+        {% case block.settings.badge_location %}
+          {% when 'c-left' %}
+              left: 0;
+          {% when 'c-center' %}
+              left: 50%;
+          {% when 'c-right' %}
+              right: 0;
+        {% endcase %}
+      }
+      c-service-comparison .grid-container .grid-item[data-block-id="{{ block.id }}"] .content-container ul {
+        {% if forloop.first %}
+          margin-right: auto;
+        {% else %}
+          margin-left: auto;
+        {% endif %}
+      }
+  {% endfor %}
+{% endstyle %}
+
+<c-service-comparison data-section-id="{{ section.id }}">
+  <div class="inner-container">
+    <div class="header-container">
+      <div class="title-container">
+        <div>
+          {{ section.settings.header }}
+        </div>
+        {% if section.settings.header_image != null %}
+          {{ section.settings.header_image | image_url: width: 980 | image_tag }}
+        {% endif %}
+      </div>
+      <p>{{ section.settings.content }}</p>
+    </div>
+    <div class="grid-container">
+      {% for block in section.blocks %}
+        <div class="grid-item" data-block-id="{{ block.id }}">
+          <div class="box-container {{ block.settings.badge_location }}">
+            {% if block.settings.top_image != null %}
+              {{ block.settings.top_image | image_url: width: 1400 | image_tag: class: 'top-image' }}
+            {% endif %}
+            {% if block.settings.badge_image != null %}
+              {{ block.settings.badge_image | image_url: width: 1400 | image_tag: class: 'badge-image' }}
+            {% endif %}
+            <div class="text-container">
+              {{ block.settings.content }}
+            </div>
+            {% if block.settings.main_image != null %}
+              {{ block.settings.main_image | image_url: width: 1400 | image_tag: class: 'main-image' }}
+            {% endif %}
+            {% if forloop.first %}
+              {% if section.settings.center_image != null %}
+                {{ section.settings.center_image | image_url: width: 1400 | image_tag: class: 'center-image' }}
+              {% endif %}
+            {% endif %}
+          </div>
+          <div class="content-container">
+            {{ block.settings.bottom_content }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</c-service-comparison>
+
+{% schema %}
+{
+  "name": "C Service Comparison",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "header_image",
+      "label": "Header Icon"
+    },
+    {
+      "type": "header",
+      "content": "Center Image Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "center_image",
+      "label": "Center Image"
+    },
+    {
+      "type": "number",
+      "id": "translate_amount",
+      "label": "Translate Amount in %"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "service",
+      "name": "Service",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "top_image",
+          "label": "Top Image"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "main_image",
+          "label": "Main Image"
+        },
+        {
+          "type": "richtext",
+          "id": "bottom_content",
+          "label": "Bottom Content"
+        },
+        {
+          "type": "header",
+          "content": "Badge Image Settings"
+        },
+        {
+          "type": "image_picker",
+          "id": "badge_image",
+          "label": "Badge Image"
+        },
+        {
+          "type": "select",
+          "id": "badge_location",
+          "label": "Badge Location",
+          "options": [
+            {
+              "label": "Left",
+              "value": "c-left"
+            },
+            {
+              "label": "Right",
+              "value": "c-right"
+            },
+            {
+              "label": "Center",
+              "value": "c-center"
+            }
+          ],
+          "default": "c-center"
+        },
+        {
+          "type": "number",
+          "id": "translate_amount",
+          "label": "Translate Amount in %"
+        },
+        {
+          "type": "number",
+          "id": "max_width",
+          "label": "Max Width in px"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Service Comparison",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

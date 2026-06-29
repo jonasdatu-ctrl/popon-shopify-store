@@ -1,0 +1,134 @@
+{% style %}
+  c-testimonial-slider .inner-container {max-width: 1400px; margin: auto; padding: 15px 20px;}
+  c-testimonial-slider .inner-container .header-container * {text-align: center; color: #003659;}
+  c-testimonial-slider .inner-container .header-container p {font-size: 18px;}
+  c-testimonial-slider .inner-container .header-container {margin-bottom: 20px;}
+  c-testimonial-slider .inner-container .swiper .swiper-slide {padding: 20px; border-radius: 19px; border: 1px solid #003659; display: flex; flex-direction: column; gap: 15px;}
+  c-testimonial-slider .inner-container .swiper .swiper-slide .image-container {width: 100%; apect-ratio: 1;}
+  c-testimonial-slider .inner-container .swiper .swiper-slide .image-container img {width: 100%; height: 100%; object-fit: cover; border-radius: 15px;}
+  c-testimonial-slider .inner-container .swiper .swiper-slide .review-container {display: flex; flex-direction: column; gap: 15px;}
+  c-testimonial-slider .inner-container .swiper .swiper-slide .review-container .review * {color: #003659; text-align: center; margin: 0;}
+  c-testimonial-slider .inner-container .swiper .swiper-slide .review-container .subject {color: #003659; text-align: center; margin: 0;}
+  c-testimonial-slider .inner-container .swiper .swiper-slide .review-container .separator {height: 2px; background-color: #004659; width: 35%; margin: auto;}
+  @media screen and (min-width: 769px) {
+    c-testimonial-slider .inner-container {padding: 30px 40px;}
+  }
+{% endstyle %}
+
+<c-testimonial-slider>
+  <div class="inner-container">
+    <div class="header-container">
+      {{ section.settings.header }}
+    </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="image-container">
+              {% if block.settings.image != null %}
+                {{ block.settings.image | image_url: width: 580 | image_tag }}
+              {% endif %}
+            </div>
+            <div class="review-container">
+              <div class="review">
+                {{ block.settings.review }}
+              </div>
+              <div class="separator"></div>
+              <div class="subject">
+                {{ block.settings.subject }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</c-testimonial-slider>
+
+<script>
+  class CTestimonialSlider extends HTMLElement {
+    constructor() {
+      super();
+      this.swiper = null;
+    }
+
+    connectedCallback() {
+      // Prevent double init
+      if (this.swiper) return;
+
+      const swiperEl = this.querySelector('.swiper');
+      if (!swiperEl || typeof Swiper === 'undefined') return;
+
+      this.swiper = new Swiper(swiperEl, {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+        loop: true,
+
+        navigation: {
+          nextEl: swiperEl.querySelector('.swiper-button-next'),
+          prevEl: swiperEl.querySelector('.swiper-button-prev'),
+        },
+
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+    }
+
+    disconnectedCallback() {
+      if (this.swiper) {
+        this.swiper.destroy(true, true);
+        this.swiper = null;
+      }
+    }
+  }
+  document.addEventListener('DOMContentLoaded', (event) => {
+    customElements.define('c-testimonial-slider', CTestimonialSlider);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "C Testimonial Slider",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "header",
+      "label": "Header"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "review",
+          "label": "Review"
+        },
+        {
+          "type": "text",
+          "id": "subject",
+          "label": "Subject"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Testimonial Slider"
+    }
+  ]
+}
+{% endschema %}

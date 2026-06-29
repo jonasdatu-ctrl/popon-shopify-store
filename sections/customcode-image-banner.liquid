@@ -1,0 +1,91 @@
+{% style %}
+  c-image-banner[data-section-id="{{ section.id }}"] {
+    {% if section.settings.d_padding_top %}
+      padding-top: 15px;
+    {% endif %}
+    {% if section.settings.d_padding_bottom %}
+      padding-bottom: 15px;
+    {% endif %}
+  }
+  c-image-banner[data-section-id="{{ section.id }}"] .image-container {
+    max-width: {{ section.settings.m_max_width }}px;
+  }
+  @media screen and (min-width: 769px) {
+    c-image-banner[data-section-id="{{ section.id }}"] {
+      {% if section.settings.d_padding_top %}
+        padding-top: 30px;
+      {% endif %}
+      {% if section.settings.d_padding_bottom %}
+        padding-bottom: 30px;
+      {% endif %}
+    }
+    c-image-banner[data-section-id="{{ section.id }}"] .image-container {
+      max-width: {{ section.settings.d_max_width }}px;
+    }
+  }
+{% endstyle %}
+
+<c-image-banner data-section-id="{{ section.id }}">
+  <div class="inner-container">
+    <div class="header-container">{{ section.settings.header }}</div>
+    {% if section.settings.m_image != null %}
+      <div class="image-container c-mobile">
+        {{ section.settings.m_image | image_url: width: 769 | image_tag }}
+      </div>
+    {% endif %}
+    {% if section.settings.d_image != null %}
+      <div class="image-container c-desktop">
+        {{ section.settings.d_image | image_url: width: 2000 | image_tag }}
+      </div>
+    {% endif %}
+  </div>
+</c-image-banner>
+
+{% schema %}
+{
+  "name": "C Image Banner",
+  "settings": [
+    { "type": "checkbox", "id": "d_padding_top", "label": "Display Padding Top", "default": true },
+    { "type": "checkbox", "id": "d_padding_bottom", "label": "Display Padding Bottom", "default": true },
+    {
+      "type": "richtext",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Image Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "m_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "number",
+      "id": "m_max_width",
+      "label": "Mobile Max Width"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Image Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "d_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "number",
+      "id": "d_max_width",
+      "label": "Desktop Max Width"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Image Banner",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

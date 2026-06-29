@@ -1,0 +1,97 @@
+{% style %}
+  c-guarantee-box[data-section-id="{{ section.id }}"] .inner-container {
+    background-color: {{ section.settings.bg_color }};
+  }
+{% endstyle %}
+
+{% capture check %}
+  {% render 'customcode-icons', icon: 'pink check' %}
+{% endcapture %}
+
+<c-guarantee-box data-section-id="{{ section.id }}">
+  <a href="{{ section.settings.link }}" class="inner-container">
+    {% if section.settings.icon != null %}
+      {{ section.settings.icon | image_url: width: 480 | image_tag: class: 'c-icon' }}
+    {% endif %}
+    <div class="heading-container">
+      {{ section.settings.header }}
+    </div>
+    <div class="grid-container">
+      {% for block in section.blocks %}
+        <div class="image-container">
+          {% if block.settings.image != null %}
+            {{ block.settings.image | image_url: width: 450 | image_tag }}
+          {% endif %}
+        </div>
+        <div class="check">
+          {% if section.settings.check_icon != null %}
+            {{ section.settings.check_icon | image_url: width: 200 | image_tag }}
+          {% else %}
+            {{ check }}
+          {% endif %}
+        </div>
+        <div class="content-container">
+          {{ block.settings.content }}
+        </div>
+      {% endfor %}
+    </div>
+  </a>
+</c-guarantee-box>
+
+{% schema %}
+{
+  "name": "C Guarantee Box",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "check_icon",
+      "label": "Check Icon"
+    },
+    {
+      "type": "richtext",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Box Color",
+      "default": "#F3F3F3"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Guarantee Box",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,87 @@
+{% style %}
+  div.c-hamburger[data-menu-trigger] {cursor: pointer; margin-left: 10px;}
+  div.c-hamburger[data-menu-trigger] svg {width: 30px; height: 30px;}
+  .c-menu-overlay {position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.5); z-index: 999; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;}
+  .c-menu-overlay.is-active {opacity: 1; pointer-events: auto;}
+  c-menu-drawer {background-color: white; position: fixed; top: 0; left: 0; width: 100%; max-width: 320px; height: 100vh; transform: translateX(-100%); transition: transform 0.3s ease; z-index: 1000; display: flex; flex-direction: column; gap; 40px;}
+  c-menu-drawer.is-active {transform: translateX(0);}
+  c-menu-drawer button.close {appearance: none; border: none; background: none; width: 30px; height: 30px; cursor: pointer; margin-bottom: 40px; padding: 0;}
+  c-menu-drawer .c-menu-drawer {position: relative; display: flex; flex-direction: column; overflow-x: hidden; height: 100%; padding: 20px; flex: 1;}
+  c-menu-drawer .c-menu-drawer [data-menu="main"] {height: 100%; position: relative;}
+  c-menu-drawer .c-menu-drawer .link-item {padding: 10px 0;}  
+  c-menu-drawer .c-menu-drawer .link-item * {font-size: 18px;}  
+  c-menu-drawer .c-menu-drawer .link-item .link-title {display: flex; gap: 10px; justify-content: space-between; align-items: center;}  
+  c-menu-drawer .c-menu-drawer .link-item .link-title svg {width: 24px;}  
+  c-menu-drawer .c-menu-drawer div[data-has-children] {cursor: pointer;}    
+  c-menu-drawer .c-submenu-drawer {position: absolute; width: 100%; height: 100%; transform: translateX(100%); top: 0; left: 20px; transition: transform 0.3s ease; background-color: white;}
+  c-menu-drawer .c-submenu-drawer.is-active {transform: translateX(0); left: 0;}  
+  c-menu-drawer .c-submenu-drawer [data-submenu-close] {display: flex; gap: 10px; padding: 10px;}  
+  c-menu-drawer .c-submenu-drawer [data-submenu-close] svg {width: 24px; transform: rotate(180deg);}  
+  c-menu-drawer .c-submenu-drawer .sublink-title {display: flex; flex-wrap: nowrap; gap: 10px; align-items: center;}  
+  c-menu-drawer .c-submenu-drawer .sublink-title img {max-width: 70px; aspect-ratio: 1; object-fit: cover;}  
+  c-menu-drawer .menu-footer {background: #eee; padding: 20px;}
+{% endstyle %}
+
+<c-menu-drawer>
+  <div class="c-menu-drawer">
+    <button data-menu-close class="close">{% render 'customcode-icons', icon: 'close' %}</button>
+
+    <div data-menu="main">
+      {% for link in linklists[section.settings.menu].links %}
+        <div class="link-item">
+          <{% if link.links.size > 0 %}div data-has-children{% else %}a href="{{ link.url }}"{% endif %}>
+            <div class="link-title">
+              {{ link.title }}
+              {% if link.links.size > 0 %}
+                {% render 'customcode-icons', icon: "right-arrow" %}
+              {% endif %}
+            </div>
+            {% if link.links.size > 0 %}              
+              <div data-menu-level="2" class="c-submenu-drawer">
+                <div data-submenu-close>{% render 'customcode-icons', icon: "right-arrow" %}{{ link.title }}</div>
+                <div class="submenu-content">
+                  {% for sublink in link.links %}
+                    <div class="link-item">
+                    {% assign file_name = sublink.url
+                      | replace: 'https://', '-'
+                      | replace: '/', '-'
+                      | replace: '.', '-'
+                      | prepend: 'link'
+                      | append: '.png'
+                    %}
+                    {% assign file_image = file_name | file_img_url %}
+                    <div class="sublink-title">
+                      {% if file_image contains '?v=' and link.title contains 'SHOP' %}
+                        <img src="{{ file_image }}" alt="{{ link.title }}">
+                      {% endif %}                      
+                      <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                    </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+          </{% if link.links.size > 0 %}div{% else %}a{% endif %}>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="menu-footer">{% render 'customcode-social-icon' %}</div>  
+</c-menu-drawer>
+<div class="c-menu-overlay" hidden></div>
+
+{% schema %}
+{
+  "name": "Menu Drawer",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu"
+    }
+  ],
+  "tag": "section",
+  "class": "shopify-section"
+}
+{% endschema %}

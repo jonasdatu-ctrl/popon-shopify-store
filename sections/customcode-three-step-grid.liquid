@@ -1,0 +1,81 @@
+{% style %}
+  c-three-step-grid[data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+  }
+{% endstyle %}
+
+<c-three-step-grid data-section-id="{{ section.id }}">
+  <div class="inner-container">
+    <h2 class="c-header">
+      <span class="c-mobile">{{ section.settings.header }}</span>
+      <span class="c-desktop">{{ section.settings.d_header }}</span>
+    </h2>
+    <div class="grid-container">
+      <div class="c-desktop horizontal-border"></div>
+      {% for block in section.blocks %}
+        <div class="grid-item">
+          <div class="image-container">
+            {% if block.settings.image != null %}
+              {{ block.settings.image | image_url: width: 980 | image_tag }}
+            {% endif %}
+          </div>
+          <div class="text-container">
+            {{ block.settings.text }}
+          </div>
+          {% unless forloop.last %}
+            {% render 'customcode-icons', icon: 'curved-path', class: 'c-mobile' %}
+          {% endunless %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</c-three-step-grid>
+
+{% schema %}
+{
+  "name": "C 3 Step Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "text",
+      "id": "d_header",
+      "label": "D Header"
+    },
+    {
+      "type": "color",
+      "label": "BG Color",
+      "id": "bg_color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "info": "Wrap text in a link to highlight"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C 3 Step grid",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

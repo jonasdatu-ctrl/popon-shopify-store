@@ -1,0 +1,21 @@
+{% assign processing_days = product.metafields.custom.customcode_processing_days | default: 2 %}
+{% assign qty_limit = product.metafields.custom.customcode_upsell_qty_limit | default: 10 %}
+{% assign qty_sold = product.metafields.custom.customcode_upsell_qty_sold | default: 0 %}
+{% assign qty_left = qty_limit | minus: qty_sold %}
+
+<c-scarcity
+  class="scarcity-bar"
+  data-processing-days="{{ processing_days }}"
+  data-qty-limit="{{ qty_limit }}"
+  data-qty-sold="{{ qty_sold }}"
+  data-tooltip="Estimated Delivery by UPS 2nd Day Air"
+>
+  <div class="scarcity-output">
+    <img
+      class="tooltip-icon"
+      src="https://cdn.shopify.com/s/files/1/0382/1761/3450/files/0bc57d4b-2f34-4cd5-afda-fc8378fa7a72.png?v=1756392294"
+      data-tippy-content="{{ block.settings.tooltip | escape }}"
+      data-tooltip-bg="#000"
+    >
+  </div>
+</c-scarcity>

@@ -1,0 +1,453 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "custom.homepage",
+  "name": "Home Page Group 2 Tamar",
+  "sections": {
+    "customcode_blog_posts_K3QATW": {
+      "type": "customcode-blog-posts",
+      "name": "C Blog Posts",
+      "settings": {
+        "header": "CELEBRATING SMILES",
+        "blog": "celebrating-smiles",
+        "blog_limit": 3
+      }
+    },
+    "customcode_content_generator_AreekL": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_ebGATx": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_ebGATx"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_grid_blocks_PBfgDy": {
+      "type": "customcode-grid-blocks",
+      "blocks": {
+        "column_4h4miL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Image_5-min.png",
+            "title": "100% CUSTOM MADE",
+            "content": "<p>We create each Pop On Smile using the impression molds you make at home and ship back to us. Paired with photos of your current smile, our skilled designers craft a custom fit that perfectly matches your teeth and complements your unique facial features. The result? A natural, seamless look that’s truly yours.</p>",
+            "box_color": "#000000cf"
+          }
+        },
+        "column_zkUrWy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Image_4-min.png",
+            "title": "SUPREME COMFORT",
+            "content": "<p>Your Pop On Smile offers a secure fit and lasting durability, designed to pop snugly over your existing teeth. Lightweight and comfortable, you can wear your new smile all day with confidence—and even hear it pop into place!</p>",
+            "box_color": "#4ba0ed"
+          }
+        },
+        "column_4hXeCH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Image_3-min.png",
+            "title": "PREMIUM MATERIAL",
+            "content": "<p>We use high-quality, biocompatible, stain-resistant, and BPA-free polyethylene to ensure durability and comfort. The ultra-smooth, polished finish provides a natural feel, so your Pop Ons look amazing and feel effortless to wear.</p>",
+            "box_color": "#4ba0ed"
+          }
+        }
+      },
+      "block_order": [
+        "column_4h4miL",
+        "column_zkUrWy",
+        "column_4hXeCH"
+      ],
+      "name": "C Grid Blocks",
+      "settings": {
+        "bg_color": "#f6f6f6",
+        "header": "How They're Made",
+        "content": "<h4>Pop On Smile are 100% custom-made from impression molds you make at home. They're made by master technicians with our proprietary design process that 3D blends digital design and hand craftsmanship.</h4>",
+        "bottom_content": "",
+        "grid_type": "type-three",
+        "mobile_grid": 1,
+        "desktop_grid": 3,
+        "text_content_color": "#003659"
+      }
+    },
+    "customcode_content_generator_DCqgy8": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "image_content_bxfcRH": {
+          "type": "image_content",
+          "settings": {
+            "image": "shopify://shop_images/b50cadd3-9bb9-4917-ab97-d1c1992ce07a.gif",
+            "link": "https://poponveneers.com/pages/color-choice",
+            "lcp": false
+          }
+        },
+        "liquid_UKNXfK": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "image_content_bxfcRH",
+        "liquid_UKNXfK"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_image_with_text_b6Bpnc": {
+      "type": "customcode-image-with-text",
+      "blocks": {
+        "image_mGGDgf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Number.png",
+            "max_width": 80
+          }
+        },
+        "content_na8hEa": {
+          "type": "content",
+          "settings": {
+            "content": "<h2><strong>FREE</strong></h2><h3>upgrade expedited</h3><h3>shipping <strong>ALL</strong> directions</h3>",
+            "font_color": "#003659",
+            "font_align": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_mGGDgf",
+        "content_na8hEa"
+      ],
+      "custom_css": [],
+      "name": "C Image with Text",
+      "settings": {
+        "image": "shopify://shop_images/Veneer_Transparent.png",
+        "max_width": 1000,
+        "flex_direction": "row"
+      }
+    },
+    "customcode_step_block_NdbGNe": {
+      "type": "customcode-step-block",
+      "blocks": {
+        "block_3PAdmn": {
+          "type": "block",
+          "settings": {
+            "title": "Impression molding kit shipped",
+            "image": "shopify://shop_images/UPS_SHIPPING_-_1.png"
+          }
+        },
+        "block_6raFrb": {
+          "type": "block",
+          "settings": {
+            "title": "Make molds at home",
+            "image": "shopify://shop_images/UPS_SHIPPING_-_2.png"
+          }
+        },
+        "block_q7MrqV": {
+          "type": "block",
+          "settings": {
+            "title": "Your new smile is 100% custom made",
+            "image": "shopify://shop_images/UPS_SHIPPING_-_3_f2b7eaf1-05c3-4064-9333-e2ca0888b33b.png"
+          }
+        },
+        "block_VTTDqR": {
+          "type": "block",
+          "settings": {
+            "title": "HOORAY! Your new smile is delivered",
+            "image": "shopify://shop_images/UPS_SHIPPING_-_4.png"
+          }
+        },
+        "step_8fU3iT": {
+          "type": "step",
+          "settings": {
+            "title": "<h4><strong>2</strong> days</h4>"
+          }
+        },
+        "step_VWrYQy": {
+          "type": "step",
+          "settings": {
+            "title": "<h4><strong>2</strong> days</h4>"
+          }
+        },
+        "step_zqNxtU": {
+          "type": "step",
+          "settings": {
+            "title": "<h4><strong>2</strong> days</h4>"
+          }
+        }
+      },
+      "block_order": [
+        "block_3PAdmn",
+        "block_6raFrb",
+        "block_q7MrqV",
+        "block_VTTDqR",
+        "step_8fU3iT",
+        "step_VWrYQy",
+        "step_zqNxtU"
+      ],
+      "name": "C Step Block",
+      "settings": {
+        "step_image": "shopify://shop_images/airplane_icon_255c4cf6-8451-4a1e-bf40-b8dceb1f759d.png"
+      }
+    },
+    "customcode_table_comparison_gEzirw": {
+      "type": "customcode-table-comparison",
+      "blocks": {
+        "row_LqWkyL": {
+          "type": "row",
+          "settings": {
+            "title": "Impression Kit included"
+          }
+        },
+        "row_8XdhLU": {
+          "type": "row",
+          "settings": {
+            "title": "$29 payment options"
+          }
+        },
+        "row_D4aY9V": {
+          "type": "row",
+          "settings": {
+            "title": "Support 7 days a week"
+          }
+        },
+        "row_9zaRKM": {
+          "type": "row",
+          "settings": {
+            "title": "FREE upgrade 2 day shipping all directions"
+          }
+        },
+        "row_g7wzaL": {
+          "type": "row",
+          "settings": {
+            "title": "2 weeks (or 1 week RUSH) smile design"
+          }
+        },
+        "row_yHi8Lp": {
+          "type": "row",
+          "settings": {
+            "title": "FREE Pop On CLEAN tablets"
+          }
+        },
+        "row_mTBi9R": {
+          "type": "row",
+          "settings": {
+            "title": "FREE gift 3D teeth models"
+          }
+        },
+        "row_rrhxAd": {
+          "type": "row",
+          "settings": {
+            "title": "Premium High End Material"
+          }
+        },
+        "row_mid9X3": {
+          "type": "row",
+          "settings": {
+            "title": "100% custom made"
+          }
+        },
+        "row_xnEdDB": {
+          "type": "row",
+          "settings": {
+            "title": "Pop On Promise Guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "row_LqWkyL",
+        "row_8XdhLU",
+        "row_D4aY9V",
+        "row_9zaRKM",
+        "row_g7wzaL",
+        "row_yHi8Lp",
+        "row_mTBi9R",
+        "row_rrhxAd",
+        "row_mid9X3",
+        "row_xnEdDB"
+      ],
+      "name": "C Table Comparison",
+      "settings": {
+        "header": "Why everyone is raving about POP ON",
+        "logo_image": "shopify://shop_images/PopOnv2.0_Logo_5f576f03-689d-42a3-89e0-a22f428a2da2.webp",
+        "check_image": "shopify://shop_images/Check_7a6735b3-eaed-4b53-a4ca-eb8e12032f90.png",
+        "x_image": "shopify://shop_images/Cross.png"
+      }
+    },
+    "customcode_content_generator_DPpKDD": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_Cqfeen": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        },
+        "full_width_image_e8nQDp": {
+          "type": "full_width_image",
+          "disabled": true,
+          "settings": {
+            "m_image": "shopify://shop_images/smile_stories_thumbnails_for_email_3_1.png",
+            "d_image": "shopify://shop_images/smile_stories_thumbnails_for_email_3_1.png",
+            "link": "https://poponveneers.com/blogs/celebrating-smiles",
+            "lcp": false
+          }
+        },
+        "section_header_wtNARz": {
+          "type": "section_header",
+          "disabled": true,
+          "settings": {
+            "header": "IT'S EASY!"
+          }
+        },
+        "content_giRfJ6": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<p>🎊 100% Custom Made Smile<br/><br/>🛡️ Pop On Promise Guarantee<br/><br/>📦 Fast & Convenient Shipping <br/><br/>👏 Painless & No Shaving Down Teeth<br/><br/>⭐⭐⭐⭐⭐ 24,000+ Raving Review</p>"
+          }
+        },
+        "liquid_eRypKj": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        },
+        "content_McjTg8": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<h2><strong>Check out customer videos<br/><br/></strong></h2><p>Thank you for sharing videos  about your experience! We're honored to be a part of your smile journey</p>"
+          }
+        },
+        "image_content_mPMXxt": {
+          "type": "image_content",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Popon_Videos.png",
+            "link": "",
+            "lcp": false
+          }
+        },
+        "button_iQnrMY": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_text": "VIDEOS",
+            "button_link": "https://poponveneers.com/pages/video-reviews"
+          }
+        },
+        "image_content_x3WYgz": {
+          "type": "image_content",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Website_blog_post_template_graphics_5_2023_32_1.webp",
+            "link": "",
+            "lcp": false
+          }
+        },
+        "accented_header_A3L9DC": {
+          "type": "accented_header",
+          "disabled": true,
+          "settings": {
+            "content": "<h2>POPON <strong>VS</strong> Other Removable Veneers</h2>"
+          }
+        },
+        "full_width_image_rDUcqH": {
+          "type": "full_width_image",
+          "disabled": true,
+          "settings": {
+            "m_image": "shopify://shop_images/Screenshot_2025-08-18_at_8.46.56_PM.png",
+            "d_image": "shopify://shop_images/Screenshot_2025-08-18_at_10.22.24_PM.png",
+            "link": "",
+            "lcp": false
+          }
+        }
+      },
+      "block_order": [
+        "liquid_Cqfeen",
+        "full_width_image_e8nQDp",
+        "section_header_wtNARz",
+        "content_giRfJ6",
+        "liquid_eRypKj",
+        "content_McjTg8",
+        "image_content_mPMXxt",
+        "button_iQnrMY",
+        "image_content_x3WYgz",
+        "accented_header_A3L9DC",
+        "full_width_image_rDUcqH"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_content_generator_wNwjh9": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "full_width_image_wpRE6T": {
+          "type": "full_width_image",
+          "settings": {
+            "m_image": "shopify://shop_images/contact_us_form_1400_x_700_px_1_1.webp",
+            "d_image": "shopify://shop_images/contact_us_form_1400_x_700_px_1_1.webp",
+            "link": "https://poponveneers.com/pages/contact-us",
+            "lcp": false
+          }
+        },
+        "liquid_BPXe7t": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-Uypjzq\"></div>\n\n<p>\n<p class=\"affirm-text\">*Affirm interest rates vary from 0%-36% APR based on credit, and are subject to an eligibility check. For example, on a $600 purchase, you may pay $63.18 for 12 months with a 15% APR. Options depend on your purchase amount, and a down payment may be required. Loans through Affirm are provided by Celtic Bank, Member FDIC; Lead Bank, Member FDIC; or Affirm Loan Services, LLC. California residents: Affirm Loan Services, LLC is licensed by the Department of Financial Protection and Innovation. Loans are made or arranged pursuant to California Financing Law license 60DBO-111681.</p>\n</p>"
+          }
+        }
+      },
+      "block_order": [
+        "full_width_image_wpRE6T",
+        "liquid_BPXe7t"
+      ],
+      "custom_css": [
+        "p {font-size: 12px; color: #003659; text-align: center; max-width: 1000px; margin: auto;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    }
+  },
+  "order": [
+    "customcode_blog_posts_K3QATW",
+    "customcode_content_generator_AreekL",
+    "customcode_grid_blocks_PBfgDy",
+    "customcode_content_generator_DCqgy8",
+    "customcode_image_with_text_b6Bpnc",
+    "customcode_step_block_NdbGNe",
+    "customcode_table_comparison_gEzirw",
+    "customcode_content_generator_DPpKDD",
+    "customcode_content_generator_wNwjh9"
+  ]
+}

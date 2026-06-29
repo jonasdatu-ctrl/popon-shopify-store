@@ -1,0 +1,144 @@
+{% style %}
+  {% unless block.settings.display_compare_price %}
+    c-buy-button[data-block-id="{{ block.id }}"] button .button-price-container h5 {
+      display: none;
+    }
+  {% endunless %}
+{% endstyle %}
+
+<c-buy-button
+  id="c-buy-button"
+  data-block-id="{{ block.id }}"
+  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+  data-selling-plan=""
+  data-price="{{product.selected_or_first_available_variant.metafields.custom.customcode_price_display.value[1] | default: product.selected_or_first_available_variant.price}}"
+  data-compare-price="{{product.selected_or_first_available_variant.metafields.custom.customcode_price_display.value[0] | default: product.selected_or_first_available_variant.compare_at_price}}"
+>
+  {% if section.settings.enable_partially %}
+    <h6 class="partially-total-price-display">
+      {{ section.settings.bottom_text }}
+      {% comment %}
+        Total (incl. <strong>NON REFUNDABLE</strong> $99 plan fee | Exc. Taxes):
+      {% endcomment %}
+      <span style="opacity: 0;">
+        {{-
+          product.selected_or_first_available_variant.price
+          | plus: section.settings.plan_fee
+          | money_without_trailing_zeros
+        -}}
+      </span>
+    </h6>
+  {% endif %}
+  {% if section.settings.enable_partially %}
+    <div class="alt-button-container">
+      <div id="partiallyCheckoutBtn">CREATE PAYMENT PLAN +</div>
+      {% if block.settings.blurb != blank or block.settings.display_payment or block.settings.footer_blurb != blank %}
+        <div class="info-container">  
+          {% if block.settings.blurb != blank %}
+            <div class="blurb">
+              {{ block.settings.blurb }}
+              <img src="https://cdn.shopify.com/s/files/1/0382/1761/3450/files/images-removebg-preview.png?v=1740586903">
+            </div>
+          {% endif %}
+          {% if block.settings.display_payment %}
+            <div class="payment-container">
+              {% for media in metaobjects.image_sets.payment_gateway_logos.image_logos.value %}
+                {{ media | image_url: width: 200 | image_tag }}
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if block.settings.footer_blurb != blank %}
+            <div class="footer-blurb">
+              {{ block.settings.footer_blurb }}
+            </div>
+          {% endif %}
+        </div>   
+      {% endif %}
+    </div>       
+  {% else %}
+    <button
+      class="atc"
+      {% unless product.selected_or_first_available_variant.available %}
+        disabled
+      {% endunless %}
+    >
+      <div class="main-button-container">
+        {% if product.selected_or_first_available_variant.available %}
+          ADD TO CART
+        {% else %}
+          SOLD OUT
+        {% endif %}
+        {% unless section.settings.enable_partially %}
+          <div class="button-price-container">
+            <h5>
+              <s>
+                {{
+                  product.selected_or_first_available_variant.metafields.custom.customcode_price_display.value[0]
+                  | default: product.selected_or_first_available_variant.compare_at_price
+                  | money_without_trailing_zeros
+                }}
+              </s>
+            </h5>
+            <h4>
+              {{
+                product.selected_or_first_available_variant.metafields.custom.customcode_price_display.value[1]
+                | default: product.selected_or_first_available_variant.price
+                | money_without_trailing_zeros
+              }}
+            </h4>
+          </div>
+        {% endunless %}
+        <div class="c-spinner c-hidden"></div>
+      </div>
+      {% if block.settings.blurb != blank or block.settings.display_payment or block.settings.footer_blurb != blank %}
+        <div class="info-container">
+          {% if block.settings.blurb != blank %}
+            <div class="blurb">
+              {{ block.settings.blurb }}
+              <img src="https://cdn.shopify.com/s/files/1/0382/1761/3450/files/images-removebg-preview.png?v=1740586903">
+            </div>
+          {% endif %}
+          {% if block.settings.display_payment %}
+            <div class="payment-container">
+              {% for media in metaobjects.image_sets.payment_gateway_logos.image_logos.value %}
+                {{ media | image_url: width: 200 | image_tag }}
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if block.settings.footer_blurb != blank %}
+            <div class="footer-blurb">
+              {{ block.settings.footer_blurb }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </button>
+  {% endif %}
+
+  {% if block.settings.display_alt_financing %}
+    <div class="separator">
+      <h5>OR</h5>
+    </div>
+    <button class="redirect" data-href="{{ block.settings.alt_financing_link }}">
+      <div class="main-button-container">
+        {{ block.settings.alt_financing_text }}
+      </div>
+      {% if block.settings.alt_financing_footer != empty or block.settings.display_bottom_payment %}
+        <div class="info-container">
+          {% if block.settings.display_bottom_payment %}
+            <div class="payment-container">
+              {% for media in metaobjects.image_sets.payment_gateway_logos.image_logos.value %}
+                {{ media | image_url: width: 200 | image_tag }}
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if block.settings.alt_financing_footer != empty %}
+            <div class="footer-blurb">
+              {{ block.settings.alt_financing_footer }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </button>
+  {% endif %}
+</c-buy-button>

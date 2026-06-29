@@ -1,0 +1,125 @@
+{% style %}
+  c-marquee[data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }}
+  }
+  c-marquee[data-section-id="{{ section.id }}"] .text-item {
+    color: {{ section.settings.font_color }};
+  }
+{% endstyle %}
+
+{% capture marquee_content %}
+  {% if section.settings.text != blank %}
+    <div class="text-container">
+    {% for i in (1..30) %}
+      <div class="text-item">
+        {{ section.settings.text }}
+      </div>
+    {% endfor %}
+    </div>
+    <div class="text-container">
+    {% for i in (1..30) %}
+      <div class="text-item">
+        {{ section.settings.text }}
+      </div>
+    {% endfor %}
+    </div>    
+  {% else %}
+    {% for block in section.blocks %}
+      {% if block.settings.image != null %}
+        {{ block.settings.image | image_url: width: 360 | image_tag }}
+      {% endif %}
+    {% endfor %}
+    {% for block in section.blocks %}
+      {% if block.settings.image != null %}
+        {{ block.settings.image | image_url: width: 360 | image_tag: class: 'c-mobile' }}
+      {% endif %}
+    {% endfor %}  
+  {% endif %} 
+{% endcapture %}
+
+<c-marquee data-section-id="{{ section.id }}">
+  <div class="inner-container" data-marquee-type="{{ section.settings.marquee_type }}">
+    {% if section.settings.show_separator %}
+      <div class="separator"></div>
+    {% endif %}
+    {% if section.settings.separator != null %}
+      {{ section.settings.separator | image_url: width: 1800 | image_tag }}
+    {% endif %}
+    <div class="marquee-container">
+      <div class="marquee-content">
+        {{ marquee_content }}
+      </div>
+    </div>
+    {% if section.settings.show_separator %}
+      <div class="separator"></div>
+    {% endif %}
+  </div>
+</c-marquee>
+
+{% schema %}
+{
+  "name": "C Marquee",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_separator",
+      "label": "Show Separator",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "BG Color"
+    },
+    {
+      "type": "select",
+      "id": "marquee_type",
+      "label": "Marquee Type",
+      "options": [
+        {
+          "label": "Text",
+          "value": "text"
+        },
+        {
+          "label": "Image",
+          "value": "image"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "header",
+      "content": "Marquee Type Text Settings"
+    },
+    {
+      "type": "color",
+      "id": "font_color",
+      "label": "Font Color"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text Marquee"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Marquee",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

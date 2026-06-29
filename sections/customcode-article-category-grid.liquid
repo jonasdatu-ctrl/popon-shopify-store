@@ -1,0 +1,70 @@
+<c-article-category-grid>
+  <div class="inner-container">
+    <div class="grid-container">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.link | default: block.settings.blog.url }}" class="grid-item">
+          <div class="image-container">
+            {% if block.settings.image != null %}
+              {{ block.settings.image | image_url: width: 1440 | image_tag }}
+            {% endif %}
+          </div>
+          <div class="info-container">
+            <p class="blog-title">
+              {% if block.settings.title != blank %}
+                {{ block.settings.title | replace: ' FAQ', '' }}
+              {% else %}
+                {{ block.settings.blog.title | replace: ' FAQ', '' }}
+              {% endif %}
+            </p>
+            <h5 class="article-count">{{ block.settings.blog.articles_count }} articles</h5>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</c-article-category-grid>
+
+{% schema %}
+{
+  "name": "C Article Category Grid",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "blog",
+      "name": "Blog",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "Blog"
+        },
+        {
+          "type": "header",
+          "content": "Overrides"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title Override"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Block Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Article Category Grid",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

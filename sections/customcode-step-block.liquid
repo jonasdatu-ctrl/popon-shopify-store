@@ -1,0 +1,104 @@
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'block' %}
+      {% assign block_count = block_count | plus: 1 %}
+  {% endcase %}
+{% endfor %}
+
+{% style %}
+  c-step-block[data-section-id="{{ section.id }}"] .inner-container .block-container > div {
+    max-width: calc((100% / {{ block_count }}) - (15px / {{ block_count }}));
+  }
+  c-step-block[data-section-id="{{ section.id }}"] .inner-container .step-container > div {
+    max-width: calc((100% / {{ block_count }}) - (10px / {{ block_count }}));
+  }
+  @media screen and (min-width: 769px) {
+    c-step-block[data-section-id="{{ section.id }}"] .inner-container .block-container > div {
+      max-width: calc((100% / {{ block_count }}) - (45px / {{ block_count }}));
+    }
+    c-step-block[data-section-id="{{ section.id }}"] .inner-container .step-container > div {
+      max-width: calc((100% / {{ block_count }}) - (30px / {{ block_count }}));
+    }
+  }
+{% endstyle %}
+
+<c-step-block data-section-id="{{ section.id }}">
+  <div class="inner-container">
+    <div class="step-container">
+      {% for block in section.blocks %}
+        {% if block.type == 'step' %}
+          <div class="step-item">
+            {{ block.settings.title }}
+            {% if section.settings.step_image != null %}
+              {{ section.settings.step_image | image_url: width: 1400 | image_tag }}
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="block-container">
+      {% for block in section.blocks %}
+        {% if block.type == 'block' %}
+          <div class="block-item">
+            <p>{{ block.settings.title }}</p>
+            <div class="image-container">
+              {% if block.settings.image != null %}
+                {{ block.settings.image | image_url: width: 1400 | image_tag }}
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</c-step-block>
+
+{% schema %}
+{
+  "name": "C Step Block",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "step_image",
+      "label": "Step Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "name": "Step",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Step Block",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

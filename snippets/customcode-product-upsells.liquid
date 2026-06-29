@@ -1,0 +1,172 @@
+<c-product-upsells>
+  <div class="option-container">
+    <p class="option-title">GET IT BY</p>
+    <div class="value-container">
+      {% if block.settings.default_enabled %}
+        <div
+          class="parent-option-value"
+          data-upsell-id=""
+          data-get-by="{{ block.settings.default_days }}"
+          {% if block.settings.most_popular_index == 0 %}
+            pop-displayed
+          {% endif %}
+          {% if block.settings.active_index == 0 %}
+            active
+          {% endif %}
+        >
+          <div class="option-value">
+            <p class="most-popular-banner">MOST POPULAR</p>
+            <div class="info-container">
+              <h5 class="prod-title">{{ block.settings.default_title }}</h5>
+              <p class="prod-date">Get it by <span></span></p>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% assign title_override = block.settings.title_overrides | split: '|' %}
+      {% for prod in block.settings.product_list %}
+        <div
+          class="parent-option-value"
+          data-upsell-id="{{ prod.selected_or_first_available_variant.id }}"
+          data-get-by="{{ prod.metafields.custom.customcode_processing_days | default: 14 }}"
+          {% if block.settings.most_popular_index == forloop.index %}
+            pop-displayed
+          {% endif %}
+          {% if block.settings.active_index == forloop.index %}
+            active
+          {% endif %}
+        >
+          <div class="option-value">
+            <p class="most-popular-banner">MOST POPULAR</p>
+            <div class="info-container">
+              <h5 class="prod-title">{{ title_override[forloop.index0] | default: prod.title }}</h5>
+              <p class="prod-date">Get it by <span></span></p>
+              {% assign qty_left = prod.metafields.custom.customcode_upsell_qty_limit
+                | minus: prod.metafields.custom.customcode_upsell_qty_sold
+              %}
+              {% if qty_left != 0 %}
+                <p class="prod-spots">Only {{ qty_left }} kits left</p>
+              {% endif %}
+              <h3 class="prod-additional">
+                +{{ prod.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+              </h3>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</c-product-upsells>
+
+<script>
+  class CProductUpsells extends HTMLElement {
+    constructor() {
+      super();
+      this.holidays = [
+        '11-14', // Christmas
+        '01-01', // New Year
+        '07-04', // Independence Day
+      ];
+    }
+
+    connectedCallback() {
+      this.optionElements = this.querySelectorAll('.parent-option-value');
+      this.setupClickHandlers();
+      this.calculateDates();
+      this.listenForVariantAdded();
+    }
+
+    setupClickHandlers() {
+      this.optionElements.forEach((el) => {
+        el.addEventListener('click', () => {
+          this.optionElements.forEach((opt) => opt.removeAttribute('active'));
+          el.setAttribute('active', '');
+        });
+      });
+    }
+
+    calculateDates() {
+      const today = new Date();
+      this.optionElements.forEach((el) => {
+        const daysToAdd = parseInt(el.dataset.getBy) || 0;
+        const deliveryDate = this.addBusinessDays(today, daysToAdd);
+        const formattedDate = this.formatDate(deliveryDate);
+        const dateSpan = el.querySelector('.prod-date span');
+        if (dateSpan) dateSpan.textContent = formattedDate;
+      });
+    }
+
+    addBusinessDays(startDate, daysToAdd) {
+      let date = new Date(startDate);
+      let addedDays = 0;
+
+      while (addedDays < daysToAdd) {
+        date.setDate(date.getDate() + 1);
+        const day = date.getDay();
+        const mmdd = this.formatMMDD(date);
+        if (day !== 0 && day !== 6 && !this.holidays.includes(mmdd)) {
+          addedDays++;
+        }
+      }
+      return date;
+    }
+
+    formatMMDD(date) {
+      const mm = String(date.getMonth() + 1).padStart(2, '0');
+      const dd = String(date.getDate()).padStart(2, '0');
+      return `${mm}-${dd}`;
+    }
+
+    formatDate(date) {
+      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const month = monthNames[date.getMonth()];
+      const day = date.getDate();
+      const suffix = this.getDaySuffix(day);
+      return `${month} ${day}${suffix}`;
+    }
+
+    getDaySuffix(day) {
+      if (day > 3 && day < 21) return 'th';
+      switch (day % 10) {
+        case 1:
+          return 'st';
+        case 2:
+          return 'nd';
+        case 3:
+          return 'rd';
+        default:
+          return 'th';
+      }
+    }
+
+    listenForVariantAdded() {
+      document.addEventListener('main-variant:added', (event) => {
+        const active = this.querySelector('.parent-option-value[active]');
+        if (!active) return;
+
+        const upsellId = active.dataset.upsellId;
+        if (!upsellId) return;
+
+        console.log('Main variant added — upsell to add:', upsellId);
+
+        this.addUpsellToCart(upsellId);
+      });
+    }
+
+    addUpsellToCart(variantId) {
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: variantId, quantity: 1 }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log('Upsell product added:', data);
+          this.dispatchEvent(new CustomEvent('upsell:added', { detail: data }));
+        })
+        .catch((err) => console.error('Upsell add failed:', err));
+    }
+  }
+
+  customElements.define('c-product-upsells', CProductUpsells);
+</script>

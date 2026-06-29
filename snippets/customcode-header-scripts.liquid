@@ -1,0 +1,159 @@
+{% comment %} Custom Logic {% endcomment %}
+{% if request.host == 'poponsmiles.com' %}
+  <script>
+    window.location.replace('https://poponveneers.com/pages/shop');
+  </script>
+{% endif %}
+
+{% comment %} Northbeam pixel {% endcomment %}
+<script src="//j.northbeam.io/vendor/nb-sp.min.js"></script>
+<script>
+  (function () {
+    var r;
+    ((n = r = r || {}).A = 'identify'),
+      (n.B = 'trackPageView'),
+      (n.C = 'fireEmailCaptureEvent'),
+      (n.D = 'fireCustomGoal'),
+      (n.E = 'firePurchaseEvent');
+    var n = '//j.northbeam.io/ota-sp/51cad550-bf67-486b-9a2b-9b39e782df29.js';
+    function t(n) {
+      for (var e = [], r = 1; r < arguments.length; r++) e[r - 1] = arguments[r];
+      a.push({ fnName: n, args: e });
+    }
+    var a = [],
+      e =
+        (((e = { _q: a })[r.A] = function (n, e) {
+          return t(r.A, n, e);
+        }),
+        (e[r.B] = function () {
+          return t(r.B);
+        }),
+        (e[r.C] = function (n, e) {
+          return t(r.C, n, e);
+        }),
+        (e[r.D] = function (n, e) {
+          return t(r.D, n, e);
+        }),
+        (e[r.E] = function (n) {
+          return t(r.E, n);
+        }),
+        (window.Northbeam = e),
+        document.createElement('script'));
+    (e.async = !0), (e.src = n), document.head.appendChild(e);
+  })();
+</script>
+<script src="//j.northbeam.io/ota-sp/51cad550-bf67-486b-9a2b-9b39e782df29.js"></script>
+{% comment %} Northbeam pixel {% endcomment %}
+
+{% comment %} Redirects {% endcomment %}
+<script>
+  {% if canonical_url contains "/pages/youre-in" or canonical_url == "https://poponveneers.com/pages/your-payment-options"   %}
+    window.location.href = 'https://poponveneers.com/products/top-bottom-teeth';
+  {% endif %}
+  {% if canonical_url contains "/pages/pop-on-bling"  %}
+    window.location.href = 'https://poponveneers.com/collections/pop-on-bling';
+  {% endif %}
+    {% if canonical_url contains "/products/pop-on-gift-cards"  %}
+    window.location.href = 'https://poponveneers.com/products/gift-card-for-pop-on';
+  {% endif %}
+</script>
+{% comment %} Redirects {% endcomment %}
+
+{% comment %} Intelligems {% endcomment %}
+<script>
+  window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
+  window._template = {
+  directory: "{{ template.directory }}",
+  name: "{{ template.name }}",
+  suffix: "{{ template.suffix }}"
+  };
+</script>
+<script
+  type="module"
+  blocking="render"
+  fetchpriority="high"
+  src="https://cdn.intelligems.io/esm/9684a7e0c50e/bundle.js"
+></script>
+{% comment %} Intelligems {% endcomment %}
+
+{% comment %} Google Ads {% endcomment %}
+<script data-src="https://www.googletagmanager.com/gtag/js?id=AW-615818041"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'AW-615818041', { allow_enhanced_conversions: true });
+</script>
+{% comment %} Google Ads {% endcomment %}
+
+{% comment %} GTM {% endcomment %}
+<!-- Google Tag Manager -->
+<script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-P48PB3L');
+</script>
+<!-- End Google Tag Manager -->
+{% comment %} GTM {% endcomment %}
+
+{% comment %} Microsoft Clarity {% endcomment %}
+<script type="lazyload_int">
+  (function (c, l, a, r, i, t, y) {
+    c[a] =
+      c[a] ||
+      function () {
+        (c[a].q = c[a].q || []).push(arguments);
+      };
+    t = l.createElement(r);
+    t.async = 1;
+    t.src = 'https://www.clarity.ms/tag/' + i;
+    y = l.getElementsByTagName(r)[0];
+    y.parentNode.insertBefore(t, y);
+  })(window, document, 'clarity', 'script', 'jyppelfh13');
+</script>
+{% comment %} Microsoft Clarity {% endcomment %}
+
+{% comment %} Truspilot {% endcomment %}
+<script type="lazyload_int" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+{% comment %} Truspilot {% endcomment %}
+
+{% comment %} Friendbuy {% endcomment %}
+<script>
+  window['friendbuyAPI'] = friendbuyAPI = window['friendbuyAPI'] || [];
+
+  // registers your merchant using your merchant ID found in the
+  // retailer app https://retailer.friendbuy.io/settings/general
+  friendbuyAPI.merchantId = '9d25411f-2430-40fe-918f-14eaf084e652';
+  friendbuyAPI.push(['merchant', friendbuyAPI.merchantId]);
+
+  // load the merchant SDK and your campaigns
+  (function (f, r, n, d, b, u, y) {
+    while ((u = n.shift())) {
+      (b = f.createElement(r)), (y = f.getElementsByTagName(r)[0]);
+      b.async = 1;
+      b.src = u;
+      y.parentNode.insertBefore(b, y);
+    }
+  })(document, 'script', [
+    'https://static.fbot.me/friendbuy.js',
+    'https://campaign.fbot.me/' + friendbuyAPI.merchantId + '/campaigns.js',
+  ]);
+</script>
+{% comment %} Friendbuy {% endcomment %}
+
+{% comment %} PostPilot Site Match {% endcomment %}
+<script type="text/javascript">
+  var script = document.createElement('script');
+  script.src = 'https://xp2023-pix.s3.amazonaws.com/px_fS215.js';
+  document.getElementsByTagName('head')[0].appendChild(script);
+</script>
+{% comment %} PostPilot Site Match {% endcomment %}

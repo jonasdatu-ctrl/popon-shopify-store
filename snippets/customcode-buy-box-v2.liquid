@@ -1,0 +1,40 @@
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+-%}
+
+<c-buy-box-v2 
+  data-product-url="{{ product.url }}"
+  data-default-selector="{{ block.settings.default_selector | default: 'otp' }}"
+  data-sub-features="{{ block.settings.subscription_features | escape }}"  
+>
+    <script type="application/json" id="VariantManifest">
+        {{ product.variants | json }}
+    </script>
+
+    {% if product.options_with_values.size != 0 %}
+        <div class="cbb-variant-container">
+            {% for option in product.options_with_values %}
+                <div class="option-container">
+                    <label>{{ option.name }}:</label>
+                    <div class="value-container" data-option-index="option{{ option.position }}">
+                    {% for value in option.values %}
+                        <button type="button" class="value-button" data-value="{{ value | escape }}" {% if option.selected_value == value %}active{% endif %}>
+                            {{ value }}
+                        </button>
+                    {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <div class="cbb-delivery-options" id="DeliveryContainer">
+        <label class="main-label">Delivery Options:</label>
+        <div class="delivery-option-container">
+            </div>
+    </div>
+
+    <div class="cbb-buy-button-container">
+        <button type="button" class="cbb-add-to-cart" id="MainAddToCart">ADD TO CART</button>
+    </div>
+</c-buy-box-v2>

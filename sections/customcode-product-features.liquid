@@ -1,0 +1,93 @@
+{% style %}
+  c-product-features {display: block; padding: 10px 20px;}
+  c-product-features .inner-container {max-width: 1000px; margin: auto;}
+  c-product-features .header-container .header-icon-container {max-width: 75px; margin: auto;}
+  c-product-features .header-container .header-icon-container img {width: 100%; height: fit-content;}
+  c-product-features .header-container h2 {margin: 10px auto; text-align: center; font-size: 24px; color: #003659;}
+  c-product-features .grid-container {display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 10px;}
+  c-product-features .grid-container .grid-icon-container {max-width: 75px; margin: auto; margin-bottom: 10px;}
+  c-product-features .grid-container .grid-content * {margin: 0; color: #003659; text-align: center; text-wrap-style: balance;}
+  c-product-features .grid-container .grid-content *:not(p) {margin-bottom: 10px;}
+  @media screen and (min-width: 769px) {
+    c-prouct-features {padding: 40px;}
+    c-product-features .header-container h2 {font-size: 42px;}
+  }
+{% endstyle %}
+
+<c-product-features>
+  <div class="inner-container">
+    <div class="header-container">
+      <div class="header-icon-container">
+        {% if section.settings.header_icon != null %}
+          {{ section.settings.header_icon | image_url: width: 450 | image_tag }}
+        {% endif %}
+      </div>
+      <h2>{{ section.settings.header }}</h2>
+    </div>
+    {% if section.settings.main_image != null %}
+      {{ section.settings.main_image | image_url: width: 1800 | image_tag }}
+    {% endif %}
+    <div class="image-container"></div>
+    <div class="grid-container">
+      {% for block in section.blocks %}
+        <div class="grid-item">
+          <div class="grid-icon-container">
+            {% if block.settings.icon != null %}
+              {{ block.settings.icon | image_url: width: 450 | image_tag }}
+            {% endif %}
+          </div>
+          <div class="grid-content">
+            {{ block.settings.content }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</c-product-features>
+
+{% schema %}
+{
+  "name": "C Product Features",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "header_icon",
+      "label": "Header Icon"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Product Features",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

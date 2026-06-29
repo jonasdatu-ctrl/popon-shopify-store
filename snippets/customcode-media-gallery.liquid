@@ -1,0 +1,38 @@
+{% if product.metafields.custom.customcode_image_override.value %}
+  {% assign media_array = product.metafields.custom.customcode_image_override.value %}
+{% else %}
+  {% assign media_array = product.media %}
+{% endif %}
+
+<c-media-gallery data-mobile-count="{{ mobile_count }}" data-desktop-count="{{ desktop_count }}">
+  <div class="media-gallery">
+    <div class="swiper main-swiper">
+      <div class="swiper-wrapper">
+        {% for media in media_array %}
+          <div class="swiper-slide">           
+            {% if media.media_type == 'video' %}
+              {{ media | video_tag: image_size: '2000x', autoplay: false, loop: false, muted: true, controls: true }}
+            {% elsif media.media_type == 'external_video' %}
+                {{ media | external_video_tag: class: 'youtube-vimeo-video' }}              
+            {% else %}
+              {{ media | image_url: width: 800 | image_tag: alt: media.alt }}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination c-mobile"></div>
+    </div>
+
+    <div class="swiper thumb-swiper c-desktop">
+      <div class="swiper-wrapper">
+        {% for media in media_array %}
+          <div class="swiper-slide {% if forloop.first %}is-active{% endif %}">
+            {{ media | image_url: width: 200 | image_tag: alt: media.alt }}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</c-media-gallery>

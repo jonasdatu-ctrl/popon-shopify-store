@@ -1,0 +1,64 @@
+<c-blog-posts>
+  <div class="inner-container">
+    <div class="header-container">
+      <h2>{{ section.settings.header }}</h2>
+      <a href="{{ section.settings.blog.url }}" class="c-mobile"> View all </a>
+    </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {% for article in section.settings.blog.articles limit: section.settings.blog_limit %}
+          <a href="{{ article.url }}" class="swiper-slide">
+            <div class="image-container">
+              {% if article.image != null %}
+                {{ article.image | image_url: width: 1400 | image_tag }}
+              {% endif %}
+            </div>
+            <div class="info-container">
+              <h4 class="article-title">{{ article.title }}</h4>
+              <p class="article-date">{{ article.created_at | date: '%B %-d, %Y' }}</p>
+              <p class="excerpt-container">
+                {{ article.excerpt | strip_html }}
+              </p>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+      <div class="swiper-controls">
+        <div class="swiper-button-prev">&lt;</div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next">&gt;</div>
+      </div>
+    </div>
+    <a href="{{ section.settings.blog.url }}" class="c-button c-desktop"> VIEW ALL </a>
+  </div>
+</c-blog-posts>
+
+{% schema %}
+{
+  "name": "C Blog Posts",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog"
+    },
+    {
+      "type": "number",
+      "id": "blog_limit",
+      "label": "Blog Limit",
+      "default": 3
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Blog Posts",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

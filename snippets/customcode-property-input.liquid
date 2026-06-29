@@ -1,0 +1,15 @@
+<c-property-input data-property="{{ block.settings.property }}">
+  <input
+    type="text"
+    {% if block.settings.required %}
+      required
+    {% endif %}
+    placeholder="{{ block.settings.placeholder }}"
+    name="properties[{{ block.settings.property }}]"
+  >
+  <div class="tooltip">
+    <h5>
+      {{ block.settings.tooltip }}
+    </h5>
+  </div>
+</c-property-input>

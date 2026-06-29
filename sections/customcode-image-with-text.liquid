@@ -1,0 +1,326 @@
+{% style %}
+  c-image-with-text[data-section-id="{{ section.id }}"] .inner-container {
+    flex-direction: {{ section.settings.flex_direction }};
+    max-width: {{ section.settings.max_width }}px;
+  }
+  {% for block in section.blocks %}
+    {% if block.type == 'title' %}
+      c-image-with-text[data-section-id="{{ section.id }}"] .inner-container .info-item[data-block-id="{{ block.id }}"] {
+        text-align: {{ block.settings.font_align }};
+      }
+    {% elsif block.type == 'content' %}
+      c-image-with-text[data-section-id="{{ section.id }}"] .inner-container .info-item[data-block-id="{{ block.id }}"] {
+        text-align: {{ block.settings.font_align }};
+        color: {{ block.settings.font_color }};
+      }
+    {% elsif block.type == 'image' %}
+      c-image-with-text[data-section-id="{{ section.id }}"] .inner-container .info-item[data-block-id="{{ block.id }}"] img {
+        max-width: {{ block.settings.max_width }}%;
+      }
+    {% elsif block.type == 'button' %}
+      c-image-with-text[data-section-id="{{ section.id }}"] .inner-container .info-item[data-block-id="{{ block.id }}"] a.center {
+        margin: auto;
+      }
+    {% endif %}
+  {% endfor %}
+  @media screen and (min-width: 769px) {
+    c-image-with-text[data-section-id="{{ section.id }}"] .inner-container {
+      flex-direction: {{ section.settings.d_flex_direction }};
+    }
+  }
+{% endstyle %}
+
+{% capture text_content %}
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'title' %}
+        <div class="info-item block-title" data-block-id="{{ block.id }}">
+          <h2>{{ block.settings.title }}</h2>
+        </div>
+      {% when 'separator' %}
+        <div class="info-item block-separator">
+        </div>
+      {% when 'content' %}
+        <div class="info-item block-content" data-block-id="{{ block.id }}">
+          {{ block.settings.content }}
+        </div>
+      {% when 'button' %}
+        <div class="info-item block-button" data-block-id="{{ block.id }}">
+          {% if block.settings.button_link != null %}
+            <a href="{{ block.settings.button_link }}" class="c-button {{ block.settings.button_align }}">
+              {{ block.settings.button_text }}
+            </a>
+          {% endif %}
+          </div>
+      {% when 'image_list' %}
+        <div class="info-item block-image-list {{ block.settings.alignment }}" data-block-id="{{ block.id }}">
+          {% assign url_list = block.settings.image_url | split: '|' %}
+          {% capture img_width %}
+            width: calc((100% - (10px * ({{ url_list.size }} - 1))) / {{ url_list.size }});
+          {% endcapture %}
+          {% for url in url_list limit: 6 %}
+            <img src="{{ url }}" width="300px" height="150px;" style="{{ img_width }}">
+          {% endfor %}
+        </div>
+      {% when 'content_grid' %}
+        <div class="info-item block-info-content-grid" data-block-id="{{ block.id }}">
+          {% assign content_array = block.settings.content | split: '<p>-</p>' %}
+          {% for content in content_array %}
+            <div class="grid-item">
+              {{ content }}
+            </div>
+          {% endfor %}
+        </div>
+      {% when 'image' %}
+        <div class="info-item block-image" data-block-id="{{ block.id }}">
+          {% if block.settings.image != null %}
+            {{ block.settings.image | image_url: width: 1000 | image_tag }}
+          {% endif %}
+        </div>
+    {% endcase %}
+  {% endfor %}
+{% endcapture %}
+
+<c-image-with-text data-section-id="{{ section.id }}">
+  <div class="inner-container">
+    <div class="left-container">
+      <div class="image-container">
+        {% if section.settings.image != null %}
+          {{ section.settings.image | image_url: width: 1800 | image_tag }}
+        {% endif %}
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="info-container">
+        {{ text_content }}
+      </div>
+    </div>
+  </div>
+</c-image-with-text>
+
+{% schema %}
+{
+  "name": "C Image with Text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Inner Container Max-width",
+      "min": 700,
+      "max": 1400,
+      "default": 1400,
+      "step": 100
+    },
+    {
+      "type": "select",
+      "id": "flex_direction",
+      "label": "Mobile Flex Direction",
+      "options": [
+        {
+          "label": "Row",
+          "value": "row"
+        },
+        {
+          "label": "Column",
+          "value": "column"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "d_flex_direction",
+      "label": "Desktop Flex Direction",
+      "options": [
+        {
+          "label": "Left",
+          "value": "row"
+        },
+        {
+          "label": "Right",
+          "value": "row-reverse"
+        }
+      ],
+      "default": "row"
+    }    
+  ],
+  "blocks": [
+    {
+      "type": "title",
+      "name": "Title",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "select",
+          "id": "font_align",
+          "label": "Text Align",
+          "options": [
+            {
+              "label": "Left",
+              "value": "left"
+            },
+            {
+              "label": "Right",
+              "value": "right"
+            },
+            {
+              "label": "Center",
+              "value": "center"
+            }
+          ],
+          "default": "left"
+        }
+      ]
+    },
+    {
+      "type": "separator",
+      "name": "Separator"
+    },
+    {
+      "type": "content",
+      "name": "Content",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "color",
+          "id": "font_color",
+          "label": "Font Color",
+          "default": "#000000CF"
+        },
+        {
+          "type": "select",
+          "id": "font_align",
+          "label": "Text Align",
+          "options": [
+            {
+              "label": "Left",
+              "value": "left"
+            },
+            {
+              "label": "Right",
+              "value": "right"
+            },
+            {
+              "label": "Center",
+              "value": "center"
+            }
+          ],
+          "default": "left"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "select",
+          "id": "button_align",
+          "label": "Button Align",
+          "options": [
+            {
+              "label": "Left",
+              "value": "left"
+            },
+            {
+              "label": "Center",
+              "value": "center"
+            },
+            {
+              "label": "Right",
+              "value": "right"
+            }
+          ],
+          "default": "left"
+        }
+      ]
+    },
+    {
+      "type": "image_list",
+      "name": "Image List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "image_url",
+          "label": "Image Url",
+          "info": "Enter Image URLs separated by '|'"
+        },
+        {
+          "type": "select",
+          "label": "Alignment",
+          "id": "alignment",
+          "options": [
+            {
+              "label": "Center",
+              "value": "c-center"
+            },
+            {
+              "label": "Space Between",
+              "value": "c-space-between"
+            }
+          ],
+          "default": "c-space-between"
+        }
+      ]
+    },
+    {
+      "type": "content_grid",
+      "name": "Content Grid",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content Grid",
+          "info": "separated by <p>-</p>"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "number",
+          "id": "max_width",
+          "label": "Max Width in %",
+          "default": 100
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Image with Text",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

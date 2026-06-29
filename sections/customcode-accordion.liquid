@@ -1,0 +1,80 @@
+{% style %}
+  c-accordion-section[data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+  }
+  c-accordion-section[data-section-id="{{ section.id }}"] .inner-container {
+    background-color: {{ section.settings.container_color }};
+  }
+{% endstyle %}
+
+<c-accordion-section data-section-id="{{ section.id }}">
+  <div class="inner-container">
+    <div class="header-container">
+      <h2>{{ section.settings.section_header }}</h2>
+    </div>
+    <div class="accordion-container">
+      {% for block in section.blocks %}
+        <div class="accordion-item">
+          <div class="accordion-title">
+            <p>{{ block.settings.title }}</p>
+            <span class="caret">
+              {% render 'customcode-icons', icon: 'icon-caret' %}
+            </span>
+          </div>
+          <div class="accordion-content">
+            {{ block.settings.content }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</c-accordion-section>
+
+{% schema %}
+{
+  "name": "C Accordion",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Section BG Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "container_color",
+      "label": "Container BG Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "section_header",
+      "label": "Section Header"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion",
+      "name": "Accordion",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Accordion",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

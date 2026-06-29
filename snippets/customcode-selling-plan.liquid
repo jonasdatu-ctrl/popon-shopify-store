@@ -1,0 +1,64 @@
+{% if product.selling_plan_groups.size != 0 and section.settings.enable_partially == false %}
+  <c-selling-plan data-rounding="{{ block.settings.rounding }}">
+    <div class="button-selector">
+      <div class="button-item" active data-type="OTP">
+        <h5>{{ block.settings.otp | default: 'ONE-TIME PURCHASE' }}</h5>
+      </div>
+      <div class="button-item" data-type="SBS">
+        <h5>{{ block.settings.sbs | default: 'SUBSCRIBE AND SAVE' }}</h5>
+      </div>
+    </div>
+    <div class="subscription-container">
+      <div class="subscription-info">
+        {% assign subscription_paragraphs = block.settings.subscription_description | split: '</p>' %}
+        {% assign paragraph_index = 0 %}
+        {% for plan in product.selling_plan_groups %}
+          {% for selling_plan in plan.selling_plans %}
+            {% assign current_paragraph = subscription_paragraphs[paragraph_index] | remove: '<p>' %}
+            <h5
+              class="subscription-paragraph"
+              data-plan-id="{{ selling_plan.id }}"
+              {% unless forloop.parentloop.first and forloop.first %}
+                style="display: none;"
+              {% endunless %}
+            >
+              {{ current_paragraph }}
+            </h5>
+            {% assign paragraph_index = paragraph_index | plus: 1 %}
+          {% endfor %}
+        {% endfor %}
+        {% render 'customcode-subscription-tooltip' %}
+      </div>
+      <div
+        class="
+          plan-picker
+          {% if product.selling_plan_groups.size == 1 %}
+            c-hiddens
+          {% endif %}
+        "
+      >
+        {% for plan in product.selling_plan_groups %}
+          {% for selling_plan in plan.selling_plans %}
+            <div class="selling-plan">
+              <input
+                {% if forloop.first and forloop.parentloop.first %}
+                  checked
+                {% endif %}
+                id="{{ selling_plan.name }}"
+                type="radio"
+                name="subscription"
+                value="{{ selling_plan.id }}"
+                data-discount="{{ selling_plan.price_adjustments.first.value }}"
+                data-discount-type="{{ selling_plan.price_adjustments.first.value_type}}"
+              >
+              <label for="{{ selling_plan.name }}">
+                <span class="custom-radio"></span>
+                <h5>{{ selling_plan.name }}</h5>
+              </label>
+            </div>
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </c-selling-plan>
+{% endif %}

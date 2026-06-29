@@ -1,0 +1,214 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "customcode_content_generator_fawCfh": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "section_header_JMwhCd": {
+          "type": "section_header",
+          "settings": {
+            "header": "{{ page.title }}"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_JMwhCd"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_marquee_3NJRxE": {
+      "type": "customcode-marquee",
+      "name": "C Marquee",
+      "settings": {
+        "show_separator": false,
+        "bg_color": "",
+        "marquee_type": "text",
+        "font_color": "#ed5c86",
+        "text": "SALE HAPPENING NOW ⬇️"
+      }
+    },
+    "customcode_content_generator_wWYNFi": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "content_RQgY4y": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-left",
+            "content": "<p><strong>With Pop On Veneers, you can Smile Now and Pay Later. </strong></p><p><br/>Pop On Veneers offers a variety of payment plans to make your dream smile accessible. </p><p><br/>At checkout, you can choose the payment plan that works best for you- whether it is one-time, weekly, bi-weekly, or monthly. We offer payment through Affirm, PayPal, AfterPay, alternative financing, and more to ensure that you’re able to smile with us. </p>"
+          }
+        },
+        "liquid_e36ebC": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "content_RQgY4y",
+        "liquid_e36ebC"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_product_comparison_pFHeM7": {
+      "type": "customcode-product-comparison",
+      "blocks": {
+        "product_indHHt": {
+          "type": "product",
+          "settings": {
+            "title": "Full Set",
+            "description": "Both Top and Bottom Included",
+            "price_display": "$449 | $699",
+            "blurb": "$250 OFF with code CRAZY",
+            "image": "shopify://shop_images/Rectangle_23-min.webp"
+          }
+        },
+        "product_AXKpDK": {
+          "type": "product",
+          "settings": {
+            "title": "Half Set",
+            "description": "Just Top of Just Bottom",
+            "price_display": "$249 | $499",
+            "blurb": "$250 OFF with code CRAZY",
+            "image": "shopify://shop_images/Rectangle_24-min.webp"
+          }
+        },
+        "callout_XFgifV": {
+          "type": "callout",
+          "settings": {
+            "bg_color": "#d3dff6",
+            "header": "<h2><strong>Smile Now, Pay Later</strong></h2><h3>Payment Plans that work for all</h3>",
+            "action_title": "You choose when you pay:",
+            "callout_link": "#",
+            "action_items": "$39/month|$29/month"
+          }
+        },
+        "letter_zbRJg3": {
+          "type": "letter",
+          "settings": {
+            "badge": "shopify://shop_images/30_day_G_ad7cce11-c316-43f6-95db-a599d2e564f5.svg",
+            "title": "The Pop On Promise",
+            "top_content": "<p>We are committed to delivering a smile that you’ll love! We always include a 30 day warranty. In case there’s any issue with the fit, we will remake your Pop On Smile up to two times. Our dedicated team is here for you every step of the way!</p><ul><li>30-day warranty</li><li>Up to two remakes</li><li>Dedicated support team every step of the way!</li></ul>",
+            "bottom_image": "shopify://shop_images/Loss_Protection_1.png",
+            "bottom_content": "<p>We recently introduced the option of adding a 1 Year Loss Protection Plan so if anything happens to your Pop On Smile, we’ll make it for you again. No questions asked! Our goal is to ensure you never have to worry about being without your smile.</p>",
+            "signature": "shopify://shop_images/Isaac_Hakimi.svg",
+            "author": "<p><strong>Isaac Hakimi<br/></strong>CEO And Co-Founder</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_indHHt",
+        "product_AXKpDK",
+        "callout_XFgifV",
+        "letter_zbRJg3"
+      ],
+      "custom_css": [
+        "c-product-comparison .letter-container img.c-bottom-image {max-width: 30%;}",
+        "c-product-comparison .letter-container img.c-author {max-width: 150px;}"
+      ],
+      "name": "C Product Comparison",
+      "settings": {}
+    },
+    "customcode_content_generator_THxQjq": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_fyAihp": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        },
+        "section_header_NBBYBL": {
+          "type": "section_header",
+          "settings": {
+            "header": "THE TOP RATED SMILE"
+          }
+        },
+        "content_qqkxnh": {
+          "type": "content",
+          "settings": {
+            "content": "<p>👏 So much 💙 for POP ON 👏</p>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_fyAihp",
+        "section_header_NBBYBL",
+        "content_qqkxnh"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customode_loox_reviews_QD94yy": {
+      "type": "customode-loox-reviews",
+      "name": "C Loox Reviews",
+      "settings": {
+        "only_photos": false,
+        "hide_thumbnails": false,
+        "product_handle": "",
+        "aggregated": true,
+        "data-limit": 16,
+        "maxwidth": 1080
+      }
+    },
+    "customcode_content_generator_XJPLHK": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_QaaEYt": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_QaaEYt"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "customcode_content_generator_fawCfh",
+    "customcode_marquee_3NJRxE",
+    "customcode_content_generator_wWYNFi",
+    "customcode_product_comparison_pFHeM7",
+    "customcode_content_generator_THxQjq",
+    "customode_loox_reviews_QD94yy",
+    "customcode_content_generator_XJPLHK"
+  ]
+}

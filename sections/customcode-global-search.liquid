@@ -1,0 +1,119 @@
+<c-global-search>
+  <div class="inner-container">
+    <div class="search-container">
+      {% if section.settings.mobile_bg != null %}
+        {{ section.settings.mobile_bg | image_url: width: 1440 | image_tag: class: 'c-mobile' }}
+      {% endif %}
+      {% if section.settings.desktop_bg != null %}
+        {{ section.settings.desktop_bg | image_url: width: 1440 | image_tag: class: 'c-desktop' }}
+      {% endif %}
+      <div class="input-container">
+        <div class="header-container">
+          {{ section.settings.header }}
+        </div>
+        <div class="field">
+          <input
+            class="search__input field__input"
+            type="search"
+            name="q"
+            placeholder="Search FAQ"
+            autocomplete="off"
+          >
+          <div class="search-icon">
+            {% render 'customcode-icons', icon: 'magnifying-glass' %}
+          </div>
+          <ul class="search-results hidden"></ul>
+        </div>
+      </div>
+    </div>
+    {% if section.settings.display_faq_grid %}
+      <div class="faq-grid">
+        {% for block in section.blocks %}
+          <a href="{{ block.settings.faq_link }}" class="grid-item">
+            <p>
+              {{ block.settings.faq_title }}
+              {% if block.settings.bg_image != null %}
+                {{ block.settings.bg_image | image_url: width: 540 | image_tag }}
+              {% endif %}
+            </p>
+          </a>
+          {% if forloop.index0 == 3 %}
+            <div class="grid-item center-item">
+              {% if section.settings.grid_center_image != null %}
+                {{ section.settings.grid_center_image | image_url: width: 540 | image_tag }}
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</c-global-search>
+
+{% schema %}
+{
+  "name": "C Global Search",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "mobile_bg",
+      "label": "Mobile BG"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_bg",
+      "label": "Desktop BG"
+    },
+    {
+      "type": "richtext",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "header",
+      "content": "FAQ Grid Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_faq_grid",
+      "label": "Dsiplay FAQ Grid",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "grid_center_image",
+      "label": "Grid Center Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_block",
+      "name": "FAQ",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "bg_image",
+          "label": "Background Image"
+        },
+        {
+          "type": "url",
+          "id": "faq_link",
+          "label": "FAQ Link"
+        },
+        {
+          "type": "text",
+          "id": "faq_title",
+          "label": "FAQ Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Global Search",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

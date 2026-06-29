@@ -1,0 +1,373 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "custom.homepage",
+  "name": "Home Page Group 2",
+  "sections": {
+    "customcode_content_generator_cayjJ6": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "full_width_image_hGqtgE": {
+          "type": "full_width_image",
+          "settings": {
+            "m_image": "shopify://shop_images/Thank_you_so_much_exceptional_customer_service_2_1_1512x_03bf4dbe-d761-4791-8eba-c1e758111fe4.webp",
+            "d_image": "shopify://shop_images/Thank_you_so_much_exceptional_customer_service_2_1_1512x_03bf4dbe-d761-4791-8eba-c1e758111fe4.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "full_width_image_hGqtgE"
+      ],
+      "disabled": true,
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_service_comparison_JE3EhQ": {
+      "type": "customcode-service-comparison",
+      "blocks": {
+        "service_xqYTEx": {
+          "type": "service",
+          "settings": {
+            "top_image": "shopify://shop_images/Invited_to_NYC_-_5.png",
+            "content": "<h3>AT HOME</h3><p>Impression Kit Shipped</p>",
+            "main_image": "shopify://shop_images/Invited_to_NYC_-_2.png",
+            "bottom_content": "<ul><li>Kit included with purchase</li><li>Step by step video guide</li><li>Impression coach support</li></ul>",
+            "badge_image": "shopify://shop_images/Invited_to_NYC_-_4.png",
+            "badge_location": "c-left",
+            "translate_amount": 42,
+            "max_width": 150
+          }
+        },
+        "service_MK84yt": {
+          "type": "service",
+          "settings": {
+            "top_image": "shopify://shop_images/Invited_to_NYC_-_6.png",
+            "content": "<h3>IN PERSON</h3><p>@ POP ON in NYC</p>",
+            "main_image": "shopify://shop_images/Invited_to_NYc_-_1.png",
+            "bottom_content": "<ul><li>Instant scan without putty</li><li>Convenient appointments</li><li>No additional fee</li></ul>",
+            "badge_image": "shopify://shop_images/POP_ON_VENEERS_Logo_for_Letterhead.png",
+            "badge_location": "c-center",
+            "translate_amount": 50,
+            "max_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "service_xqYTEx",
+        "service_MK84yt"
+      ],
+      "disabled": true,
+      "name": "C Service Comparison",
+      "settings": {
+        "header": "<h2>YOU'RE INVITED TO<br/><strong>POP ON in NYC!</strong></h2>",
+        "content": "Choose where to make your teeth molds!",
+        "header_image": "shopify://shop_images/NY_statue.png",
+        "center_image": "shopify://shop_images/Invited_to_NYC_-_Person.png",
+        "translate_amount": 72
+      }
+    },
+    "customcode_content_generator_XiLHpN": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_8VdKGt": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_8VdKGt"
+      ],
+      "disabled": true,
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_table_comparison_gEzirw": {
+      "type": "customcode-table-comparison",
+      "blocks": {
+        "row_LqWkyL": {
+          "type": "row",
+          "settings": {
+            "title": "Impression Kit included"
+          }
+        },
+        "row_8XdhLU": {
+          "type": "row",
+          "settings": {
+            "title": "$29 payment options"
+          }
+        },
+        "row_D4aY9V": {
+          "type": "row",
+          "settings": {
+            "title": "Support 7 days a week"
+          }
+        },
+        "row_9zaRKM": {
+          "type": "row",
+          "settings": {
+            "title": "FREE upgrade 2 day shipping all directions"
+          }
+        },
+        "row_g7wzaL": {
+          "type": "row",
+          "settings": {
+            "title": "2 weeks (or 1 week RUSH) smile design"
+          }
+        },
+        "row_yHi8Lp": {
+          "type": "row",
+          "settings": {
+            "title": "FREE Pop On CLEAN tablets"
+          }
+        },
+        "row_mTBi9R": {
+          "type": "row",
+          "settings": {
+            "title": "FREE gift 3D teeth models"
+          }
+        },
+        "row_rrhxAd": {
+          "type": "row",
+          "settings": {
+            "title": "Premium High End Material"
+          }
+        },
+        "row_mid9X3": {
+          "type": "row",
+          "settings": {
+            "title": "100% custom made"
+          }
+        },
+        "row_xnEdDB": {
+          "type": "row",
+          "settings": {
+            "title": "Pop On Promise Guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "row_LqWkyL",
+        "row_8XdhLU",
+        "row_D4aY9V",
+        "row_9zaRKM",
+        "row_g7wzaL",
+        "row_yHi8Lp",
+        "row_mTBi9R",
+        "row_rrhxAd",
+        "row_mid9X3",
+        "row_xnEdDB"
+      ],
+      "name": "C Table Comparison",
+      "settings": {
+        "header": "Why everyone is raving about POP ON",
+        "logo_image": "shopify://shop_images/PopOnv2.0_Logo_5f576f03-689d-42a3-89e0-a22f428a2da2.webp",
+        "check_image": "shopify://shop_images/Check_7a6735b3-eaed-4b53-a4ca-eb8e12032f90.png",
+        "x_image": "shopify://shop_images/Cross.png"
+      }
+    },
+    "customcode_content_generator_DPpKDD": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_Cqfeen": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        },
+        "full_width_image_e8nQDp": {
+          "type": "full_width_image",
+          "disabled": true,
+          "settings": {
+            "m_image": "shopify://shop_images/smile_stories_thumbnails_for_email_3_1.png",
+            "d_image": "shopify://shop_images/smile_stories_thumbnails_for_email_3_1.png",
+            "link": "https://poponveneers.com/blogs/celebrating-smiles"
+          }
+        },
+        "section_header_wtNARz": {
+          "type": "section_header",
+          "disabled": true,
+          "settings": {
+            "header": "IT'S EASY!"
+          }
+        },
+        "content_giRfJ6": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<p>🎊 100% Custom Made Smile<br/><br/>🛡️ Pop On Promise Guarantee<br/><br/>📦 Fast & Convenient Shipping <br/><br/>👏 Painless & No Shaving Down Teeth<br/><br/>⭐⭐⭐⭐⭐ 24,000+ Raving Review</p>"
+          }
+        },
+        "liquid_eRypKj": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        },
+        "content_McjTg8": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<h2><strong>Check out customer videos<br/><br/></strong></h2><p>Thank you for sharing videos  about your experience! We're honored to be a part of your smile journey</p>"
+          }
+        },
+        "image_content_mPMXxt": {
+          "type": "image_content",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Popon_Videos.png",
+            "link": ""
+          }
+        },
+        "button_iQnrMY": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_text": "VIDEOS",
+            "button_link": "https://poponveneers.com/pages/video-reviews"
+          }
+        },
+        "image_content_x3WYgz": {
+          "type": "image_content",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Website_blog_post_template_graphics_5_2023_32_1.webp",
+            "link": ""
+          }
+        },
+        "accented_header_A3L9DC": {
+          "type": "accented_header",
+          "disabled": true,
+          "settings": {
+            "content": "<h2>POPON <strong>VS</strong> Other Removable Veneers</h2>"
+          }
+        },
+        "full_width_image_rDUcqH": {
+          "type": "full_width_image",
+          "disabled": true,
+          "settings": {
+            "m_image": "shopify://shop_images/Screenshot_2025-08-18_at_8.46.56_PM.png",
+            "d_image": "shopify://shop_images/Screenshot_2025-08-18_at_10.22.24_PM.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "liquid_Cqfeen",
+        "full_width_image_e8nQDp",
+        "section_header_wtNARz",
+        "content_giRfJ6",
+        "liquid_eRypKj",
+        "content_McjTg8",
+        "image_content_mPMXxt",
+        "button_iQnrMY",
+        "image_content_x3WYgz",
+        "accented_header_A3L9DC",
+        "full_width_image_rDUcqH"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_image_with_text_qBdRU7": {
+      "type": "customcode-image-with-text",
+      "blocks": {
+        "title_eBETyn": {
+          "type": "title",
+          "settings": {
+            "title": "GIFT CARDS",
+            "font_align": "center"
+          }
+        },
+        "content_rGRd7K": {
+          "type": "content",
+          "settings": {
+            "content": "<p>Looking for the perfect gift?</p><p><strong>Give the Gift of a Smile!</strong></p><p>It's the perfect gift that keeps on giving!</p><p>They'll sing 🎶 your praises every day!</p>",
+            "font_color": "#000000cf",
+            "font_align": "center"
+          }
+        },
+        "button_mUCVrL": {
+          "type": "button",
+          "settings": {
+            "button_link": "https://poponveneers.com/products/gift-card-for-pop-on",
+            "button_text": "SHOP GIFT CARDS",
+            "button_align": "center"
+          }
+        }
+      },
+      "block_order": [
+        "title_eBETyn",
+        "content_rGRd7K",
+        "button_mUCVrL"
+      ],
+      "disabled": true,
+      "name": "C Image with Text",
+      "settings": {
+        "image": "shopify://shop_images/Gift_Card_Email_Graphic_2.png",
+        "max_width": 1400,
+        "flex_direction": "column"
+      }
+    },
+    "customcode_content_generator_wNwjh9": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "full_width_image_wpRE6T": {
+          "type": "full_width_image",
+          "settings": {
+            "m_image": "shopify://shop_images/contact_us_form_1400_x_700_px_1_1.webp",
+            "d_image": "shopify://shop_images/contact_us_form_1400_x_700_px_1_1.webp",
+            "link": "https://poponveneers.com/pages/contact-us"
+          }
+        },
+        "liquid_BPXe7t": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-Uypjzq\"></div>\n\n<p>\n<p class=\"affirm-text\">*Affirm interest rates vary from 0%-36% APR based on credit, and are subject to an eligibility check. For example, on a $600 purchase, you may pay $63.18 for 12 months with a 15% APR. Options depend on your purchase amount, and a down payment may be required. Loans through Affirm are provided by Celtic Bank, Member FDIC; Lead Bank, Member FDIC; or Affirm Loan Services, LLC. California residents: Affirm Loan Services, LLC is licensed by the Department of Financial Protection and Innovation. Loans are made or arranged pursuant to California Financing Law license 60DBO-111681.</p>\n</p>"
+          }
+        }
+      },
+      "block_order": [
+        "full_width_image_wpRE6T",
+        "liquid_BPXe7t"
+      ],
+      "custom_css": [
+        "p {font-size: 12px; color: #003659; text-align: center; max-width: 1000px; margin: auto;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    }
+  },
+  "order": [
+    "customcode_content_generator_cayjJ6",
+    "customcode_service_comparison_JE3EhQ",
+    "customcode_content_generator_XiLHpN",
+    "customcode_table_comparison_gEzirw",
+    "customcode_content_generator_DPpKDD",
+    "customcode_image_with_text_qBdRU7",
+    "customcode_content_generator_wNwjh9"
+  ]
+}

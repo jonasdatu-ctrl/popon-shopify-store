@@ -1,0 +1,102 @@
+{% style %}
+  c-image-overlay-grid .inner-container {max-width: 1400px; margin: auto; padding: 15px 20px;}
+  c-image-overlay-grid .inner-container .item-container {display: flex; flex-direction: column; gap: 20px;}
+  c-image-overlay-grid .inner-container .item-instance {display: flex; gap: 20px; flex-wrap: nowrap; position: relative;}
+  c-image-overlay-grid .inner-container .item-instance:nth-child(odd) {flex-direction: row;}
+  c-image-overlay-grid .inner-container .item-instance:nth-child(even) {flex-direction: row-reverse;}
+  c-image-overlay-grid .inner-container .item-instance > * {flex: 1; flex-direction: column; justify-content: center; z-index: 1;}
+  c-image-overlay-grid .inner-container .item-instance .image-container {background-color: #d9d9d9;}
+  c-image-overlay-grid .inner-container .item-instance .text-container {display: flex;}
+  c-image-overlay-grid .inner-container .item-instance .text-container .item-title {margin: 0 0 10px 0; text-align: center; color: #003659;}
+  c-image-overlay-grid .inner-container .item-instance .text-container .item-content * {margin: 0; text-align: center; color: #003659;}
+  c-image-overlay-grid .inner-container > a {margin-top: 20px;}
+  @media screen and (min-width: 769px) {
+    c-image-overlay-grid .inner-container {padding: 30px 40px;}
+    c-image-overlay-grid .inner-container .item-container {display: grid; gap: 60px; grid-template-columns: 1fr 1fr;}
+    c-image-overlay-grid .inner-container .item-instance {padding: 40px; border-radius: 19px; background-color: #d9d9d9;}
+    c-image-overlay-grid .inner-container .item-instance .text-container {justify-content: space-evenly; flex-direction: column; gap: 20px;}
+    c-image-overlay-grid .inner-container .item-instance .text-container img {max-width: 360px; margin: auto;}
+    c-image-overlay-grid .inner-container > a {margin-top: 40px;}
+  }
+{% endstyle %}
+
+<c-image-overlay-grid>
+  <div class="inner-container">
+    <div class="item-container">
+      {% for block in section.blocks %}
+        <div class="item-instance">
+          <div class="image-container c-mobile">
+            {% if block.settings.m_image != null %}
+              {{ block.settings.m_image | image_url: width: 560 | image_tag }}
+            {% endif %}
+          </div>
+          <div class="text-container">
+            <h4 class="item-title">{{ block.settings.item_title }}</h4>
+            {% if block.settings.d_image != null %}
+              {{ block.settings.d_image | image_url: width: 560 | image_tag: class: 'c-desktop' }}
+            {% endif %}
+            <div class="item-content">
+              {{ block.settings.item_content }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% if section.settings.button_link != null %}
+      <a href="{{ section.settings.button_link }}" class="c-mobile c-button">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+  </div>
+</c-image-overlay-grid>
+
+{% schema %}
+{
+  "name": "C Image Overlay Grid",
+  "settings": [
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "M Image",
+          "id": "m_image"
+        },
+        {
+          "type": "image_picker",
+          "label": "D Image",
+          "id": "d_image"
+        },
+        {
+          "type": "text",
+          "id": "item_title",
+          "label": "Item Title"
+        },
+        {
+          "type": "richtext",
+          "id": "item_content",
+          "label": "Item Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Image Overlay Grid"
+    }
+  ]
+}
+{% endschema %}

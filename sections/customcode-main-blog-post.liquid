@@ -1,0 +1,71 @@
+<c-main-blog-post>
+  <div class="inner-container">
+    {% if section.settings.enable_share %}
+      <div class="share-container">
+        {% render 'customcode-share' %}
+      </div>
+    {% endif %}
+    {% if section.settings.enable_pagination %}
+      <div class="blog-pagination">
+        {% assign current_article = article %}
+        {% assign blog_articles = blog.articles %}
+
+        {% assign found_current = false %}
+        {% assign previous_article = null %}
+        {% assign next_article = null %}
+
+        {% for a in blog_articles %}
+          {% if found_current %}
+            {% assign next_article = a %}
+            {% break %}
+          {% endif %}
+
+          {% if a.handle == current_article.handle %}
+            {% assign found_current = true %}
+          {% else %}
+            {% assign previous_article = a %}
+          {% endif %}
+        {% endfor %}
+
+        <div class="prev-next-links">
+          {% if previous_article %}
+            <a href="{{ previous_article.url }}" class="prev-article">&#60;</a>
+          {% else %}
+            <span></span>
+          {% endif %}
+
+          {% if next_article %}
+            <a href="{{ next_article.url }}" class="next-article">&#62;</a>
+          {% else %}
+            <span></span>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</c-main-blog-post>
+
+{% schema %}
+{
+  "name": "C Main Blog Post",
+  "enabled_on": { "templates": ["article"] },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_share",
+      "label": "Enable Share"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pagination",
+      "label": "Enable Pagination"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Main Blog Post",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

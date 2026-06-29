@@ -1,0 +1,55 @@
+<c-accordion>
+  <div class="accordion-title" role="button" aria-expanded="false">
+    {{ block.settings.accordion_title }}
+    <span class="accordion-icon" aria-hidden="true">+</span>
+  </div>
+  <div class="accordion-content c-hidden" aria-hidden="true">
+    {% if block.settings.video_link != null %}
+      <div class="video-container">
+        <iframe
+          src="{{ block.settings.video_link }}"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        >
+        </iframe>
+      </div>
+    {% endif %}
+    {% if block.settings.video != null %}
+      <div class="video-container">
+        {{ block.settings.video | video_tag: loop: false, muted: true, controls: true, autoplay: false }}
+      </div>
+    {% endif %}
+    {% if block.settings.content != null %}
+      <div class="content-container">
+        {{ block.settings.content }}
+      </div>
+    {% endif %}
+    {% if block.settings.page != null %}
+      <div class="content-container">
+        {{ block.settings.page.content }}
+      </div>
+    {% endif %}
+    {% if block.settings.display_html_content %}
+      <div class="c-html-content-one">
+        <div class="image-text-container">
+          {% if block.settings.image != null %}
+            <div class="html-image-container">
+              {{ block.settings.image | image_url: width: 500 | image_tag }}
+            </div>
+            <div class="text-content">
+              {{ block.settings.text }}
+            </div>
+          {% endif %}
+        </div>
+        <div class="additional-content-container">
+          {{ block.settings.additional_content }}
+        </div>
+        {% if block.settings.button_link != null %}
+          <a href="{{ block.settings.button_link }}">
+            {{ block.settings.button_text }}
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</c-accordion>

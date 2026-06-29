@@ -1,0 +1,194 @@
+{% unless product.has_only_default_variant %}
+  <c-general-variant-selector
+    data-handle="{{ product.handle }}"
+    data-variant="{{ product.selected_or_first_available_variant.id }}"
+    data-dynamic-price="{{ block.settings.dynamic_prices }}"
+    data-dynamic-variant-image="{{ block.settings.display_dynamic_variant_image }}"
+  >
+    {% comment %}
+      <script type="application/json" id="product-data">
+        {{ product.variants | json }}
+      </script>
+    {% endcomment %}
+    <script type="application/json" id="custom-product-data">
+      [
+          {% for variant in product.variants %}
+          {
+              "variant_id": "{{ variant.id }}",
+              "product_id": "{{ variant.product.id }}",
+              "variant_options": {{ variant.options | json }},
+              "variant_available": {{ variant.available }},
+              "price_compare": "{{ variant.metafields.custom.customcode_price_display.value[0] | default: variant.compare_at_price | money_without_trailing_zeros }}",
+              "price": "{{ variant.metafields.custom.customcode_price_display.value[1] | default: variant.price | money_without_trailing_zeros }}",
+              "price_compare_raw": "{{ variant.metafields.custom.customcode_price_display.value[0] | default: variant.compare_at_price }}",
+              "price_raw": "{{ variant.metafields.custom.customcode_price_display.value[1] | default: variant.price }}",
+              "downpayment_price": "{{ variant.metafields.custom.customcode_partial_price_display.value[0] | money_without_trailing_zeros }}",
+              "installment_price": "{{ variant.metafields.custom.customcode_partial_price_display.value[1] | money_without_trailing_zeros }}",
+              "variant_image": "{{ variant.metafields.custom.customcode_variant_display_image.value | image_url: width: 1480 }}"
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+      ]
+    </script>
+
+    {% for option in product.options_with_values %}
+      <div class="option-container">
+        {% unless block.settings.hide_option_title contains option.name %}
+          <p class="option-title">{{ option.name }}</p>
+        {% endunless %}
+        <div
+          class="value-container {% if option.values.size > 3 %}more-than-three{% endif %} {{ block.settings.container_type}}"
+          data-index="{{ option.position }}"
+        >
+          {% for value in option.values %}
+            {%- assign tooltip = '' -%}
+            {%- for pair in product.metafields.custom.customcode_variant_tooltip.value.size_key_pair_values.value -%}
+              {%- assign property = pair | split: '||' | first | strip -%}
+              {%- assign content = pair | split: '||' | last | strip -%}
+              {%- if property == value.name -%}
+                {%- assign tooltip = content -%}
+              {%- endif -%}
+            {%- endfor -%}
+
+            {% capture c_tooltip %}
+              {% if tooltip != '' %}
+                <img
+                  data-tippy-content="{{ tooltip | escape }}"
+                  data-tooltip-bg="#191D48FF"
+                  data-tooltip-color="white"
+                  src="https://cdn.shopify.com/s/files/1/0382/1761/3450/files/0bc57d4b-2f34-4cd5-afda-fc8378fa7a72.png?v=1756392294"
+                >
+              {% else %}
+              {% endif %}   
+            {% endcapture %}
+
+            <div class="parent-option-value">
+              {% if block.settings.title_placement == 'above' %}
+                <div class="value-title" data-value="{{ value.name | escape }}">
+                  {{ c_tooltip }}
+                  <h5>{{ value.name | replace: '(Most Popular)', '' | replace: 'Hollywood White', 'Hollywood' }}</h5>
+                </div>
+              {% endif %}
+              <div
+                class="option-value"
+                {% if forloop.first %}
+                  first
+                {% endif %}
+                {% if value.selected %}
+                  active
+                {% endif %}
+                {% unless value.available %}
+                  unavailable
+                {% endunless %}
+                data-variant-id="{{ value.variant.id }}"
+              >
+                {% unless block.settings.hide_most_popular contains option.name %}
+                  <p
+                    class="most-popular-banner"
+                    {% if forloop.first %}
+                      displayed
+                    {% endif %}
+                  >
+                    MOST POPULAR
+                  </p>
+                {% endunless %}
+                <div class="info-container">
+                  {% if block.settings.title_placement == 'within' %}
+                    <div class="value-title" data-value="{{ value.name | escape }}">
+                      {{ c_tooltip }}
+                      <h5>
+                        {{ value.name | replace: '(Most Popular)', '' | replace: 'Hollywood White', 'Hollywood' }}
+                      </h5>
+                    </div>
+                  {% endif %}
+                  <div class="option-image">
+                    {% assign key = value.name
+                      | replace: ' ', '_'
+                      | replace: '&', ''
+                      | replace: '(', ''
+                      | replace: ')', ''
+                    %}
+                    {% assign media = metaobjects.variant_option_values_image_display[key].variant_option_image.value %}
+                    {% if media != null %}
+                      {{ media | image_url: width: 120 | image_tag: class: 'option-image' }}
+                    {% endif %}
+                  </div>
+                  {% unless block.settings.hide_thumb_images contains option.name %}
+                    {% if section.settings.enable_partially and section.settings.display_variant_price == true %}
+                      <div class="partial-price">
+                        <p class="downpayment">
+                          DOWNPAYMENT:
+                          <span>
+                            {{-
+                              value.variant.metafields.custom.customcode_partial_price_display.value[0]
+                              | money_without_trailing_zeros
+                            -}}
+                          </span>
+                        </p>
+                        <hr>
+                        <p class="installment">
+                          EACH PAYMENT FOR 6 MONTHS:
+                          <span>
+                            {{-
+                              value.variant.metafields.custom.customcode_partial_price_display.value[1]
+                              | money_without_trailing_zeros
+                            -}}
+                          </span>
+                        </p>
+                      </div>
+                    {% else %}
+                      <div
+                        class="option-price {% if block.settings.display_price_diff %}alt{% endif %}"
+                        data-price="{{ value.variant.metafields.custom.customcode_price_display.value[1] | default: value.variant.price }}"
+                      >
+                        <p>
+                          <s>
+                            {{
+                              value.variant.metafields.custom.customcode_price_display.value[0]
+                              | default: value.variant.compare_at_price
+                              | money_without_trailing_zeros
+                            }}
+                          </s>
+                        </p>
+                        <h3>
+                          {{
+                            value.variant.metafields.custom.customcode_price_display.value[1]
+                            | default: value.variant.price
+                            | money_without_trailing_zeros
+                          }}
+                        </h3>
+                        {% if block.settings.display_price_diff %}
+                          {% assign c_compare = value.variant.metafields.custom.customcode_price_display.value[0]
+                            | default: value.variant.compare_at_price
+                          %}
+                          {% assign c_price = value.variant.metafields.custom.customcode_price_display.value[1]
+                            | default: value.variant.price
+                          %}
+                          <p class="discount-calc">
+                            {{ c_compare | minus: c_price | money_without_trailing_zeros }} off
+                          </p>
+                        {% endif %}
+                        {% comment %} Intelligems test purposes {% endcomment %}
+                        {% if block.settings.display_price_diff %}
+                          {% assign c_compare = value.variant.metafields.custom.customcode_price_display.value[0]
+                            | default: value.variant.compare_at_price
+                          %}
+                          {% assign c_price = value.variant.metafields.custom.customcode_price_display.value[1]
+                            | default: value.variant.price
+                          %}
+                          <div style="display: none;" class="dicount-calc-alt">
+                            {{ c_compare | minus: c_price | minus: 2000 | money_without_trailing_zeros }} + extra $20 off!
+                          </div>
+                        {% endif %}      
+                        {% comment %} Intelligems test purposes {% endcomment %}
+                      </div>
+                    {% endif %}
+                  {% endunless %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </c-general-variant-selector>
+{% endunless %}

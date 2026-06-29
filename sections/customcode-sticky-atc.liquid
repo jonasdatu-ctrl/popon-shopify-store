@@ -1,0 +1,69 @@
+{% style %}
+{% endstyle %}
+
+{% assign context_product = product | default: section.settings.product_context %}
+
+{% if template.name == 'product' or true %}
+  <c-sticky-atc class="c-mobile" data-section-id="{{ section.id }}">
+    <div class="inner-container">
+      <div class="text-container">
+        {% if section.settings.title != blank %}
+          <p>
+            {% render 'customcode-icons', icon: 'circled-pink-check' -%}
+            {{- section.settings.title }}
+          </p>
+        {% endif %}
+      </div>
+      <div class="c-button">
+        {{ section.settings.button_text | default: 'CHOOSE OPTIONS' }}
+        {% if section.settings.display_prices %}
+          <div class="product-price">
+            <s>
+              {{-
+                context_product.selected_or_first_available_variant.compare_at_price
+                | money_without_trailing_zeros
+              -}}
+            </s>
+            {{ context_product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </c-sticky-atc>
+{% endif %}
+
+{% schema %}
+{
+  "name": "C Sticky ATC",
+  "class": "c-sticky-action",
+  "settings": [
+    {
+      "type": "product",
+      "label": "Product Context",
+      "id": "product_context"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_prices",
+      "label": "Display Initial Product Prices",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Sticky ATC",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,69 @@
+<c-main-blog>
+  <div class="inner-container">
+    <div class="grid-container">
+      {% paginate blog.articles by 250 %}
+        {% for article in blog.articles %}
+          <a href="{{ article.url }}" class="grid-item">
+            <div class="image-container">
+              {{ article.image | image_url: width: 1400 | image_tag }}
+            </div>
+            <div class="info-container">
+              <p class="article-title">{{ article.title | truncate: 50 | escape }}</p>
+              <p class="article-excerpt">
+                {%- if article.excerpt.size > 0 -%}
+                  {{ article.excerpt | strip_html | truncatewords: 30 }}
+                {%- else -%}
+                  {{ article.content | strip_html | truncatewords: 30 }}
+                {%- endif -%}
+              </p>
+              <img
+                class="yt-image"
+                src="https://cdn.shopify.com/s/files/1/0382/1761/3450/files/youtube-icon.png?v=1730721248"
+              >
+            </div>
+          </a>
+          {% assign myindex = forloop.index | modulo: section.settings.interval %}
+          {%- if myindex == 0 -%}
+            <div class="klaviyo-article-container">
+              {{ section.settings.klaviyo_widget }}
+            </div>
+          {% endif %}
+        {% endfor %}
+        <div class="pagination-container">
+          {%- if paginate.pages > 1 -%}
+            {%- render 'customcode-pagination', paginate: paginate -%}
+          {%- endif -%}
+        </div>
+        <div class="klaviyo-article-container">
+          {{ section.settings.klaviyo_widget }}
+        </div>
+      {% endpaginate %}
+    </div>
+  </div>
+</c-main-blog>
+
+{% schema %}
+{
+  "name": "C Main Blog",
+  "enabled_on": { "templates": ["blog"] },
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "klaviyo_widget",
+      "label": "Klaviyo Widget"
+    },
+    {
+      "type": "number",
+      "id": "interval",
+      "label": "Interval",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Main Blog",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

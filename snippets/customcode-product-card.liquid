@@ -1,0 +1,104 @@
+{% if product.selected_or_first_available_variant.metafields.custom.customcode_price_display[0].value
+  or product.selected_or_first_available_variant.compare_at_price
+%}
+  {% assign compare_price = product.selected_or_first_available_variant.metafields.custom.customcode_price_display[0].value
+    | default: product.selected_or_first_available_variant.compare_at_price
+  %}
+  {% assign price = product.selected_or_first_available_variant.custom.customcode_price_display[1].value
+    | default: product.selected_or_first_available_variant.price
+  %}
+  {% assign sale_fraction = price | times: 1.0 | divided_by: compare_price %}
+  {% assign sale_percent = sale_fraction | times: 100 | round %}
+  {% assign sale_amount_off = 100 | minus: sale_percent %}
+{% endif %}
+
+<c-product-card>
+  {% if section.settings.card_linkable %}
+    <a href="{{ product.url }}" class="card-container">
+  {% else %}
+    <div class="card-container">
+  {% endif %}
+    <div class="image-container">
+      {% if product.metafields.custom.c_pcard_image_override.value != null and section.settings.display_image_override %}
+        {{ product.metafields.custom.c_pcard_image_override | image_url: width: 1900 | image_tag  }}
+      {% else %}
+        {{ product | image_url: width: 1900 | image_tag }}
+      {% endif %}
+      {% if product.available == false %}
+        <div class="sale-badge">SOLD OUT</div>
+      {% elsif sale_amount_off > 0 %}
+        <div class="sale-badge">SALE {{ sale_amount_off }}% OFF</div>
+      {% endif %}
+    </div>
+    <div class="info-container">
+      <p>
+        {% if product.metafields.custom.c_pcard_title_override.value != blank and section.settings.display_title %}
+          {{ product.metafields.custom.c_pcard_title_override.value }}
+        {% else %}
+          {{ product.title }}
+        {% endif %}
+      </p>
+      {% if product.metafields.custom.c_pcard_bullet_override.value != null and section.settings.display_bullets %}
+        <div class="product-bullets">
+          {{ product.metafields.custom.c_pcard_bullet_override | metafield_tag }}
+        </div>
+      {% endif %}
+      <div class="price-container">
+        <p class="compare-price">
+          <s>
+            {% if product.selected_or_first_available_variant.metafields.custom.customcode_price_display[0].value
+              or product.selected_or_first_available_variant.compare_at_price
+            %}
+              {{-
+                product.selected_or_first_available_variant.metafields.custom.customcode_price_display[0].value
+                | default: product.selected_or_first_available_variant.compare_at_price
+                | money
+              -}}
+            {% endif %}
+          </s>
+        </p>
+        <p class="final-price">
+          {{
+            product.selected_or_first_available_variant.custom.customcode_price_display[1].value
+            | default: product.selected_or_first_available_variant.price
+            | money
+          }}
+        </p>
+      </div>
+    </div>
+  {% if section.settings.card_linkable %}
+    </a>
+  {% else %}
+    </div>
+  {% endif %}
+  {% if section.settings.display_variant_selector and product.variants.size > 1 %}
+    <div class="variant-selector">
+      <select class="c-variant-select">
+        {% for variant in product.variants %}
+          <option 
+            value="{{ variant.id }}"
+            {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+            {% unless variant.available %}disabled{% endunless %}
+          >
+            {{ variant.title }} - {{ variant.price | money }}
+            {% unless variant.available %}(Sold Out){% endunless %}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+  {% endif %}
+  <button
+    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+    {% unless product.available %}
+      disabled
+    {% endunless %}
+    class="c-button"
+  >
+    {% if product.available %}
+      ADD TO CART
+    {% else %}
+      SOLD OUT
+    {% endif %}
+    <div class="c-spinner c-hidden"></div>
+  </button>
+</c-product-card>

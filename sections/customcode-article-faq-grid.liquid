@@ -1,0 +1,71 @@
+{% if section.settings.blog != null %}
+  {% assign grid_items = section.settings.blog %}
+{% else %}
+  {% assign grid_items = blog %}
+{% endif %}
+
+<c-article-faq-grid>
+  <div class="inner-container">
+    <div class="header-container">
+      <h1>
+        {% if section.settings.header != blank %}
+          {{ section.settings.header }}
+        {% else %}
+          {{ grid_items.title | replace: ' FAQ', '' }}
+        {% endif %}
+      </h1>
+      <div class="input-container">
+        <div class="field">
+          <input
+            class="search__input field__input"
+            type="search"
+            name="q"
+            placeholder="Search FAQ"
+            autocomplete="off"
+          >
+          <div class="search-icon">
+            {% render 'customcode-icons', icon: 'magnifying-glass' %}
+          </div>
+          <ul class="search-results hidden"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      {% for item in grid_items.articles %}
+        <a
+          href="{{ item.url }}"
+          class="grid-item"
+          data-title="{{ item.title | downcase }}"
+          data-content="{{ item.content | strip_html | escape | downcase }}"
+        >
+          <p class="article-title">{{ item.title }}</p>
+          <p class="article-content">{{ item.content | strip_html | truncatewords: 30 }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</c-article-faq-grid>
+
+{% schema %}
+{
+  "name": "C Article FAQ Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title Override"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog Override"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Article FAQ Grid",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

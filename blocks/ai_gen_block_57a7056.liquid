@@ -1,0 +1,863 @@
+{% doc %}
+  @prompt
+    a new product launch page
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-product-launch-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+  }
+
+  .ai-product-launch__hero-{{ ai_gen_id }} {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: {{ block.settings.hero_bg_color }};
+    padding: 60px 20px;
+    overflow: hidden;
+  }
+
+  .ai-product-launch__hero-image-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: {{ block.settings.hero_image_opacity | divided_by: 100.0 }};
+  }
+
+  .ai-product-launch__hero-placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-product-launch__hero-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+  }
+
+  .ai-product-launch__hero-content-{{ ai_gen_id }} {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    color: {{ block.settings.hero_text_color }};
+  }
+
+  .ai-product-launch__badge-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: {{ block.settings.badge_bg_color }};
+    color: {{ block.settings.badge_text_color }};
+    border-radius: {{ block.settings.badge_border_radius }}px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .ai-product-launch__hero-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.hero_title_size }}px;
+    font-weight: 800;
+    margin: 0 0 20px;
+    line-height: 1.1;
+  }
+
+  .ai-product-launch__hero-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.hero_description_size }}px;
+    margin: 0 0 30px;
+    line-height: 1.6;
+  }
+
+  .ai-product-launch__hero-cta-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: {{ block.settings.cta_bg_color }};
+    color: {{ block.settings.cta_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.cta_border_radius }}px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .ai-product-launch__hero-cta-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.cta_hover_bg_color }};
+    color: {{ block.settings.cta_hover_text_color }};
+    transform: translateY(-2px);
+  }
+
+  .ai-product-launch__features-{{ ai_gen_id }} {
+    padding: 80px 20px;
+    background-color: {{ block.settings.features_bg_color }};
+  }
+
+  .ai-product-launch__features-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-product-launch__features-title-{{ ai_gen_id }} {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 50px;
+    color: {{ block.settings.features_text_color }};
+  }
+
+  .ai-product-launch__features-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+  }
+
+  .ai-product-launch__feature-{{ ai_gen_id }} {
+    text-align: center;
+  }
+
+  .ai-product-launch__feature-icon-{{ ai_gen_id }} {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background-color: {{ block.settings.feature_icon_bg_color }};
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ block.settings.feature_icon_color }};
+  }
+
+  .ai-product-launch__feature-icon-{{ ai_gen_id }} svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .ai-product-launch__feature-title-{{ ai_gen_id }} {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: {{ block.settings.features_text_color }};
+  }
+
+  .ai-product-launch__feature-description-{{ ai_gen_id }} {
+    font-size: 14px;
+    line-height: 1.6;
+    color: {{ block.settings.features_text_color }};
+    opacity: 0.8;
+  }
+
+  .ai-product-launch__product-showcase-{{ ai_gen_id }} {
+    padding: 80px 20px;
+    background-color: {{ block.settings.showcase_bg_color }};
+  }
+
+  .ai-product-launch__showcase-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .ai-product-launch__showcase-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+  }
+
+  .ai-product-launch__showcase-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    border-radius: {{ block.settings.showcase_image_radius }}px;
+  }
+
+  .ai-product-launch__showcase-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #f4f4f4;
+    border-radius: {{ block.settings.showcase_image_radius }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-product-launch__showcase-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  .ai-product-launch__showcase-content-{{ ai_gen_id }} {
+    color: {{ block.settings.showcase_text_color }};
+  }
+
+  .ai-product-launch__showcase-title-{{ ai_gen_id }} {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
+
+  .ai-product-launch__showcase-description-{{ ai_gen_id }} {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 30px;
+  }
+
+  .ai-product-launch__showcase-price-{{ ai_gen_id }} {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 30px;
+  }
+
+  .ai-product-launch__showcase-cta-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: {{ block.settings.cta_bg_color }};
+    color: {{ block.settings.cta_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.cta_border_radius }}px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .ai-product-launch__showcase-cta-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.cta_hover_bg_color }};
+    color: {{ block.settings.cta_hover_text_color }};
+    transform: translateY(-2px);
+  }
+
+  .ai-product-launch__final-cta-{{ ai_gen_id }} {
+    padding: 80px 20px;
+    background-color: {{ block.settings.final_cta_bg_color }};
+    text-align: center;
+  }
+
+  .ai-product-launch__final-cta-content-{{ ai_gen_id }} {
+    max-width: 700px;
+    margin: 0 auto;
+    color: {{ block.settings.final_cta_text_color }};
+  }
+
+  .ai-product-launch__final-cta-title-{{ ai_gen_id }} {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
+
+  .ai-product-launch__final-cta-description-{{ ai_gen_id }} {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 30px;
+  }
+
+  .ai-product-launch__final-cta-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 18px 50px;
+    background-color: {{ block.settings.final_button_bg }};
+    color: {{ block.settings.final_button_text }};
+    text-decoration: none;
+    border-radius: {{ block.settings.cta_border_radius }}px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .ai-product-launch__final-cta-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.final_button_hover_bg }};
+    color: {{ block.settings.final_button_hover_text }};
+    transform: translateY(-2px);
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-product-launch__hero-{{ ai_gen_id }} {
+      min-height: 400px;
+      padding: 40px 20px;
+    }
+
+    .ai-product-launch__hero-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.hero_title_size | times: 0.6 }}px;
+    }
+
+    .ai-product-launch__hero-description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.hero_description_size | times: 0.9 }}px;
+    }
+
+    .ai-product-launch__features-{{ ai_gen_id }},
+    .ai-product-launch__product-showcase-{{ ai_gen_id }},
+    .ai-product-launch__final-cta-{{ ai_gen_id }} {
+      padding: 50px 20px;
+    }
+
+    .ai-product-launch__features-title-{{ ai_gen_id }} {
+      font-size: 28px;
+    }
+
+    .ai-product-launch__showcase-container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .ai-product-launch__showcase-title-{{ ai_gen_id }} {
+      font-size: 24px;
+    }
+
+    .ai-product-launch__final-cta-title-{{ ai_gen_id }} {
+      font-size: 28px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-product-launch-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-product-launch__hero-{{ ai_gen_id }}">
+    {% if block.settings.hero_image %}
+      <img
+        src="{{ block.settings.hero_image | image_url: width: 2000 }}"
+        alt="{{ block.settings.hero_image.alt | escape }}"
+        class="ai-product-launch__hero-image-{{ ai_gen_id }}"
+        loading="lazy"
+        width="{{ block.settings.hero_image.width }}"
+        height="{{ block.settings.hero_image.height }}"
+      >
+    {% else %}
+      <div class="ai-product-launch__hero-placeholder-{{ ai_gen_id }}">
+        {{ 'hero-apparel-1' | placeholder_svg_tag }}
+      </div>
+    {% endif %}
+
+    <div class="ai-product-launch__hero-content-{{ ai_gen_id }}">
+      {% if block.settings.badge_text != blank %}
+        <div class="ai-product-launch__badge-{{ ai_gen_id }}">{{ block.settings.badge_text }}</div>
+      {% endif %}
+
+      {% if block.settings.hero_title != blank %}
+        <h1 class="ai-product-launch__hero-title-{{ ai_gen_id }}">{{ block.settings.hero_title }}</h1>
+      {% endif %}
+
+      {% if block.settings.hero_description != blank %}
+        <div class="ai-product-launch__hero-description-{{ ai_gen_id }}">
+          {{ block.settings.hero_description }}
+        </div>
+      {% endif %}
+
+      {% if block.settings.hero_cta_text != blank %}
+        <a
+          href="{{ block.settings.hero_cta_link }}"
+          class="ai-product-launch__hero-cta-{{ ai_gen_id }}"
+        >
+          {{ block.settings.hero_cta_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="ai-product-launch__features-{{ ai_gen_id }}">
+    <div class="ai-product-launch__features-container-{{ ai_gen_id }}">
+      {% if block.settings.features_title != blank %}
+        <h2 class="ai-product-launch__features-title-{{ ai_gen_id }}">
+          {{ block.settings.features_title }}
+        </h2>
+      {% endif %}
+
+      <div class="ai-product-launch__features-grid-{{ ai_gen_id }}">
+        {% for i in (1..3) %}
+          {% liquid
+            assign feature_title_key = 'feature_' | append: i | append: '_title'
+            assign feature_desc_key = 'feature_' | append: i | append: '_description'
+            assign feature_title = block.settings[feature_title_key]
+            assign feature_desc = block.settings[feature_desc_key]
+          %}
+
+          {% if feature_title != blank %}
+            <div class="ai-product-launch__feature-{{ ai_gen_id }}">
+              <div class="ai-product-launch__feature-icon-{{ ai_gen_id }}">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="ai-product-launch__feature-title-{{ ai_gen_id }}">{{ feature_title }}</h3>
+              {% if feature_desc != blank %}
+                <div class="ai-product-launch__feature-description-{{ ai_gen_id }}">
+                  {{ feature_desc }}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="ai-product-launch__product-showcase-{{ ai_gen_id }}">
+    <div class="ai-product-launch__showcase-container-{{ ai_gen_id }}">
+      <div class="ai-product-launch__showcase-image-wrapper-{{ ai_gen_id }}">
+        {% if block.settings.showcase_image %}
+          <img
+            src="{{ block.settings.showcase_image | image_url: width: 1000 }}"
+            alt="{{ block.settings.showcase_image.alt | escape }}"
+            class="ai-product-launch__showcase-image-{{ ai_gen_id }}"
+            loading="lazy"
+            width="{{ block.settings.showcase_image.width }}"
+            height="{{ block.settings.showcase_image.height }}"
+          >
+        {% else %}
+          <div class="ai-product-launch__showcase-placeholder-{{ ai_gen_id }}">
+            {{ 'product-apparel-1' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="ai-product-launch__showcase-content-{{ ai_gen_id }}">
+        {% if block.settings.showcase_product %}
+          <h2 class="ai-product-launch__showcase-title-{{ ai_gen_id }}">
+            {{ block.settings.showcase_product.title }}
+          </h2>
+          <div class="ai-product-launch__showcase-description-{{ ai_gen_id }}">
+            {{ block.settings.showcase_product.description | truncate: 200 }}
+          </div>
+          <div class="ai-product-launch__showcase-price-{{ ai_gen_id }}">
+            {{ block.settings.showcase_product.price | money }}
+          </div>
+          <a
+            href="{{ block.settings.showcase_product.url }}"
+            class="ai-product-launch__showcase-cta-{{ ai_gen_id }}"
+          >
+            {{ block.settings.showcase_cta_text }}
+          </a>
+        {% else %}
+          {% if block.settings.showcase_title != blank %}
+            <h2 class="ai-product-launch__showcase-title-{{ ai_gen_id }}">
+              {{ block.settings.showcase_title }}
+            </h2>
+          {% endif %}
+          {% if block.settings.showcase_description != blank %}
+            <div class="ai-product-launch__showcase-description-{{ ai_gen_id }}">
+              {{ block.settings.showcase_description }}
+            </div>
+          {% endif %}
+          {% if block.settings.showcase_cta_text != blank %}
+            <a
+              href="{{ block.settings.showcase_cta_link }}"
+              class="ai-product-launch__showcase-cta-{{ ai_gen_id }}"
+            >
+              {{ block.settings.showcase_cta_text }}
+            </a>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="ai-product-launch__final-cta-{{ ai_gen_id }}">
+    <div class="ai-product-launch__final-cta-content-{{ ai_gen_id }}">
+      {% if block.settings.final_cta_title != blank %}
+        <h2 class="ai-product-launch__final-cta-title-{{ ai_gen_id }}">
+          {{ block.settings.final_cta_title }}
+        </h2>
+      {% endif %}
+
+      {% if block.settings.final_cta_description != blank %}
+        <div class="ai-product-launch__final-cta-description-{{ ai_gen_id }}">
+          {{ block.settings.final_cta_description }}
+        </div>
+      {% endif %}
+
+      {% if block.settings.final_button_label != blank %}
+        <a
+          href="{{ block.settings.final_button_link }}"
+          class="ai-product-launch__final-cta-button-{{ ai_gen_id }}"
+        >
+          {{ block.settings.final_button_label }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product launch page",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero section"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Background image"
+    },
+    {
+      "type": "range",
+      "id": "hero_image_opacity",
+      "label": "Image opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "default": 50
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "New Launch"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "hero_title",
+      "label": "Title",
+      "default": "Introducing Our Latest Innovation"
+    },
+    {
+      "type": "richtext",
+      "id": "hero_description",
+      "label": "Description",
+      "default": "<p>Experience the future of dental cosmetics with our revolutionary new product</p>"
+    },
+    {
+      "type": "text",
+      "id": "hero_cta_text",
+      "label": "Button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "hero_cta_link",
+      "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "hero_title_size",
+      "label": "Title size",
+      "min": 24,
+      "max": 72,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "hero_description_size",
+      "label": "Description size",
+      "min": 14,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Hero colors"
+    },
+    {
+      "type": "color",
+      "id": "hero_bg_color",
+      "label": "Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "hero_text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "badge_bg_color",
+      "label": "Badge background",
+      "default": "#0f4c81"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Badge text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "badge_border_radius",
+      "label": "Badge border radius",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Features section"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "features_title",
+      "label": "Section title",
+      "default": "Why You'll Love It"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_title",
+      "label": "Feature 1 title",
+      "default": "Premium Quality"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_1_description",
+      "label": "Feature 1 description",
+      "default": "<p>Crafted with the finest materials for lasting results</p>"
+    },
+    {
+      "type": "text",
+      "id": "feature_2_title",
+      "label": "Feature 2 title",
+      "default": "Easy to Use"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_2_description",
+      "label": "Feature 2 description",
+      "default": "<p>Simple application process that fits your lifestyle</p>"
+    },
+    {
+      "type": "text",
+      "id": "feature_3_title",
+      "label": "Feature 3 title",
+      "default": "Instant Results"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_3_description",
+      "label": "Feature 3 description",
+      "default": "<p>See the transformation immediately after application</p>"
+    },
+    {
+      "type": "color",
+      "id": "features_bg_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "features_text_color",
+      "label": "Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "feature_icon_bg_color",
+      "label": "Icon background",
+      "default": "#0f4c81"
+    },
+    {
+      "type": "color",
+      "id": "feature_icon_color",
+      "label": "Icon color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Product showcase"
+    },
+    {
+      "type": "product",
+      "id": "showcase_product",
+      "label": "Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "showcase_image",
+      "label": "Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "showcase_title",
+      "label": "Title",
+      "default": "The Perfect Smile Awaits"
+    },
+    {
+      "type": "richtext",
+      "id": "showcase_description",
+      "label": "Description",
+      "default": "<p>Transform your smile with our innovative veneers designed for comfort and confidence</p>"
+    },
+    {
+      "type": "text",
+      "id": "showcase_cta_text",
+      "label": "Button text",
+      "default": "View Product"
+    },
+    {
+      "type": "url",
+      "id": "showcase_cta_link",
+      "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "showcase_image_radius",
+      "label": "Image border radius",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "showcase_bg_color",
+      "label": "Background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "showcase_text_color",
+      "label": "Text",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Final call to action"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "final_cta_title",
+      "label": "Title",
+      "default": "Ready to Transform Your Smile?"
+    },
+    {
+      "type": "richtext",
+      "id": "final_cta_description",
+      "label": "Description",
+      "default": "<p>Join thousands of satisfied customers who have discovered the confidence of a perfect smile</p>"
+    },
+    {
+      "type": "text",
+      "id": "final_button_label",
+      "label": "Button text",
+      "default": "Get Started Today"
+    },
+    {
+      "type": "url",
+      "id": "final_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "final_cta_bg_color",
+      "label": "Background",
+      "default": "#0f4c81"
+    },
+    {
+      "type": "color",
+      "id": "final_cta_text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "final_button_bg",
+      "label": "Button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "final_button_text",
+      "label": "Button text",
+      "default": "#0f4c81"
+    },
+    {
+      "type": "color",
+      "id": "final_button_hover_bg",
+      "label": "Button hover background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "final_button_hover_text",
+      "label": "Button hover text",
+      "default": "#0f4c81"
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "color",
+      "id": "cta_bg_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "cta_text_color",
+      "label": "Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "cta_hover_bg_color",
+      "label": "Hover background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "cta_hover_text_color",
+      "label": "Hover text",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "cta_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product launch page"
+    }
+  ]
+}
+{% endschema %}

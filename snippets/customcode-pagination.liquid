@@ -1,0 +1,51 @@
+{%- if paginate.parts.size > 0 -%}
+  <c-pagination>
+    <ul class="pagination-list">
+      {%- if paginate.previous -%}
+        <li>
+          <a
+            href="{{ paginate.previous.url }}"
+            class="pagination__item pagination__item--previous"
+          >
+            {% render 'customcode-icons', icon: 'icon-caret' %}
+          </a>
+        </li>
+      {%- endif -%}
+      {%- for part in paginate.parts -%}
+        <li>
+          {%- if part.is_link -%}
+            <a
+              href="{{ part.url }}"
+              class="pagination__item link"
+            >
+              {{- part.title -}}
+            </a>
+          {%- else -%}
+            {%- if part.title == paginate.current_page -%}
+              <a
+                role="link"
+                aria-disabled="true"
+                class="pagination__item pagination__item--current"
+              >
+                {{- part.title -}}
+              </a>
+            {%- else -%}
+              <span class="pagination__item">{{ part.title }}</span>
+            {%- endif -%}
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+
+      {%- if paginate.next -%}
+        <li>
+          <a
+            href="{{ paginate.next.url }}"
+            class="pagination__item pagination__item--next"
+          >
+            {% render 'customcode-icons', icon: 'icon-caret' %}
+          </a>
+        </li>
+      {%- endif -%}
+    </ul>
+  </c-pagination>
+{% endif %}

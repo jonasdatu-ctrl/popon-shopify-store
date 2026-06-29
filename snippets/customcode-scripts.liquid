@@ -1,0 +1,2284 @@
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script src="https://unpkg.com/@popperjs/core@2" defer></script>
+<script src="https://unpkg.com/tippy.js@6" defer></script>
+<script type="text/javascript" src="https://partial.ly/js/partially-checkout-button.js" defer></script>
+<script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js" defer></script>
+<script src="https://unpkg.com/basiclightbox@5.0.4/dist/basicLightbox.min.js" defer></script>
+<script async type="text/javascript" src="//asset.fwcdn3.com/js/fwn.js?business_id=5maa2R"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" async></script>
+
+{% comment %} UTILITIES {% endcomment %}
+<script>
+  let tippyInstances = [];
+
+  function initTooltips() {
+    tippyInstances.forEach((instance) => instance.destroy());
+    tippyInstances = [];
+
+    document.querySelectorAll('[data-tippy-content]').forEach((el) => {
+      const bgColor = el.getAttribute('data-tooltip-bg') || '#333';
+      const textColor = el.getAttribute('data-tooltip-color') || '#fff';
+
+      const instance = tippy(el, {
+        content: el.getAttribute('data-tippy-content'),
+        allowHTML: true,
+        interactive: true,
+        trigger: 'mouseenter focus click',
+        theme: 'custom',
+        onShow(instance) {
+          requestAnimationFrame(() => {
+            const box = instance.popper.querySelector('.tippy-box');
+            if (box) {
+              box.style.setProperty('background-color', bgColor, 'important');
+              box.style.setProperty('color', textColor, 'important');
+            }
+          });
+        },
+      });
+
+      tippyInstances.push(instance);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    initTooltips();
+  });
+
+  window.addEventListener('scroll', () => {
+    tippyInstances.forEach((instance) => instance.hide());
+  });
+</script>
+<script>
+  //Insert BBB Logo in footer
+  document.addEventListener('DOMContentLoaded', function () {
+    const target = document.querySelector('footer rte-formatter');
+
+    if (target) {
+      const img = document.createElement('img');
+      img.src = 'https://cdn.shopify.com/s/files/1/0382/1761/3450/files/BBB_logo_1_copy-min.png?v=1757588246';
+      img.style.width = '117px';
+      img.style.marginTop = '20px';
+
+      target.appendChild(img);
+    } else {
+      console.warn('Less than 3 matching elements found.');
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const cartTrigger = document.querySelector('cart-drawer-component.cart-drawer > button');
+
+    if (cartTrigger) {
+      cartTrigger.addEventListener('click', function () {
+        Rebuy.SmartCart.show();
+      });
+    } else {
+      console.warn('Cart trigger button not found.');
+    }
+  });
+</script>
+<script>
+  // Check if current URL contains /products/top-bottom-teeth
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.location.pathname.includes('/products/top-bottom-teeth')) {
+      const allowedReferrers = [
+        'https://poponveneers.com/pages/youre-in',
+        'https://poponveneers.com/pages/am-i-a-candidate',
+        'https://poponveneers.com/pages/your-payment-options',
+        'https://poponveneers.com/pages/payment-options',
+      ];
+
+      if (allowedReferrers.includes(document.referrer)) {
+        const overlay = document.getElementById('congrats-overlay-alt');
+        const overlayt1 = overlay.querySelector('.you-qualify-wrd');
+        const overlayt2 = overlay.querySelector('.congrats-word');
+
+        if (overlay && overlayt1 && overlayt2) {
+          overlay.style.display = 'flex';
+          overlayt1.style.opacity = 1;
+          overlayt2.style.opacity = 1;
+
+          setTimeout(function () {
+            overlay.style.display = 'none';
+            overlayt1.style.opacity = 0;
+            overlayt2.style.opacity = 0;
+          }, 3000);
+
+          confetti({
+            particleCount: 500,
+            spread: 320,
+            origin: { y: 0.5 },
+          });
+        }
+      }
+    }
+  });
+</script>
+{% if template.name == 'article' %}
+  <script>
+    //Add controls on blog videos
+    document.addEventListener('DOMContentLoaded', () => {
+      const videos = document.querySelectorAll('video');
+
+      videos.forEach((video) => {
+        video.controls = true; // enable controls
+      });
+    });
+  </script>
+{% endif %}
+<script>
+  //Parameter based functions
+  (function () {
+    // 1. Extraction Logic
+    const params = new URLSearchParams(window.location.search);
+    const caseId = params.get('caseId');
+    const orderEmail = params.get('orderEmail');
+    const giftVariantId = params.get('variantgift');
+
+    if (caseId) {
+      localStorage.setItem('previousVeneerOrder', caseId);
+    }
+    
+    if (orderEmail) {
+      localStorage.setItem('previousOrderEmail', orderEmail);
+    }
+
+    // 2. DOM Population Logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const emailField = document.querySelector('input[name="properties[Previous-Order-Email]"]');
+      const storedEmail = localStorage.getItem('previousOrderEmail');
+
+      if (emailField && storedEmail) {
+        emailField.value = storedEmail;
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      if (!giftVariantId) return;
+
+      try {
+        const cart = await fetch('/cart.js').then(r => r.json());
+
+        const exists = cart.items.some(
+          item => String(item.variant_id) === String(giftVariantId)
+        );
+
+        if (exists) return;
+
+        await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            id: giftVariantId,
+            quantity: 1
+          })
+        });
+
+        console.log(`Gift variant ${giftVariantId} added to cart.`);
+      } catch (err) {
+        console.error('Failed to process gift variant:', err);
+      }
+    });  
+
+  })();
+</script>
+
+{% comment %} WEB COMPONENTS {% endcomment %}
+<script>
+  // SECTIONS
+  class GlobalSearch extends HTMLElement {
+    constructor() {
+      super();
+      this.input = null;
+      this.resultsList = null;
+      this.debounceTimeout = null;
+      this.delay = 300; // ms
+      this.controller = null; // for aborting fetch
+    }
+    connectedCallback() {
+      this.input = this.querySelector('input[type="search"]');
+      this.resultsList = this.querySelector('.search-results');
+
+      if (!this.input || !this.resultsList) return;
+
+      this.input.addEventListener('input', this.debounce(this.handleInput.bind(this), this.delay));
+      document.addEventListener('click', this.handleClickOutside.bind(this));
+    }
+    debounce(func, delay) {
+      return (...args) => {
+        clearTimeout(this.debounceTimeout);
+        this.debounceTimeout = setTimeout(() => func.apply(this, args), delay);
+      };
+    }
+    handleClickOutside(event) {
+      if (!this.contains(event.target)) {
+        this.hideResults();
+      }
+    }
+    async handleInput(event) {
+      const query = event.target.value.trim();
+
+      if (query.length === 0) {
+        this.hideResults();
+        return;
+      }
+
+      this.showLoading();
+
+      // Abort previous fetch if any
+      if (this.controller) this.controller.abort();
+      this.controller = new AbortController();
+
+      try {
+        const url = `/search/suggest.json?q=${encodeURIComponent(
+          query
+        )}&resources[type]=article&resources[limit]=10&resources[limit_scope]=each&resources[options][fields]=title,body`;
+        const res = await fetch(url, { signal: this.controller.signal });
+        const data = await res.json();
+        const articles = data.resources.results.articles;
+
+        this.renderResults(articles);
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          console.error('Search error:', error);
+          this.renderResults([]);
+        }
+      }
+    }
+    renderResults(articles) {
+      const questionArticles = articles.filter((article) => article.title.includes('?'));
+
+      this.resultsList.innerHTML = '';
+
+      if (questionArticles.length === 0) {
+        this.resultsList.innerHTML = '<li>No FAQ Found</li>';
+      } else {
+        this.resultsList.innerHTML = questionArticles
+          .map((article) => `<li><a href="${article.url}">${article.title}</a></li>`)
+          .join('');
+      }
+
+      this.resultsList.classList.remove('hidden');
+
+      const searchEvent = new CustomEvent('global-search-triggered', {
+        detail: {
+          searchTerm: this.input.value.trim(),
+          resultCount: questionArticles.length,
+        },
+      });
+
+      window.dispatchEvent(searchEvent);
+    }
+    showLoading() {
+      this.resultsList.innerHTML = '<li>Loading...</li>';
+      this.resultsList.classList.remove('hidden');
+    }
+    hideResults() {
+      this.resultsList.classList.add('hidden');
+      this.resultsList.innerHTML = '';
+    }
+  }
+  class BlogPosts extends HTMLElement {
+    constructor() {
+      super();
+    }
+    connectedCallback() {
+      this.initSwiper();
+    }
+    initSwiper() {
+      new Swiper(this.querySelector('.swiper'), {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        pagination: {
+          el: this.querySelector('.swiper-pagination'),
+          type: 'fraction',
+          clickable: true,
+          renderFraction: (currentClass, totalClass) => {
+            return `<span class="${currentClass}"></span>/<span class="${totalClass}"></span>`;
+          },
+        },
+        navigation: {
+          nextEl: this.querySelector('.swiper-button-next'),
+          prevEl: this.querySelector('.swiper-button-prev'),
+        },
+        breakpoints: {
+          769: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    }
+  }
+  class CArticleFAQGrid extends HTMLElement {
+    constructor() {
+      super();
+      this.input = null;
+      this.gridItems = [];
+      this.handleInput = this.handleInput.bind(this);
+      this.debouncedInput = this.debounce(this.handleInput, 200);
+    }
+
+    connectedCallback() {
+      this.input = this.querySelector('input[type="search"]');
+      this.gridItems = Array.from(this.querySelectorAll('.grid-item'));
+
+      if (this.input) {
+        this.input.addEventListener('input', this.debouncedInput);
+      }
+    }
+
+    disconnectedCallback() {
+      if (this.input) {
+        this.input.removeEventListener('input', this.debouncedInput);
+      }
+    }
+
+    handleInput(event) {
+      const query = event.target.value.trim().toLowerCase();
+
+      this.gridItems.forEach((item) => {
+        const title = item.dataset.title || '';
+        const content = item.dataset.content || '';
+        const match = title.includes(query) || content.includes(query);
+        item.style.display = match ? '' : 'none';
+      });
+    }
+
+    debounce(fn, delay) {
+      let timeout;
+      return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => fn.apply(this, args), delay);
+      };
+    }
+  }
+  class CMenuDrawer extends HTMLElement {
+    constructor() {
+      super();
+      this.mainMenu = null;
+    }
+    connectedCallback() {
+      this.mainMenu = this.querySelector('[data-menu="main"]');
+      this.overlay = document.querySelector('.c-menu-overlay');
+
+      this.bindHamburger();
+      this.bindCloseButtons();
+      this.bindMenuLinks();
+      this.bindBackButton();
+      this.bindOverlayClick();
+    }
+    bindHamburger() {
+      const trigger = document.querySelector('[data-menu-trigger]');
+      if (trigger) {
+        trigger.addEventListener('click', () => {
+          this.classList.add('is-active');
+          this.showOverlay();
+        });
+      }
+    }
+    bindCloseButtons() {
+      this.querySelectorAll('[data-menu-close]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          this.classList.remove('is-active');
+          this.closeSubMenu();
+          this.hideOverlay();
+        });
+      });
+    }
+    closeSubMenu() {
+      this.querySelectorAll('.c-submenu-drawer').forEach((drawer) => {
+        drawer.classList.remove('is-active');
+      });
+    }
+    bindMenuLinks() {
+      this.querySelectorAll('[data-has-children]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          if (e.target.closest('.c-submenu-drawer')) {
+            return;
+          }
+          this.closeSubMenu();
+          const submenu = link.querySelector('.c-submenu-drawer');
+          if (submenu && submenu.dataset.menuLevel === '2') {
+            submenu.classList.add('is-active');
+          }
+        });
+      });
+    }
+    {% comment %} bindBackButton() {
+      this.querySelectorAll('[data-submenu-close]').forEach((closeBtn) => {
+        closeBtn.addEventListener('click', (e) => {
+          const drawer = e.currentTarget.closest('.c-submenu-drawer');
+          if (drawer) {
+            drawer.classList.remove('is-active');
+          }
+        });
+      });
+    } {% endcomment %}
+    bindBackButton() {
+      this.querySelectorAll('[data-submenu-close]').forEach((closeBtn) => {
+        closeBtn.addEventListener('click', (e) => {
+          // 1. Prevents the click from reaching the parent menu link wrapper
+          e.stopPropagation(); 
+          
+          // 2. Checks if the button text contains "SHOP" (case-insensitive)
+          if (closeBtn.textContent.toUpperCase().includes('SHOP')) {
+            window.location.href = '/pages/shop';
+            return; // Stops execution so the menu doesn't animate backward
+          }
+
+          // 3. Default behavior for all other menus
+          const drawer = e.currentTarget.closest('.c-submenu-drawer');
+          if (drawer) {
+            drawer.classList.remove('is-active');
+          }
+        });
+      });
+    }    
+    bindOverlayClick() {
+      if (!this.overlay) return;
+      this.overlay.addEventListener('click', () => {
+        this.classList.remove('is-active');
+        this.closeSubMenu();
+        this.hideOverlay();
+      });
+    }
+    showOverlay() {
+      if (!this.overlay) return;
+      this.overlay.hidden = false;
+      requestAnimationFrame(() => {
+        this.overlay.classList.add('is-active');
+      });
+    }
+    hideOverlay() {
+      if (!this.overlay) return;
+      this.overlay.classList.remove('is-active');
+      this.overlay.addEventListener(
+        'transitionend',
+        () => {
+          this.overlay.hidden = true;
+        },
+        { once: true }
+      );
+    }
+  }
+  class CStickyATC extends HTMLElement {
+    constructor() {
+      super();
+      this.button = null;
+      this.observer = null;
+      this.targetEl = null
+    }
+    connectedCallback() {
+      this.button = this.querySelector('div.c-button');
+      this.targetEl = document.querySelector('c-buy-button') || document.querySelector('button.cbb-add-to-cart');
+
+      if (this.button && this.targetEl) {
+        this.button.addEventListener('click', () => {
+          this.targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+
+      if (this.targetEl) {
+        this.observer = new IntersectionObserver(this.handleIntersect.bind(this), {
+          root: null,
+          threshold: 0.01,
+        });
+
+        this.observer.observe(this.targetEl);
+      }
+    }
+    handleIntersect(entries) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          this.style.display = 'none';
+        } else {
+          const isAboveViewport = entry.boundingClientRect.bottom < 0;
+
+          if (isAboveViewport) {
+            this.style.display = '';
+          } else {
+            this.style.display = 'none';
+          }
+        }
+      });
+    }
+  }
+  class CAccordionSection extends HTMLElement {
+    constructor() {
+      super();
+    }
+    connectedCallback() {
+      this.initAccordion();
+    }
+    initAccordion() {
+      const items = this.querySelectorAll('.accordion-item');
+
+      items.forEach((item) => {
+        const title = item.querySelector('.accordion-title');
+
+        title.addEventListener('click', () => {
+          const isActive = item.hasAttribute('active');
+
+          items.forEach((i) => i.removeAttribute('active'));
+
+          if (!isActive) {
+            item.setAttribute('active', '');
+          }
+        });
+      });
+    }
+  }
+  class CAccordionAlt extends HTMLElement {
+    connectedCallback() {
+      this.querySelectorAll('.accordion-item').forEach((item) => {
+        item.querySelector('.question-container').addEventListener('click', () => {
+          const isOpen = item.hasAttribute('active');
+
+          // close all
+          this.querySelectorAll('.accordion-item').forEach((i) => {
+            i.removeAttribute('active');
+          });
+
+          // open clicked if it was closed
+          if (!isOpen) {
+            item.setAttribute('active', '');
+          }
+        });
+      });
+    }
+  }  
+
+  // SNIPPETS
+  class VideoCarouselSlider extends HTMLElement {
+    constructor() {
+      super();
+      this.currentIndex = 0;
+    }
+
+    connectedCallback() {
+      this.init();
+    }
+
+    init() {
+      this.track = this.querySelector('.vcs-track');
+      this.modal = this.querySelector('.vcs-modal');
+      this.modalTrack = this.querySelector('.vcs-modal-track');
+      this.modalVideos = this.querySelectorAll('.vcs-modal-video');
+      this.slides = this.querySelectorAll('.vcs-slide');
+      
+      // Horizontal Nav
+      const prev = this.querySelector('.vcs-nav-arrow.prev');
+      const next = this.querySelector('.vcs-nav-arrow.next');
+
+      const updateArrows = () => {
+        prev.classList.toggle('hidden', this.track.scrollLeft <= 5);
+        next.classList.toggle('hidden', this.track.scrollLeft + this.track.offsetWidth >= this.track.scrollWidth - 5);
+      };
+
+      if (next && prev) {
+        next.onclick = () => this.track.scrollBy({ left: this.track.offsetWidth / 1.5, behavior: 'smooth' });
+        prev.onclick = () => this.track.scrollBy({ left: -this.track.offsetWidth / 1.5, behavior: 'smooth' });
+        this.track.addEventListener('scroll', updateArrows);
+        updateArrows();
+      }
+
+      // Carousel Interactivity
+      this.slides.forEach((slide, idx) => {
+        const vid = slide.querySelector('video');
+        slide.addEventListener('mouseenter', () => vid.play().catch(() => {}));
+        slide.addEventListener('mouseleave', () => { 
+          vid.pause(); 
+          vid.currentTime = 0; 
+        });
+        slide.addEventListener('click', () => this.openModal(idx));
+      });
+
+      // Modal Controls
+      this.querySelector('.vcs-modal-close').onclick = () => this.closeModal();
+      this.querySelector('.vcs-m-arrow.up').onclick = (e) => { e.stopPropagation(); this.navigateModal(-1); };
+      this.querySelector('.vcs-m-arrow.down').onclick = (e) => { e.stopPropagation(); this.navigateModal(1); };
+      
+      // Modal background close
+      this.modal.addEventListener('click', (e) => {
+        if (e.target.classList.contains('vcs-m-slide')) this.closeModal();
+      });
+    }
+
+    openModal(index) {
+      this.currentIndex = index;
+      this.modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden'; // Lock page scroll
+      this.updateModalView();
+    }
+
+    closeModal() {
+      this.modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      this.modalVideos.forEach(v => v.pause());
+    }
+
+    navigateModal(dir) {
+      const count = this.modalVideos.length;
+      this.currentIndex = (this.currentIndex + dir + count) % count;
+      this.updateModalView();
+    }
+
+    updateModalView() {
+      this.modalTrack.style.transform = `translateY(-${this.currentIndex * 100}vh)`;
+      
+      // Active player management
+      this.modalVideos.forEach((v, i) => {
+        if (i === this.currentIndex) {
+          v.load(); // Force load if preload="none"
+          v.play();
+        } else {
+          v.pause();
+        }
+      });
+    }
+  }  
+  class CMediaGallery extends HTMLElement {
+    connectedCallback() {
+      if (!window.Swiper) {
+        console.warn('Swiper is not loaded');
+        return;
+      }
+      this.mobileCount = Number.parseFloat(this.dataset.mobileCount) || 2.3;
+      this.desktopCount = Number.parseFloat(this.dataset.desktopCount) || 1;
+      this.mainSwiperContainer = this.querySelector('.main-swiper');
+      this.thumbSwiperContainer = this.querySelector('.thumb-swiper');
+      this.nextBtn = this.thumbSwiperContainer.querySelector('.swiper-button-next');
+      this.prevBtn = this.thumbSwiperContainer.querySelector('.swiper-button-prev');
+
+      this.initMainSwiper();
+
+      if (window.innerWidth >= 768) {
+        this.initThumbSwiper();
+        this.syncSwipers();
+        this.bindArrowSync();
+      }
+
+      this.bindZoomModal(); // 🆕 added
+    }
+
+    initMainSwiper() {
+      const isMobile = window.innerWidth < 768;
+      this.mainSwiper = new Swiper(this.mainSwiperContainer, {
+        slidesPerView: isMobile ? this.mobileCount : this.desktopCount,
+        spaceBetween: 10,
+        pagination: isMobile
+          ? {
+              el: this.mainSwiperContainer.querySelector('.swiper-pagination'),
+              clickable: true,
+            }
+          : false,
+        a11y: { enabled: true },
+      });
+    }
+
+    initThumbSwiper() {
+      this.thumbSwiper = new Swiper(this.thumbSwiperContainer, {
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: this.nextBtn,
+          prevEl: this.prevBtn,
+        },
+        slideToClickedSlide: true,
+        watchSlidesProgress: true,
+        watchOverflow: false,
+        centerInsufficientSlides: true,
+        loop: false,
+        a11y: { enabled: true },
+      });
+    }
+
+    syncSwipers() {
+      if (!this.mainSwiper || !this.thumbSwiper) return;
+
+      this.mainSwiper.on('slideChange', () => {
+        this.thumbSwiper.slideTo(this.mainSwiper.activeIndex);
+        this.highlightActiveThumb();
+      });
+
+      this.thumbSwiper.on('click', () => {
+        const clickedIndex = this.thumbSwiper.clickedIndex;
+        if (typeof clickedIndex === 'number') {
+          this.mainSwiper.slideTo(clickedIndex);
+        }
+      });
+    }
+
+    bindArrowSync() {
+      this.nextBtn.addEventListener('click', () => {
+        this.mainSwiper.slideNext();
+      });
+      this.prevBtn.addEventListener('click', () => {
+        this.mainSwiper.slidePrev();
+      });
+    }
+
+    bindZoomModal() {
+      this.mainSwiperContainer.addEventListener('click', (e) => {
+        const slide = e.target.closest('.swiper-slide');
+        if (!slide) return;
+
+        if (slide.querySelector('video, iframe')) return;
+
+        const imageSlides = [...this.mainSwiper.slides].filter((s) =>
+          [...s.children].some((child) => child.tagName === 'IMG')
+        );
+
+        const clickedImageIndex = imageSlides.indexOf(slide);
+        if (clickedImageIndex === -1) return;
+
+        const modalSlides = imageSlides
+          .map((s) => {
+            const img = s.querySelector('img');
+            return `
+              <div class="c-media-gallery swiper-slide">
+                <img src="${img.src}" alt="${img.alt || ''}" />
+              </div>
+            `;
+          })
+          .join('');
+
+        const modalContent = `
+          <div class="c-media-gallery zoom-modal">
+            <button class="c-media-gallery zoom-close" aria-label="Close zoom">&times;</button>
+
+            <div class="c-media-gallery swiper zoom-swiper">
+              <div class="c-media-gallery swiper-wrapper">
+                ${modalSlides}
+              </div>
+              <div class="c-media-gallery swiper-button-prev"></div>
+              <div class="c-media-gallery swiper-button-next"></div>
+              <div class="c-media-gallery swiper-pagination"></div>
+            </div>
+          </div>
+        `;
+
+        const instance = basicLightbox.create(modalContent, {
+          closable: false,
+          onShow: (instance) => {
+            const modalEl = instance.element();
+            const isMobile = window.innerWidth < 768;
+
+            // Close button
+            modalEl.querySelector('.zoom-close').addEventListener('click', () => instance.close());
+
+            modalEl.addEventListener('click', (e) => {
+              const isImage = e.target instanceof HTMLImageElement;
+              const isNavButton = e.target.closest('.swiper-button-next, .swiper-button-prev');
+
+              if (!isImage && !isNavButton) {
+                instance.close();
+              }
+            });
+
+            // Init zoom swiper
+            new Swiper(modalEl.querySelector('.zoom-swiper'), {
+              initialSlide: clickedImageIndex,
+              navigation: {
+                nextEl: modalEl.querySelector('.swiper-button-next'),
+                prevEl: modalEl.querySelector('.swiper-button-prev'),
+              },
+              pagination: {
+                el: modalEl.querySelector('.swiper-pagination'),
+                clickable: true,
+              },
+              breakpoints: {
+                0: {
+                  pagination: {
+                    enabled: true,
+                  },
+                  navigation: {
+                    enabled: false,
+                  },
+                },
+                768: {
+                  pagination: {
+                    enabled: false,
+                  },
+                  navigation: {
+                    enabled: true,
+                  },
+                },
+              },
+              a11y: {
+                enabled: true,
+              },
+            });
+          },
+        });
+
+        instance.show();
+      });
+    }
+
+    highlightActiveThumb() {
+      this.thumbSwiper.slides.forEach((slide, index) => {
+        slide.classList.toggle('is-active', index === this.mainSwiper.activeIndex);
+      });
+    }
+  }
+  class GVariantSelector extends HTMLElement {
+    constructor() {
+      super();
+      this.variantData = [];
+      this.pricingData = [];
+      this.selectedOptions = {};
+      this.mainProductSelector = 'c-featured-product';
+      this.handle = this.getAttribute('data-handle');
+      this.variantId = this.getAttribute('data-variant');
+      this.featuredProduct = this.closest('c-featured-product');
+      this.partiallyEnabled = this.featuredProduct.getAttribute('data-partially');
+      this.partiallyData = null;
+      this.partiallyFreebie = this.featuredProduct.getAttribute('data-partially-freebie');
+      this.partiallyProductId = this.featuredProduct.getAttribute('data-partially-product-id');
+      this.partiallyVariantId = this.featuredProduct.getAttribute('data-partially-variant-id');
+      this.partiallyFreebieFee = this.featuredProduct.getAttribute('data-partially-freebie-price');
+      this.partiallyPlanFee = this.featuredProduct.getAttribute('data-partially-plan-fee');
+      this.dynamicVariant = this.getAttribute('data-dynamic-variant-image');
+    }
+    connectedCallback() {
+      const pricingDataScript = this.querySelector('#custom-product-data');
+      if (!pricingDataScript) return;
+
+      try {
+        this.pricingData = JSON.parse(pricingDataScript.textContent);
+        this.variantData = this.pricingData.map((v) => ({
+          id: Number(v.variant_id),
+          product_id: Number(v.product_id),
+          available: v.variant_available,
+          options: v.variant_options,
+          price: Number(v.price_raw),
+          image: v.variant_image,
+        }));
+      } catch (err) {
+        console.error('[price update] Failed to parse custom pricing JSON:', err);
+        return;
+      }
+
+      if (this.partiallyEnabled == 'true') {
+        const partiallyVariantData = this.featuredProduct.querySelector('#partially-variant-map');
+        if (!partiallyVariantData) return;
+
+        try {
+          this.partiallyData = JSON.parse(partiallyVariantData.textContent);
+        } catch (err) {
+          console.error('[price update] Failed to parse custom pricing JSON:', err);
+          return;
+        }
+      }
+
+      this.querySelectorAll('.option-value[active]').forEach((el) => {
+        const index = el.closest('.value-container')?.dataset.index;
+        if (index) {
+          this.selectedOptions[`${index - 1}`] = el
+            .closest('.parent-option-value')
+            .querySelector('.value-title').dataset.value;
+        }
+      });
+
+      const matchedVariant = this.getVariantByOptions(this.selectedOptions);
+      if (matchedVariant && this.partiallyEnabled === 'true') {
+        this.updatePartiallyButton(matchedVariant);
+      }
+
+      this.addEventListener('click', this.onOptionClick.bind(this));
+    }
+    async onOptionClick(event) {
+      const valueEl = event.target.closest('.option-value');
+      if (!valueEl) return;
+
+      const optionContainer = valueEl.closest('.value-container');
+      const index = optionContainer?.dataset.index;
+      if (!index) return;
+
+      const value = valueEl.closest('.parent-option-value').querySelector('.value-title')?.dataset.value;
+      if (!value) return;
+
+      // Set active
+      optionContainer.querySelectorAll('.option-value').forEach((el) => el.removeAttribute('active'));
+      valueEl.setAttribute('active', '');
+
+      // Update selected option
+      this.selectedOptions[`${index - 1}`] = value;
+
+      // Recalculate availability and update prices
+      this.querySelectorAll('.value-container').forEach((container) => {
+        const containerIndex = Number(container.dataset.index) - 1;
+        if (container === optionContainer) return;
+
+        container.querySelectorAll('.option-value').forEach((optEl) => {
+          const optValue = optEl.closest('.parent-option-value').querySelector('.value-title')?.dataset.value;
+          if (!optValue) return;
+
+          const testSelection = { ...this.selectedOptions, [containerIndex]: optValue };
+          const possibleMatch = this.getVariantByOptions(testSelection);
+
+          if (possibleMatch && possibleMatch.available) {
+            optEl.removeAttribute('unavailable');
+          } else {
+            optEl.setAttribute('unavailable', '');
+          }
+          const pricing = this.getPricingDataByVariantId(possibleMatch.id);
+          if (pricing && this.partiallyEnabled == 'false') {
+            this.updateOptionPriceDisplay(optEl, pricing);
+          } else if (pricing && this.partiallyEnabled == 'true') {
+            this.updatePartiallyOptionPriceDisplay(optEl, pricing);
+          }
+        });
+      });
+      // Final price + ATC update
+      const matchedVariant = this.getVariantByOptions(this.selectedOptions);
+      if (matchedVariant) {
+        if (this.partiallyEnabled == 'false') {
+          this.updateBuyButton(matchedVariant);
+        } else {
+          this.updatePartiallyButton(matchedVariant);
+        }
+        const featuredProduct = this.closest('c-featured-product');
+        if (featuredProduct) {
+          featuredProduct.dispatchEvent(
+            new CustomEvent('variant-changed', {
+              detail: { variant: matchedVariant },
+              bubbles: true,
+              composed: true,
+            })
+          );
+        }
+        if (this.dynamicVariant === 'true') {
+          this.updateFirstImage(matchedVariant.image);
+        }
+      }
+    }
+    getVariantByOptions(optionMap) {
+      return this.variantData.find((variant) => {
+        return variant.options.every((opt, i) => optionMap[i.toString()] === opt);
+      });
+    }
+    updateFirstImage(url) {
+      const container = this.closest('c-featured-product');
+      if (!container) return;
+
+      const imageSlider = container.querySelectorAll('c-media-gallery .swiper');
+      imageSlider.forEach((slider) => {
+        let img = slider.querySelector('.swiper-slide img');
+        img.src = url;
+        img.srcset = url;
+      });
+    }
+    getPricingDataByVariantId(variantId) {
+      return this.pricingData.find((p) => Number(p.variant_id) === Number(variantId));
+    }
+    updateOptionPriceDisplay(optionEl, pricing) {
+      const priceContainer = optionEl.querySelector('.option-price');
+
+      if (!priceContainer) return;
+
+      const s = priceContainer.querySelector('s');
+      const h3 = priceContainer.querySelector('h3');
+
+      if (s) {
+        s.textContent = pricing?.price_compare || '';
+      }
+      if (h3) {
+        h3.textContent = pricing?.price || '';
+      }
+      if (pricing?.price_raw) {
+        priceContainer.dataset.price = pricing.price_raw;
+      }
+    }
+    updatePartiallyOptionPriceDisplay(optionEl, pricing) {
+      const priceContainer = optionEl.querySelector('.partial-price');
+
+      if (!priceContainer) return;
+
+      const downpayment = priceContainer.querySelector('p.downpayment span');
+      const installment = priceContainer.querySelector('p.installment span');
+
+      if (downpayment) {
+        downpayment.textContent = pricing?.downpayment_price || '';
+      }
+      if (installment) {
+        installment.textContent = pricing?.installment_price || '';
+      }
+    }
+    updatePartiallyButton(variant) {
+      const variantId = variant.id;
+      const data = this.partiallyData?.[variantId];
+
+      if (!data) return;
+
+      this.updatePartiallyTotalPriceDisplay(variant.price, Number(this.partiallyPlanFee));
+
+      let totalPrice = data.price;
+
+      const mainItem = {
+        id: variant.product_id,
+        name: data.title,
+        sku: data.sku,
+        price: data.price,
+        total: data.price,
+        quantity: 1,
+        variant_id: Number(variantId),
+        image: 'https://cdn.shopify.com/s/files/1/0382/1761/3450/files/100_CUSTOM_MADE.jpg?v=1749063251',
+      };
+
+      let items = [mainItem];
+
+      if (this.partiallyFreebie == 'true') {
+        items.push({
+          id: Number(this.partiallyProductId),
+          name: 'Pop On Veneers - Custom Made Smile',
+          sku: '',
+          price: Number(this.partiallyFreebieFee),
+          total: Number(this.partiallyFreebieFee),
+          quantity: 1,
+          variant_id: Number(this.partiallyVariantId),
+          image:
+            'https://cdn.shopify.com/s/files/1/0382/1761/3450/products/Icon_Proprietary_Digital_Design_Technique_1_7ff0b962-8134-42b7-bbaa-5c3eb63e629f.png?v=1631279032',
+        });
+        totalPrice = totalPrice + Number(this.partiallyFreebieFee);
+      }
+
+      if (!this.partiallyBtnInstance) {
+        this.partiallyBtnInstance = new PartiallyButton({
+          offer: data.offer_id,
+          amount: totalPrice,
+          currency: 'USD',
+          renderSelector: '#partiallyCheckoutBtn',
+          baseUrl: 'https://partially.poponveneers.com',
+          meta: {
+            source: 'shopify',
+            items,
+          },
+        });
+
+        this.partiallyBtnInstance.init();
+      } else {
+        this.partiallyBtnInstance.offer = data.offer_id;
+        this.partiallyBtnInstance.amount = totalPrice;
+        this.partiallyBtnInstance.meta.items = items;
+        this.partiallyBtnInstance.updateButtonHref();
+      }
+      var partiallyUrl = this.partiallyBtnInstance.generateUrl();
+      console.log('partially generated checkout url: ' + partiallyUrl);
+      this.partiallyBtnInstance.updateButtonHref();
+      //console.log(this.partiallyBtnInstance);
+    }
+    updatePartiallyTotalPriceDisplay(basePrice, planFee = 0) {
+      const totalCents = basePrice + planFee;
+
+      const totalFormatted = (totalCents / 100).toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2,
+      });
+
+      const displayEl = this.featuredProduct.querySelector('.partially-total-price-display span');
+      if (displayEl) {
+        displayEl.textContent = totalFormatted;
+      }
+    }
+    updateBuyButton(variant) {
+      const mainProduct = this.closest(this.mainProductSelector);
+      if (!mainProduct) return;
+
+      const buyButton = mainProduct.querySelector('c-buy-button');
+      if (!buyButton) return;
+
+      const button = buyButton.querySelector('button.atc');
+
+      buyButton.dataset.variantId = variant.id;
+
+      if (variant.available) {
+        button.disabled = false;
+        button.innerHTML = button.innerHTML.replace(/SOLD OUT/i, 'ADD TO CART');
+      } else {
+        button.disabled = true;
+        button.innerHTML = button.innerHTML.replace(/ADD TO CART/i, 'SOLD OUT');
+      }
+
+      const match = this.pricingData.find((p) => Number(p.variant_id) === Number(variant.id));
+      if (!match) return;
+
+      buyButton.dataset.price = match.price_raw;
+      buyButton.dataset.comparePrice = match.price_compare_raw;
+      const priceContainer = buyButton.querySelector('.button-price-container');
+      const s = priceContainer.querySelector('s');
+      const h4 = priceContainer.querySelector('h4');
+
+      s.textContent = match.price_compare;
+      h4.textContent = match.price;
+    }
+  }
+  class CBuyButton extends HTMLElement {
+    constructor() {
+      super();
+      this.button = null;
+      this.spinner = null;
+      this.priceContainer = null;
+      this.redirectBtn = null;
+      this.productContainer = null;
+      this.featuredProduct = this.closest('c-featured-product');
+      this.partiallyEnabled = this.featuredProduct.getAttribute('data-partially');
+    }
+    connectedCallback() {
+      this.button = this.querySelector('button.atc');
+      this.spinner = this.button?.querySelector('.c-spinner');
+      this.priceContainer = this.button?.querySelector('.button-price-container');
+      this.redirectBtn = this.querySelector('button.redirect');
+      this.productContainer = this.closest('c-featured-product');
+
+      if (this.redirectBtn) {
+        this.redirectBtn.addEventListener('click', this.handleRedirect.bind(this));
+      }
+
+      if (!this.button) return;
+
+      console.log(this.partiallyEnabled);
+      if (this.partiallyEnabled == 'true') {
+      } else {
+        this.button.addEventListener('click', this.handleClick.bind(this));
+      }
+    }
+    {% comment %} async handleClick(event) {
+      event.preventDefault();
+
+      const variantId = this.dataset.variantId;
+      if (!variantId) return;
+
+      const sellingPlanId = this.dataset.sellingPlan;
+
+      // Validate required inputs before adding to cart
+      const allValid = this.validateRequiredInputs(this.productContainer);
+      if (!allValid) return;
+
+      // Show loading state on the button
+      this.setLoadingState(true);
+
+      try {
+        // Collect section IDs from all cart-items-components to get updated HTML from Shopify
+        const sections = Array.from(document.querySelectorAll('cart-items-component'))
+          .map(el => el.dataset.sectionId)
+          .join(',');
+
+        // Build the product payload for Shopify
+        const productData = {
+          ...this.buildProductData(variantId, sellingPlanId),
+          sections,
+        };
+
+        // Send add-to-cart request to Shopify
+        const addResponse = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(productData),
+        });
+
+        if (!addResponse.ok) throw new Error('Failed to add to cart');
+
+        // Parse Shopify response
+        const response = await addResponse.json();
+
+        // Dispatch the CartAddEvent so cart drawer updates
+        this.dispatchEvent(
+          new CartAddEvent({}, variantId.toString(), {
+            source: 'c-buy-button',
+            itemCount: 1,
+            productId: variantId,
+            sections: response.sections,
+          })
+        );
+      } catch (error) {
+        console.error('Error adding product to cart:', error);
+      } finally {
+        // Reset button state
+        this.setLoadingState(false);
+        document.querySelector('cart-drawer-component').open();
+      }
+    }      {% endcomment %}
+    async handleClick(event) {
+      event.preventDefault();
+
+      const variantId = this.dataset.variantId;
+      if (!variantId) return;
+      const sellingPlanId = this.dataset.sellingPlan;
+      const allValid = this.validateRequiredInputs(this.productContainer);
+      if (!allValid) return;
+      this.setLoadingState(true);
+
+      try {
+        const productData = this.buildProductData(variantId, sellingPlanId);
+        const addResponse = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(productData),
+        });
+        if (!addResponse.ok) throw new Error('Failed to add to cart');
+      } catch (error) {
+        console.error(error);
+      } finally {
+        document.dispatchEvent(new CustomEvent('main-variant:added', { bubbles: true }));
+        this.setLoadingState(false);
+      }
+    }
+    buildProductData(variantId, sellingPlanId) {
+      const properties = {};
+
+      const inputs = this.productContainer.querySelectorAll('input[name*="properties"]');
+      inputs.forEach((input) => {
+        const match = input.name.match(/^properties\[(.+?)\]$/);
+        if (match && input.value) {
+          const title = match[1];
+          properties[title] = input.value;
+        }
+      });
+
+      const caseId = localStorage.getItem('previousVeneerOrder');
+      if (caseId) {
+        properties['Shipping With Veneer Order'] = caseId;
+      }      
+
+      const productData = {
+        id: variantId,
+        quantity: 1,
+        ...(Object.keys(properties).length && { properties }),
+        ...(sellingPlanId && { selling_plan: sellingPlanId }),
+      };
+
+      return productData;
+    }
+    validateRequiredInputs(container) {
+      const requiredInputs = container.querySelectorAll('c-property-input input[required]');
+      let allValid = true;
+      let firstInvalidInput = null;
+      console.log(allValid);
+
+      //Default theme forms
+      requiredInputs.forEach((input) => {
+        const wrapper = input.closest('c-property-input');
+        const isValid = wrapper && typeof wrapper.validate === 'function' ? wrapper.validate() : input.checkValidity();
+
+        if (!isValid) {
+          allValid = false;
+          if (!firstInvalidInput) firstInvalidInput = input;
+        }
+      });
+      console.log(allValid);
+
+      //Upload Lift Input Forms
+      const uploadRequiredInputs = container.querySelectorAll('.cl-upload--wrapper input[required]:not([type="file"])');
+      uploadRequiredInputs.forEach((input) => {
+        if (!input.value) {
+          allValid = false;
+          if (!firstInvalidInput) firstInvalidInput = input;
+        }
+      });
+      console.log(allValid);
+
+      //Upload Lift File Upload Forms
+      const fileInputs = container.querySelectorAll('.cl-upload--wrapper .cl-upload--area:not(.cl-hide)');
+      fileInputs.forEach((fileInput) => {
+        if (fileInput.querySelector('.filepond--file')) {
+        } else {
+          allValid = false;
+        }
+      });
+
+      if (firstInvalidInput) {
+        firstInvalidInput.focus();
+      }
+
+      console.log(allValid);
+      return allValid;
+    }
+    setLoadingState(isLoading) {
+      if (isLoading) {
+        this.spinner.classList.remove('c-hidden');
+        this.spinner.classList.add('c-flex');
+        this.priceContainer.classList.add('c-hidden');
+        this.priceContainer.classList.remove('c-flex');
+        this.button.disabled = true;
+      } else {
+        this.spinner.classList.add('c-hidden');
+        this.spinner.classList.remove('c-flex');
+        this.priceContainer.classList.remove('c-hidden');
+        this.priceContainer.classList.add('c-flex');
+        this.button.disabled = false;
+      }
+    }
+    handleRedirect(event) {
+      event.preventDefault();
+
+      const href = this.redirectBtn.dataset.href;
+      if (href) {
+        window.location.href = href;
+      }
+    }
+  }
+  class CAccordion extends HTMLElement {
+    constructor() {
+      super();
+      this.titleEl = null;
+      this.content = null;
+      this.icon = null;
+    }
+
+    connectedCallback() {
+      this.titleEl = this.querySelector('.accordion-title');
+      this.content = this.querySelector('.accordion-content');
+      this.icon = this.querySelector('.accordion-icon');
+
+      if (!this.titleEl || !this.content || !this.icon) return;
+
+      this.titleEl.addEventListener('click', this.toggle.bind(this));
+      this.titleEl.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.toggle();
+        }
+      });
+    }
+
+    toggle() {
+      const isOpen = this.titleEl.getAttribute('aria-expanded') === 'true';
+
+      // 🔍 Find the closest <c-featured-product> ancestor
+      const featuredProduct = this.closest('c-featured-product');
+
+      if (featuredProduct) {
+        // 🔁 Close all other accordions in the same product
+        const allAccordions = featuredProduct.querySelectorAll('c-accordion');
+
+        allAccordions.forEach((accordion) => {
+          if (accordion !== this) {
+            const title = accordion.querySelector('.accordion-title');
+            const content = accordion.querySelector('.accordion-content');
+            const icon = accordion.querySelector('.accordion-icon');
+
+            if (title && content && icon) {
+              title.setAttribute('aria-expanded', 'false');
+              content.setAttribute('aria-hidden', 'true');
+              content.classList.add('c-hidden');
+              icon.classList.remove('open');
+            }
+          }
+        });
+      }
+
+      // ✅ Toggle this one
+      this.titleEl.setAttribute('aria-expanded', String(!isOpen));
+      this.content.setAttribute('aria-hidden', String(isOpen));
+      this.content.classList.toggle('c-hidden', isOpen);
+      this.icon.classList.toggle('open', !isOpen);
+    }
+  }
+  class CPropertyInput extends HTMLElement {
+    constructor() {
+      super();
+      this.input = null;
+      this.tooltip = null;
+    }
+    connectedCallback() {
+      this.input = this.querySelector('input');
+      this.tooltip = this.querySelector('.tooltip');
+
+      this.input.addEventListener('focus', () => {
+        this.tooltip.style.display = 'block';
+      });
+
+      this.input.addEventListener('blur', () => {
+        this.tooltip.style.display = 'none';
+      });
+
+      this.input.addEventListener('input', () => {
+        this.validate();
+      });
+    }
+    get value() {
+      return this.input.value.trim();
+    }
+    validate() {
+      const val = this.querySelector('input').value;
+      const isValid = val.startsWith('88') || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+      return isValid;
+    }
+  }
+  class CSellingPlan extends HTMLElement {
+    constructor() {
+      super();
+      this.handleToggle = this.handleToggle.bind(this);
+      this.handleRadioChange = this.handleRadioChange.bind(this);
+      this.rounding = this.getAttribute('data-rounding');
+    }
+    connectedCallback() {
+      this.otpButton = this.querySelector('[data-type="OTP"]');
+      this.sbsButton = this.querySelector('[data-type="SBS"]');
+      this.subscriptionContainer = this.querySelector('.subscription-container');
+      this.radioButtons = this.querySelectorAll('input[type="radio"][name="subscription"]');
+
+      this.otpButton.addEventListener('click', this.handleToggle);
+      this.sbsButton.addEventListener('click', this.handleToggle);
+      this.radioButtons.forEach((radio) => radio.addEventListener('change', this.handleRadioChange));
+
+      const featuredProduct = this.closest('c-featured-product');
+      featuredProduct.addEventListener('variant-changed', (event) => {
+        const sellingPlan = featuredProduct.querySelector('c-selling-plan');
+        if (sellingPlan) {
+          sellingPlan.updatePrice();
+          sellingPlan.updateBuyButtonPrice();
+        }
+      });
+    }
+    handleToggle(e) {
+      const type = e.currentTarget.dataset.type;
+      this.querySelectorAll('.button-item').forEach((btn) => btn.removeAttribute('active'));
+      e.currentTarget.setAttribute('active', '');
+
+      if (type === 'OTP') {
+        this.subscriptionContainer.removeAttribute('active');
+        this.updateDataSellingPlan(null);
+        this.updateSubscriptionDescription(null);
+      } else {
+        this.subscriptionContainer.setAttribute('active', '');
+        const selected = this.querySelector('input[name="subscription"]:checked');
+        this.updateDataSellingPlan(selected ? selected.value : null);
+        this.updateSubscriptionDescription(selected ? selected.value : null);
+      }
+      this.updatePrice();
+      this.updateBuyButtonPrice();
+    }
+    handleRadioChange(e) {
+      if (this.sbsButton.hasAttribute('active')) {
+        this.updateDataSellingPlan(e.target.value);
+        this.updatePrice();
+        this.updateBuyButtonPrice();
+        this.updateSubscriptionDescription(e.target.value);
+      }
+    }
+    updateDataSellingPlan(planId = null) {
+      const featured = this.closest('c-featured-product');
+      if (!featured) return;
+
+      const buyButton = featured.querySelector('c-buy-button');
+      if (!buyButton) return;
+
+      if (planId) {
+        buyButton.setAttribute('data-selling-plan', planId);
+      } else {
+        buyButton.removeAttribute('data-selling-plan');
+      }
+    }
+    updatePrice() {
+      const featured = this.closest('c-featured-product');
+      if (!featured) return;
+
+      let variantSelector = featured.querySelector('c-general-variant-selector');
+      if (!variantSelector) return;
+
+      const selectedRadio = this.querySelector('input[name="subscription"]:checked');
+      const isSBSActive = this.sbsButton.hasAttribute('active');
+
+      const discountType = selectedRadio?.dataset.discountType || null;
+      const discountValue = parseFloat(selectedRadio?.dataset.discount || '0');
+
+      const priceElements = variantSelector.querySelectorAll('.option-price');
+
+      priceElements.forEach((priceEl) => {
+        const priceTextEl = priceEl.querySelector('h3');
+        if (!priceTextEl) return;
+
+        const basePriceStr = priceEl.dataset.price;
+        if (!basePriceStr) return;
+
+        let basePriceCents = parseInt(basePriceStr, 10);
+        if (isNaN(basePriceCents)) return;
+
+        let basePriceDollars = basePriceCents / 100;
+        let finalPrice = basePriceDollars;
+
+        if (isSBSActive && discountType && !isNaN(discountValue)) {
+          if (discountType === 'percentage') {
+            finalPrice = basePriceDollars * (1 - discountValue / 100);
+          } else if (discountType === 'amount') {
+            finalPrice = basePriceDollars - discountValue;
+          }
+        }
+
+        finalPrice = Math.max(0, finalPrice);
+        priceTextEl.textContent = this.formatMoney(finalPrice);
+
+        const diffEl = priceEl.querySelector('.discount-calc');
+        const compareCents = parseInt(priceEl.querySelector('s')?.textContent?.replace(/[^0-9.]/g, '') || 0) * 100;
+
+        if (diffEl && compareCents) {
+          const compareDollars = compareCents / 100;
+          const diff = Math.max(0, compareDollars - finalPrice);
+          diffEl.textContent = `${this.formatMoney(diff)} off`;
+        }
+      });
+    }
+    formatMoney(amount) {
+      if (this.rounding === 'true') {
+        return `$${Math.round(amount)}`;
+      } else {
+        return `$${amount % 1 === 0 ? amount.toFixed(0) : amount.toFixed(2)}`;
+      }
+    }
+    updateBuyButtonPrice() {
+      const featured = this.closest('c-featured-product');
+      if (!featured) return;
+
+      const buyButton = featured.querySelector('c-buy-button');
+      if (!buyButton) return;
+
+      const priceContainer = buyButton.querySelector('.button-price-container');
+      if (!priceContainer) return;
+
+      const h4 = priceContainer.querySelector('h4');
+      const s = priceContainer.querySelector('s');
+      if (!h4 || !s) return;
+
+      const selectedRadio = this.querySelector('input[name="subscription"]:checked');
+      const isSBSActive = this.sbsButton.hasAttribute('active');
+      const discountType = selectedRadio?.dataset.discountType || null;
+      const discountValue = parseFloat(selectedRadio?.dataset.discount || '0');
+
+      const priceCents = parseInt(buyButton.dataset.price, 10);
+      const compareCents = parseInt(buyButton.dataset.comparePrice, 10);
+      if (isNaN(priceCents)) return;
+
+      let priceDollars = priceCents / 100;
+      let finalPrice = priceDollars;
+
+      if (isSBSActive && discountType && !isNaN(discountValue)) {
+        if (discountType === 'percentage') {
+          finalPrice = priceDollars * (1 - discountValue / 100);
+        } else if (discountType === 'amount') {
+          finalPrice = priceDollars - discountValue;
+        }
+      }
+
+      finalPrice = Math.max(0, finalPrice);
+
+      h4.textContent = this.formatMoney(finalPrice);
+      s.textContent = !isNaN(compareCents) ? this.formatMoney(compareCents / 100) : '';
+    }
+    updateSubscriptionDescription(planId) {
+      const paragraphs = this.querySelectorAll('.subscription-paragraph');
+      paragraphs.forEach((p) => {
+        if (p.dataset.planId === planId) {
+          p.style.display = '';
+        } else {
+          p.style.display = 'none';
+        }
+      });
+    }
+  }
+  class CProductCard extends HTMLElement {
+    constructor() {
+      super();
+      this.button = null;
+      this.spinner = null;
+      this.mainButtonContainer = null;
+    }
+    connectedCallback() {
+      this.button = this.querySelector('button.c-button');
+      this.spinner = this.querySelector('.c-spinner');
+      this.selector = this.querySelector('.c-variant-select');
+
+      if (this.button && this.spinner) {
+        this.button.addEventListener('click', this.handleAddToCart.bind(this));
+      }
+      if (this.selector) {
+        this.selector.addEventListener('change', (e) => {
+          this.button.dataset.variantId = e.target.value;
+          
+          const selectedOption = e.target.options[e.target.selectedIndex];
+          if (selectedOption.hasAttribute('disabled')) {
+            this.button.disabled = true;
+            this.button.textContent = 'SOLD OUT';
+          } else {
+            this.button.disabled = false;
+            this.button.textContent = 'ADD TO CART';
+          }
+        });
+      }      
+    }
+    async handleAddToCart(event) {
+      event.preventDefault();
+
+      const variantId = this.button.dataset.variantId;
+      if (!variantId) return;
+
+      this.setLoadingState(true);
+
+      try {
+        const response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            items: [
+              {
+                id: variantId,
+                quantity: 1,
+              },
+            ],
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to add to cart');
+        }
+        const data = await response.json();
+      } catch (error) {
+        console.error('Add to cart error:', error);
+      } finally {
+        setTimeout(() => {
+          this.setLoadingState(false);
+        }, 1500);
+      }
+    }
+    setLoadingState(isLoading) {
+      if (isLoading) {
+        this.spinner.classList.remove('c-hidden');
+        this.button.disabled = true;
+      } else {
+        this.spinner.classList.add('c-hidden');
+        this.button.disabled = false;
+      }
+    }
+  }
+  class ShareButton extends HTMLElement {
+    constructor() {
+      super();
+      this.button = this.querySelector('button');
+    }
+
+    connectedCallback() {
+      this.button?.addEventListener('click', () => {
+        const title = this.dataset.title || document.title;
+        const url = this.dataset.url || window.location.href;
+
+        if (navigator.share) {
+          navigator.share({ title, url }).catch((err) => {
+            if (err.name !== 'AbortError') {
+              console.error('Error using Web Share API:', err);
+            }
+          });
+        } else {
+          console.warn('Web Share API not supported.');
+        }
+      });
+    }
+  }
+  class CMarqueeGenerator extends HTMLElement {
+    constructor() {
+      super();
+      this.speed = 0.5; // px per frame – adjust as needed
+    }
+
+    connectedCallback() {
+      this.track = this.querySelector('.c-content-marquee-track');
+      if (!this.track) return;
+
+      this.original = this.querySelector('.marquee-item-original');
+
+      this.waitForImages().then(() => {
+        this.setupClones();
+        this.startAnimation();
+      });
+    }
+
+    waitForImages() {
+      const images = this.querySelectorAll('img');
+      if (images.length === 0) return Promise.resolve();
+
+      let loaded = 0;
+      return new Promise((resolve) => {
+        images.forEach((img) => {
+          if (img.complete) {
+            loaded++;
+            if (loaded === images.length) resolve();
+          } else {
+            img.onload = img.onerror = () => {
+              loaded++;
+              if (loaded === images.length) resolve();
+            };
+          }
+        });
+      });
+    }
+
+    setupClones() {
+      let totalWidth = this.original.offsetWidth;
+
+      while (totalWidth < this.offsetWidth * 2) {
+        const clone = this.original.cloneNode(true);
+        clone.classList.remove('marquee-item-original');
+        clone.classList.add('marquee-item-clone');
+        this.track.appendChild(clone);
+        totalWidth += clone.offsetWidth;
+      }
+
+      this.pos = 0;
+    }
+
+    startAnimation() {
+      const step = () => {
+        this.pos -= this.speed;
+
+        const width = this.original.offsetWidth;
+        if (Math.abs(this.pos) >= width) {
+          this.pos += width;
+        }
+
+        this.track.style.transform = `translateX(${this.pos}px)`;
+        requestAnimationFrame(step);
+      };
+
+      requestAnimationFrame(step);
+    }
+  }
+  class CScarcity extends HTMLElement {
+    constructor() {
+      super();
+      this.holidays = [
+        '01-01',
+        '01-20',
+        '02-17',
+        '05-26',
+        '06-19',
+        '07-04',
+        '09-01',
+        '10-13',
+        '11-11',
+        '11-27',
+        '12-25',
+      ];
+    }
+    connectedCallback() {
+      this.processingDays = parseInt(this.dataset.processingDays);
+      this.qtyLimit = parseInt(this.dataset.qtyLimit);
+      this.qtySold = parseInt(this.dataset.qtySold);
+
+      this.qtyLeft = this.qtyLimit - this.qtySold;
+      this.output = this.querySelector('.scarcity-output');
+
+      this.render();
+      this.timer = setInterval(() => this.updateCountdown(), 1000);
+    }
+    render() {
+      const nowEST = this.getESTDate();
+      const hour = nowEST.getHours();
+      const minute = nowEST.getMinutes();
+
+      const beforeCutoff = hour < 16 || (hour === 16 && minute === 0);
+
+      if (beforeCutoff) {
+        this.renderPreCutoff(nowEST);
+      } else {
+        this.renderPostCutoff(nowEST);
+      }
+    }
+    renderPreCutoff(nowEST) {
+      const cutoff = new Date(nowEST);
+      cutoff.setHours(16, 0, 0, 0);
+
+      const diffMs = cutoff - nowEST;
+      const diffSec = Math.max(0, Math.floor(diffMs / 1000));
+
+      const hours = this.pad(Math.floor(diffSec / 3600));
+      const minutes = this.pad(Math.floor((diffSec % 3600) / 60));
+      const seconds = this.pad(diffSec % 60);
+
+      const countdown = `${hours}:${minutes}:${seconds}`;
+
+      // If first render → inject full template
+      if (!this.output.querySelector('.countdown')) {
+        const deliveryDate = this.addBusinessDays(nowEST, this.processingDays);
+        const deliveryFormatted = this.formatDate(deliveryDate);
+
+        const text = `
+        <span class="countdown" style="color:#ED5C86"><strong>${countdown}</strong></span>
+        for kit delivery by 
+        <strong>${deliveryFormatted}</strong><span class="ig-test">&nbsp;& extra <span style="font-size:13px"><strong>$20 off</strong></span></span>
+      `;
+
+        this.output.querySelector('img').insertAdjacentHTML('beforebegin', text);
+        return;
+      }
+
+      // If already rendered → update ONLY the number
+      this.output.querySelector('.countdown strong').textContent = countdown;
+    }
+    renderPostCutoff(nowEST) {
+      this.postRendered = true;
+      const deliveryDate = this.addBusinessDays(nowEST, this.processingDays + 1);
+      const deliveryFormatted = this.formatDate(deliveryDate);
+
+      const text = `
+        Only <strong>${this.qtyLeft}</strong>
+        kits left to receive by <strong>${deliveryFormatted}</strong><span class="ig-test">&nbsp;& extra <span style="13px"><strong>$20 off</strong></span></span>
+      `;
+
+      this.output.querySelector('img').insertAdjacentHTML('beforebegin', text);
+    }
+    addBusinessDays(startDate, daysToAdd) {
+      let date = new Date(startDate);
+      let added = 0;
+
+      while (added < daysToAdd) {
+        date.setDate(date.getDate() + 1);
+
+        const day = date.getDay();
+        const mmdd = this.formatMMDD(date);
+
+        if (day !== 0 && day !== 6 && !this.holidays.includes(mmdd)) {
+          added++;
+        }
+      }
+
+      return date;
+    }
+    getESTDate() {
+      const now = new Date();
+      const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+      const estOffset = -5;
+      return new Date(utc + 3600000 * estOffset);
+    }
+    formatMMDD(date) {
+      const mm = String(date.getMonth() + 1).padStart(2, '0');
+      const dd = String(date.getDate()).padStart(2, '0');
+      return `${mm}-${dd}`;
+    }
+    formatDate(date) {
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const month = months[date.getMonth()];
+      const day = date.getDate();
+      return `${month} ${day}`;
+    }
+    updateCountdown() {
+      const nowEST = this.getESTDate();
+      const hour = nowEST.getHours();
+      const minute = nowEST.getMinutes();
+      const beforeCutoff = hour < 16 || (hour === 16 && minute === 0);
+
+      if (beforeCutoff) {
+        this.renderPreCutoff(nowEST);
+        return;
+      }
+
+      // After cutoff → render once then stop timer
+      if (!this.postRendered) {
+        this.renderPostCutoff(nowEST);
+        this.postRendered = true;
+      }
+
+      clearInterval(this.timer);
+    }
+    pad(num) {
+      return String(num).padStart(2, '0');
+    }
+  }
+  class CCallout extends HTMLElement {
+    connectedCallback() {
+      this.updateCallout();
+    }
+    updateCallout() {
+      const h5 = this.querySelector('h5');
+      if (!h5) return;
+
+      const params = new URLSearchParams(window.location.search);
+      const firstName = params.get('klaviyo_first_name') || '';
+
+      let html = h5.innerHTML;
+      html = html.replace('[[klaviyo_first_name]]', firstName);
+
+      html = html
+        .replace(/\s+/g, ' ')
+        .replace(/\s([!,.?])/g, '$1')
+        .trim();
+
+      h5.innerHTML = html;
+    }
+  }
+  class CBuyBoxV2 extends HTMLElement {
+    constructor() {
+      super();
+      const manifestEl = this.querySelector('#VariantManifest');
+      this.variants = manifestEl ? JSON.parse(manifestEl.textContent) : [];
+      this.defaultSelector = this.dataset.defaultSelector;
+      this.currentVariant = null;
+    }
+
+    connectedCallback() {
+      this.initListeners();
+      this.updateState();
+    }
+
+    initListeners() {
+      this.addEventListener('click', (e) => {
+        const btn = e.target.closest('.value-button');
+        if (btn) this.handleOptionClick(btn);
+      });
+      this.querySelector('#MainAddToCart').addEventListener('click', () => this.addToCart());
+    }
+
+    handleOptionClick(target) {
+      const container = target.closest('.value-container');
+      container.querySelectorAll('.value-button').forEach(btn => btn.removeAttribute('active'));
+      target.setAttribute('active', '');
+      this.updateState();
+    }
+
+    updateState() {
+      const selectedOptions = {};
+      this.querySelectorAll('.value-container').forEach(container => {
+        const index = container.dataset.optionIndex;
+        const activeBtn = container.querySelector('.value-button[active]');
+        if (activeBtn) selectedOptions[index] = activeBtn.dataset.value;
+      });
+
+      this.currentVariant = this.variants.find(v => {
+        return Object.keys(selectedOptions).every(key => v[key] === selectedOptions[key]);
+      });
+
+      if (this.currentVariant) {
+        const allocations = this.currentVariant.selling_plan_allocations || [];
+        const hasSubs = allocations.length > 0;
+
+        if (!hasSubs) {
+          // Force OTP if no subscriptions exist for this variant
+          this.selectedDeliveryId = 'otp';
+        } else {
+          // If subscriptions exist, default to the first one
+          this.selectedDeliveryId = `sub-${allocations[0].selling_plan_id}`;
+        }
+      }      
+
+      this.renderDeliveryOptions();
+      this.updateATCButton();
+    }
+
+    renderDeliveryOptions() {
+      const container = this.querySelector('#DeliveryContainer .delivery-option-container');
+      if (!this.currentVariant) {
+        container.innerHTML = `<p>Selection unavailable</p>`;
+        return;
+      }
+
+      const allocations = this.currentVariant.selling_plan_allocations || [];
+      const hasSubs = allocations.length > 0;
+
+      let selectedId = this.selectedDeliveryId;      
+
+      const otpPriceRaw = this.currentVariant.price;
+      const otpPriceFormatted = (otpPriceRaw / 100).toFixed(2);
+      const comparePriceFormatted = this.currentVariant.compare_at_price 
+        ? (this.currentVariant.compare_at_price / 100).toFixed(2) 
+        : null;
+
+      const isOtpSelected = selectedId === 'otp';
+      const isSubSelected = selectedId.startsWith('sub-');
+
+      // 1. Render OTP with conditional active class
+      let html = `
+        <div class="delivery-option ${isOtpSelected ? 'is-active' : ''}">
+          <input type="radio" id="otp" name="delivery-option" value="" 
+            ${isOtpSelected ? 'checked' : ''}>
+          <label for="otp">
+            <span>Buy Once</span>
+            <span>
+              <span class="price-display">$${otpPriceFormatted}</span>
+              ${comparePriceFormatted ? `<span class="compare-price">$${comparePriceFormatted}</span>` : ''}
+            </span>
+          </label>
+        </div>
+      `;
+
+      // 2. Render Subscription Group with conditional active class
+      if (hasSubs) {
+        html += `
+          <div class="sub-group-container ${isSubSelected ? 'is-active' : ''}">
+            <div class="sub-promo-banner">Biggest Savings</div>
+            <div class="sub-options-inner">
+        `;
+
+        allocations.forEach(alloc => {
+          const subPriceRaw = alloc.price;
+          const subPriceFormatted = (subPriceRaw / 100).toFixed(2);
+          const radioId = `sub-${alloc.selling_plan_id}`;
+          const isThisSubSelected = selectedId === radioId;
+          const savingsPercent = Math.round(((otpPriceRaw - subPriceRaw) / otpPriceRaw) * 100);
+          
+          html += `
+            <div class="delivery-option sub-row">
+              <input type="radio" id="${radioId}" name="delivery-option" value="${alloc.selling_plan_id}"
+                ${isThisSubSelected ? 'checked' : ''}>
+              <label for="${radioId}">
+                <span>Subscribe and Save ${savingsPercent}%</span>
+                <span>
+                  <span class="price-display">$${subPriceFormatted}</span>
+                  <span class="compare-price">$${otpPriceFormatted}</span>
+                </span>
+              </label>
+            </div>
+          `;
+        });
+
+        html += `
+              <hr class="sub-divider">
+              <ul class="sub-value-props">
+        `;
+
+        const featuresAttr = this.getAttribute('data-sub-features') || "";
+        const features = featuresAttr.split('|').filter(f => f.trim() !== "");
+        
+        features.forEach(feature => {
+          html += `<li>${feature.trim()}</li>`;
+        });
+
+        html += `
+            </ul>
+            </div>
+          </div>
+        `;
+      }
+
+      container.innerHTML = html;
+
+      // Add listener to re-render when radio changes to update highlights
+      container.querySelectorAll('input[name="delivery-option"]').forEach(input => {
+        input.addEventListener('change', (e) => {
+          this.selectedDeliveryId = e.target.id; // Update tracked ID
+          this.renderDeliveryOptions(); // Re-render to update active classes
+        });
+      });
+    }
+
+    updateATCButton() {
+      const btn = this.querySelector('#MainAddToCart');
+      if (!this.currentVariant || !this.currentVariant.available) {
+        btn.disabled = true;
+        btn.textContent = 'SOLD OUT';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'ADD TO CART';
+      }
+    }
+
+    async addToCart() {
+      const properties = {};
+      const caseId = localStorage.getItem('previousVeneerOrder');      
+
+      const btn = this.querySelector('#MainAddToCart');
+      const selectedRadio = this.querySelector('input[name="delivery-option"]:checked');
+      const sellingPlanId = selectedRadio ? selectedRadio.value : null;
+
+      if (caseId) {
+        properties['Shipping With Veneer Order'] = caseId;
+      }      
+      
+      const body = {
+        items: [{
+          id: this.currentVariant.id,
+          quantity: 1,
+          ...(Object.keys(properties).length && { properties }),
+          ...(sellingPlanId && { selling_plan: parseInt(sellingPlanId) })
+        }]
+      };
+
+      btn.disabled = true;
+      const originalText = btn.textContent;
+      btn.textContent = 'ADDING...';
+
+      try {
+        const response = await fetch(window.Shopify.routes.root + 'cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+        if (!response.ok) throw new Error('Failed to add to cart');
+        btn.textContent = 'ADDED!';
+        document.dispatchEvent(new CustomEvent('cart:refresh'));
+      } catch (err) {
+        console.error(err);
+        btn.textContent = 'ERROR';
+      } finally {
+        setTimeout(() => { this.updateATCButton(); }, 2000);
+      }
+    }
+    {% comment %} async addToCart() {
+      const btn = this.querySelector('#MainAddToCart');
+      const selectedRadio = this.querySelector('input[name="delivery-option"]:checked');
+      const sellingPlanId = selectedRadio ? selectedRadio.value : null;
+      
+      if (!this.currentVariant) return;
+
+      // 1. Set Loading State
+      btn.disabled = true;
+      const originalText = btn.textContent;
+      btn.textContent = 'ADDING...';
+
+      try {
+        // 2. Collect section IDs for theme AJAX updates
+        const sections = Array.from(document.querySelectorAll('cart-items-component, .cart-drawer'))
+          .map(el => el.dataset.sectionId || el.id) // Fallback to id if sectionId isn't there
+          .filter(id => id)
+          .join(',');
+
+        const body = {
+          id: parseInt(this.currentVariant.id),
+          quantity: 1,
+          sections: sections,
+          ...(sellingPlanId && { selling_plan: parseInt(sellingPlanId) })
+        };
+
+        // 3. Send Request
+        const response = await fetch(window.Shopify.routes.root + 'cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+
+        if (!response.ok) throw new Error('Failed to add to cart');
+        const cartData = await response.json();
+
+        // 4. Dispatch the Custom Theme Event
+        // Note: We use the variant ID and the section HTML returned by Shopify
+        this.dispatchEvent(
+          new CustomEvent('cart:add-success', { // Change to match 'CartAddEvent' if that is a global class
+            bubbles: true,
+            detail: {
+              variantId: this.currentVariant.id.toString(),
+              sections: cartData.sections
+            }
+          })
+        );
+
+        // If 'CartAddEvent' is a specific class in your theme, use this instead:
+        if (typeof CartAddEvent !== 'undefined') {
+            this.dispatchEvent(
+              new CartAddEvent({}, this.currentVariant.id.toString(), {
+                source: 'c-buy-box-v2',
+                itemCount: 1,
+                productId: this.currentVariant.id,
+                sections: cartData.sections,
+              })
+            );
+        }
+
+      } catch (err) {
+        console.error('Cart Error:', err);
+        btn.textContent = 'ERROR';
+      } finally {
+        // 5. Reset Button & Open Drawer
+        btn.disabled = false;
+        btn.textContent = originalText;
+
+        const drawer = document.querySelector('cart-drawer-component');
+        if (drawer && typeof drawer.open === 'function') {
+          drawer.open();
+        }
+      }
+    }     {% endcomment %}
+  }  
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    // SECTIONS
+    customElements.define('c-global-search', GlobalSearch);
+    customElements.define('c-blog-posts', BlogPosts);
+    customElements.define('c-article-faq-grid', CArticleFAQGrid);
+    customElements.define('c-menu-drawer', CMenuDrawer);
+    customElements.define('c-sticky-atc', CStickyATC);
+    customElements.define('c-accordion-section', CAccordionSection);
+    customElements.define('c-accordion-alt', CAccordionAlt);    
+
+    // SNIPPETS
+    customElements.define('video-carousel-slider', VideoCarouselSlider);    
+    customElements.define('c-media-gallery', CMediaGallery);
+    customElements.define('c-general-variant-selector', GVariantSelector);
+    customElements.define('c-buy-button', CBuyButton);
+    customElements.define('c-accordion', CAccordion);
+    customElements.define('c-property-input', CPropertyInput);
+    customElements.define('c-selling-plan', CSellingPlan);
+    customElements.define('c-product-card', CProductCard);
+    customElements.define('c-share', ShareButton);
+    customElements.define('c-marquee-generator', CMarqueeGenerator);
+    customElements.define('c-scarcity', CScarcity);
+    customElements.define('c-callout', CCallout);
+    customElements.define('c-buy-box-v2', CBuyBoxV2);
+  });
+</script>
+
+{% comment %} GTAG Scripts {% endcomment %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Rivo referral Event - c_gorgias_rivo_traffic
+    function getQueryParam(param) {
+      return new URLSearchParams(window.location.search).get(param);
+    }
+
+    const source = getQueryParam('utm_source');
+    const medium = getQueryParam('utm_medium');
+    const campaign = getQueryParam('utm_campaign');
+
+    if (source === 'gorgias_email' && medium === 'footer' && campaign === 'referral_program') {
+      console.log('YES!');
+      gtag('event', 'c_gorgias_rivo_traffic', {
+        source: source,
+        medium: medium,
+        campaign: campaign,
+        page_url: window.location.href,
+      });
+    }
+
+    // Variant Click Event - c_variant_clicked
+    document.querySelectorAll('.option-value').forEach(function (el) {
+      el.addEventListener('click', function () {
+        const clickedValue = el.querySelector('.value-title')?.dataset?.value || 'unknown';
+        const productHandle = el.closest('c-general-variant-selector')?.dataset?.handle || 'unknown';
+        const pageUrl = window.location.href;
+
+        gtag('event', 'c_variant_clicked', {
+          event_category: 'interaction',
+          event_label: clickedValue,
+          value: 1,
+          product_handle: productHandle,
+          page_url: pageUrl,
+        });
+      });
+    });
+
+    window.addEventListener('global-search-triggered', (e) => {
+      const { searchTerm, resultCount } = e.detail;
+
+      gtag('event', 'c_search', {
+        event_category: 'search',
+        event_label: searchTerm,
+        result_count: resultCount,
+      });
+    });
+  });
+</script>

@@ -1,0 +1,469 @@
+{% style %}
+  c-content-generator[data-section-id="{{ section.id }}"] {
+    {% if section.settings.d_padding_top %}
+      padding-top: 15px;
+    {% endif %}
+    {% if section.settings.d_padding_bottom %}
+      padding-bottom: 15px;
+    {% endif %}
+  }
+  @media screen and (min-width: 769px) {
+    c-content-generator[data-section-id="{{ section.id }}"] {
+      {% if section.settings.d_padding_top %}
+        padding-top: 30px;
+      {% endif %}
+      {% if section.settings.d_padding_bottom %}
+        padding-bottom: 30px;
+      {% endif %}
+    }
+  }
+{% endstyle %}
+
+<c-content-generator data-section-id="{{ section.id }}">
+  <div class="inner-container">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'full_width_image' %}
+          <div class="content-block block-full-width-image" data-index="{{ forloop.index0 }}">
+            {% if block.settings.link != null %}<a href="{{ block.settings.link }}">{% endif %}
+            {% if block.settings.m_image != null %}
+              {% if block.settings.lcp %}
+                {{
+                  block.settings.m_image
+                  | image_url: width: 1600
+                  | image_tag: class: 'c-mobile', loading: 'eager', fetchpriority: 'high', decoding: 'sync'
+                }}
+              {% else %}
+                {{ block.settings.m_image | image_url: width: 1600 | image_tag: class: 'c-mobile' }}
+              {% endif %}
+            {% endif %}
+            {% if block.settings.d_image != null %}
+              {% if block.settings.lcp %}
+                {{
+                  block.settings.d_image
+                  | image_url: width: 3200
+                  | image_tag: class: 'c-desktop', loading: 'eager', fetchpriority: 'high', decoding: 'sync'
+                }}
+              {% else %}
+                {{ block.settings.d_image | image_url: width: 3200 | image_tag: class: 'c-desktop' }}
+              {% endif %}
+            {% endif %}
+            {% if block.settings.link != null %}</a>{% endif %}
+          </div>
+        {% when 'section_header' %}
+          <div class="content-block block-section-header" data-index="{{ forloop.index0 }}">
+            <h2>{{ block.settings.header }}</h2>
+          </div>
+        {% when 'content' %}
+          <div
+            class="content-block block-content {{ block.settings.text_alignment }}"
+            data-index="{{ forloop.index0 }}"
+          >
+            {{ block.settings.content }}
+          </div>
+        {% when 'liquid' %}
+          <div class="content-block block-liquid" data-index="{{ forloop.index0 }}">
+            {{ block.settings.liquid }}
+          </div>
+        {% when 'accented_header' %}
+          <div class="content-block block-accented-header" data-index="{{ forloop.index0 }}">
+            {{ block.settings.content }}
+          </div>
+        {% when 'image_content' %}
+          <a
+            href="{{ block.settings.link }}"
+            class="content-block block-image-content"
+            data-index="{{ forloop.index0 }}"
+          >
+            {% if block.settings.image != null %}
+              {% if block.settings.lcp %}
+                {{
+                  block.settings.image
+                  | image_url: width: 1500
+                  | image_tag: loading: 'eager', fetchpriority: 'high', decoding: 'sync'
+                }}
+              {% else %}
+                {{ block.settings.image | image_url: width: 1500 | image_tag }}
+              {% endif %}
+            {% endif %}
+          </a>
+        {% when 'button' %}
+          <div class="content-block block-button" data-index="{{ forloop.index0 }}">
+            <a href="{{ block.settings.button_link }}" class="c-button">
+              {{ block.settings.button_text }}
+            </a>
+          </div>
+        {% when 'blurb_text' %}
+          <div class="content-block block-blurb-text">
+            <div style="color: {{ block.settings.color }};">
+              {{ block.settings.text }}
+            </div>
+          </div>
+        {% when 'two_grid' %}
+          <div class="content-block block-two-grid">
+            {% if block.settings.image_one != null %}
+              <a href="{{ block.settings.link_one }}">
+                {{ block.settings.image_one | image_url: width: 580 | image_tag }}
+              </a>
+            {% endif %}
+            {% if block.settings.image_two != null %}
+              <a href="{{ block.settings.link_two }}">
+                {{ block.settings.image_two | image_url: width: 580 | image_tag }}
+              </a>
+            {% endif %}
+          </div>
+        {% when 'three_grid' %}
+          <div class="content-block block-three-grid">
+            {% if block.settings.image_one != null %}
+              <a href="{{ block.settings.link_one }}">
+                {{ block.settings.image_one | image_url: width: 580 | image_tag }}
+              </a>
+            {% endif %}
+            {% if block.settings.image_two != null %}
+              <a href="{{ block.settings.link_two }}">
+                {{ block.settings.image_two | image_url: width: 580 | image_tag }}
+              </a>
+            {% endif %}
+            {% if block.settings.image_three != null %}
+              <a href="{{ block.settings.link_three }}">
+                {{ block.settings.image_three | image_url: width: 580 | image_tag }}
+              </a>
+            {% endif %}
+          </div>
+        {% when 'tooltip' %}
+          <div class="content-block block-tooltip">
+            <div
+              data-tooltip-bg="#FFFFFF"
+              data-tippy-content="{{ block.settings.html | escape }}"
+            >
+              <img src="https://cdn.shopify.com/s/files/1/0382/1761/3450/files/0bc57d4b-2f34-4cd5-afda-fc8378fa7a72.png?v=1756392294">
+              <p>{{ block.settings.text }}</p>
+            </div>
+          </div>
+        {% when 'video_content' %}
+          <div class="content-block block-video-content">
+            {% if block.settings.video_file %}
+              {{
+                block.settings.video_file
+                | video_tag:
+                  autoplay: block.settings.autoplay,
+                  loop: block.settings.loop,
+                  muted: block.settings.muted,
+                  controls: block.settings.controls
+              }}
+            {% elsif block.settings.video_url %}
+
+            {% endif %}
+          </div>
+        {% when 'marquee' %}
+          <div class="content-block block-marquee" data-index="{{ forloop.index0 }}">
+            {% render 'customcode-marquee-generator', block: block %}
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+</c-content-generator>
+
+{% schema %}
+{
+  "name": "C Content Generator",
+  "settings": [
+    { "type": "checkbox", "id": "d_padding_top", "label": "Display Padding Top", "default": true },
+    { "type": "checkbox", "id": "d_padding_bottom", "label": "Display Padding Bottom", "default": true }
+  ],
+  "blocks": [
+    {
+      "type": "tooltip",
+      "name": "Tooltip",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "html",
+          "id": "html",
+          "label": "HTML"
+        }
+      ]
+    },
+    {
+      "type": "two_grid",
+      "name": "2 Image Grid",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_one",
+          "label": "Image 1"
+        },
+        {
+          "type": "url",
+          "id": "link_one",
+          "label": "Link 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_two",
+          "label": "Image 2"
+        },
+        {
+          "type": "url",
+          "id": "link_two",
+          "label": "Link 2"
+        }
+      ]
+    },
+    {
+      "type": "three_grid",
+      "name": "3 Image Grid",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_one",
+          "label": "Image 1"
+        },
+        {
+          "type": "url",
+          "id": "link_one",
+          "label": "Link 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_two",
+          "label": "Image 2"
+        },
+        {
+          "type": "url",
+          "id": "link_two",
+          "label": "Link 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_three",
+          "label": "Image 3"
+        },
+        {
+          "type": "url",
+          "id": "link_three",
+          "label": "Link 3"
+        }
+      ]
+    },
+    {
+      "type": "blurb_text",
+      "name": "Text Info",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Font Color",
+          "default": "#003659"
+        }
+      ]
+    },
+    {
+      "type": "full_width_image",
+      "name": "Full Width Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "m_image",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "d_image",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "lcp",
+          "label": "Mark Image as LCP",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "section_header",
+      "name": "Section Header",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Header"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "name": "Content",
+      "settings": [
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text Alignment",
+          "options": [
+            {
+              "value": "c-text-left",
+              "label": "Left"
+            },
+            {
+              "value": "c-text-center",
+              "label": "Center"
+            },
+            {
+              "value": "c-text-right",
+              "label": "Right"
+            }
+          ],
+          "default": "c-text-center"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    },
+    {
+      "type": "liquid",
+      "name": "Liquid",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "liquid",
+          "label": "Liquid"
+        }
+      ]
+    },
+    {
+      "type": "accented_header",
+      "name": "Accented Header",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "info": "Bold Text will be accented"
+        }
+      ]
+    },
+    {
+      "type": "video_content",
+      "name": "Video Content",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video_file",
+          "label": "Video File"
+        },
+        {
+          "type": "video_url",
+          "id": "video_url",
+          "label": "Video URL",
+          "accept": ["vimeo", "youtube"]
+        },
+        {
+          "type": "header",
+          "content": "Video Settings"
+        },
+        {
+          "type": "checkbox",
+          "id": "autoplay",
+          "label": "Autoplay",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "muted",
+          "label": "Muted",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "controls",
+          "label": "Controls",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "loop",
+          "label": "Loop",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "image_content",
+      "name": "Image Content",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "lcp",
+          "label": "Mark Image as LCP",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    },
+    {
+      "type": "marquee",
+      "name": "Marquee",
+      "settings": [
+        {
+          "type": "html",
+          "id": "html",
+          "label": "Marquee HTML"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Content Generator",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,209 @@
+{% style %}
+  c-stepped-process.stepped-process {display: block; max-width: 780px; margin: 0 auto; padding: 15px 20px;}
+  c-stepped-process .stepped-grid {display: grid; grid-template-columns: 1fr .75fr 1fr; grid-auto-rows: minmax(60px, auto); gap: 0;}
+  c-stepped-process .top-node, c-stepped-process .end-node, c-stepped-process .bridge-node, c-stepped-process .middle-node {position: relative;}
+  c-stepped-process .circle-node {background: #003659; aspect-ratio: 1; border-radius: 50%; width: 15px; top: 50%; position: absolute; left: 50%; transform: translate(-50%, -50%);}
+  c-stepped-process .top-node-line {background: #003659; width: 2px; bottom: 0; position: absolute; left: 50%; transform: translate(-50%, 0%); height: 50%;}
+  c-stepped-process .bottom-node-line {background: #003659; width: 2px; top: 0; position: absolute; left: 50%; transform: translate(-50%, 0%); height: 50%;}
+  /* ================= IMAGES ================= */
+  c-stepped-process .step-image {position: relative; display: flex; align-items: center;}
+  c-stepped-process .step-image img {width: 100%; height: fit-content; display: block; position: relative; z-index: 1; border-radius: 20px;}
+  /* ================= TEXT ================= */
+  c-stepped-process .step-text {position: relative; display: flex; flex-direction: column; justify-content: center;}
+  c-stepped-process .step-text.text-left {padding-left: 10px; padding-bottom: 10px; padding-top: 10px; margin: 20px 0 20px 0px;}
+  c-stepped-process .step-text.text-right {padding-right: 10px; padding-bottom: 10px; padding-top: 10px; margin: 20px 0px 20px 0px;}
+  c-stepped-process .step-text.text-left .accent-circle {width: 10px; height: 10px; border: 1px solid #003659; border-radius: 50%; position: absolute; left: 0;}
+  c-stepped-process .step-text.text-right .accent-circle {width: 10px; height: 10px; border: 1px solid #003659; border-radius: 50%; position: absolute; right: 0;}
+  c-stepped-process .step-text img {max-width: 75px; margin: auto;}
+  c-stepped-process .step-text h3 {margin: 0 0 8px; color: #003659;}
+  c-stepped-process .step-text p {margin: 0; color: #003659;}
+  /* ================= NODE ================= */
+  c-stepped-process .step-node {position: relative; width: 56px; height: 56px; margin: 0 auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+  c-stepped-process .step-number {position: relative; z-index: 3; width: 56px; background: #003659; color: #fff; font-weight: bold; border-radius: 50%; display: flex; justify-content: center; align-items: center; aspect-ratio: 1;}
+  c-stepped-process .node-ripple { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; border: 2px solid #003659; z-index: 1;}
+  c-stepped-process .ripple-1 {width: 70px; height: 70px;}
+  c-stepped-process .ripple-2 {width: 80px; height: 80px; border-color: #003659;}
+  c-stepped-process .node-line {position: absolute; background: #003659; z-index: 0;}
+  c-stepped-process .node-line--vertical {width: 2px; height: 100%; left: 50%; transform: translate(-50%, 0);}
+  c-stepped-process .node-line--horizontal {width: 100%; height: 2px; top: 50%; transform: translate(0, -50%);}
+  @media screen and (min-width: 769px) {
+    c-stepped-process.stepped-process {padding: 30px 40px;}
+  }
+  {% if section.settings.display_bracket %}
+    c-stepped-process[data-section-id="{{ section.id }}"] .step-text.text-left {border-left: 1px solid #003659; border-top: 1px solid #003659; border-bottom: 1px solid #003659; border-image: linear-gradient(to right, #000 50%, transparent 50%) 1% 1;}
+    c-stepped-process[data-section-id="{{ section.id }}"] .step-text.text-right {border-right: 1px solid #003659; border-top: 1px solid #003659; border-bottom: 1px solid #003659; border-image: linear-gradient(to left, #000 50%, transparent 50%) 1% 1;}
+  {% endif %}
+{% endstyle %}
+
+<c-stepped-process class="stepped-process" data-section-id="{{ section.id }}">
+  <div class="stepped-grid">
+    <div
+      class="top-node"
+      style="grid-column: 2; grid-row: 1;"
+    >
+      <div class="circle-node"></div>
+      <div class="top-node-line"></div>
+    </div>
+    {% for block in section.blocks %}
+      {% assign row_start = forloop.index0 | times: 2 | plus: 1 %}
+
+      {% if block.settings.image_position == 'left' %}
+        <!-- IMAGE LEFT -->
+        <div
+          class="step-image image-left"
+          style="grid-column: 1; grid-row: {{ row_start }} / span 3;"
+        >
+          {% if block.settings.image %}
+            {{ block.settings.image | image_url: width: 1200 | image_tag }}
+          {% endif %}
+        </div>
+
+        <!-- NODE -->
+        <div style="grid-column: 2; grid-row: {{ row_start | plus: 1 }};" class="middle-node">
+          <span class="node-line node-line--vertical"></span>
+          <span class="node-line node-line--horizontal"></span>
+
+          <div class="step-node">
+            {% if section.settings.display_ripples %}
+              <span class="node-ripple ripple-1"></span>
+              <span class="node-ripple ripple-2"></span>
+            {% endif %}
+
+            <div class="step-number">{{ block.settings.number }}</div>
+          </div>
+        </div>
+
+        <!-- TEXT RIGHT -->
+        <div
+          class="step-text text-left"
+          style="grid-column: 3; grid-row: {{ row_start | plus: 1 }};"
+        >
+          {% if section.settings.display_circles %}
+            <div class="accent-circle"></div>
+          {% endif %}
+          {% if block.settings.across_icon != null %}
+            {{ block.settings.across_icon | image_url: width: 450 | image_tag }}
+          {% endif %}
+          <h3>{{ block.settings.heading }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </div>
+
+      {% else %}
+        <!-- TEXT LEFT -->
+        <div
+          class="step-text text-right"
+          style="grid-column: 1; grid-row: {{ row_start | plus: 1 }};"
+        >
+          {% if section.settings.display_circles %}
+            <div class="accent-circle"></div>
+          {% endif %}
+          {% if block.settings.across_icon != null %}
+            {{ block.settings.across_icon | image_url: width: 450 | image_tag }}
+          {% endif %}
+          <h3>{{ block.settings.heading }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </div>
+
+        <!-- NODE -->
+        <div style="grid-column: 2; grid-row: {{ row_start | plus: 1 }};" class="middle-node">
+          <span class="node-line node-line--vertical"></span>
+          <span class="node-line node-line--horizontal"></span>
+
+          <div class="step-node">
+            {% if forloop.first %}
+              <span class="node-dot node-dot--top"></span>
+            {% endif %}
+
+            {% if section.settings.display_ripples %}
+              <span class="node-ripple ripple-1"></span>
+              <span class="node-ripple ripple-2"></span>
+            {% endif %}
+
+            <div class="step-number">{{ block.settings.number }}</div>
+
+            {% if forloop.last %}
+              <span class="node-dot node-dot--bottom"></span>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- IMAGE RIGHT -->
+        <div
+          class="step-image image-right"
+          style="grid-column: 3; grid-row: {{ row_start }} / span 3;"
+        >
+          {% if block.settings.image %}
+            {{ block.settings.image | image_url: width: 1200 | image_tag }}
+          {% endif %}
+        </div>
+      {% endif %}
+      {% unless forloop.last %}
+        <div style="grid-column: 2; grid-row: {{ row_start | plus: 2 }};" class="bridge-node">
+          <span class="node-line node-line--vertical"></span>
+        </div>
+      {% endunless %}
+    {% endfor %}
+    <div
+      class="end-node"
+      style="grid-column: 2; grid-row: {{ section.blocks.size | times: 2 | plus: 1 }};"
+    >
+      <div class="circle-node"></div>
+      <div class="bottom-node-line"></div>
+    </div>
+  </div>
+</c-stepped-process>
+
+{% schema %}
+{
+  "name": "Stepped Image Process",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display_ripples",
+      "label": "Display Ripples",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "display_bracket",
+      "label": "Display Bracket",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "display_circles",
+      "label": "Display Circles",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Step image" },
+        { "type": "text", "id": "number", "label": "Center number", "default": "1" },
+        { "type": "image_picker", "id": "across_icon", "label": "Across Icon" },
+        { "type": "text", "id": "heading", "label": "Across heading" },
+        { "type": "textarea", "id": "text", "label": "Across text" },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image position",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stepped Image Process",
+      "blocks": [{ "type": "step" }, { "type": "step" }, { "type": "step" }]
+    }
+  ]
+}
+{% endschema %}

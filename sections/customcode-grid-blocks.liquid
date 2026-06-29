@@ -1,0 +1,181 @@
+{% style %}
+  {% if section.settings.grid_type == 'type-one' %}
+    {% for block in section.blocks %}
+        c-grid-blocks .grid-container[data-grid-type="type-one"] .grid-item[data-block-id="{{ block.id }}"] .image-container {
+          background-color: {{ block.settings.box_color }};
+        }
+    {% endfor %}
+  {% endif %}
+  c-grid-blocks[data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+  }
+  c-grid-blocks[data-section-id="{{ section.id }}"] .grid-container {
+    grid-template-columns: repeat({{ section.settings.mobile_grid }}, 1fr); gap: 15px;
+  }
+  c-grid-blocks[data-section-id="{{ section.id }}"] .grid-item .c-content * {
+    color: {{ section.settings.text_content_color }};
+  }
+  @media screen and (min-width: 769px) {
+    c-grid-blocks[data-section-id="{{ section.id }}"] .grid-container {
+      grid-template-columns: repeat({{ section.settings.desktop_grid }}, 1fr); gap: 15px;
+    }
+  }
+{% endstyle %}
+
+<c-grid-blocks data-section-id="{{ section.id }}">
+  <div class="inner-container">
+    <div class="header-container">
+      <h2>{{ section.settings.header }}</h2>
+      <div class="content-container">
+        {{ section.settings.content }}
+      </div>
+    </div>
+    <div class="grid-container" data-grid-type="{{ section.settings.grid_type }}">
+      {% for block in section.blocks %}
+        <div class="grid-item" data-block-id="{{ block.id }}">
+          {% if block.settings.icon != null %}
+            {{ block.settings.icon | image_url: width: 560 | image_tag: class: 'c-icon' }}
+          {% else %}
+            <div class="grid-number">
+              {{ forloop.index }}
+            </div>
+          {% endif %}
+          <div class="image-container">
+            {% if block.settings.image != null %}
+              {{ block.settings.image | image_url: width: 2000 | image_tag }}
+            {% endif %}
+          </div>
+          <div class="text-container">
+            {% if block.settings.title != blank %}
+              <h4 class="c-title">{{ block.settings.title }}</h4>
+            {% endif %}
+            {% if block.settings.content != null %}
+              <div class="c-content">
+                {{ block.settings.content }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% if section.settings.bottom_content != empty %}
+      <div class="bottom-content-container">
+        {{ section.settings.bottom_content }}
+      </div>
+    {% endif %}
+  </div>
+</c-grid-blocks>
+
+{% schema %}
+{
+  "name": "C Grid Blocks",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "bottom_content",
+      "label": "Bottom Content"
+    },
+    {
+      "type": "select",
+      "id": "grid_type",
+      "label": "Grid Type",
+      "options": [
+        {
+          "label": "One",
+          "value": "type-one"
+        },
+        {
+          "label": "Two",
+          "value": "type-two"
+        },
+        {
+          "label": "Three",
+          "value": "type-three"
+        }
+      ],
+      "default": "type-one"
+    },
+    {
+      "type": "number",
+      "id": "mobile_grid",
+      "label": "Mobile Columns",
+      "default": 2
+    },
+    {
+      "type": "number",
+      "id": "desktop_grid",
+      "label": "Desktop Columns",
+      "default": 4
+    },
+    {
+      "type": "color",
+      "id": "text_content_color",
+      "label": "Block Content Color",
+      "default": "#808080"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "header",
+          "content": "Grid Type 1 Settings"
+        },
+        {
+          "type": "color",
+          "id": "box_color",
+          "label": "BG Box Color",
+          "default": "#4BA0ED"
+        },
+        {
+          "type": "header",
+          "content": "Grid Type 2 Settings"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Grid Blocks",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

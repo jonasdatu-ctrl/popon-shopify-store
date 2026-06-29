@@ -1,0 +1,243 @@
+{% style %}
+  c-animated-triangle[data-section-id="{{ section.id }}"] {
+    {% if section.settings.display_p_top %}
+      padding-top: 15px;
+    {% endif %}
+    {% if section.settings.display_p_bottom %}
+      padding-bottom: 15px;
+    {% endif %}
+  }
+  @media screen and (min-width: 769px) {
+    c-animated-triangle[data-section-id="{{ section.id }}"] {
+      {% if section.settings.display_p_top %}
+        padding-top: 40px;
+      {% endif %}
+      {% if section.settings.display_p_bottom %}
+        padding-bottom: 40px;
+      {% endif %}
+    }    
+  }
+  c-animated-triangle {display: block; overflow: hidden; text-align: center;}
+  c-animated-triangle .header-container {margin-bottom: 40px;}
+  c-animated-triangle .header-container h2 {font-weight: 400; text-align: center; color: #003659; margin: 0 0 15px 0;}
+  c-animated-triangle .header-container p {text-align: center; color: #003659; margin: 0 0 0px 0; text-wrap: balance;}
+  c-animated-triangle .interactive-triangle__container {position: relative; max-width: 500px; height: auto; margin: auto; aspect-ratio: 1;}
+  c-animated-triangle .interactive-triangle__triangle {width: 100%; height: 100%; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); transform: rotate(-5deg); transition: background 0.3s ease;}
+  c-animated-triangle .interactive-triangle__center {position: absolute; top: 60%; left: 51%; transform: translate(-50%, -50%) scale(1.93); background: transparent; padding: 16px 24px; max-width: 70%;}
+  c-animated-triangle .interactive-triangle__corner {position: absolute; padding: 10px; background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; font-weight: 600; transition: all .25s; white-space: nowrap;}
+  c-animated-triangle .interactive-triangle__corner.active {background: #003659; color: #fff; transform: scale(1.05);}
+  c-animated-triangle .interactive-triangle__corner * {font-size: 11px;}
+  c-animated-triangle .interactive-triangle__corner--top {top: -30px; left: 35%;}
+  c-animated-triangle .interactive-triangle__corner--left {bottom: -10%; left: 20px;}
+  c-animated-triangle .interactive-triangle__corner--right {bottom: -20px; right: 10px;}
+  c-animated-triangle .interactive-triangle__fade-out {opacity: 0; transform: translateY(10px);}
+  c-animated-triangle .interactive-triangle__description * {text-wrap: balance;}
+  c-animated-triangle .interactive-triangle__description {margin: 40px auto 0 auto; padding: 20px; border-radius: 12px; max-width: 500px; position: relative; min-height: 60px; transition: opacity .3s, transform .3s}
+  c-animated-triangle .interactive-triangle__description .description-item {position: absolute; inset: 0; opacity: 0; transition: opacity .3s, transform .3s; pointer-events: none; width: calc(100% - 40px); left: 50%; transform: translate(-50%, 0);}
+  c-animated-triangle .interactive-triangle__description .description-item[active] {opacity: 1; pointer-events: auto;}
+  @media screen and (min-width: 769px) {
+    c-animated-triangle .interactive-triangle__corner {padding: 12px 18px;}
+    c-animated-triangle .interactive-triangle__corner * {font-size: 14px;}
+    c-animated-triangle .interactive-triangle__corner--top {top: -30px; left: 35%;}
+    c-animated-triangle .interactive-triangle__corner--left {bottom: -10%; left: 20px;}
+    c-animated-triangle .interactive-triangle__corner--right {bottom: -20px; right: -20%;}
+    c-animated-triangle .interactive-triangle__description {margin: 80px auto 0 auto; min-height: 70px;}
+  }
+{% endstyle %}
+
+<c-animated-triangle class="interactive-triangle" data-section-id="{{ section.id }}">
+  <div class="header-container">
+    {{ section.settings.header }}
+  </div>
+  <div class="interactive-triangle__container">
+    <div
+      class="interactive-triangle__triangle"
+    ></div>
+
+    <!-- Center Box -->
+    <div class="interactive-triangle__center">
+      {% if section.settings.image != null %}
+        {{ section.settings.image | image_url: width: 400 | image_tag }}
+      {% endif %}
+    </div>
+
+    <!-- Corner Blocks -->
+    {% for block in section.blocks %}
+      <div class="interactive-triangle__corner interactive-triangle__corner--{{ block.settings.position }} {% if forloop.first %}active{% endif %}">
+        {{ block.settings.label }}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="interactive-triangle__description">
+    {% for block in section.blocks %}
+      <div
+        class="description-item"
+        data-index="{{ forloop.index0 }}"
+        {% if forloop.first %}
+          active
+        {% endif %}
+      >
+        {{ block.settings.description }}
+      </div>
+    {% endfor %}
+  </div>
+</c-animated-triangle>
+
+<script>
+  class CAnimatedTriangle extends HTMLElement {
+    connectedCallback() {
+      this.triangle = this.querySelector('.interactive-triangle__triangle');
+      this.corners = this.querySelectorAll('.interactive-triangle__corner');
+      this.description = this.querySelector('.interactive-triangle__description');
+
+      this.currentAngle = 0;
+      this.targetAngle = 0;
+      this.lockedAngle = 0;
+
+      this.setupActive();
+      this.animate();
+      this.bindEvents();
+    }
+
+    setupActive() {
+      const active = this.querySelector('.interactive-triangle__corner.active');
+      if (active) {
+        this.lockedAngle = this.getAngleFromCorner(active);
+        this.targetAngle = this.lockedAngle;
+      }
+    }
+
+    getAngleFromCorner(corner) {
+      if (corner.classList.contains('interactive-triangle__corner--top')) return 180; // white toward top
+      if (corner.classList.contains('interactive-triangle__corner--left')) return 90; // white toward left
+      if (corner.classList.contains('interactive-triangle__corner--right')) return 0; // white toward right
+      return 180;
+    }
+
+    animate() {
+      const ease = 0.1;
+      this.currentAngle += (this.targetAngle - this.currentAngle) * ease;
+
+      this.triangle.style.background = `linear-gradient(${this.currentAngle}deg,rgba(255,255,255,0.65) 0%, #0E4C82 50%)`;
+
+      requestAnimationFrame(() => this.animate());
+    }
+
+    bindEvents() {
+      this.triangle.addEventListener('mousemove', (e) => {
+        const rect = this.triangle.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const angle = (Math.atan2(y - centerY, x - centerX) * 180) / Math.PI;
+        this.targetAngle = angle;
+      });
+
+      this.triangle.addEventListener('mouseleave', () => {
+        this.targetAngle = this.lockedAngle;
+      });
+
+      this.corners.forEach((corner, index) => {
+        corner.addEventListener('click', () => {
+          // Toggle active corner
+          this.corners.forEach((c) => c.classList.remove('active'));
+          corner.classList.add('active');
+
+          // Rotate triangle
+          this.lockedAngle = this.getAngleFromCorner(corner);
+          this.targetAngle = this.lockedAngle;
+
+          // Toggle description
+          {% comment %} const items = this.description.querySelectorAll('.description-item');
+          items.forEach((item, i) => {
+            if (i === index) {
+              item.style.display = 'block';
+              setTimeout(() => item.classList.remove('interactive-triangle__fade-out'), 20);
+            } else {
+              item.classList.add('interactive-triangle__fade-out');
+              setTimeout(() => (item.style.display = 'none'), 250);
+            }
+          }); {% endcomment %}
+          const items = this.description.querySelectorAll('.description-item');
+
+          items.forEach((item, i) => {
+            if (i === index) {
+              item.setAttribute('active', '');
+            } else {
+              item.removeAttribute('active');
+            }
+          });          
+        });
+      });
+    }
+  }
+
+  customElements.define('c-animated-triangle', CAnimatedTriangle);
+</script>
+
+{% schema %}
+{
+  "name": "C Animated Triangle",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display_p_top",
+      "label": "Dispaly Padding Top",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "display_p_bottom",
+      "label": "Dispaly Padding Bottom",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "corner",
+      "name": "Corner",
+      "settings": [
+        {
+          "type": "select",
+          "id": "position",
+          "label": "Position",
+          "options": [
+            { "value": "top", "label": "Top" },
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" }
+          ]
+        },
+        {
+          "type": "richtext",
+          "id": "label",
+          "label": "Corner label"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Animated Triangle"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,65 @@
+<c-freebies>
+  <div class="freebie-inner-container">
+    <div class="fr-title-container">
+      <h4>{{ title }}</h4>
+    </div>
+    <div class="fr-grid-container">
+      {% if img_one != null %}
+        <div class="fr-grid-item">
+          <div class="image-container">
+            {{ img_one | image_url: width: 1080 | image_tag }}
+          </div>
+          <div class="text-container">
+            <p>{{ txt_one }}</p>
+            <span class="c-desktop">
+              {% render 'customcode-icons', icon: 'circled-pink-check' -%}
+              {{ button_text }}
+            </span>
+          </div>
+        </div>
+      {% endif %}
+      {% if img_two != null %}
+        <div class="fr-grid-item">
+          <div class="image-container">
+            {{ img_two | image_url: width: 1080 | image_tag }}
+          </div>
+          <div class="text-container">
+            <p>{{ txt_two }}</p>
+            <span class="c-desktop">
+              {% render 'customcode-icons', icon: 'circled-pink-check' -%}
+              {{ button_text }}
+            </span>
+          </div>
+        </div>
+      {% endif %}
+      {% if img_three != null %}
+        <div class="fr-grid-item">
+          <div class="image-container">
+            {{ img_three | image_url: width: 1080 | image_tag }}
+          </div>
+          <div class="text-container">
+            <p>{{ txt_three }}</p>
+            <span class="c-desktop">
+              {% render 'customcode-icons', icon: 'circled-pink-check' -%}
+              {{ button_text }}
+            </span>
+          </div>
+        </div>
+      {% endif %}
+      {% if img_four != null %}
+        <div class="fr-grid-item">
+          <div class="image-container">
+            {{ img_four | image_url: width: 1080 | image_tag }}
+          </div>
+          <div class="text-container">
+            <p>{{ txt_four }}</p>
+            <span class="c-desktop">
+              {% render 'customcode-icons', icon: 'circled-pink-check' -%}
+              {{ button_text }}
+            </span>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</c-freebies>

@@ -1,0 +1,48 @@
+{% style %}
+  c-image-text-badge[data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+  }
+{% endstyle %}
+
+<c-image-text-badge data-section-id="{{ section.id }}">
+  <div class="inner-container">
+    <div class="image-container">
+      {% if section.settings.image != null %}
+        {{ section.settings.image | image_url: width: 1040 | image_tag }}
+      {% endif %}
+    </div>
+    <div class="text-container">
+      {{ section.settings.text }}
+    </div>
+  </div>
+</c-image-text-badge>
+
+{% schema %}
+{
+  "name": "C Image Text Badge",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "BG Color"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "info": "Use bold to highlight text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Image Text Badge",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

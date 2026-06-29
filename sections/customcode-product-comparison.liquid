@@ -1,0 +1,210 @@
+{% style %}
+  {% for block in section.blocks %}
+    {% if block.type == 'callout' %}
+      c-product-comparison .callout-container[data-block-id="{{ block.id }}"] {
+        background-color: {{ block.settings.bg_color }};
+      }
+      {% endif %}
+    {% endfor %}
+{% endstyle %}
+
+<c-product-comparison>
+  <div class="inner-container">
+    <div class="left-container">
+      <div class="grid-container">
+        {% for block in section.blocks %}
+          {% if block.type == 'product' %}
+            <div class="grid-item">
+              <div class="info-container">
+                <h2 class="c-title">{{ block.settings.title }}</h2>
+                <p class="c-description">{{ block.settings.description }}</p>
+                <div class="price-container">
+                  {% assign price_array = block.settings.price_display | split: '|' %}
+                  <h3>
+                    {{ price_array[0] }}
+                    <s>{{ price_array[1] }}</s>
+                  </h3>
+                </div>
+                <p class="blurb">
+                  {{ block.settings.blurb }}
+                </p>
+              </div>
+              {% if block.settings.image != null %}
+                {{ block.settings.image | image_url: width: 1800 | image_tag }}
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% for block in section.blocks %}
+        {% if block.type == 'callout' %}
+          <a href="{{ block.settings.callout_link }}" class="callout-container" data-block-id="{{ block.id }}">
+            <div class="callout-header">
+              {{ block.settings.header }}
+            </div>
+            <div class="action-container">
+              <h4 class="action-title">
+                {{ block.settings.action_title }}
+              </h4>
+              <div class="action-grid">
+                {% assign action_grid = block.settings.action_items | split: '|' %}
+                {% for action in action_grid %}
+                  <div class="action-item">
+                    {{ action }}
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% for block in section.blocks %}
+      {% if block.type == 'letter' %}
+        <div class="right-container">
+          <div class="letter-container">
+            {% if block.settings.badge != null %}
+              {{ block.settings.badge | image_url: width: 540 | image_tag: class: 'c-badge' }}
+            {% endif %}
+            <h2 class="letter-title">{{ block.settings.title }}</h2>
+            <div class="top-content">
+              {{ block.settings.top_content }}
+            </div>
+            {% if block.settings.bottom_image != null %}
+              {{ block.settings.bottom_image | image_url: width: 1800 | image_tag: class: 'c-bottom-image' }}
+            {% endif %}
+            <div class="bottom-content">
+              {{ block.settings.bottom_content }}
+            </div>
+            {% if block.settings.signature != null %}
+              {{ block.settings.signature | image_url: width: 540 | image_tag: class: 'c-author' }}
+            {% endif %}
+            <div class="author">
+              {{ block.settings.author }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</c-product-comparison>
+
+{% schema %}
+{
+  "name": "C Product Comparison",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Label"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "price_display",
+          "label": "Price Display",
+          "info": "[Price] | [Compare Price] format"
+        },
+        {
+          "type": "text",
+          "id": "blurb",
+          "label": "Blurb"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "name": "Callout",
+      "settings": [
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "BG Color"
+        },
+        {
+          "type": "richtext",
+          "id": "header",
+          "label": "Header"
+        },
+        {
+          "type": "text",
+          "id": "action_title",
+          "label": "Callout Title"
+        },
+        {
+          "type": "url",
+          "id": "callout_link",
+          "label": "Callout Link"
+        },
+        {
+          "type": "text",
+          "id": "action_items",
+          "label": "Callout Options",
+          "info": "[Item 1] | [Item 2] | [Item 3] format"
+        }
+      ]
+    },
+    {
+      "type": "letter",
+      "name": "Letter",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Badge",
+          "id": "badge"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "top_content",
+          "label": "Top Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "bottom_image",
+          "label": "Bottom Image"
+        },
+        {
+          "type": "richtext",
+          "id": "bottom_content",
+          "label": "Bottom Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "signature",
+          "label": "Signature"
+        },
+        {
+          "type": "richtext",
+          "id": "author",
+          "label": "Author"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Product Comparison",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

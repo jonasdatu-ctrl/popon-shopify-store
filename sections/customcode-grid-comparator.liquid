@@ -1,0 +1,113 @@
+{% assign title_array = section.settings.title_text | split: '|' %}
+
+{% assign column_array_count = section.blocks.size | plus: 1 %}
+{% assign row_array_count = title_array.size %}
+
+{% assign bg_color_array = '' %}
+{% for block in section.blocks %}
+  {% assign bg_color_array = bg_color_array | append: block.settings.bg_color | append: '|' %}
+{% endfor %}
+{% assign bg_color_array = bg_color_array | split: '|' %}
+
+<c-grid-comparator>
+  <div class="inner-container">
+    <table>
+      {% for row in title_array %}
+        <tr>
+          <td style="background-color: #F5F5F5;">
+            <p>{{ row }}</p>
+          </td>
+          {% for block in section.blocks %}
+            {% assign block_content_array = block.settings.value_text | split: '|' %}
+            {% assign column_index = forloop.index0 %}
+            {% assign bg_color = bg_color_array[column_index] %}
+
+            {% if forloop.parentloop.first %}
+              <td style="background-color: {{ bg_color }};">
+                {% if block.settings.title != blank %}
+                  <h4>{{ block.settings.title }}</h4>
+                {% endif %}
+                {% if block.settings.title_image_one != null %}
+                  {{ block.settings.title_image_one | image_url: width: 980 | image_tag }}
+                {% endif %}
+                {% if block.settings.title_image_two != null %}
+                  {{ block.settings.title_image_two | image_url: width: 980 | image_tag }}
+                {% endif %}
+              </td>
+            {% else %}
+              <td style="background-color: {{ bg_color }};">
+                {% assign index = forloop.parentloop.index0 | minus: 1 %}
+                <p>
+                  {{ block_content_array[index] }}
+                </p>
+              </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </table>
+    <div class="footer-text">
+      {{ section.settings.footer_text }}
+    </div>
+  </div>
+</c-grid-comparator>
+
+{% schema %}
+{
+  "name": "C Grid Comparator",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_text",
+      "label": "Title",
+      "info": "Separated by |"
+    },
+    {
+      "type": "richtext",
+      "id": "footer_text",
+      "label": "Footer Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Column BG Color",
+          "default": "#000000"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "title_image_one",
+          "label": "Title Image One"
+        },
+        {
+          "type": "image_picker",
+          "id": "title_image_two",
+          "label": "Title Image Two"
+        },
+        {
+          "type": "text",
+          "id": "value_text",
+          "label": "Value",
+          "info": "Separated by |"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Grid Comparator",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

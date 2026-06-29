@@ -1,0 +1,266 @@
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'mobile_marquee' %}
+      {% assign img_url = block.settings.image | image_url: width: 380 %}
+      {% assign mobile_marquee = mobile_marquee | append: ',' | append: img_url %}
+    {% when 'desktop_one_marquee' %}
+      {% assign img_url = block.settings.image | image_url: width: 380 %}
+      {% assign desktop_one_marquee = desktop_one_marquee | append: ',' | append: img_url %}
+    {% when 'desktop_two_marquee' %}
+      {% assign img_url = block.settings.image | image_url: width: 380 %}
+      {% assign desktop_two_marquee = desktop_two_marquee | append: ',' | append: img_url %}
+    {% when 'desktop_three_marquee' %}
+      {% assign img_url = block.settings.image | image_url: width: 380 %}
+      {% assign desktop_three_marquee = desktop_three_marquee | append: ',' | append: img_url %}
+  {% endcase %}
+{% endfor %}
+
+{% assign mobile_marquee = mobile_marquee | split: ',' %}
+{% assign desktop_one_marquee = desktop_one_marquee | split: ',' %}
+{% assign desktop_two_marquee = desktop_two_marquee | split: ',' %}
+{% assign desktop_three_marquee = desktop_three_marquee | split: ',' %}
+
+<c-text-marquee>
+  <div class="inner-container">
+    <div class="left-container">
+      {% comment %} CUSTOMCODE FOR FIRELIGHT CONTAINER {% endcomment %}
+      <div style="padding: 0 20px;" class="firelight-container">
+        {% render 'customcode-video-carousel-slider' %}
+        {% comment %} <div id="custom-container-test">
+          <h4 style="text-align: center; margin-bottom: 10px; color: #003659; font-weight: normal;">
+            Trending On TikTok
+          </h4>
+          <fw-embed-feed
+            channel="pop_on"
+            mode="row"
+            open_in="default"
+            max_videos="0"
+            placement="middle"
+            player_placement="bottom-right"
+            playlist="gYxw8w"
+          ></fw-embed-feed>
+        </div> {% endcomment %}
+        <div class="klaviyo-form-ReiK6m"></div>
+        <div class="klaviyo-form-QY4Y3g"></div>
+
+        {% comment %} <fw-widget widget_config_id="Po999o_efc" /> {% endcomment %}
+      </div>
+      {% comment %} CUSTOMCODE FOR FIRELIGHT CONTAINER {% endcomment %}
+
+      <div class="marquee-container" style="display: none;">
+        <div class="mobile-marquee-wrapper">
+          {% for image in mobile_marquee %}
+            {% if image != blank %}
+              <img src="{{ image }}">
+            {% endif %}
+          {% endfor %}
+          {% for image in desktop_one_marquee %}
+            {% if image != blank %}
+              <img src="{{ image }}">
+            {% endif %}
+          {% endfor %}
+          {% for image in desktop_two_marquee %}
+            {% if image != blank %}
+              <img src="{{ image }}">
+            {% endif %}
+          {% endfor %}
+          {% for image in desktop_three_marquee %}
+            {% if image != blank %}
+              <img src="{{ image }}">
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="desktop-one-wrapper c-desktop">
+          {% for image in desktop_one_marquee %}
+            {% if image != blank %}
+              <img src="{{ image }}">
+            {% endif %}
+          {% endfor %}
+          {% for image in desktop_one_marquee %}
+            {% if image != blank %}
+              <img src="{{ image }}">
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="desktop-two-wrapper c-desktop">
+          {% for image in desktop_two_marquee %}
+            {% if image != blank %}
+              <img src="{{ image }}">
+            {% endif %}
+          {% endfor %}
+          {% for image in desktop_two_marquee %}
+            {% if image != blank %}
+              <img src="{{ image }}">
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="desktop-three-wrapper c-desktop">
+          {% for image in desktop_three_marquee %}
+            {% if image != blank %}
+              <img src="{{ image }}">
+            {% endif %}
+          {% endfor %}
+          {% for image in desktop_three_marquee %}
+            {% if image != blank %}
+              <img src="{{ image }}">
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="text-container">
+        {% if section.settings.blurb != blank %}
+          <h4 class="blurb">{{ section.settings.blurb }}</h4>
+        {% endif %}
+        <div class="header-text">
+          {{ section.settings.header }}
+        </div>
+        <div class="featured-flex-container">
+          {% assign feature_array = section.settings.features_grid | split: '|' %}
+          {% assign feature_array_link = section.settings.features_grid_link | split: '|' %}
+          {% for item in feature_array %}
+            <a href="{{ feature_array_link[forloop.index0] }}" class="feature-item">
+              {% render 'customcode-icons', icon: 'circled-check' %}
+              {{ item }}
+            </a>
+          {% endfor %}
+        </div>
+        {% if section.settings.image_url != blank %}
+          <div class="info-item block-image-list">
+            {% assign url_list = section.settings.image_url | split: '|' %}
+            {% capture img_width %}
+            width: calc((100% - (10px * ({{ url_list.size }} - 1))) / {{ url_list.size }});
+          {% endcapture %}
+            {% for url in url_list limit: 6 %}
+              <img src="{{ url }}" width="300px" height="150px;" style="{{ img_width }}">
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if section.settings.content != blank %}
+          <div class="info-item block-info-content-grid">
+            {% assign content_array = section.settings.content | split: '<p>-</p>' %}
+            {% for content in content_array %}
+              <div class="grid-item">
+                {{ content }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if section.settings.button_link != null %}
+          <a href="{{ section.settings.button_link }}" class="c-button">
+            {{ section.settings.button_text }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</c-text-marquee>
+
+{% schema %}
+{
+  "name": "C Text Marquee",
+  "settings": [
+    {
+      "type": "text",
+      "id": "blurb",
+      "label": "Blurb"
+    },
+    {
+      "type": "richtext",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "text",
+      "id": "features_grid",
+      "label": "Features Grid",
+      "info": "Separated by |"
+    },
+    {
+      "type": "text",
+      "id": "features_grid_link",
+      "label": "Features Grid Link",
+      "info": "Separated by |"
+    },
+    {
+      "type": "text",
+      "id": "image_url",
+      "label": "Image Url",
+      "info": "Enter Image URLs separated by '|'"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content Grid",
+      "info": "separated by <p>-</p>"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "mobile_marquee",
+      "name": "Mobile Marquee",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "desktop_one_marquee",
+      "name": "Desktop One Marquee",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "desktop_two_marquee",
+      "name": "Desktop Two Marquee",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "desktop_three_marquee",
+      "name": "Desktop Three Marquee",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Text Marquee",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

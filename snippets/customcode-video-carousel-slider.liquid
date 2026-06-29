@@ -1,0 +1,144 @@
+<style>
+    video-carousel-slider { display: block; position: relative; width: 100%; overflow: hidden; max-width: 1080px; margin: auto;}
+    .video-carousel-section .video-carousel-heading {text-align: center; margin-bottom: 10px; color: #003659; font-weight: normal;}
+    
+    /* Carousel Layout */
+    video-carousel-slider .vcs-container { position: relative; display: flex; align-items: center; }
+    video-carousel-slider .vcs-track {
+    display: grid; grid-auto-flow: column; gap: 15px; overflow-x: auto;
+    scroll-snap-type: x mandatory; scrollbar-width: none; width: 100%;
+    grid-auto-columns: calc(100% / 1.4);
+    }
+    video-carousel-slider .vcs-track::-webkit-scrollbar { display: none; }
+    
+    @media (min-width: 750px) {
+    video-carousel-slider .vcs-track { grid-auto-columns: calc((100% - 45px) / 4.1); }
+    }
+
+    /* Slide Styling */
+    video-carousel-slider .vcs-slide { scroll-snap-align: start; border-radius: 12px; overflow: hidden; cursor: pointer; position: relative; }
+    video-carousel-slider .vcs-inner { position: relative; width: 100%; aspect-ratio: 9/16; background: #000; }
+    video-carousel-slider .vcs-main-video { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+
+    /* Overlays */
+    video-carousel-slider .vcs-overlay { 
+    position: absolute; inset: 0; background: rgba(0,0,0,0.2); 
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease; z-index: 2;
+    }
+    video-carousel-slider .vcs-slide:hover .vcs-overlay { opacity: 0; visibility: hidden; }
+    
+    video-carousel-slider .vcs-play-btn { 
+    width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.25); 
+    display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px);
+    }
+    video-carousel-slider .vcs-play-btn svg {
+    transform: scale(1.5); 
+    }
+    video-carousel-slider .vcs-title { position: absolute; bottom: 20px; padding: 0 10px; color: #fff; font-weight: bold; font-size: 20px; line-height: normal;}
+
+    /* Horizontal Nav */
+    video-carousel-slider .vcs-nav-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #fff;
+    background: white; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    z-index: 10; color: black; box-shadow: gray 0px 0px 10px;
+    }
+    video-carousel-slider .vcs-nav-arrow.prev { left: 10px; transform: translateY(-50%) rotate(90deg); }
+    video-carousel-slider .vcs-nav-arrow.next { right: 10px; transform: translateY(-50%) rotate(-90deg); }
+    video-carousel-slider .vcs-nav-arrow.hidden { opacity: 0; pointer-events: none; }
+
+    /* Vertical Modal */
+    video-carousel-slider .vcs-modal { position: fixed; inset: 0; z-index: 9999; display: none; overflow: hidden; background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px);}
+    video-carousel-slider .vcs-modal[aria-hidden="false"] { display: block; }
+    
+    video-carousel-slider .vcs-modal-close {
+    position: absolute; top: 10px; right: 10px; z-index: 10005;
+    background: transparent; border: none; color: white;
+    border-radius: 50%; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    font-size: 40px;
+    }
+    
+    video-carousel-slider .vcs-modal-nav {
+    position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 20px; z-index: 10005;
+    }
+    
+    video-carousel-slider .vcs-m-arrow {
+    background: transparent; border: none;
+    width: 52px; height: 52px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    }
+    video-carousel-slider .vcs-m-arrow.up { transform: rotate(180deg); }
+    video-carousel-slider .vcs-m-arrow svg { width: 32px; fill: #fff; }
+
+    video-carousel-slider .vcs-modal-viewport { height: 100vh; width: 100vw; display: flex; align-items: center; }
+    video-carousel-slider .vcs-modal-track {
+    display: flex; flex-direction: column; height: 100vh; width: 100%;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    video-carousel-slider .vcs-m-slide {
+    height: 100vh; width: 100%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; padding: 0; box-sizing: border-box;
+    }
+    video-carousel-slider .vcs-modal-video { max-height: 100vh; width: auto; height: 100vh;}
+</style>
+
+{% assign current_set = video_set | default: 'trending-on-tiktok' %}
+
+{% assign title = metaobjects.firelight_video_set[current_set].section_title.value %}
+{% assign video_array = metaobjects.firelight_video_set[current_set].media_grid.value %}
+{% assign title_array = metaobjects.firelight_video_set[current_set].title_grid.value %}  
+
+<section class="video-carousel-section">
+    {% if title != blank %}
+        <h4 class="video-carousel-heading">{{ title | escape }}</h4>
+    {% endif %}    
+
+    <video-carousel-slider>
+        <div class="vcs-container">
+        <div class="vcs-track">
+        {% for video in video_array %}
+            <div class="vcs-slide" data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            <div class="vcs-inner">
+                {{ video | video_tag: image_size: '720x', loop: true, muted: true, controls: false, class: 'vcs-main-video' }}
+                <div class="vcs-overlay">
+                <div class="vcs-play-btn">
+                    <svg viewBox="0 0 100 100" width="30" height="30"><polygon points="35,25 35,75 75,50" fill="white"/></svg>
+                </div>
+                <div class="vcs-title">{{ title_array[forloop.index0] }}</div>
+                </div>
+            </div>
+            </div>
+        {% endfor %}
+        </div>
+
+        <button class="vcs-nav-arrow prev" aria-label="Previous">
+        <svg viewBox="0 0 10 6" width="18"><path fill-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></svg>
+        </button>
+        <button class="vcs-nav-arrow next" aria-label="Next">
+        <svg viewBox="0 0 10 6" width="18"><path fill-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></svg>
+        </button>
+        </div>
+
+        <div class="vcs-modal" aria-hidden="true">
+        <button class="vcs-modal-close">✕</button>
+        <div class="vcs-modal-nav">
+        <button class="vcs-m-arrow up">
+            <svg viewBox="0 0 10 6"><path d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="white"></svg>
+        </button>
+        <button class="vcs-m-arrow down">
+            <svg viewBox="0 0 10 6"><path d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="white"></svg>
+        </button>
+        </div>
+        <div class="vcs-modal-viewport">
+        <div class="vcs-modal-track">
+            {% for video in video_array %}
+            <div class="vcs-m-slide">
+                {{ video | video_tag: loop: true, controls: true, preload: "none", class: 'vcs-modal-video' }}
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+        </div>
+    </video-carousel-slider>
+</section>

@@ -1,0 +1,92 @@
+<c-table-comparison>
+  <div class="inner-container">
+    <div class="header-container">
+      <h2>{{ section.settings.header }}</h2>
+    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="normal-cell header-cell">
+          <td><h4>The Real Deal</h4></td>
+          <td>
+            <img src="https://cdn.shopify.com/s/files/1/0382/1761/3450/files/PopOnv2.0_Logo_5f576f03-689d-42a3-89e0-a22f428a2da2.webp?v=1733810799">
+          </td>
+          <td><h4>Others</h4></td>
+        </tr>
+        {% for block in section.blocks %}
+          <tr class="normal-cell {% if forloop.last %}last-normal-row{% endif %}">
+            <td>
+              <p>{{ block.settings.title }}</p>
+            </td>
+            <td>
+              {% if section.settings.check_image != null %}
+                {{ section.settings.check_image | image_url: width: 150 | image_tag }}
+              {% endif %}
+            </td>
+            <td>
+              {% if section.settings.x_image != null %}
+                {{ section.settings.x_image | image_url: width: 150 | image_tag }}
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</c-table-comparison>
+
+{% schema %}
+{
+  "name": "C Table Comparison",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "check_image",
+      "label": "Check Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "x_image",
+      "label": "X Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Table Comparison",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

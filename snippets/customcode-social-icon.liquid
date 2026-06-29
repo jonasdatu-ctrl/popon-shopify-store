@@ -1,0 +1,55 @@
+<c-social-icon>
+  <p></p>
+  <div class="inner-container">
+    <a href="https://www.facebook.com/poponveneers" class="link list-social__link">
+      {%- render 'customcode-icons', icon: 'facebook' -%}
+      <span class="visually-hidden">Facebook</span>
+    </a>
+
+    <a href="https://www.instagram.com/poponveneers/" class="link list-social__link">
+      {%- render 'customcode-icons', icon: 'instagram' -%}
+      <span class="visually-hidden">Instagram</span>
+    </a>
+
+    <a href="https://www.youtube.com/c/poponveneers" class="link list-social__link">
+      {%- render 'customcode-icons', icon: 'youtube' -%}
+      <span class="visually-hidden">Youtube</span>
+    </a>
+
+    <a href="https://www.tiktok.com/@pop.on" class="link list-social__link">
+      {%- render 'customcode-icons', icon: 'tiktok' -%}
+      <span class="visually-hidden">Tiktok</span>
+    </a>
+
+    <a href="https://x.com/PopOnVeneers" class="link list-social__link">
+      {%- render 'customcode-icons', icon: 'x' -%}
+      <span class="visually-hidden">X</span>
+    </a>
+
+    <a href="https://www.pinterest.com/PopOnVeneers" class="link list-social__link">
+      {%- render 'customcode-icons', icon: 'pinterest' -%}
+      <span class="visually-hidden">Pinterest</span>
+    </a>
+    {% comment %}
+      {%- if settings.social_snapchat_link != blank -%}
+        <a href="{{ settings.social_snapchat_link }}" class="link list-social__link">
+          {%- render 'icon-snapchat' -%}
+          <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+        </a>
+      {%- endif -%}
+      {%- if settings.social_tumblr_link != blank -%}
+        <a href="{{ settings.social_tumblr_link }}" class="link list-social__link">
+          {%- render 'icon-tumblr' -%}
+          <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+        </a>
+      {%- endif -%}
+      {%- if settings.social_vimeo_link != blank -%}
+        <a href="{{ settings.social_vimeo_link }}" class="link list-social__link">
+          {%- render 'icon-vimeo' -%}
+          <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+        </a>
+      {%- endif -%}
+    {% endcomment %}
+  </div>
+  <p></p>
+</c-social-icon>

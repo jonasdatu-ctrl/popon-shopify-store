@@ -1,0 +1,73 @@
+{% style %}
+  {% for block in section.blocks %}
+    c-variant-highlight .variant-item[data-block-id="{{ block.id }}"] .variant-image {
+      background-color: {{ block.settings.color }};
+    }
+  {% endfor %}
+{% endstyle %}
+
+<c-variant-highlight>
+  <div class="inner-container">
+    <div class="main-image-container">
+      {% if section.settings.image != null %}
+        {{ section.settings.image | image_url: width: 1800 | image_tag }}
+      {% endif %}
+    </div>
+    <div class="variant-container">
+      {% for block in section.blocks %}
+        <div class="variant-item" data-block-id="{{ block.id }}">
+          <div class="variant-image">
+            {% if block.settings.image != null %}
+              {{ block.settings.image | image_url: width: 540 | image_tag }}
+            {% endif %}
+          </div>
+          <p>
+            <strong>{{ block.settings.text }}</strong>
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</c-variant-highlight>
+
+{% schema %}
+{
+  "name": "C Variant Highlight",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "variant",
+      "name": "Variant",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Color"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Variant Highlight",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

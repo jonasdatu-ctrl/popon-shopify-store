@@ -1,0 +1,11 @@
+<c-share>
+  <button
+    class="share-button__button"
+    aria-label="Share"
+    data-title="{{ article.title | escape }}"
+    data-url="{{ shop.url }}{{ article.url }}"
+  >
+    {% render 'customcode-icons', icon: 'icon-share' %}
+    <p>Share</p>
+  </button>
+</c-share>
