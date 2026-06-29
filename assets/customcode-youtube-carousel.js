@@ -36,6 +36,25 @@
     return 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
   }
 
+  function watchUrl(id) {
+    return 'https://www.youtube.com/watch?v=' + id;
+  }
+
+  // Cache oEmbed lookups (title/author) so each id is fetched at most once.
+  var oembedCache = {};
+  function fetchMeta(id) {
+    if (oembedCache[id]) return oembedCache[id];
+    var url = 'https://www.youtube.com/oembed?url=' +
+      encodeURIComponent('https://www.youtube.com/watch?v=' + id) + '&format=json';
+    oembedCache[id] = fetch(url)
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .catch(function () { return null; });
+    return oembedCache[id];
+  }
+
+  var YT_PLAY_SVG =
+    '<svg viewBox="0 0 24 24" fill="#c4302b" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>';
+
   class YoutubeCarouselSlider extends HTMLElement {
     constructor() {
       super();
@@ -58,11 +77,48 @@
 
       if (!this.track || !this.modal) return;
 
+      this.setupTitleObserver();
       this.seedFromDom();
       this.bindNav();
       this.bindSlides();
       this.bindModal();
       this.observeSentinel();
+    }
+
+    // Lazily fetch the real video title/channel (via oEmbed) only when a card
+    // is near the viewport, so titles never add upfront network cost.
+    setupTitleObserver() {
+      if (!('IntersectionObserver' in window)) { this._noTitleObserver = true; return; }
+      var self = this;
+      this.titleObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            self.titleObserver.unobserve(entry.target);
+            self.hydrateMeta(entry.target);
+          }
+        });
+      }, { rootMargin: '200px' });
+    }
+
+    observeOrHydrate(slide) {
+      if (this._noTitleObserver) this.hydrateMeta(slide);
+      else this.titleObserver.observe(slide);
+    }
+
+    hydrateMeta(slide) {
+      if (slide.dataset.metaLoaded) return;
+      slide.dataset.metaLoaded = '1';
+      var id = slide.dataset.videoId;
+      var titleEl = slide.querySelector('[data-yt-title]');
+      var channelEl = slide.querySelector('[data-yt-channel]');
+      fetchMeta(id).then(function (meta) {
+        if (!meta) return;
+        if (titleEl && meta.title) {
+          titleEl.textContent = meta.title;
+          titleEl.setAttribute('title', meta.title);
+        }
+        if (channelEl && meta.author_name) channelEl.textContent = meta.author_name;
+      });
     }
 
     // Build the ordered id list from the server-rendered page-1 slides.
@@ -73,6 +129,7 @@
         if (id) {
           slide.dataset.index = self.ids.length;
           self.ids.push(id);
+          self.observeOrHydrate(slide);
         }
       });
     }
@@ -97,6 +154,8 @@
       var self = this;
       // Event delegation covers both server-rendered and appended slides.
       this.track.addEventListener('click', function (e) {
+        // Let the "Watch on YouTube" link behave as a normal external link.
+        if (e.target.closest('.ytc-yt-link')) return;
         var slide = e.target.closest('.ytc-slide');
         if (!slide) return;
         self.openModal(Number(slide.dataset.index));
@@ -181,8 +240,16 @@
           '<div class="ytc-overlay"><div class="ytc-play-btn">' +
             '<svg viewBox="0 0 100 100" width="30" height="30"><polygon points="35,25 35,75 75,50" fill="white"/></svg>' +
           '</div></div>' +
+        '</div>' +
+        '<div class="ytc-meta">' +
+          '<div class="ytc-title" data-yt-title>&nbsp;</div>' +
+          '<div class="ytc-channel" data-yt-channel></div>' +
+          '<a class="ytc-yt-link" href="' + watchUrl(id) + '" target="_blank" rel="noopener noreferrer">' +
+            YT_PLAY_SVG + 'Watch on YouTube' +
+          '</a>' +
         '</div>';
       this.track.insertBefore(slide, this.sentinel);
+      this.observeOrHydrate(slide);
     }
 
     openModal(index) {

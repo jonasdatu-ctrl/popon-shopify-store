@@ -89,6 +89,25 @@ The section SHALL provide a modal that plays the selected review video, allows n
 - **WHEN** the visitor closes the modal
 - **THEN** the modal is hidden, the live iframe is removed so audio/video stops, and page scrolling is restored
 
+### Requirement: Cards display video metadata before playback
+
+Each carousel card SHALL display the video's real title and a "Watch on YouTube" link before the visitor opens the video. The title (and channel name when available) SHALL be retrieved client-side from the YouTube oEmbed endpoint and fetched lazily (only as a card nears the viewport), with each video looked up at most once. The "Watch on YouTube" link SHALL open the video on `youtube.com` in a new tab and SHALL NOT trigger the in-page modal.
+
+#### Scenario: Title shown on the card
+
+- **WHEN** a card scrolls near the viewport
+- **THEN** its real YouTube video title (and channel, if available) is fetched once via oEmbed and displayed on the card without opening the video
+
+#### Scenario: Watch on YouTube link
+
+- **WHEN** the visitor clicks the "Watch on YouTube" link on a card
+- **THEN** the video opens on youtube.com in a new tab and the in-page modal does NOT open
+
+#### Scenario: Metadata lookup is deduplicated
+
+- **WHEN** the same video appears or is hydrated more than once
+- **THEN** the oEmbed endpoint is requested at most once for that video id
+
 ### Requirement: Performance and lazy loading
 
 Offscreen thumbnail images SHALL be lazy-loaded, and the section SHALL add resource hints (preconnect) for the YouTube thumbnail and embed hosts. The carousel's JavaScript SHALL be delivered as a deferred asset loaded only where the section is used, without modifying the shared `customcode-scripts.liquid` bundle.

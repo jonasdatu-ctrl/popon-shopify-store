@@ -39,6 +39,12 @@
 - [x] 7.2 Implement next/prev navigation that swaps the iframe `src` to the adjacent loaded video (and, optionally, triggers `loadNextPage()` when navigating past the last loaded item).
 - [x] 7.3 Implement `closeModal()`: remove the iframe (stops playback), hide modal, restore body scroll.
 
+## 9. Card metadata (title + watch link)
+
+- [x] 9.1 Add a `fetchMeta(id)` oEmbed helper (cached) and a `watchUrl(id)` builder to the asset JS.
+- [x] 9.2 Render a meta area (title placeholder, channel, "Watch on YouTube" link) on both server-rendered and JS-appended facade cards.
+- [x] 9.3 Lazily hydrate each card's title/channel via an IntersectionObserver; skip modal opening when the watch link is clicked.
+
 ## 8. Verification
 
 - [ ] 8.1 On the live domain, confirm page 1 renders facades server-side with JS disabled, and that no YouTube iframe exists in the DOM until a slide is clicked.
