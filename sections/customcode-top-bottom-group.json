@@ -91,8 +91,8 @@
           "type": "html",
           "settings": {
             "html": "<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/image_bf6e7fd4-85f1-40ea-88e3-71649202da7b.png?v=1782745074\">",
-            "m_margin_bottom": 10,
-            "d_margin_bottom": 20
+            "m_margin_bottom": 0,
+            "d_margin_bottom": 0
           }
         },
         "product_scroller_kgwNfV": {
