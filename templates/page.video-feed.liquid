@@ -1,0 +1,11 @@
+{% layout none %}
+{% comment %}
+  Lightweight feed template for the YouTube reviews carousel.
+
+  Assign this template to the review pages (video-reviews, video-reviews-2, ...).
+  The carousel fetches each page with ?view=video-feed so it receives ONLY the
+  page body (the YouTube embed iframes) with no header, footer, nav, or scripts.
+
+  {% layout none %} strips all theme chrome, keeping the response tiny.
+{% endcomment %}
+{{ page.content }}
