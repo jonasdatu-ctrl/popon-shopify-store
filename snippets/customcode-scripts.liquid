@@ -508,6 +508,50 @@
       });
     }
   }
+  class CStickyScroll extends HTMLElement {
+    constructor() {
+      super();
+      this.button = null;
+      this.observer = null;
+      this.targetEl = null;
+    }
+    connectedCallback() {
+      this.button = this.querySelector('div.c-button');
+      this.targetEl = document.querySelector('c-buy-button') || document.querySelector('button.cbb-add-to-cart');
+
+      if (this.button && this.targetEl) {
+        this.button.addEventListener('click', () => {
+          this.targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+
+      if (this.targetEl) {
+        this.observer = new IntersectionObserver(this.handleIntersect.bind(this), {
+          root: null,
+          threshold: 0.01,
+        });
+
+        this.observer.observe(this.targetEl);
+      } else {
+        this.style.display = 'none';
+      }
+    }
+    handleIntersect(entries) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          this.style.display = 'none';
+        } else {
+          const isBelowViewport = entry.boundingClientRect.top > 0;
+
+          if (isBelowViewport) {
+            this.style.display = '';
+          } else {
+            this.style.display = 'none';
+          }
+        }
+      });
+    }
+  }
   class CAccordionSection extends HTMLElement {
     constructor() {
       super();
@@ -2212,6 +2256,7 @@
     customElements.define('c-article-faq-grid', CArticleFAQGrid);
     customElements.define('c-menu-drawer', CMenuDrawer);
     customElements.define('c-sticky-atc', CStickyATC);
+    customElements.define('c-sticky-scroll', CStickyScroll);
     customElements.define('c-accordion-section', CAccordionSection);
     customElements.define('c-accordion-alt', CAccordionAlt);    
 

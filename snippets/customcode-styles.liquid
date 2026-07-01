@@ -146,14 +146,14 @@
 
   /* customcode-sticky-action */
   .c-sticky-action {position: sticky !important; bottom: 0; z-index: 1; width: 100%;}
-  c-sticky-atc {padding: 10px 20px; background-color: #003659;}
-  c-sticky-atc .inner-container {display: flex; flex-direction: column; padding: 5px 10px; gap: 5px; margin: auto; width: 100%;}
-  c-sticky-atc .inner-container .text-container {display: flex; justify-content: center;}
-  c-sticky-atc .inner-container .text-container * {text-align: center; font-weight: 700; color: white; margin: 0;}
-  c-sticky-atc .inner-container .text-container svg {width: 15px; height: 15px; display: inline;}
-  c-sticky-atc .inner-container .text-container svg path {color: #FF5C89;}
-  c-sticky-atc .inner-container div.c-button {width: 100%; cursor: pointer; text-align: center; padding: 10px 15px; background-color: #FFFFFF; border-radius: 5px; color: #003659; font-weight: 700; font-size: 18px; position: relative;}
-  c-sticky-atc .inner-container div.c-button .product-price {position: absolute; right: 5px; top: 50%; transform: translate(0, -50%);}
+  c-sticky-atc, c-sticky-scroll {padding: 10px 20px; background-color: #003659;}
+  c-sticky-atc .inner-container, c-sticky-scroll .inner-container {display: flex; flex-direction: column; padding: 5px 10px; gap: 5px; margin: auto; width: 100%;}
+  c-sticky-atc .inner-container .text-container, c-sticky-scroll .inner-container .text-container {display: flex; justify-content: center;}
+  c-sticky-atc .inner-container .text-container *, c-sticky-scroll .inner-container .text-container * {text-align: center; font-weight: 700; color: white; margin: 0;}
+  c-sticky-atc .inner-container .text-container svg, c-sticky-scroll .inner-container .text-container svg {width: 15px; height: 15px; display: inline;}
+  c-sticky-atc .inner-container .text-container svg path, c-sticky-scroll .inner-container .text-container svg path {color: #FF5C89;}
+  c-sticky-atc .inner-container div.c-button, c-sticky-scroll .inner-container div.c-button {width: 100%; cursor: pointer; text-align: center; padding: 10px 15px; background-color: #FFFFFF; border-radius: 5px; color: #003659; font-weight: 700; font-size: 18px; position: relative;}
+  c-sticky-atc .inner-container div.c-button .product-price, c-sticky-scroll .inner-container div.c-button .product-price {position: absolute; right: 5px; top: 50%; transform: translate(0, -50%);}
 
   /* customcode-image-text-badge */
   c-image-text-badge {display: block; padding: 10px 20px;}
