@@ -48,13 +48,21 @@
       "blocks": {
         "liquid_W84DrL": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<div class=\"main-page-custom\">\n{{ page.content }}\n</div>"
+          }
+        },
+        "liquid_kadTJz": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<p><a href=\"#shopify-section-sections--19098238484618__customcode_featured_product_tmDDXD\"><img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Payment_Plan_Chart.png?v=1778696297\" alt=\"\"></a></p>"
           }
         }
       },
       "block_order": [
-        "liquid_W84DrL"
+        "liquid_W84DrL",
+        "liquid_kadTJz"
       ],
       "custom_css": [
         "img {margin: auto;}",
