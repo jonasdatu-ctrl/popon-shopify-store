@@ -148,12 +148,20 @@
           "settings": {
             "liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Powered_by_partially_8_1_480x480.png?v=1715708371\" alt=\"\">"
           }
+        },
+        "button_gjzwGG": {
+          "type": "button",
+          "settings": {
+            "button_text": "Select Payment Options",
+            "button_link": "https://poponveneers.com/pages/payment-options"
+          }
         }
       },
       "block_order": [
         "content_8KXtR8",
         "liquid_k6VUGw",
-        "liquid_zCxC9y"
+        "liquid_zCxC9y",
+        "button_gjzwGG"
       ],
       "custom_css": [
         "img {margin: auto; width: 100%; max-width: 700px;}"
