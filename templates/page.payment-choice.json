@@ -58,15 +58,95 @@
           "settings": {
             "liquid": "<p><a href=\"#shopify-section-sections--19098238484618__customcode_featured_product_tmDDXD\"><img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Payment_Plan_Chart.png?v=1778696297\" alt=\"\"></a></p>"
           }
+        },
+        "liquid_nPprPc": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
         }
       },
       "block_order": [
         "liquid_W84DrL",
-        "liquid_kadTJz"
+        "liquid_kadTJz",
+        "liquid_nPprPc"
       ],
       "custom_css": [
         "img {margin: auto;}",
         ".content-block.block-liquid {max-width: 700px; margin: auto;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_product_comparison_kJUT4a": {
+      "type": "customcode-product-comparison",
+      "blocks": {
+        "product_dCLdQb": {
+          "type": "product",
+          "settings": {
+            "title": "Full Set",
+            "description": "Both Top and Bottom Included",
+            "price_display": "$499 | $699",
+            "blurb": "",
+            "image": "shopify://shop_images/Homepage_Image_1-min.png"
+          }
+        },
+        "product_gA7mjT": {
+          "type": "product",
+          "settings": {
+            "title": "Half Set",
+            "description": "Just Top or Just Bottom",
+            "price_display": "$299 | $499",
+            "blurb": "",
+            "image": "shopify://shop_images/Homepage_Image_2-min.png"
+          }
+        },
+        "callout_xGafaQ": {
+          "type": "callout",
+          "settings": {
+            "bg_color": "#d3dff6",
+            "header": "<h2><strong>Smile Now, Pay Later</strong></h2><h3>Payment Plans that work for all</h3>",
+            "action_title": "You choose when you pay:",
+            "callout_link": "#",
+            "action_items": "$39/month|$29/month"
+          }
+        }
+      },
+      "block_order": [
+        "product_dCLdQb",
+        "product_gA7mjT",
+        "callout_xGafaQ"
+      ],
+      "custom_css": [
+        "c-product-comparison .letter-container img.c-bottom-image {max-width: 30%;}",
+        "c-product-comparison .letter-container img.c-author {max-width: 150px;}"
+      ],
+      "name": "C Product Comparison",
+      "settings": {}
+    },
+    "customcode_content_generator_HAB7Hk": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "content_8KXtR8": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-left",
+            "content": "<p><strong>With Pop On Veneers</strong>®<strong>, you can Smile Now and Pay Later. </strong></p><p><br/>Pop On Veneers® offers a variety of payment plans to make your dream smile accessible. <br/><br/>At checkout, you can choose the payment plan that works best for you- whether it is one-time, weekly, bi-weekly, or monthly. We offer payment through Affirm, PayPal, AfterPay, alternative financing, and more to ensure that you’re able to smile with us. </p>"
+          }
+        },
+        "liquid_k6VUGw": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "content_8KXtR8",
+        "liquid_k6VUGw"
       ],
       "name": "C Content Generator",
       "settings": {
@@ -78,6 +158,8 @@
   "order": [
     "main",
     "customcode_content_generator_UiQNgJ",
-    "customcode_content_generator_fawCfh"
+    "customcode_content_generator_fawCfh",
+    "customcode_product_comparison_kJUT4a",
+    "customcode_content_generator_HAB7Hk"
   ]
 }
