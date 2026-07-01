@@ -368,9 +368,20 @@
         "button_text": "CHOOSE VENEERS",
         "display_prices": false
       }
+    },
+    "customcode_sticky_scroll_aB3xY9": {
+      "type": "customcode-sticky-atc-scroll",
+      "name": "C Sticky Scroll",
+      "settings": {
+        "product_context": "",
+        "title": "",
+        "button_text": "CHOOSE VENEERS",
+        "display_prices": false
+      }
     }
   },
   "order": [
+    "customcode_sticky_scroll_aB3xY9",
     "customcode_featured_product_tmDDXD",
     "customcode_three_step_grid_zrmM8Y",
     "customcode_content_generator_9AtPMb",
