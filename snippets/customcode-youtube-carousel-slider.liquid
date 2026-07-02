@@ -25,9 +25,13 @@
   youtube-carousel-slider .ytc-container { position: relative; display: flex; align-items: center; }
   youtube-carousel-slider .ytc-track {
     display: grid; grid-auto-flow: column; gap: 15px; overflow-x: auto;
-    scroll-snap-type: x mandatory; scrollbar-width: none; width: 100%;
+    scrollbar-width: none; width: 100%;
     grid-auto-columns: calc(100% / 1.1);
   }
+  /* NOTE: no `scroll-snap-type: x mandatory` here. The carousel virtualizes its
+     slides (only a window is mounted), so most scroll positions have no snap
+     target; mandatory snap would force the scroller back into the mounted window
+     and make it impossible to scroll through unmounted regions. */
   youtube-carousel-slider .ytc-track::-webkit-scrollbar { display: none; }
 
   @media (min-width: 750px) {
