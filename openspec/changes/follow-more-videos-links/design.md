@@ -51,20 +51,34 @@ Maintain `this.visited` (Set of normalized page paths already fetched) and `this
 ### D5: Keep existing stop conditions as safety nets
 Retain the non-OK-response stop and the empty-page (no IDs) stop from the current `loadNextPage()`. The primary terminator becomes "no More videos link," with these as fallbacks. *Why:* defense in depth against malformed or moved pages.
 
+### D6: Fill the load-ahead zone synchronously after each fetch
+The base-page refetch (D2) appends zero new slides (its IDs are already in `seen`), so it does not move the trailing sentinel and the `IntersectionObserver` — which only fires on intersection *changes* — never re-fires, stalling the chain before the first page with new content. The same stall hits any page whose ~2 videos are too few to push the sentinel out of the 600px trigger zone. Add a synchronous `needsMore()` check (`getBoundingClientRect` on sentinel vs. track right edge + 600px) and, in `loadNextPage`'s `.finally`, call `loadNextPage()` again while `needsMore()` is true. Termination is guaranteed by the existing guards (`done`, `!nextUrl`, `visited`). *Why:* the observer alone cannot advance across zero-append loads; the fill-loop is bounded by scroll position (it only fills ~600px ahead), so initial load stays cheap. *Alternative — seed `nextUrl` from a Liquid `data-next-url` to avoid the zero-append base fetch:* still needed for small pages, and adds the brittle Liquid parsing D2 rejected.
+
+### D7: Performance at scale — facades + `content-visibility`, then DOM windowing
+The link chain can reach ~200 pages × ~2 videos ≈ **~400 slides** if a visitor scrolls the whole carousel. The facade pattern already caps the catastrophic cost (≤ 1 live iframe regardless of count) and paging is scroll-bounded (nothing loads until scrolled toward), so *initial* load is unaffected. The remaining cost is **unbounded DOM/image accumulation** — ~400 slides (~4,000 nodes) plus their lazy thumbnails and per-card oEmbed lookups — which is only paid by a visitor who scrolls to the end. Three tiers, applied in order of payoff/effort:
+
+- **Tier 1 — `content-visibility: auto` (adopt now, cheap):** add `content-visibility: auto; contain-intrinsic-size: <w> <h>;` to `.ytc-slide` so the browser skips layout/paint for offscreen slides. Near-zero risk, largest single win against scroll jank; makes hundreds of slides render like a handful. Does not reduce node count or image/oEmbed requests.
+- **Tier 3 — DOM windowing/virtualization (adopt — the structural fix):** decouple paging from rendering. `this.ids` (all known video IDs, plus the cached oEmbed meta) becomes the single source of truth; the DOM holds only a **window** of slide elements around the current scroll position (plus a small buffer). Two spacer elements sized `offscreenCount × slideStride` (stride = slide width + gap, measured once) preserve `scrollWidth` and scroll offset; a scroll handler throttled with `requestAnimationFrame` recomputes the window and mounts/unmounts slides via a small recycle pool. Modal navigation already reads from `this.ids` (not the DOM), so it is unaffected by unmounting; `oembedCache` prevents metadata refetch when a slide remounts. This bounds DOM cost to O(window) instead of O(videos), enabling unbounded chains without bloat. *Cost:* it is a real refactor — `appendFacade` splits into "record ID" (paging) and "render window" (renderer), and the title/click observers move onto the windowed slides.
+- **Tier 2 — hard cap (optional belt-and-suspenders):** with virtualization the DOM is already bounded, so a cap is optional; if desired, stop paging after ~100 videos and surface a "See all reviews on YouTube" link to also bound total page/oEmbed requests. *Alternative to Tier 3 — cap only:* rejected as the primary answer because it hides content and the merchant's chain may keep growing; kept as an optional add-on.
+
+*Why this ordering:* Tier 1 is a free CSS win shipped immediately; Tier 3 is the correct structural bound for a potentially long chain; Tier 2 is a cheap optional guard on request count.
+
 ## Risks / Trade-offs
 
 - **Merchant changes the button's `alt` text or markup** → paging halts after page 1 (same failure mode as today, no worse). Mitigation: `alt="More videos"` selector is isolated in one helper for easy update; document the contract in tasks.
 - **"More videos" anchor stripped by the feed view** → the link lives inside merchant-authored `{{ page.content }}`, which the feed template renders, so it survives; but if a merchant authors the button outside page content it would be lost. Mitigation: JS falls back to full-page parsing when the feed template is absent; note the requirement that the button be inside page content.
 - **Extra page-1 fetch** → one additional small request on first paging. Mitigation: gated behind the scroll sentinel (only when the user nears the end) and served by the lightweight `?view=video-feed` template.
 - **Pages mixing non-YouTube embeds (e.g. TikTok)** → `extractIdsFromHtml` only matches YouTube iframes, so non-YouTube items are silently skipped; a page of only non-YouTube embeds hits the empty-page stop. Mitigation: acceptable — the carousel is YouTube-only by design; flag during implementation if review pages are actually TikTok.
-- **Very long chains** → link-following has no upper bound. Mitigation: fetches remain lazy (one per sentinel trigger) and `visited` bounds total distinct fetches to the number of real pages.
+- **Very long chains** → link-following has no upper bound, and slides accumulate in the DOM (~400 at full scroll). Mitigation: fetches remain lazy (scroll-bounded) and `visited` bounds distinct fetches to the real page count; DOM/paint cost is addressed by D7 (`content-visibility` now, DOM windowing for the node-count bound), with an optional hard cap on request count.
 
 ## Migration Plan
 
-1. Edit `assets/customcode-youtube-carousel.js`: swap `nextPage` for `nextUrl`, add `extractNextUrl` + `visited`/`seen` sets, seed `nextUrl` and `seen`, update `loadNextPage()`. No new files.
-2. Update the `base_handle` `info` text in `sections/customcode-youtube-reviews-carousel.liquid`.
-3. Verify on the live domain that paging walks `video-reviews → more-videos-211 → 210 → …` and terminates cleanly.
-4. **Rollback:** revert the asset and section edits; behavior returns to numeric paging. No data or template migration involved.
+1. Edit `assets/customcode-youtube-carousel.js`: swap `nextPage` for `nextUrl`, add `extractNextUrl` + `visited`/`seen` sets, seed `nextUrl` and `seen`, update `loadNextPage()`, add the `needsMore()` fill-loop (D6). No new files.
+2. Add `content-visibility` to `.ytc-slide` (D7 Tier 1) in `snippets/customcode-youtube-carousel-slider.liquid`.
+3. Refactor rendering to DOM windowing (D7 Tier 3): split `appendFacade` into ID-recording (paging) and window-rendering (renderer) with spacers + rAF-throttled scroll handler and a recycle pool.
+4. Update the `base_handle` `info` text in `sections/customcode-youtube-reviews-carousel.liquid`.
+5. Verify on the live domain that paging walks `video-reviews → more-videos-211 → 210 → …`, terminates cleanly, and that the mounted-slide count stays bounded while scrolling a long chain.
+6. **Rollback:** revert the asset and section edits; behavior returns to numeric paging. No data or template migration involved.
 
 ## Open Questions
 

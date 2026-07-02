@@ -35,7 +35,13 @@
   }
 
   /* Slide / facade (16:9 landscape) */
-  youtube-carousel-slider .ytc-slide { scroll-snap-align: start; border-radius: 12px; overflow: hidden; cursor: pointer; position: relative; }
+  /* content-visibility lets the browser skip layout/paint for offscreen slides,
+     keeping a long chain smooth. contain-intrinsic-size reserves each slide's
+     ~16:9 thumbnail + meta height so scroll geometry stays stable. */
+  youtube-carousel-slider .ytc-slide {
+    scroll-snap-align: start; border-radius: 12px; overflow: hidden; cursor: pointer; position: relative;
+    content-visibility: auto; contain-intrinsic-size: auto 340px;
+  }
   youtube-carousel-slider .ytc-inner { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
   youtube-carousel-slider .ytc-thumb { width: 100%; height: 100%; object-fit: cover; display: block; }
 
