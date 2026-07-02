@@ -99,18 +99,32 @@
 
       if (!this.track || !this.modal) return;
 
-      this.mounted = new Map(); // index -> mounted slide element (the window)
-      this.pool = [];           // detached slide elements available for reuse
-      this._stride = 0;         // measured slide width + column gap (px)
-
+      this.setupTitleObserver();
       this.seedFromDom();
       this.bindNav();
       this.bindSlides();
       this.bindModal();
-      this.bindScroll();
-      this.updateSentinel();
-      this.renderWindow();
       this.observeSentinel();
+    }
+
+    // Lazily fetch the real video title/channel (via oEmbed) only when a card
+    // is near the viewport, so titles never add upfront network cost.
+    setupTitleObserver() {
+      if (!('IntersectionObserver' in window)) { this._noTitleObserver = true; return; }
+      var self = this;
+      this.titleObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            self.titleObserver.unobserve(entry.target);
+            self.hydrateMeta(entry.target);
+          }
+        });
+      }, { rootMargin: '200px' });
+    }
+
+    observeOrHydrate(slide) {
+      if (this._noTitleObserver) this.hydrateMeta(slide);
+      else this.titleObserver.observe(slide);
     }
 
     hydrateMeta(slide) {
@@ -129,148 +143,17 @@
       });
     }
 
-    // --- Virtualized rendering -------------------------------------------
-    // `this.ids` is the source of truth; only a window of slide elements around
-    // the scroll position is mounted. Each mounted slide is positioned by an
-    // explicit `grid-column`, so the grid creates full-width (but empty)
-    // implicit tracks for the unmounted videos — preserving scrollWidth and
-    // scroll offset so the carousel behaves as if every slide were present.
-
-    // Record page-1 ids from the server-rendered slides, then detach those
-    // slides into the recycle pool; renderWindow() re-mounts the visible window.
+    // Build the ordered id list from the server-rendered page-1 slides.
     seedFromDom() {
       var self = this;
       this.querySelectorAll('.ytc-slide').forEach(function (slide) {
         var id = slide.dataset.videoId;
-        if (id) { self.ids.push(id); self.seen.add(id); }
-        slide.remove();
-        self.pool.push(slide);
-      });
-    }
-
-    createSlideEl() {
-      var slide = document.createElement('div');
-      slide.className = 'ytc-slide';
-      slide.innerHTML =
-        '<div class="ytc-inner">' +
-          '<img class="ytc-thumb" loading="lazy" width="480" height="360" alt="Customer review video">' +
-          '<div class="ytc-overlay"><div class="ytc-play-btn">' +
-            '<svg viewBox="0 0 100 100" width="30" height="30"><polygon points="35,25 35,75 75,50" fill="white"/></svg>' +
-          '</div></div>' +
-        '</div>' +
-        '<div class="ytc-meta">' +
-          '<div class="ytc-title" data-yt-title>&nbsp;</div>' +
-          '<div class="ytc-channel" data-yt-channel></div>' +
-          '<a class="ytc-yt-link" target="_blank" rel="noopener noreferrer">' +
-            YT_PLAY_SVG + 'Watch on YouTube' +
-          '</a>' +
-        '</div>';
-      return slide;
-    }
-
-    // Populate a fresh or recycled slide element for ids[index].
-    buildSlide(index) {
-      var id = this.ids[index];
-      var el = this.pool.pop() || this.createSlideEl();
-      el.dataset.index = index;
-      el.dataset.videoId = id;
-      el.dataset.metaLoaded = '';
-      el.style.gridColumn = String(index + 1);
-      el.querySelector('.ytc-thumb').src = thumbUrl(id, this.quality);
-      el.querySelector('.ytc-yt-link').href = watchUrl(id);
-      var titleEl = el.querySelector('[data-yt-title]');
-      if (titleEl) { titleEl.innerHTML = '&nbsp;'; titleEl.removeAttribute('title'); }
-      var channelEl = el.querySelector('[data-yt-channel]');
-      if (channelEl) channelEl.textContent = '';
-      return el;
-    }
-
-    mountSlide(index) {
-      var el = this.mounted.get(index);
-      if (el) return el;
-      el = this.buildSlide(index);
-      this.track.insertBefore(el, this.sentinel);
-      this.mounted.set(index, el);
-      this.hydrateMeta(el); // mounted slides are near the viewport by definition
-      return el;
-    }
-
-    unmountSlide(index) {
-      var el = this.mounted.get(index);
-      if (!el) return;
-      el.remove();
-      this.mounted.delete(index);
-      if (this.pool.length < 24) this.pool.push(el); // cap the recycle pool
-    }
-
-    // Keep the sentinel at the column after the last known video so the grid
-    // reserves full width for every video (mounted or not).
-    updateSentinel() {
-      if (this.sentinel) this.sentinel.style.gridColumn = String(this.ids.length + 1);
-    }
-
-    columnGap() {
-      return parseFloat(getComputedStyle(this.track).columnGap) || 15;
-    }
-
-    // Slide stride (column width + gap). Bootstrapped from slide 0, which is in
-    // view at initial load (scrollLeft 0) so its measured width is the true
-    // column width — an offscreen probe would report the content-visibility
-    // intrinsic size instead. Cached; re-measured on resize via remeasureStride.
-    getStride() {
-      if (this._stride) return this._stride;
-      var probe = this.mounted.get(0);
-      if (!probe && this.ids.length) probe = this.mountSlide(0);
-      if (!probe) return 0;
-      this._stride = probe.offsetWidth + this.columnGap();
-      return this._stride;
-    }
-
-    // After a resize the column width changes; measure from a slide currently in
-    // the viewport (content-visibility skips — and would mis-size — offscreen ones).
-    remeasureStride() {
-      var inView = null;
-      var tRect = this.track.getBoundingClientRect();
-      this.mounted.forEach(function (el) {
-        if (inView) return;
-        var r = el.getBoundingClientRect();
-        if (r.right > tRect.left && r.left < tRect.right) inView = el;
-      });
-      if (inView) this._stride = inView.offsetWidth + this.columnGap();
-    }
-
-    // Mount the slides in view (± buffer) and unmount everything else.
-    renderWindow() {
-      if (!this.ids.length) { this.updateSentinel(); return; }
-      var stride = this.getStride();
-      if (!stride) return;
-      var BUFFER = 4;
-      var scrollLeft = this.track.scrollLeft;
-      var viewW = this.track.clientWidth;
-      var start = Math.max(0, Math.floor(scrollLeft / stride) - BUFFER);
-      var end = Math.min(this.ids.length - 1, Math.ceil((scrollLeft + viewW) / stride) + BUFFER);
-      for (var i = start; i <= end; i++) this.mountSlide(i);
-      var self = this;
-      this.mounted.forEach(function (el, idx) {
-        if (idx < start || idx > end) self.unmountSlide(idx);
-      });
-      this.updateSentinel();
-    }
-
-    bindScroll() {
-      var self = this;
-      this.track.addEventListener('scroll', function () {
-        if (self._rafPending) return;
-        self._rafPending = true;
-        requestAnimationFrame(function () {
-          self._rafPending = false;
-          self.renderWindow();
-          if (self._updateArrows) self._updateArrows();
-        });
-      });
-      window.addEventListener('resize', function () {
-        self.remeasureStride(); // column width is responsive
-        self.renderWindow();
+        if (id) {
+          slide.dataset.index = self.ids.length;
+          self.ids.push(id);
+          self.seen.add(id);
+          self.observeOrHydrate(slide);
+        }
       });
     }
 
@@ -285,7 +168,7 @@
       };
       next.onclick = function () { track.scrollBy({ left: track.offsetWidth / 1.5, behavior: 'smooth' }); };
       prev.onclick = function () { track.scrollBy({ left: -track.offsetWidth / 1.5, behavior: 'smooth' }); };
-      // Scroll updates (arrows + window render) are driven by bindScroll().
+      track.addEventListener('scroll', update);
       this._updateArrows = update;
       update();
     }
@@ -368,15 +251,12 @@
           if (html == null) return;
           var ids = extractIdsFromHtml(html);
           if (!ids.length) { self.stop(); return; } // no embeds => treat as end
-          // Record new ids only (dedupe against the base page's server-rendered
-          // ids and any cross-page overlap); the renderer mounts what's in view.
+          // Skip videos already shown (e.g. the base page's server-rendered ids).
           ids.forEach(function (id) {
             if (self.seen.has(id)) return;
             self.seen.add(id);
-            self.ids.push(id);
+            self.appendFacade(id);
           });
-          self.updateSentinel();
-          self.renderWindow();
           if (self._updateArrows) self._updateArrows();
           self.nextUrl = extractNextUrl(html);
           if (!self.nextUrl) self.stop(); // no "More videos" link => end of chain
@@ -393,6 +273,32 @@
     stop() {
       this.done = true;
       if (this.observer) this.observer.disconnect();
+    }
+
+    appendFacade(id) {
+      var index = this.ids.length;
+      this.ids.push(id);
+      var slide = document.createElement('div');
+      slide.className = 'ytc-slide';
+      slide.dataset.videoId = id;
+      slide.dataset.index = index;
+      slide.innerHTML =
+        '<div class="ytc-inner">' +
+          '<img class="ytc-thumb" loading="lazy" width="480" height="360" ' +
+            'src="' + thumbUrl(id, this.quality) + '" alt="Customer review video">' +
+          '<div class="ytc-overlay"><div class="ytc-play-btn">' +
+            '<svg viewBox="0 0 100 100" width="30" height="30"><polygon points="35,25 35,75 75,50" fill="white"/></svg>' +
+          '</div></div>' +
+        '</div>' +
+        '<div class="ytc-meta">' +
+          '<div class="ytc-title" data-yt-title>&nbsp;</div>' +
+          '<div class="ytc-channel" data-yt-channel></div>' +
+          '<a class="ytc-yt-link" href="' + watchUrl(id) + '" target="_blank" rel="noopener noreferrer">' +
+            YT_PLAY_SVG + 'Watch on YouTube' +
+          '</a>' +
+        '</div>';
+      this.track.insertBefore(slide, this.sentinel);
+      this.observeOrHydrate(slide);
     }
 
     openModal(index) {

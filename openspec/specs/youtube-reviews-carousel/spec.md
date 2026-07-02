@@ -3,9 +3,7 @@
 ## Purpose
 
 Provide a theme section that displays YouTube customer-review videos in a horizontally-scrolling carousel, with server-rendered first page, lazy paging of additional pages, facade-based playback, modal playback, per-card metadata, and performance-conscious loading.
-
 ## Requirements
-
 ### Requirement: Section renders a YouTube reviews carousel
 
 The theme SHALL provide a section that displays YouTube customer-review videos in a horizontally-scrolling carousel, reusing the visual layout of the existing native-video carousel (track, navigation arrows, modal) adapted to a 16:9 landscape slide format. The section SHALL expose merchant-configurable settings including section heading, the base page handle (default `video-reviews`), and the YouTube thumbnail quality.
@@ -18,7 +16,7 @@ The theme SHALL provide a section that displays YouTube customer-review videos i
 #### Scenario: Merchant configures the base handle
 
 - **WHEN** the merchant sets the base page handle setting to a value other than `video-reviews`
-- **THEN** the carousel sources its first page from `/pages/<base-handle>` and subsequent pages from `/pages/<base-handle>-2`, `-3`, and so on
+- **THEN** the carousel sources its first page from `/pages/<base-handle>` and sources each subsequent page by following the "More videos" link found on the previously loaded page
 
 ### Requirement: Page 1 is server-rendered without a network request
 
@@ -36,17 +34,32 @@ The section SHALL render the first page of review videos at server-render time b
 
 ### Requirement: Additional pages load lazily until exhausted
 
-After page 1, the carousel SHALL fetch subsequent pages (`/pages/<base-handle>-2`, `-3`, …) only when the visitor approaches the end of the loaded slides, appending their videos as facades. The carousel SHALL stop paging when a fetched page returns HTTP 404. At most one page fetch SHALL be in flight at a time.
+After page 1, the carousel SHALL fetch subsequent pages only when the visitor approaches the end of the loaded slides, following each page's in-page "More videos" link to determine the next page, and appending the videos from each fetched page as facades. The "More videos" link is the URL of the anchor that wraps an image with `alt="More videos"`; discovered links SHALL be reduced to a same-origin path before fetching so that absolute canonical-domain URLs also work on preview domains. The carousel SHALL stop paging when a fetched page contains no "More videos" link, when a fetch returns a non-OK response, or when a fetched page contains no video embeds. The carousel SHALL NOT fetch the same page URL twice and SHALL NOT append a video that has already been shown, so that a page linking back into the chain cannot cause an infinite loop or duplicate slides. At most one page fetch SHALL be in flight at a time.
 
 #### Scenario: Loading the next page on scroll
 
-- **WHEN** the visitor scrolls the carousel track near its end and more pages remain
-- **THEN** the next sequential page is fetched and its review videos are appended as facade slides
+- **WHEN** the visitor scrolls the carousel track near its end and the last loaded page contained a "More videos" link
+- **THEN** the page that link points to is fetched and its review videos are appended as facade slides
 
-#### Scenario: Reaching the end of the sequence
+#### Scenario: Following the chain across differing handles
 
-- **WHEN** a fetched page returns HTTP 404
+- **WHEN** the loaded page's "More videos" link points to a handle unrelated to the base handle (e.g. `more-videos-211` following `video-reviews`, or a descending `more-videos-210` after `more-videos-211`)
+- **THEN** the carousel fetches exactly that linked page rather than an incremented `<base-handle>-n` URL
+
+#### Scenario: Reaching the end of the chain
+
+- **WHEN** a fetched page contains no anchor wrapping an image with `alt="More videos"`
 - **THEN** the carousel stops requesting further pages and no error is shown to the visitor
+
+#### Scenario: Chain links back to an already-visited page
+
+- **WHEN** a "More videos" link points to a page URL that has already been fetched
+- **THEN** the carousel does not fetch it again and stops paging, and no duplicate slides are appended
+
+#### Scenario: Overlapping video sets between pages
+
+- **WHEN** a fetched page includes a video that was already appended from an earlier page
+- **THEN** that video is not appended a second time
 
 #### Scenario: No overlapping fetches
 
@@ -127,3 +140,23 @@ Offscreen thumbnail images SHALL be lazy-loaded, and the section SHALL add resou
 
 - **WHEN** the section is rendered
 - **THEN** its JavaScript loads in a deferred manner and is not added to the global `customcode-scripts.liquid` bundle
+
+### Requirement: Carousel stays responsive across long chains
+
+The carousel SHALL avoid unnecessary rendering cost as the "More videos" chain grows. Offscreen slides SHALL NOT incur paint cost until scrolled near, and loading additional pages SHALL remain scroll-driven so that no videos beyond the visitor's viewport-plus-buffer are fetched on initial load. (DOM windowing/virtualization was evaluated and reverted because it is incompatible with the track's mandatory scroll-snap; slides therefore remain in the DOM once loaded, with offscreen paint skipped.)
+
+#### Scenario: Offscreen slides are not painted
+
+- **WHEN** the carousel holds many slides and most are scrolled out of view
+- **THEN** the browser skips layout and paint for the offscreen slides (they do not contribute rendering cost until scrolled near)
+
+#### Scenario: Initial load does not fetch the whole chain
+
+- **WHEN** the page first loads
+- **THEN** only the first page plus a scroll-ahead buffer is fetched, not the entire chain
+
+#### Scenario: Carousel scrolls both directions across a long chain
+
+- **WHEN** the visitor scrolls to the end of a long loaded chain and then scrolls back toward the start
+- **THEN** scrolling is not blocked in either direction and the navigation arrows reflect the true start/end positions
+

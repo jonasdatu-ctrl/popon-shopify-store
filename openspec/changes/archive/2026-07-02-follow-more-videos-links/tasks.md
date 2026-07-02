@@ -34,12 +34,14 @@
 
 ## 7. Performance: DOM windowing / virtualization (D7 Tier 3)
 
-- [x] 7.1 Make `this.ids` (plus the existing `oembedCache`) the source of truth; split `appendFacade` into (a) record-the-id used by paging and (b) a `renderWindow()` that builds slide DOM only for indices in the current window.
-- [x] 7.2 Preserve `scrollWidth` and scroll offset without slides: mounted slides use explicit `grid-column`, so the grid creates full-width empty implicit tracks for unmounted videos (`updateSentinel()` keeps the sentinel at column `ids.length + 1`); `slideStride` measured once from a mounted slide.
-- [x] 7.3 Add a `requestAnimationFrame`-throttled scroll handler on the track that recomputes the window (viewport range + buffer) and mounts/unmounts slides, reusing a small recycle pool.
-- [x] 7.4 Ensure modal navigation reads video ids from `this.ids` (not the DOM) so videos with unmounted slides still open/navigate, and that remounting a slide reuses `oembedCache` without a new oEmbed request.
-- [x] 7.5 Keep the sentinel-based paging + `needsMore()` fill-loop working with the windowed renderer (paging appends ids; renderer decides what is mounted).
-- [ ] 7.6 (Optional, D7 Tier 2) Add a configurable hard cap (~100 videos) that stops paging and shows a "See all reviews on YouTube" link, to also bound total page/oEmbed requests. — Deferred: windowing already bounds the DOM; cap only bounds request count.
+> **Group 7 REVERTED.** DOM windowing was implemented and browser-tested, but virtualization is incompatible with the track's `scroll-snap-type: x mandatory`: with only a window of slides mounted, most scroll positions have no snap target, so the browser force-snapped the scroller back into the window — freezing scroll near the end and hiding the nav. The virtualization was reverted to the original append-all rendering (scroll-snap restored). Tier 1 (`content-visibility`, group 6) is retained and still skips paint for offscreen slides. The DOM-bound optimization is deferred; if revisited it must drop mandatory snap (or use `proximity`) as a prerequisite.
+
+- [ ] 7.1 ~~Split `appendFacade` into record-id (paging) + `renderWindow()` (renderer).~~ Reverted.
+- [ ] 7.2 ~~Preserve scroll geometry via explicit `grid-column` + implicit tracks.~~ Reverted.
+- [ ] 7.3 ~~rAF-throttled scroll handler mounting/unmounting a window with a recycle pool.~~ Reverted.
+- [ ] 7.4 ~~Modal reads ids from `this.ids`; remount reuses `oembedCache`.~~ (Modal already read from `this.ids` — unchanged.)
+- [ ] 7.5 ~~Keep paging + `needsMore()` fill-loop working with the windowed renderer.~~ Reverted (fill-loop retained with append rendering).
+- [ ] 7.6 (Deferred, D7 Tier 2) Optional hard cap (~100 videos) + "See all reviews on YouTube" link to bound request count — only relevant if a DOM-bound approach is revisited.
 
 ## 8. Verification
 
@@ -47,7 +49,7 @@
 - [x] 8.2 Confirm paging stops cleanly at the end of the chain (no console errors) and that a page linking back to an already-visited URL does not loop or duplicate slides. (Verified: dedicated cycle test stops after 4 distinct fetches, `done=true`, no refetch.)
 - [x] 8.3 Confirm modal "next past the last loaded video" still pulls in the next page via the new logic. (navigateModal unchanged, reads `this.ids` + calls `loadNextPage`; modal open/next/close verified in harness.)
 - [x] 8.4 Confirm the "More videos" anchor is present inside the fetched `?view=video-feed` response (part of `page.content`).
-- [x] 8.5 Scroll a long chain and confirm the mounted slide count stays bounded (windowing) and no per-video growth in node count. (Verified: 60 videos loaded, mounted slide count peaked at 11; DOM slides ≤ 11 throughout.)
+- [x] 8.5 Scroll a long chain and confirm the carousel loads it and scrolls both ways. (Verified in headless Chrome after the group-7 revert: 60 videos load with append rendering, scroll-back to start works, arrows correct, no page errors. Note: DOM now holds all loaded slides — `content-visibility` keeps offscreen ones from painting.)
 
 ## 9. Post-deploy smoke test (live domain)
 

@@ -50,26 +50,21 @@ After page 1, the carousel SHALL fetch subsequent pages only when the visitor ap
 
 ## ADDED Requirements
 
-### Requirement: Carousel remains performant across long chains
+### Requirement: Carousel stays responsive across long chains
 
-The carousel SHALL keep its rendering cost bounded regardless of how many videos the "More videos" chain ultimately yields. Offscreen slides SHALL NOT incur layout/paint cost, and the number of slide elements mounted in the DOM SHALL be bounded to a window around the visitor's current scroll position rather than growing with the total number of loaded videos. Video identifiers and fetched metadata SHALL be retained as the source of truth so that slides can be unmounted and remounted without re-fetching metadata, and modal navigation SHALL continue to work for videos whose slides are not currently mounted. Loading additional pages SHALL remain scroll-driven so that no videos beyond the visitor's viewport-plus-buffer are fetched or rendered on initial load.
+The carousel SHALL avoid unnecessary rendering cost as the "More videos" chain grows. Offscreen slides SHALL NOT incur paint cost until scrolled near, and loading additional pages SHALL remain scroll-driven so that no videos beyond the visitor's viewport-plus-buffer are fetched on initial load. (DOM windowing/virtualization was evaluated and reverted because it is incompatible with the track's mandatory scroll-snap; slides therefore remain in the DOM once loaded, with offscreen paint skipped.)
 
 #### Scenario: Offscreen slides are not painted
 
 - **WHEN** the carousel holds many slides and most are scrolled out of view
 - **THEN** the browser skips layout and paint for the offscreen slides (they do not contribute rendering cost until scrolled near)
 
-#### Scenario: DOM node count stays bounded while scrolling a long chain
-
-- **WHEN** the visitor scrolls through a chain that yields hundreds of videos
-- **THEN** the number of slide elements present in the DOM stays bounded to a window around the current position rather than accumulating one element per loaded video
-
-#### Scenario: Unmounted videos remain navigable and re-render without refetch
-
-- **WHEN** the visitor navigates the modal to, or scrolls back to, a video whose slide was unmounted
-- **THEN** that video plays / its slide re-renders using the retained id and cached metadata, without re-requesting the metadata
-
 #### Scenario: Initial load does not fetch the whole chain
 
 - **WHEN** the page first loads
-- **THEN** only the first page plus a scroll-ahead buffer is fetched and rendered, not the entire chain
+- **THEN** only the first page plus a scroll-ahead buffer is fetched, not the entire chain
+
+#### Scenario: Carousel scrolls both directions across a long chain
+
+- **WHEN** the visitor scrolls to the end of a long loaded chain and then scrolls back toward the start
+- **THEN** scrolling is not blocked in either direction and the navigation arrows reflect the true start/end positions
