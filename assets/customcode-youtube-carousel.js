@@ -28,6 +28,23 @@
     return ids;
   }
 
+  // The review pages chain via a merchant-authored "More videos" button
+  // (<a href="..."><img alt="More videos"></a>). Return that link reduced to a
+  // same-origin path (so absolute canonical-domain hrefs also work on previews),
+  // or null when the page has no such button (end of the chain).
+  function extractNextUrl(htmlString) {
+    var doc = new DOMParser().parseFromString(htmlString, 'text/html');
+    var img = doc.querySelector('img[alt="More videos"]');
+    var anchor = img && img.closest('a');
+    var href = anchor && anchor.getAttribute('href');
+    if (!href) return null;
+    try {
+      return new URL(href, window.location.href).pathname;
+    } catch (e) {
+      return null;
+    }
+  }
+
   function thumbUrl(id, quality) {
     return 'https://i.ytimg.com/vi/' + id + '/' + (quality || 'hqdefault') + '.jpg';
   }
@@ -59,7 +76,9 @@
     constructor() {
       super();
       this.ids = [];
-      this.nextPage = 2; // page 1 is server-rendered
+      this.seen = new Set();    // video ids already shown (dedupe across pages)
+      this.visited = new Set(); // page paths already fetched (loop protection)
+      this.nextUrl = null;      // path of the next page to fetch (from "More videos")
       this.isLoading = false;
       this.done = false;
       this.currentIndex = 0;
@@ -69,6 +88,9 @@
       this.baseHandle = this.dataset.baseHandle || 'video-reviews';
       this.quality = this.dataset.quality || 'hqdefault';
       this.useFeedView = this.dataset.feedView !== 'false';
+      // Page 1 is server-rendered; its "More videos" link isn't in the DOM, so
+      // the base page is fetched once (deduped by `seen`) to discover it.
+      this.nextUrl = '/pages/' + this.baseHandle;
 
       this.track = this.querySelector('.ytc-track');
       this.sentinel = this.querySelector('.ytc-sentinel');
@@ -129,6 +151,7 @@
         if (id) {
           slide.dataset.index = self.ids.length;
           self.ids.push(id);
+          self.seen.add(id);
           self.observeOrHydrate(slide);
         }
       });
@@ -198,24 +221,33 @@
     }
 
     loadNextPage() {
-      if (this.isLoading || this.done) return Promise.resolve();
+      if (this.isLoading || this.done || !this.nextUrl) return Promise.resolve();
+      var path = this.nextUrl;
+      // A "More videos" link back into the chain would loop forever; stop instead.
+      if (this.visited.has(path)) { this.stop(); return Promise.resolve(); }
       this.isLoading = true;
+      this.visited.add(path);
       var self = this;
-      var url = '/pages/' + this.baseHandle + '-' + this.nextPage;
-      if (this.useFeedView) url += '?view=video-feed';
+      var url = this.useFeedView ? path + '?view=video-feed' : path;
 
       return fetch(url, { headers: { 'X-Requested-With': 'fetch' } })
         .then(function (res) {
-          if (!res.ok) { self.stop(); return null; } // 404 => end of sequence
+          if (!res.ok) { self.stop(); return null; } // missing page => end
           return res.text();
         })
         .then(function (html) {
           if (html == null) return;
           var ids = extractIdsFromHtml(html);
-          if (!ids.length) { self.stop(); return; } // empty page => treat as end
-          ids.forEach(function (id) { self.appendFacade(id); });
-          self.nextPage += 1;
+          if (!ids.length) { self.stop(); return; } // no embeds => treat as end
+          // Skip videos already shown (e.g. the base page's server-rendered ids).
+          ids.forEach(function (id) {
+            if (self.seen.has(id)) return;
+            self.seen.add(id);
+            self.appendFacade(id);
+          });
           if (self._updateArrows) self._updateArrows();
+          self.nextUrl = extractNextUrl(html);
+          if (!self.nextUrl) self.stop(); // no "More videos" link => end of chain
         })
         .catch(function () { self.stop(); })
         .finally(function () { self.isLoading = false; });
