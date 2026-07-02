@@ -220,6 +220,18 @@
       this.observer.observe(this.sentinel);
     }
 
+    // Whether the sentinel is still within the load-ahead zone (mirrors the
+    // IntersectionObserver's 600px right rootMargin). Used to keep filling
+    // synchronously after a load, since a load that appends 0 new slides (e.g.
+    // the base-page refetch, or a page whose videos were all already seen) does
+    // not move the sentinel and so would not re-trigger the observer.
+    needsMore() {
+      if (this.done || !this.sentinel || !this.track) return false;
+      var t = this.track.getBoundingClientRect();
+      var s = this.sentinel.getBoundingClientRect();
+      return s.left <= t.right + 600;
+    }
+
     loadNextPage() {
       if (this.isLoading || this.done || !this.nextUrl) return Promise.resolve();
       var path = this.nextUrl;
@@ -250,7 +262,12 @@
           if (!self.nextUrl) self.stop(); // no "More videos" link => end of chain
         })
         .catch(function () { self.stop(); })
-        .finally(function () { self.isLoading = false; });
+        .finally(function () {
+          self.isLoading = false;
+          // Keep loading until the sentinel is pushed out of the load-ahead
+          // zone (or the chain ends); one fetch of ~2 videos is rarely enough.
+          if (self.needsMore()) self.loadNextPage();
+        });
     }
 
     stop() {
