@@ -11,10 +11,14 @@ import { onAnimationEnd } from '@theme/utilities';
  * @extends {Component<Refs>}
  */
 class HeaderDrawer extends Component {
-  requiredRefs = ['details'];
+  // The built-in drawer markup (and its `ref="details"`) is intentionally
+  // commented out in header-drawer.liquid in favor of <c-menu-drawer>, so
+  // `details` is not required here.
+  requiredRefs = [];
 
   connectedCallback() {
     super.connectedCallback();
+    if (!this.refs.details) return;
 
     this.addEventListener('keyup', this.#onKeyUp);
     this.#setupAnimatedElementListeners();
