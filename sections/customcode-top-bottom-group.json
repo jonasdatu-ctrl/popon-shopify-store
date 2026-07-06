@@ -11,6 +11,16 @@
   "name": "Main PDP Group",
   "type": "custom.pdp",
   "sections": {
+    "customcode_sticky_scroll_aB3xY9": {
+      "type": "customcode-sticky-atc-scroll",
+      "name": "C Sticky Scroll",
+      "settings": {
+        "product_context": "",
+        "title": "",
+        "button_text": "CHOOSE MY VENEERS",
+        "display_prices": false
+      }
+    },
     "customcode_featured_product_tmDDXD": {
       "type": "customcode-featured-product",
       "blocks": {
@@ -85,14 +95,6 @@
             "alt_financing_footer": "<h5>$29/week plans | No Credit Check | <strong>NO DISCOUNTS</strong></h5>",
             "m_margin_bottom": 10,
             "d_margin_bottom": 20
-          }
-        },
-        "html_AgG6mh": {
-          "type": "html",
-          "settings": {
-            "html": "<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/image_bf6e7fd4-85f1-40ea-88e3-71649202da7b.png?v=1782745074\">",
-            "m_margin_bottom": 0,
-            "d_margin_bottom": 0
           }
         },
         "product_scroller_kgwNfV": {
@@ -252,7 +254,6 @@
         "callout_F9eHDE",
         "variant_selector_TY9TJL",
         "buy_button_RVBmwk",
-        "html_AgG6mh",
         "product_scroller_kgwNfV",
         "product_scroller_rJUNVc",
         "accordion_QwaWNg",
@@ -264,9 +265,7 @@
         "accordion_kGyPtf",
         "freebies_n4mTXi"
       ],
-      "custom_css": [
-        ".product-info-row[data-row-index=\"4\"] {display: none;}"
-      ],
+      "custom_css": [],
       "name": "C Featured Product",
       "settings": {
         "product_override": "top-bottom-teeth",
@@ -366,16 +365,6 @@
         "product_context": "",
         "title": "SAVE $220 IF YOU ORDER NOW",
         "button_text": "CHOOSE VENEERS",
-        "display_prices": false
-      }
-    },
-    "customcode_sticky_scroll_aB3xY9": {
-      "type": "customcode-sticky-atc-scroll",
-      "name": "C Sticky Scroll",
-      "settings": {
-        "product_context": "",
-        "title": "",
-        "button_text": "CHOOSE MY VENEERS",
         "display_prices": false
       }
     }
