@@ -292,10 +292,10 @@
         '</div>' +
         '<div class="ytc-meta">' +
           '<div class="ytc-title" data-yt-title>&nbsp;</div>' +
-          '<div class="ytc-channel" data-yt-channel></div>' +
-          '<a class="ytc-yt-link" href="' + watchUrl(id) + '" target="_blank" rel="noopener noreferrer">' +
-            YT_PLAY_SVG + 'Watch on YouTube' +
-          '</a>' +
+          // '<div class="ytc-channel" data-yt-channel></div>' +
+          // '<a class="ytc-yt-link" href="' + watchUrl(id) + '" target="_blank" rel="noopener noreferrer">' +
+          //   YT_PLAY_SVG + 'Watch on YouTube' +
+          // '</a>' +
         '</div>';
       this.track.insertBefore(slide, this.sentinel);
       this.observeOrHydrate(slide);
