@@ -927,8 +927,7 @@
         ".header-text ul {list-style: none; padding: 0; width: fit-content; margin: auto;}",
         ".header-text li strong {background: #e7e9ae;}",
         "@media and (min-width: 769px) {.inner-container {flex-direction: column; } .left-container {display: flex; flex-direction: column; justify-content: center; } c-text-marquee .right-container {aspect-ratio: unset; }}",
-        "@media and (min-width: 1120px) {.inner-container {padding: 30px 0; }}",
-        "* {display: revert;}"
+        "@media and (min-width: 1120px) {.inner-container {padding: 30px 0; }}"
       ],
       "name": "C Text Marquee - ALT",
       "settings": {
