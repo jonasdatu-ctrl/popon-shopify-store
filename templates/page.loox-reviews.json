@@ -74,7 +74,7 @@
         "hide_thumbnails": false,
         "product_handle": "",
         "aggregated": true,
-        "data-limit": 4,
+        "data-limit": 8,
         "maxwidth": 1080
       }
     }
