@@ -635,244 +635,244 @@
         "padding-block-end": 0
       }
     },
-    "customcode_text_marquee_gKhEKe": {
+    "customcode_text_marquee_nk4m64": {
       "type": "customcode-text-marquee",
       "blocks": {
-        "mobile_marquee_QqHCmk": {
+        "mobile_marquee_zweMLG": {
           "type": "mobile_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Erica_R_-_mobile.jpg"
           }
         },
-        "mobile_marquee_JxzCLx": {
+        "mobile_marquee_mkRJLd": {
           "type": "mobile_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Karen_-_mobile.jpg"
           }
         },
-        "mobile_marquee_r3TQaN": {
+        "mobile_marquee_zMgkQB": {
           "type": "mobile_marquee",
           "settings": {
             "image": "shopify://shop_images/Mike_H_-_Before_and_After.jpg"
           }
         },
-        "mobile_marquee_qBqLhR": {
+        "mobile_marquee_BDd9N8": {
           "type": "mobile_marquee",
           "settings": {
             "image": "shopify://shop_images/jessica_-_before_and_after.png"
           }
         },
-        "mobile_marquee_wHTj9N": {
+        "mobile_marquee_reAhNm": {
           "type": "mobile_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Tee_F_-_mobile.jpg"
           }
         },
-        "mobile_marquee_airEMy": {
+        "mobile_marquee_yeWEPm": {
           "type": "mobile_marquee",
           "settings": {
             "image": "shopify://shop_images/Brandy_-_Before_and_after.png"
           }
         },
-        "mobile_marquee_REd9Dt": {
+        "mobile_marquee_qnwMk3": {
           "type": "mobile_marquee",
           "settings": {
             "image": "shopify://shop_images/Lisa_-_Before_and_After.png"
           }
         },
-        "mobile_marquee_EdQVD3": {
+        "mobile_marquee_QRwbpK": {
           "type": "mobile_marquee",
           "settings": {
             "image": "shopify://shop_images/Madison_-_Before_and_After.jpg"
           }
         },
-        "mobile_marquee_7i9QGt": {
+        "mobile_marquee_Ta47nt": {
           "type": "mobile_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Riley_H_-_mobile.jpg"
           }
         },
-        "mobile_marquee_3A9H6B": {
+        "mobile_marquee_np7f9C": {
           "type": "mobile_marquee",
           "settings": {
             "image": "shopify://shop_images/Randall_-_Before_and_After.jpg"
           }
         },
-        "desktop_one_marquee_Jzx3zT": {
+        "desktop_one_marquee_RT8xf7": {
           "type": "desktop_one_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Erica_R.jpg"
           }
         },
-        "desktop_one_marquee_AjxGYg": {
+        "desktop_one_marquee_rRqMCU": {
           "type": "desktop_one_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Karen.jpg"
           }
         },
-        "desktop_one_marquee_cWYMcm": {
+        "desktop_one_marquee_cyA3Ga": {
           "type": "desktop_one_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Mike_H.jpg"
           }
         },
-        "desktop_one_marquee_rNpC6X": {
+        "desktop_one_marquee_63FM3E": {
           "type": "desktop_one_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Jessica_D.jpg"
           }
         },
-        "desktop_one_marquee_hRUPhC": {
+        "desktop_one_marquee_dcgitn": {
           "type": "desktop_one_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Tee_F.jpg"
           }
         },
-        "desktop_one_marquee_9VBVrn": {
+        "desktop_one_marquee_mUXqzh": {
           "type": "desktop_one_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Brandy_F.jpg"
           }
         },
-        "desktop_one_marquee_PF7m3h": {
+        "desktop_one_marquee_3Y6nVN": {
           "type": "desktop_one_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Lisa_P.jpg"
           }
         },
-        "desktop_one_marquee_pAaBzN": {
+        "desktop_one_marquee_f9xy7D": {
           "type": "desktop_one_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Madison_F.jpg"
           }
         },
-        "desktop_one_marquee_TJG7DY": {
+        "desktop_one_marquee_FP3UhH": {
           "type": "desktop_one_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Riley_H.jpg"
           }
         },
-        "desktop_one_marquee_AwKxxP": {
+        "desktop_one_marquee_nDEGWp": {
           "type": "desktop_one_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_1_-_Randall_F.jpg"
           }
         },
-        "desktop_two_marquee_fAqzge": {
+        "desktop_two_marquee_F97j8K": {
           "type": "desktop_two_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_4_-_Lonnie_R.jpg"
           }
         },
-        "desktop_two_marquee_eP4iHX": {
+        "desktop_two_marquee_FPE8pH": {
           "type": "desktop_two_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_4_-_Scott_W.jpg"
           }
         },
-        "desktop_two_marquee_TxXpeF": {
+        "desktop_two_marquee_aa3DBV": {
           "type": "desktop_two_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_4_-_Amy_H.jpg"
           }
         },
-        "desktop_two_marquee_RmPT8r": {
+        "desktop_two_marquee_H4q4Pz": {
           "type": "desktop_two_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_4_-_Rosmaree_H.jpg"
           }
         },
-        "desktop_two_marquee_nnRMXY": {
+        "desktop_two_marquee_FXrXj7": {
           "type": "desktop_two_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_4_-_Barbara_B.jpg"
           }
         },
-        "desktop_two_marquee_thzEfk": {
+        "desktop_two_marquee_Rtx8te": {
           "type": "desktop_two_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_4_-_Jennifer_L.jpg"
           }
         },
-        "desktop_two_marquee_D8cDxW": {
+        "desktop_two_marquee_L7FgFh": {
           "type": "desktop_two_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_4_-_Kevin_R.jpg"
           }
         },
-        "desktop_two_marquee_ceLFk7": {
+        "desktop_two_marquee_V3hxyy": {
           "type": "desktop_two_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_4_-_Johnny_F.jpg"
           }
         },
-        "desktop_two_marquee_brcWBc": {
+        "desktop_two_marquee_H9KiQ6": {
           "type": "desktop_two_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_4_-_Lydia_C.jpg"
           }
         },
-        "desktop_two_marquee_TT4dAD": {
+        "desktop_two_marquee_f36DgA": {
           "type": "desktop_two_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_4_-_Kisha_M.jpg"
           }
         },
-        "desktop_three_marquee_UY7MjT": {
+        "desktop_three_marquee_NGWGR4": {
           "type": "desktop_three_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_3_-_David_O.jpg"
           }
         },
-        "desktop_three_marquee_kDWF4t": {
+        "desktop_three_marquee_yC98TK": {
           "type": "desktop_three_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_3_-_Dawn_H.jpg"
           }
         },
-        "desktop_three_marquee_xTjNRF": {
+        "desktop_three_marquee_t3Dbfi": {
           "type": "desktop_three_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_3_-_Rosalind_T.jpg"
           }
         },
-        "desktop_three_marquee_wdJ9ty": {
+        "desktop_three_marquee_iW8FY6": {
           "type": "desktop_three_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_3_-_Benjamin_A.jpg"
           }
         },
-        "desktop_three_marquee_JbA6dy": {
+        "desktop_three_marquee_NUKQgB": {
           "type": "desktop_three_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_3_-_Meg_L.jpg"
           }
         },
-        "desktop_three_marquee_gzERpT": {
+        "desktop_three_marquee_NYJG8A": {
           "type": "desktop_three_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_3_-_Richard_S.jpg"
           }
         },
-        "desktop_three_marquee_UiLEAq": {
+        "desktop_three_marquee_bhk3BG": {
           "type": "desktop_three_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_3_-_Vanya_W.jpg"
           }
         },
-        "desktop_three_marquee_8E4QLh": {
+        "desktop_three_marquee_mWMe6L": {
           "type": "desktop_three_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_3_-_Alexis_F.jpg"
           }
         },
-        "desktop_three_marquee_nbW4Un": {
+        "desktop_three_marquee_azRtKw": {
           "type": "desktop_three_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_3_-_Sureka_R.jpg"
           }
         },
-        "desktop_three_marquee_zJkUHG": {
+        "desktop_three_marquee_DbczpY": {
           "type": "desktop_three_marquee",
           "settings": {
             "image": "shopify://shop_images/Row_3_-_Jerry_G.jpg"
@@ -880,54 +880,54 @@
         }
       },
       "block_order": [
-        "mobile_marquee_QqHCmk",
-        "mobile_marquee_JxzCLx",
-        "mobile_marquee_r3TQaN",
-        "mobile_marquee_qBqLhR",
-        "mobile_marquee_wHTj9N",
-        "mobile_marquee_airEMy",
-        "mobile_marquee_REd9Dt",
-        "mobile_marquee_EdQVD3",
-        "mobile_marquee_7i9QGt",
-        "mobile_marquee_3A9H6B",
-        "desktop_one_marquee_Jzx3zT",
-        "desktop_one_marquee_AjxGYg",
-        "desktop_one_marquee_cWYMcm",
-        "desktop_one_marquee_rNpC6X",
-        "desktop_one_marquee_hRUPhC",
-        "desktop_one_marquee_9VBVrn",
-        "desktop_one_marquee_PF7m3h",
-        "desktop_one_marquee_pAaBzN",
-        "desktop_one_marquee_TJG7DY",
-        "desktop_one_marquee_AwKxxP",
-        "desktop_two_marquee_fAqzge",
-        "desktop_two_marquee_eP4iHX",
-        "desktop_two_marquee_TxXpeF",
-        "desktop_two_marquee_RmPT8r",
-        "desktop_two_marquee_nnRMXY",
-        "desktop_two_marquee_thzEfk",
-        "desktop_two_marquee_D8cDxW",
-        "desktop_two_marquee_ceLFk7",
-        "desktop_two_marquee_brcWBc",
-        "desktop_two_marquee_TT4dAD",
-        "desktop_three_marquee_UY7MjT",
-        "desktop_three_marquee_kDWF4t",
-        "desktop_three_marquee_xTjNRF",
-        "desktop_three_marquee_wdJ9ty",
-        "desktop_three_marquee_JbA6dy",
-        "desktop_three_marquee_gzERpT",
-        "desktop_three_marquee_UiLEAq",
-        "desktop_three_marquee_8E4QLh",
-        "desktop_three_marquee_nbW4Un",
-        "desktop_three_marquee_zJkUHG"
+        "mobile_marquee_zweMLG",
+        "mobile_marquee_mkRJLd",
+        "mobile_marquee_zMgkQB",
+        "mobile_marquee_BDd9N8",
+        "mobile_marquee_reAhNm",
+        "mobile_marquee_yeWEPm",
+        "mobile_marquee_qnwMk3",
+        "mobile_marquee_QRwbpK",
+        "mobile_marquee_Ta47nt",
+        "mobile_marquee_np7f9C",
+        "desktop_one_marquee_RT8xf7",
+        "desktop_one_marquee_rRqMCU",
+        "desktop_one_marquee_cyA3Ga",
+        "desktop_one_marquee_63FM3E",
+        "desktop_one_marquee_dcgitn",
+        "desktop_one_marquee_mUXqzh",
+        "desktop_one_marquee_3Y6nVN",
+        "desktop_one_marquee_f9xy7D",
+        "desktop_one_marquee_FP3UhH",
+        "desktop_one_marquee_nDEGWp",
+        "desktop_two_marquee_F97j8K",
+        "desktop_two_marquee_FPE8pH",
+        "desktop_two_marquee_aa3DBV",
+        "desktop_two_marquee_H4q4Pz",
+        "desktop_two_marquee_FXrXj7",
+        "desktop_two_marquee_Rtx8te",
+        "desktop_two_marquee_L7FgFh",
+        "desktop_two_marquee_V3hxyy",
+        "desktop_two_marquee_H9KiQ6",
+        "desktop_two_marquee_f36DgA",
+        "desktop_three_marquee_NGWGR4",
+        "desktop_three_marquee_yC98TK",
+        "desktop_three_marquee_t3Dbfi",
+        "desktop_three_marquee_iW8FY6",
+        "desktop_three_marquee_NUKQgB",
+        "desktop_three_marquee_NYJG8A",
+        "desktop_three_marquee_bhk3BG",
+        "desktop_three_marquee_mWMe6L",
+        "desktop_three_marquee_azRtKw",
+        "desktop_three_marquee_DbczpY"
       ],
       "custom_css": [
         ".inner-container {max-width: 1080px; margin: auto; padding-top: 0 !important;}",
         ".header-text h2 {text-align: center;}",
         ".header-text ul {list-style: none; padding: 0; width: fit-content; margin: auto;}",
-        ".header-text li strong {background: #e7e9ae;}",
-        "@media and (min-width: 769px) {.inner-container {flex-direction: column; } .left-container {display: flex; flex-direction: column; justify-content: center; } c-text-marquee .right-container {aspect-ratio: unset; }}",
-        "@media and (min-width: 1120px) {.inner-container {padding: 30px 0; }}"
+        ".header-text li strong {background: #e7e9aeff;}",
+        "@media screen and (min-width: 769px) {.inner-container {flex-direction: column; } .left-container {display: flex; flex-direction: column; justify-content: center; } c-text-marquee .right-container {aspect-ratio: unset; }}",
+        "@media screen and (min-width: 1120px) {.inner-container {padding: 30px 0; }}"
       ],
       "name": "C Text Marquee - ALT",
       "settings": {
@@ -1447,7 +1447,7 @@
     "customcode_text_marquee_f7WPtj",
     "customcode_content_generator_bbEwKj",
     "blocks_jwQh3K",
-    "customcode_text_marquee_gKhEKe",
+    "customcode_text_marquee_nk4m64",
     "customode_loox_reviews_RD4wjz",
     "customcode_content_generator_JNGjUD",
     "customcode_content_generator_QNkfQq",
