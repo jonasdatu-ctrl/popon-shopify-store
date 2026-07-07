@@ -147,19 +147,6 @@
         "d_padding_bottom": false
       }
     },
-    "customode_loox_reviews_EwhxF3": {
-      "type": "customode-loox-reviews",
-      "disabled": true,
-      "name": "C Loox Reviews - ALT",
-      "settings": {
-        "only_photos": false,
-        "hide_thumbnails": true,
-        "product_handle": "",
-        "aggregated": true,
-        "data-limit": 4,
-        "maxwidth": 1080
-      }
-    },
     "1762453897bad50063": {
       "type": "_blocks",
       "blocks": {
@@ -1445,7 +1432,6 @@
     "customcode_content_generator_Vjyy8i",
     "customcode_content_generator_9tyKAt",
     "customcode_content_generator_43YJKQ",
-    "customode_loox_reviews_EwhxF3",
     "1762453897bad50063",
     "customcode_text_marquee_f7WPtj",
     "customcode_content_generator_bbEwKj",
