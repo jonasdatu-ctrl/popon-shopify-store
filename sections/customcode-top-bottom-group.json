@@ -179,7 +179,7 @@
             "display_html_content": true,
             "image": "shopify://shop_images/Icon_Pop_On_Promise.png",
             "text": "<p>Our Pop On Promise ensures you love your Pop On Veneers.</p>",
-            "additional_content": "<ul><li>Backed by the Pop On Promise</li><li>Up to two remakes included for the perfect fit</li><li>Dedicated support team every step of the way!</li></ul>",
+            "additional_content": "<ul><li>Backed by the Pop On Promise</li><li>Up to<strong> two remakes included </strong>for the perfect fit</li><li>Dedicated support team every step of the way!</li></ul>",
             "button_link": "",
             "button_text": ""
           }
