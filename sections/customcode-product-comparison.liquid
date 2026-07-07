@@ -36,6 +36,11 @@
           {% endif %}
         {% endfor %}
       </div>
+    {% if section.settings.button_link != null %}
+      <a class="button" href="#{{ section.settings.button_link }}">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
       {% for block in section.blocks %}
         {% if block.type == 'callout' %}
           <a href="{{ block.settings.callout_link }}" class="callout-container" data-block-id="{{ block.id }}">
@@ -92,7 +97,18 @@
 {% schema %}
 {
   "name": "C Product Comparison",
-  "settings": [],
+  "settings": [
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"  
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    }
+  ],
   "blocks": [
     {
       "type": "product",
