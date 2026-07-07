@@ -84,18 +84,6 @@
         "d_padding_bottom": false
       }
     },
-    "customode_loox_reviews_EwhxF3": {
-      "type": "customode-loox-reviews",
-      "name": "C Loox Reviews - ALT",
-      "settings": {
-        "only_photos": false,
-        "hide_thumbnails": true,
-        "product_handle": "",
-        "aggregated": true,
-        "data-limit": 4,
-        "maxwidth": 1080
-      }
-    },
     "customcode_content_generator_43YJKQ": {
       "type": "customcode-content-generator",
       "blocks": {
@@ -157,6 +145,19 @@
       "settings": {
         "d_padding_top": false,
         "d_padding_bottom": false
+      }
+    },
+    "customode_loox_reviews_EwhxF3": {
+      "type": "customode-loox-reviews",
+      "disabled": true,
+      "name": "C Loox Reviews - ALT",
+      "settings": {
+        "only_photos": false,
+        "hide_thumbnails": true,
+        "product_handle": "",
+        "aggregated": true,
+        "data-limit": 4,
+        "maxwidth": 1080
       }
     },
     "1762453897bad50063": {
@@ -602,6 +603,7 @@
       "block_order": [
         "loox_reviews_loox_trust_badge_A9AF6H"
       ],
+      "disabled": true,
       "custom_css": [
         "> div {max-width: 1080px; margin: auto; display: flex !important;}",
         "* {display: none;}"
@@ -921,6 +923,7 @@
         "desktop_three_marquee_azRtKw",
         "desktop_three_marquee_DbczpY"
       ],
+      "disabled": true,
       "custom_css": [
         ".inner-container {max-width: 1080px; margin: auto; padding-top: 0 !important;}",
         ".header-text h2 {text-align: center;}",
@@ -1441,8 +1444,8 @@
   "order": [
     "customcode_content_generator_Vjyy8i",
     "customcode_content_generator_9tyKAt",
-    "customode_loox_reviews_EwhxF3",
     "customcode_content_generator_43YJKQ",
+    "customode_loox_reviews_EwhxF3",
     "1762453897bad50063",
     "customcode_text_marquee_f7WPtj",
     "customcode_content_generator_bbEwKj",
