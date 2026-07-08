@@ -1,0 +1,131 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "customcode_content_generator_QY3exk": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "section_header_BPfqyj": {
+          "type": "section_header",
+          "settings": {
+            "header": "{{ page.title }}"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_BPfqyj"
+      ],
+      "custom_css": [
+        "h1,h2 {text-transform: uppercase;}",
+        "h2 {font-weight: normal;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_content_generator_fawCfh": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_W84DrL": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{{ page.content }}"
+          }
+        },
+        "liquid_bxdjcB": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_W84DrL",
+        "liquid_bxdjcB"
+      ],
+      "custom_css": [
+        "img {margin: auto;}",
+        ".content-block.block-liquid {max-width: 700px; margin: auto;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_grid_blocks_dPbmiC": {
+      "type": "customcode-grid-blocks",
+      "blocks": {
+        "column_bXVHQF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Image_5-min.png",
+            "title": "100% CUSTOM MADE",
+            "content": "<p>We create each Pop On Smile using the impression molds you make at home and ship back to us. Paired with photos of your current smile, our skilled designers craft a custom fit that perfectly matches your teeth and complements your unique facial features. The result? A natural, seamless look that’s truly yours.</p>",
+            "box_color": "#000000cf"
+          }
+        },
+        "column_JLMUgK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Image_4-min.png",
+            "title": "SUPREME COMFORT",
+            "content": "<p>Your Pop On Smile offers a secure fit and lasting durability, designed to pop snugly over your existing teeth. Lightweight and comfortable, you can wear your new smile all day with confidence—and even hear it pop into place!</p>",
+            "box_color": "#4ba0ed"
+          }
+        },
+        "column_ykkbnt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Image_3-min.png",
+            "title": "PREMIUM MATERIAL",
+            "content": "<p>We use high-quality, biocompatible, stain-resistant, and BPA-free polyethylene to ensure durability and comfort. The ultra-smooth, polished finish provides a natural feel, so your Pop Ons look amazing and feel effortless to wear.</p>",
+            "box_color": "#4ba0ed"
+          }
+        }
+      },
+      "block_order": [
+        "column_bXVHQF",
+        "column_JLMUgK",
+        "column_ykkbnt"
+      ],
+      "name": "C Grid Blocks",
+      "settings": {
+        "bg_color": "#f6f6f6",
+        "header": "How They're Made",
+        "content": "<h4>Pop On Smile are 100% custom-made from impression molds you make at home. They're made by master technicians with our proprietary design process that 3D blends digital design and hand craftsmanship.</h4>",
+        "bottom_content": "",
+        "grid_type": "type-three",
+        "mobile_grid": 1,
+        "desktop_grid": 3,
+        "text_content_color": "#003659"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "customcode_content_generator_QY3exk",
+    "customcode_content_generator_fawCfh",
+    "customcode_grid_blocks_dPbmiC"
+  ]
+}
