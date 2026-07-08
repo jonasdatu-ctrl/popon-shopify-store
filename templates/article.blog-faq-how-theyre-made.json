@@ -166,6 +166,54 @@
         "d_padding_top": true,
         "d_padding_bottom": true
       }
+    },
+    "customcode_grid_blocks_aM8LnL": {
+      "type": "customcode-grid-blocks",
+      "blocks": {
+        "column_LVt7Li": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Image_5-min.png",
+            "title": "100% CUSTOM MADE",
+            "content": "<p>We create each Pop On Smile using the impression molds you make at home and ship back to us. Paired with photos of your current smile, our skilled designers craft a custom fit that perfectly matches your teeth and complements your unique facial features. The result? A natural, seamless look that’s truly yours.</p>",
+            "box_color": "#000000cf"
+          }
+        },
+        "column_dywgHK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Image_4-min.png",
+            "title": "SUPREME COMFORT",
+            "content": "<p>Your Pop On Smile offers a secure fit and lasting durability, designed to pop snugly over your existing teeth. Lightweight and comfortable, you can wear your new smile all day with confidence—and even hear it pop into place!</p>",
+            "box_color": "#4ba0ed"
+          }
+        },
+        "column_E7qBWD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Image_3-min.png",
+            "title": "PREMIUM MATERIAL",
+            "content": "<p>We use high-quality, biocompatible, stain-resistant, and BPA-free polyethylene to ensure durability and comfort. The ultra-smooth, polished finish provides a natural feel, so your Pop Ons look amazing and feel effortless to wear.</p>",
+            "box_color": "#4ba0ed"
+          }
+        }
+      },
+      "block_order": [
+        "column_LVt7Li",
+        "column_dywgHK",
+        "column_E7qBWD"
+      ],
+      "name": "C Grid Blocks",
+      "settings": {
+        "bg_color": "#f6f6f6",
+        "header": "How They're Made",
+        "content": "<h4>Pop On Smile are 100% custom-made from impression molds you make at home. They're made by master technicians with our proprietary design process that 3D blends digital design and hand craftsmanship.</h4>",
+        "bottom_content": "",
+        "grid_type": "type-three",
+        "mobile_grid": 1,
+        "desktop_grid": 3,
+        "text_content_color": "#003659"
+      }
     }
   },
   "order": [
@@ -173,6 +221,7 @@
     "section",
     "customcode_main_blog_post_nX6brQ",
     "customcode_content_generator_J6aWTK",
-    "customcode_content_generator_XRqFw4"
+    "customcode_content_generator_XRqFw4",
+    "customcode_grid_blocks_aM8LnL"
   ]
 }
