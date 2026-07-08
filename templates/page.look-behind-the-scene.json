@@ -54,6 +54,7 @@
         },
         "liquid_bxdjcB": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
           }
@@ -120,12 +121,32 @@
         "desktop_grid": 3,
         "text_content_color": "#003659"
       }
+    },
+    "customcode_content_generator_fYa4Hx": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_XFF6Aj": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_XFF6Aj"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
     }
   },
   "order": [
     "main",
     "customcode_content_generator_QY3exk",
     "customcode_content_generator_fawCfh",
-    "customcode_grid_blocks_dPbmiC"
+    "customcode_grid_blocks_dPbmiC",
+    "customcode_content_generator_fYa4Hx"
   ]
 }
