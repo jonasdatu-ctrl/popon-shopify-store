@@ -147,7 +147,6 @@
     },
     "custom_liquid_Ygf3kc": {
       "type": "custom-liquid",
-      "disabled": true,
       "name": "t:names.custom_liquid",
       "settings": {
         "custom_liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>",
