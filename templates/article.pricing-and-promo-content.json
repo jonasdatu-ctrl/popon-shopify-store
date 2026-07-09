@@ -1,1 +1,281 @@
-{"sections":{"section":{"type":"main-blog-post","blocks":{"blog-post-title":{"type":"text","name":"Title","disabled":true,"static":true,"settings":{"text":"<h1>{{ article.title }}<\/h1>","width":"100%","max_width":"normal","alignment":"center","type_preset":"h2","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"blog-post-details":{"type":"_blog-post-info-text","name":"Details","disabled":true,"static":true,"settings":{"show_date":true,"show_author":false,"type_preset":"","alignment":"center","show_alignment":true,"padding-block-start":24,"padding-block-end":0},"blocks":{}},"blog-post-image":{"type":"_blog-post-featured-image","disabled":true,"static":true,"settings":{"image_ratio":"adapt","width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"blog-post-content":{"type":"_blog-post-content","static":true,"settings":{},"blocks":{}}},"disabled":true,"settings":{"content_direction":"column","gap":32,"color_scheme":"","padding-block-start":40,"padding-block-end":80}},"customcode_content_generator_NPXPGD":{"type":"customcode-content-generator","blocks":{"content_Xy7bNF":{"type":"content","settings":{"text_alignment":"c-text-center","content":"{{ article.content }}"}}},"block_order":["content_Xy7bNF"],"custom_css":["p,h1,h2,h3,h4,h5 {display: none;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_content_generator_LGJejn":{"type":"customcode-content-generator","blocks":{"section_header_peyH3U":{"type":"section_header","settings":{"header":"{{ article.title }}"}},"content_htJKy9":{"type":"content","settings":{"text_alignment":"c-text-center","content":"{{ article.content }}"}},"full_width_image_kCTMh9":{"type":"full_width_image","settings":{"m_image":"{{ article.image }}","d_image":"{{ article.image }}","link":"","lcp":false}}},"block_order":["section_header_peyH3U","content_htJKy9","full_width_image_kCTMh9"],"custom_css":[".content-block.block-section-header * {text-transform: uppercase;}",".content-block.block-content * {margin: 20px auto; width: 100%;}","video {display: none;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_main_blog_post_idyBhP":{"type":"customcode-main-blog-post","custom_css":["@media screen and (min-width: 769px) {c-main-blog-post {padding: 40px 40px 20px 40px; }}"],"name":"C Main Blog Post","settings":{"enable_share":true,"enable_pagination":true}},"customcode_content_generator_gr3LBB":{"type":"customcode-content-generator","blocks":{"content_kcmqVN":{"type":"content","settings":{"text_alignment":"c-text-center","content":"<p><a href=\"https:\/\/poponveneers.com\/blogs\/celebrating-smiles\" title=\"https:\/\/poponveneers.com\/blogs\/celebrating-smiles\">See More Smile Stories<\/a><\/p>"}}},"block_order":["content_kcmqVN"],"custom_css":["c-content-generator {padding: 0;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_content_generator_hTTdUP":{"type":"customcode-content-generator","blocks":{"liquid_neeUyV":{"type":"liquid","settings":{"liquid":"<div class=\"klaviyo-form-ReiK6m\"><\/div>\n<div class=\"klaviyo-form-QY4Y3g\"><\/div>"}}},"block_order":["liquid_neeUyV"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}}},"order":["section","customcode_content_generator_NPXPGD","customcode_content_generator_LGJejn","customcode_main_blog_post_idyBhP","customcode_content_generator_gr3LBB","customcode_content_generator_hTTdUP"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section": {
+      "type": "main-blog-post",
+      "blocks": {
+        "blog-post-title": {
+          "type": "text",
+          "name": "Title",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "text": "<h1>{{ article.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "blog-post-details": {
+          "type": "_blog-post-info-text",
+          "name": "Details",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "show_date": true,
+            "show_author": false,
+            "type_preset": "",
+            "alignment": "center",
+            "show_alignment": true,
+            "padding-block-start": 24,
+            "padding-block-end": 0
+          },
+          "blocks": {}
+        },
+        "blog-post-image": {
+          "type": "_blog-post-featured-image",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "image_ratio": "adapt",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "blog-post-content": {
+          "type": "_blog-post-content",
+          "static": true,
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "customcode_content_generator_NPXPGD": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "content_Xy7bNF": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "{{ article.content }}"
+          }
+        }
+      },
+      "block_order": [
+        "content_Xy7bNF"
+      ],
+      "custom_css": [
+        "p,h1,h2,h3,h4,h5 {display: none;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_content_generator_LGJejn": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "section_header_peyH3U": {
+          "type": "section_header",
+          "settings": {
+            "header": "{{ article.title }}"
+          }
+        },
+        "content_htJKy9": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "{{ article.content }}"
+          }
+        },
+        "full_width_image_kCTMh9": {
+          "type": "full_width_image",
+          "settings": {
+            "m_image": "{{ article.image }}",
+            "d_image": "{{ article.image }}",
+            "link": "",
+            "lcp": false
+          }
+        }
+      },
+      "block_order": [
+        "section_header_peyH3U",
+        "content_htJKy9",
+        "full_width_image_kCTMh9"
+      ],
+      "custom_css": [
+        ".content-block.block-section-header * {text-transform: uppercase;}",
+        ".content-block.block-content * {margin: 20px auto; width: 100%;}",
+        "video {display: none;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_main_blog_post_idyBhP": {
+      "type": "customcode-main-blog-post",
+      "custom_css": [
+        "@media screen and (min-width: 769px) {c-main-blog-post {padding: 40px 40px 20px 40px; }}"
+      ],
+      "name": "C Main Blog Post",
+      "settings": {
+        "enable_share": true,
+        "enable_pagination": true
+      }
+    },
+    "customcode_content_generator_gr3LBB": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "content_kcmqVN": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<p><a href=\"https://poponveneers.com/blogs/celebrating-smiles\" title=\"https://poponveneers.com/blogs/celebrating-smiles\">See More Smile Stories</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_kcmqVN"
+      ],
+      "custom_css": [
+        "c-content-generator {padding: 0;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_content_generator_hTTdUP": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_neeUyV": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_neeUyV"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "1783609197d618bc42": {
+      "type": "_blocks",
+      "blocks": {
+        "loox_reviews_loox_video_slider_NeLrii": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-video-slider/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "show-by-tag": false,
+            "layout": "spotlight",
+            "shadow": "",
+            "show-rating": true,
+            "show-reviewer-name": true,
+            "hide-arrows-mobile": false,
+            "auto-play": true,
+            "show-border": false,
+            "border-width": 1,
+            "border-radius": 16,
+            "text-color": "",
+            "rating-icon-color": "",
+            "border-color": "",
+            "play-button-color": "",
+            "shadow-color": "",
+            "product-id": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_video_slider_NeLrii"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    }
+  },
+  "order": [
+    "section",
+    "customcode_content_generator_NPXPGD",
+    "customcode_content_generator_LGJejn",
+    "customcode_main_blog_post_idyBhP",
+    "customcode_content_generator_gr3LBB",
+    "customcode_content_generator_hTTdUP",
+    "1783609197d618bc42"
+  ]
+}
