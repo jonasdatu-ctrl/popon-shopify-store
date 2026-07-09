@@ -20,6 +20,39 @@
         "padding-block-end": 80
       }
     },
+    "customcode_content_generator_fawCfh": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "section_header_JMwhCd": {
+          "type": "section_header",
+          "disabled": true,
+          "settings": {
+            "header": "{{ page.title }}"
+          }
+        },
+        "content_KgXCgf": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "{{ page.content }}"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_JMwhCd",
+        "content_KgXCgf"
+      ],
+      "custom_css": [
+        ".content-block.block-liquid {max-width: 700px; margin: auto;}",
+        ".content-block.block-section-header * {text-transform: uppercase;}",
+        "img {margin: auto;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
     "1783607663aa24dd42": {
       "type": "_blocks",
       "blocks": {
@@ -76,41 +109,9 @@
         "padding-block-end": 0
       }
     },
-    "customcode_content_generator_fawCfh": {
-      "type": "customcode-content-generator",
-      "blocks": {
-        "section_header_JMwhCd": {
-          "type": "section_header",
-          "disabled": true,
-          "settings": {
-            "header": "{{ page.title }}"
-          }
-        },
-        "content_KgXCgf": {
-          "type": "content",
-          "settings": {
-            "text_alignment": "c-text-center",
-            "content": "{{ page.content }}"
-          }
-        }
-      },
-      "block_order": [
-        "section_header_JMwhCd",
-        "content_KgXCgf"
-      ],
-      "custom_css": [
-        ".content-block.block-liquid {max-width: 700px; margin: auto;}",
-        ".content-block.block-section-header * {text-transform: uppercase;}",
-        "img {margin: auto;}"
-      ],
-      "name": "C Content Generator",
-      "settings": {
-        "d_padding_top": true,
-        "d_padding_bottom": true
-      }
-    },
     "customode_loox_reviews_JxNbTU": {
       "type": "customode-loox-reviews",
+      "disabled": true,
       "name": "C Loox Reviews",
       "settings": {
         "only_photos": false,
@@ -146,6 +147,7 @@
     },
     "custom_liquid_Ygf3kc": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:names.custom_liquid",
       "settings": {
         "custom_liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>",
