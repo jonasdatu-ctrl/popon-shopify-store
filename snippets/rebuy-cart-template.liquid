@@ -140,7 +140,7 @@
             <div class="rebuy-cart__flyout-item-info">
               <a role="heading" aria-level="5" class="rebuy-cart__flyout-item-product-title" v-bind:href="itemURL(item)" v-html="item.product_title" v-bind:alt="'View ' + item.product_title"></a>
               <div class="rebuy-cart__flyout-item-variant-title" v-html="item.variant_title" v-if="item.variant_title"></div>
-              <div class="rebuy-cart__flyout-item-selling-plan" v-if="item.selling_plan_allocation && !hasSwitchToSubscription(item)" v-html="item.selling_plan_allocation.selling_plan.name"></div>
+              <div class="rebuy-cart__flyout-item-selling-plan" v-if="item.selling_plan_allocation && !hasSwitchToSubscription(item)" v-html="itemDeliveryFrequency(item)"></div>
               <div class="rebuy-cart__flyout-item-discount-message" v-if="hasLineItemDiscount(item)" v-html="lineItemDiscountMessage(item)"></div>
               <div class="rebuy-cart__flyout-item-properties" v-if="hasItemProperties(item)">
                 <div class="rebuy-cart__flyout-item-property rebuy-cart__flyout-item-property--delivery-frequency" v-if="itemDeliveryFrequency(item)" v-html="itemDeliveryFrequency(item)"></div>
