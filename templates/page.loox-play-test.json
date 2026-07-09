@@ -81,6 +81,7 @@
       "blocks": {
         "section_header_JMwhCd": {
           "type": "section_header",
+          "disabled": true,
           "settings": {
             "header": "{{ page.title }}"
           }
@@ -157,8 +158,8 @@
   },
   "order": [
     "main",
-    "1783607663aa24dd42",
     "customcode_content_generator_fawCfh",
+    "1783607663aa24dd42",
     "customode_loox_reviews_JxNbTU",
     "customcode_content_generator_NbxCTP",
     "custom_liquid_Ygf3kc"
