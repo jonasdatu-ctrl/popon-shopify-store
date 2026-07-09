@@ -11,7 +11,7 @@
         {{ product.variants | json }}
     </script>
 
-    {% if product.options_with_values.size != 0 %}
+    {% unless product.has_only_default_variant %}
         <div class="cbb-variant-container">
             {% for option in product.options_with_values %}
                 <div class="option-container">
@@ -26,7 +26,7 @@
                 </div>
             {% endfor %}
         </div>
-    {% endif %}
+    {% endunless %}
 
     <div class="cbb-delivery-options" id="DeliveryContainer">
         <label class="main-label">Delivery Options:</label>

@@ -2010,16 +2010,20 @@
 
       if (this.currentVariant) {
         const allocations = this.currentVariant.selling_plan_allocations || [];
-        const hasSubs = allocations.length > 0;
 
-        if (!hasSubs) {
-          // Force OTP if no subscriptions exist for this variant
-          this.selectedDeliveryId = 'otp';
-        } else {
-          // If subscriptions exist, default to the first one
-          this.selectedDeliveryId = `sub-${allocations[0].selling_plan_id}`;
+        const currentChoiceIsValid =
+          this.selectedDeliveryId === 'otp' ||
+          allocations.some(alloc => `sub-${alloc.selling_plan_id}` === this.selectedDeliveryId);
+
+        if (!currentChoiceIsValid) {
+          if (allocations.length > 0 && this.defaultSelector === 'subs') {
+            this.selectedDeliveryId = `sub-${allocations[0].selling_plan_id}`;
+          } else {
+            // Force OTP when no subscriptions exist for this variant, or when the default is OTP
+            this.selectedDeliveryId = 'otp';
+          }
         }
-      }      
+      }
 
       this.renderDeliveryOptions();
       this.updateATCButton();
