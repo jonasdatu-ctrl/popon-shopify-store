@@ -193,29 +193,6 @@
         "d_padding_bottom": true
       }
     },
-    "customcode_content_generator_R6HYq6": {
-      "type": "customcode-content-generator",
-      "blocks": {
-        "content_FQz6yf": {
-          "type": "content",
-          "settings": {
-            "text_alignment": "c-text-center",
-            "content": "<p><a href=\"https://poponveneers.com/blogs/celebrating-smiles\" title=\"https://poponveneers.com/blogs/celebrating-smiles\">See More Smile Stories</a></p>"
-          }
-        }
-      },
-      "block_order": [
-        "content_FQz6yf"
-      ],
-      "custom_css": [
-        "c-content-generator {padding: 0;}"
-      ],
-      "name": "C Content Generator",
-      "settings": {
-        "d_padding_top": true,
-        "d_padding_bottom": true
-      }
-    },
     "customcode_content_generator_hTTdUP": {
       "type": "customcode-content-generator",
       "blocks": {
@@ -228,6 +205,25 @@
       },
       "block_order": [
         "liquid_neeUyV"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_content_generator_mMYQRt": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_99HXm8": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_99HXm8"
       ],
       "name": "C Content Generator",
       "settings": {
@@ -290,6 +286,29 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "customcode_content_generator_R6HYq6": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "content_FQz6yf": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<p><a href=\"https://poponveneers.com/blogs/celebrating-smiles\" title=\"https://poponveneers.com/blogs/celebrating-smiles\">See More Smile Stories</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_FQz6yf"
+      ],
+      "custom_css": [
+        "c-content-generator {padding: 0;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
     }
   },
   "order": [
@@ -300,6 +319,7 @@
     "customcode_content_generator_gr3LBB",
     "customcode_content_generator_hTTdUP",
     "1783609197d618bc42",
-    "customcode_content_generator_R6HYq6"
+    "customcode_content_generator_R6HYq6",
+    "customcode_content_generator_mMYQRt"
   ]
 }
