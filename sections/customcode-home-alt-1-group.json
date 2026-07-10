@@ -865,7 +865,8 @@
         ".header-text h2 {text-align: center;}",
         ".header-text li strong {background: #e7e9aeff;}",
         ".klaviyo-form-ReiK6m {display: none;}",
-        "@media screen and (min-width: 769px) {.inner-container {flex-direction: column; } .left-container {display: flex; flex-direction: column; justify-content: center; } c-text-marquee .right-container {display: none; }}",
+        " c-text-marquee .right-container {display: none; }",
+        "@media screen and (min-width: 769px) {.inner-container {flex-direction: column; } .left-container {display: flex; flex-direction: column; justify-content: center; }}",
         "@media screen and (min-width: 1120px) {.inner-container {padding: 30px 0; }}"
       ],
       "name": "C Text Marquee",
