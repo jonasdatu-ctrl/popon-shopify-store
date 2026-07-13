@@ -2329,5 +2329,18 @@
         result_count: resultCount,
       });
     });
+
+    // Element Click Event - c_element_clicked
+    // Delegated so elements with [data-ga-label] added after page load are tracked too
+    document.addEventListener('click', function (event) {
+      const el = event.target.closest('[data-ga-label]');
+      if (!el || typeof gtag !== 'function') return;
+
+      gtag('event', 'c_element_clicked', {
+        event_category: 'interaction',
+        event_label: el.dataset.gaLabel,
+        page_url: window.location.href,
+      });
+    });
   });
 </script>

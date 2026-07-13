@@ -51,5 +51,10 @@
         {% endif %}
       </div>
     {% endif %}
+    {% if block.settings.custom_html != blank %}
+      <div class="custom-html-container">
+        {{ block.settings.custom_html }}
+      </div>
+    {% endif %}
   </div>
 </c-accordion>
