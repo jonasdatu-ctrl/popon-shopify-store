@@ -169,7 +169,7 @@
             "additional_content": "",
             "button_link": "",
             "button_text": "",
-            "custom_html": "<a style=\"display: none;\" href=\"tel:639682228232\" data-ga-label=\"HELLO WORLD\">\nClick Me! \n</a>"
+            "custom_html": "<a style=\"display: none;\" href=\"tel:639682228232\" data-ga-label=\"HELLO WORLD\">\nClick Me! \n</a>\n<div style=\"display: none;\" data-ga-label=\"HELLO-WORLD\">\n CLICK ME!\n</div>"
           }
         },
         "accordion_4jYDgz": {
