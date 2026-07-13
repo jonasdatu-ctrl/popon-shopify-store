@@ -2353,8 +2353,6 @@
           //page_url: window.location.href,
         });
         const navigate = function () {
-          if (navigated) return;
-          navigated = true;
           window.location.href = link.href;
         };
         setTimeout(navigate, 400);
