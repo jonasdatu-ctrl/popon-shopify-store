@@ -135,7 +135,8 @@
             "text": "",
             "additional_content": "",
             "button_link": "",
-            "button_text": ""
+            "button_text": "",
+            "custom_html": ""
           }
         },
         "accordion_UktWGK": {
@@ -151,7 +152,8 @@
             "text": "",
             "additional_content": "",
             "button_link": "",
-            "button_text": ""
+            "button_text": "",
+            "custom_html": ""
           }
         },
         "accordion_89jVHP": {
@@ -166,7 +168,8 @@
             "text": "",
             "additional_content": "",
             "button_link": "",
-            "button_text": ""
+            "button_text": "",
+            "custom_html": "<a style=\"display: none;\" href=\"tel:639682228232\" data-ga-label=\"HELLO WORLD\">\nClick Me! \n</a>"
           }
         },
         "accordion_4jYDgz": {
@@ -181,7 +184,8 @@
             "text": "<p>Our Pop On Promise ensures you love your Pop On Veneers.</p>",
             "additional_content": "<ul><li>Backed by the Pop On Promise</li><li>Up to<strong> two remakes included </strong>for the perfect fit</li><li>Dedicated support team every step of the way!</li></ul>",
             "button_link": "",
-            "button_text": ""
+            "button_text": "",
+            "custom_html": ""
           }
         },
         "accordion_9MBfGx": {
@@ -195,7 +199,8 @@
             "text": "",
             "additional_content": "",
             "button_link": "",
-            "button_text": ""
+            "button_text": "",
+            "custom_html": ""
           }
         },
         "accordion_QCXE7h": {
@@ -209,7 +214,8 @@
             "text": "",
             "additional_content": "",
             "button_link": "",
-            "button_text": ""
+            "button_text": "",
+            "custom_html": ""
           }
         },
         "accordion_kGyPtf": {
@@ -225,7 +231,8 @@
             "text": "<p><strong>Get you teeth scanned at POP ON instead of doing impressions at home!</strong></p>",
             "additional_content": "<ul><li>No need to make impressions with the kit at home, we'll scan your teeth in our NYC office.</li><li>No Additional fee.</li></ul>",
             "button_link": "https://poponveneers.com/products/pop-on-veneers-in-person-nyc",
-            "button_text": "Learn more"
+            "button_text": "Learn more",
+            "custom_html": ""
           }
         },
         "freebies_n4mTXi": {
