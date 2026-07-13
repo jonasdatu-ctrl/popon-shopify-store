@@ -36,7 +36,7 @@
           {% endif %}
         {% endfor %}
       </div>
-    {% if section.settings.button_link != null %}
+    {% if section.settings.button_link != blank %}
       <a class="c-button" href="#{{ section.settings.button_link }}">
         {{ section.settings.button_text }}
       </a>
