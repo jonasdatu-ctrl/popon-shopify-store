@@ -2336,11 +2336,17 @@
       const el = event.target.closest('[data-ga-label]');
       if (!el || typeof gtag !== 'function') return;
 
-      gtag('event', 'c_element_clicked', {
-        //event_category: 'interaction',
-        event_label: el.dataset.gaLabel,
-        //page_url: window.location.href,
-      });
+      const link = event.target.closest('a[data-ga-label]');
+
+      if (!link) {
+        gtag('event', 'c_element_clicked', {
+          //event_category: 'interaction',
+          event_label: el.dataset.gaLabel,
+          //page_url: window.location.href,
+        });
+      }
+      
+      event.preventDefault();
     });
   });
 </script>
