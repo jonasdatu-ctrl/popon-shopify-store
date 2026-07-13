@@ -2330,17 +2330,31 @@
       });
     });
 
-    // Element Click Event - c_element_clicked
-    // Delegated so elements with [data-ga-label] added after page load are tracked too
-    document.addEventListener('click', function (event) {
-      const el = event.target.closest('[data-ga-label]');
-      if (!el || typeof gtag !== 'function') return;
+// Element Click Event - c_element_clicked
+document.addEventListener('click', function (event) {
+  const el = event.target.closest('[data-ga-label]');
+  if (!el || typeof gtag !== 'function') return;
 
-      gtag('event', 'c_element_clicked', {
-        //event_category: 'interaction',
-        event_label: el.dataset.gaLabel,
-        //page_url: window.location.href,
-      });
-    });
+  // Check if it's an outbound or protocol link (like tel: or mailto:)
+  const isProtocolLink = el.getAttribute('href') && (el.getAttribute('href').startsWith('tel:') || el.getAttribute('href').startsWith('mailto:'));
+
+  if (isProtocolLink) {
+    // Prevent the default application dialer from opening instantly
+    event.preventDefault(); 
+  }
+
+  // Fire the event exactly how your working c_search event formats its payload
+  gtag('event', 'c_element_clicked', {
+    event_label: el.dataset.gaLabel,
+    clicked_url: el.getAttribute('href') || window.location.href // Swapped page_url to safe clicked_url string
+  });
+
+  if (isProtocolLink) {
+    // Allow GTM 150 milliseconds to successfully send the hit to GA4, then execute the dialer
+    setTimeout(function() {
+      window.location.href = el.getAttribute('href');
+    }, 150);
+  }
+});
   });
 </script>
