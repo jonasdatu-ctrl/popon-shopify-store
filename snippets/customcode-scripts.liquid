@@ -2332,7 +2332,7 @@
 
     // Element Click Event - c_element_clicked
     // Delegated so elements with [data-ga-label] added after page load are tracked too
-    {% comment %} document.addEventListener('click', function (event) {
+    document.addEventListener('click', function (event) {
       const el = event.target.closest('[data-ga-label]');
       if (!el || typeof gtag !== 'function') return;
 
@@ -2341,37 +2341,6 @@
         event_label: el.dataset.gaLabel,
         //page_url: window.location.href,
       });
-    }); {% endcomment %}
-
-// Element Click Event - c_element_clicked
-// Delegated so elements with [data-ga-label] added after page load are tracked too
-document.addEventListener('click', function (event) {
-  const el = event.target.closest('[data-ga-label]');
-  if (!el || typeof gtag !== 'function') return;
-
-  const href = el.getAttribute('href') || '';
-  // Check if it's a protocol link (like tel: or mailto:) OR a standard page link that navigates away
-  const isLinkNavigating = href && !href.startsWith('#') && !el.getAttribute('target');
-
-  if (isLinkNavigating) {
-    // 1. Temporarily stop the browser from instantly leaving or opening an external app
-    event.preventDefault(); 
-  }
-
-  // 2. Fire your event normally
-  gtag('event', 'c_element_clicked', {
-    event_category: 'interaction',
-    event_label: el.dataset.gaLabel,
-    page_url: window.location.href,
-  });
-
-  if (isLinkNavigating) {
-    // 3. Give GTM/GA4 exactly 150ms to finish sending the network packet, then resume the link action
-    setTimeout(function() {
-      window.location.href = href;
-    }, 150);
-  }
-});
-
+    });
   });
 </script>
