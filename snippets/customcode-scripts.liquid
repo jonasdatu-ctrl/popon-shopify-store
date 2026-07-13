@@ -2336,11 +2336,44 @@
       const el = event.target.closest('[data-ga-label]');
       if (!el || typeof gtag !== 'function') return;
 
-      gtag('event', 'c_element_clicked', {
+      const payload = {
         //event_category: 'interaction',
         event_label: el.dataset.gaLabel,
         //page_url: window.location.href,
-      });
+      };
+
+      // Same-tab navigation (href / tel: / mailto:) unloads or suspends the page
+      // before the hit is sent, so hold the click until GA confirms the hit,
+      // with a timeout fallback so navigation never hangs when GA is blocked
+      const link = event.target.closest('a[href]');
+      const href = link ? link.getAttribute('href') : '';
+      const navigatesSameTab =
+        link &&
+        href &&
+        href.charAt(0) !== '#' &&
+        href.toLowerCase().indexOf('javascript:') !== 0 &&
+        (!link.target || link.target === '_self') &&
+        !event.defaultPrevented &&
+        !event.ctrlKey &&
+        !event.metaKey &&
+        !event.shiftKey &&
+        !event.altKey;
+
+      if (!navigatesSameTab) {
+        gtag('event', 'c_element_clicked', payload);
+        return;
+      }
+
+      event.preventDefault();
+      let navigated = false;
+      const navigate = function () {
+        if (navigated) return;
+        navigated = true;
+        window.location.href = link.href;
+      };
+      payload.event_callback = navigate;
+      gtag('event', 'c_element_clicked', payload);
+      setTimeout(navigate, 400);
     });
   });
 </script>

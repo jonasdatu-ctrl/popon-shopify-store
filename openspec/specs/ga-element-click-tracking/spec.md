@@ -34,6 +34,20 @@ The tracker SHALL use event delegation at the document level so that elements wi
 - **WHEN** an element with `data-ga-label` is inserted into the DOM after `DOMContentLoaded` and subsequently clicked
 - **THEN** the `c_element_clicked` event fires exactly as it does for elements present at page load
 
+### Requirement: Event delivery survives link navigation
+
+When the tracked click also triggers same-tab navigation (regular `href`, `tel:`, or `mailto:` links), the tracker SHALL prevent the default navigation, send the event with an `event_callback` that performs the navigation, and SHALL navigate after a short timeout fallback (~400ms) if the callback never fires (e.g. GA blocked). Clicks that do not navigate the current page (`target="_blank"`, `#` anchors, `javascript:` hrefs, modifier-key/new-tab clicks, already-prevented defaults) SHALL send the event immediately without interfering with the click.
+
+#### Scenario: Same-tab link click
+
+- **WHEN** a user plain-clicks a tracked `<a href="/pages/contact-us">` (or `tel:`/`mailto:` link)
+- **THEN** the event is sent first and navigation proceeds via the GA callback, or after the timeout fallback at the latest
+
+#### Scenario: New-tab or modified click
+
+- **WHEN** a user ctrl/cmd-clicks a tracked link or the link has `target="_blank"`
+- **THEN** the event is sent without preventing default and the browser's native behavior is unchanged
+
 ### Requirement: Tracker degrades safely when gtag is unavailable
 
 The tracker SHALL NOT throw an error or interfere with the click's default behavior (e.g. link navigation) if the `gtag` function is not defined.
