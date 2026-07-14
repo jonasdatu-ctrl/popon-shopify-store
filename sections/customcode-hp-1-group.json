@@ -1,1 +1,1411 @@
-{"type":"custom.homepage","name":"Home Page Group 1 Alt","sections":{"customcode_content_generator_jFH6wz":{"type":"customcode-content-generator","blocks":{"liquid_tCUQX3":{"type":"liquid","disabled":true,"settings":{"liquid":"<div id=\"ab-one\" class=\"c-inner\">\n<a href=\"https:\/\/poponveneers.com\/pages\/payment-options\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n<\/a>\n<a style=\"padding-right: 5px;\" href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n<\/a>\n<a href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icons_300k-min.png?v=1767035797\">\n<\/a>\n<\/div>"}},"liquid_GiDyQW":{"type":"liquid","disabled":true,"settings":{"liquid":"<div id=\"ab-two\" class=\"c-inner c-custom\">\n<a href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icon_Money_Back_Guarantee.png?v=1765309039\">\n<\/a>\n\n<\/div>"}},"liquid_AJEckC":{"type":"liquid","settings":{"liquid":"<div id=\"ab-three\" class=\"c-inner c-mobile\">\n<a style=\"visibility: hidden; padding-right: 5px;\" href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n<\/a>\n<a style=\"padding-right: 0px !important; border-right: none;\" href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icons_350k.png?v=1781541581\">\n<\/a>\n<a style=\"visibility: hidden; padding-right: 5px;\" href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n<\/a>\n<\/div>\n\n<div id=\"ab-four\" class=\"c-inner c-mobile\">\n<a style=\"padding-right: 5px;\" href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n<\/a>\n<a style=\"padding-right: 5px;\" href=\"https:\/\/poponveneers.com\/pages\/payment-options\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n<\/a>\n<a href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icons_Pop_On_Promise_2.png?v=1777983216\">\n<\/a>\n<\/div>"}},"liquid_XNAWTQ":{"type":"liquid","settings":{"liquid":"<div id=\"ab-five\" class=\"c-inner c-desktop\">\n<a style=\"padding-right: 5px;\" href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icons_350k.png?v=1781541581\">\n<\/a>\n<a style=\"padding-right: 5px;\" href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n<\/a>\n<a href=\"https:\/\/poponveneers.com\/pages\/payment-options\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n<\/a>\n<a class=\"c-desktop\" href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/Icons_Pop_On_Promise_2.png?v=1777983216\">\n<\/a>\n<\/div>"}}},"block_order":["liquid_tCUQX3","liquid_GiDyQW","liquid_AJEckC","liquid_XNAWTQ"],"custom_css":[".inner-container {gap: 10px;}",".c-inner {justify-content: center; gap: 5px; max-width: 700px; margin: auto;}",".c-inner > *:not(:last-child) {border-right: 1px solid #7c221d;}",".c-inner.c-custom {max-width: 150px;}","@media screen and (max-width: 768px) {c-content-generator {padding-top: 0 !important; }}","@media screen and (min-width: 769px) {.c-inner.c-custom {max-width: 250px; } .content-block.block-liquid[data-index=\"1\"] {margin-bottom: 30px; }}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":false}},"customcode_content_generator_zKpeVw":{"type":"customcode-content-generator","blocks":{"liquid_yfhyJU":{"type":"liquid","settings":{"liquid":"<style>\n.custom-container {\n  position: relative;\n  display: flex;\n}\n.custom-container .custom-mobile {\n  display: block;\n}\n.custom-container .custom-desktop {\n  display: none;\n}\n.custom-container video {\n  width: 100%;\n  height: auto;\n  display: block;\n}\n.custom-container .ccc-button {\n  text-decoration: none;\n  background: linear-gradient(90deg, #cd9a37 0%, #eedb9a 100%);\n  color: #0f4c81;\n  position: absolute;\n  left: 50%;\n  transform: translate(-50%, 0);\n  bottom: calc(15px * (100vw \/ 320px));\n    padding: calc(5px * (100vw \/ 320px)) calc(25px * (100vw \/ 320px));\n    font-size: calc(15px * (100vw \/ 320px)) !important;\n    font-weight: 600;\n    border-radius: 10px;\n}\n@media screen and (min-width: 769px) {\n  .custom-container .custom-mobile {\n    display: none;\n  }\n  .custom-container .custom-desktop {\n    display: block;\n    max-width: 1400px;\n    margin: auto;\n  }\n  .custom-container .ccc-button {\n      font-size: calc(16px * (100vw \/ 769px)) !important;\n    padding: calc(12px * (100vw \/ 769px)) calc(60px * (100vw \/ 769px)) !important;\n    bottom: calc(15px * (100vw \/ 769px)) !important;\n}\n}\n@media screen and (min-width: 1400px) {\n  .custom-container .ccc-button {\n    font-size: 22px !important;\n    padding: 25px 90px !important;\n    bottom: 20px !important;\n  }\n}\n<\/style>\n<a href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\" class=\"custom-container\">\n  <video\n    class=\"custom-desktop\"\n    src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a8fb3803f1f24fc1bcd30cb56e78eb9a.mp4\"\n    autoplay\n    muted\n    loop\n    playsinline\n  ><\/video>\n\n  <video\n    class=\"custom-mobile\"\n    src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/aca958ae377c4ec984cdc2b35e62a302.mp4\"\n    autoplay\n    muted\n    loop\n    playsinline\n  ><\/video>\n  <div class=\"ccc-button\" href=\"https:\/\/poponveneers.com\/pages\/am-i-a-candidate\">\n  \tGET STARTED\n  <\/div>\n<\/a>"}}},"block_order":["liquid_yfhyJU"],"custom_css":["c-content-generator .block-liquid {padding: 0 !important;}","> * {}"],"name":"C Content Generator","settings":{"d_padding_top":false,"d_padding_bottom":false}},"customcode_content_generator_43YJKQ":{"type":"customcode-content-generator","blocks":{"full_width_image_wJkQwm":{"type":"full_width_image","settings":{"m_image":"shopify:\/\/shop_images\/Website_Banner_Valentines_Mobile.png","d_image":"shopify:\/\/shop_images\/Website_Banner_Valentines_Desktop_8a06d793-cbec-4329-b3f6-18215739ca33.png","link":"","lcp":true}},"content_nVXG86":{"type":"content","settings":{"text_alignment":"c-text-center","content":"<p><br\/><\/p>"}},"button_tnmU3Q":{"type":"button","settings":{"button_text":"GET STARTED","button_link":"https:\/\/poponveneers.com\/pages\/am-i-a-candidate"}},"full_width_image_maBKjb":{"type":"full_width_image","disabled":true,"settings":{"m_image":"shopify:\/\/shop_images\/top_page_3_Desktop_1-min_e68ecf6f-a982-4a4b-89ef-0e9a278a8d86.png","d_image":"shopify:\/\/shop_images\/top_page_3_Desktop_1-min_e68ecf6f-a982-4a4b-89ef-0e9a278a8d86.png","link":"","lcp":false}},"liquid_7DkxxD":{"type":"liquid","disabled":true,"settings":{"liquid":"<div class=\"klaviyo-form-ReiK6m\"><\/div>\n<div class=\"klaviyo-form-QY4Y3g\"><\/div>"}}},"block_order":["full_width_image_wJkQwm","content_nVXG86","button_tnmU3Q","full_width_image_maBKjb","liquid_7DkxxD"],"disabled":true,"custom_css":[".inner-container {gap: 0;}","a.c-button {background-color: #02bf63 !important; margin-bottom: 15px;}",".content-block.block-full-width-image {width: 100%; max-width: 1400px; margin: auto;}"],"name":"C Content Generator","settings":{"d_padding_top":false,"d_padding_bottom":false}},"customode_loox_reviews_DrrX8Y":{"type":"customode-loox-reviews","disabled":true,"name":"C Loox Reviews","settings":{"only_photos":false,"hide_thumbnails":true,"product_handle":"","aggregated":true,"data-limit":4,"maxwidth":1080}},"1762453897bad50063":{"type":"_blocks","blocks":{"loox_reviews_loox_trust_badge_9BK3Lx":{"type":"shopify:\/\/apps\/loox-reviews\/blocks\/loox-trust-badge\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e","settings":{"layout":"horizontal-slim","alignment":"left","scheme-type":"default","review-title":"reviews","rating-icon":true,"average-rating":false,"loox-branding":false,"review-count":true,"open-reviews":true,"show-border":false,"border-radius":8,"font-size":20,"background-color":"","secondary-background-color":"","text-color":"#0f4c81","rating-icon-color":"#0f4c81","border-color":""}}},"block_order":["loox_reviews_loox_trust_badge_9BK3Lx"],"custom_css":["> div {max-width: 1080px; margin: auto; display: flex !important;}"],"settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"section_width":"page-width","section_height":"","section_height_custom":50,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0}},"customcode_text_marquee_f7WPtj":{"type":"customcode-text-marquee","blocks":{"mobile_marquee_Y9kKbW":{"type":"mobile_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Erica_R_-_mobile.jpg"}},"mobile_marquee_r6jYix":{"type":"mobile_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Karen_-_mobile.jpg"}},"mobile_marquee_mXEecK":{"type":"mobile_marquee","settings":{"image":"shopify:\/\/shop_images\/Mike_H_-_Before_and_After.jpg"}},"mobile_marquee_j7HzV9":{"type":"mobile_marquee","settings":{"image":"shopify:\/\/shop_images\/jessica_-_before_and_after.png"}},"mobile_marquee_DXrG9X":{"type":"mobile_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Tee_F_-_mobile.jpg"}},"mobile_marquee_8YPUGU":{"type":"mobile_marquee","settings":{"image":"shopify:\/\/shop_images\/Brandy_-_Before_and_after.png"}},"mobile_marquee_KiHYAd":{"type":"mobile_marquee","settings":{"image":"shopify:\/\/shop_images\/Lisa_-_Before_and_After.png"}},"mobile_marquee_DXRhXz":{"type":"mobile_marquee","settings":{"image":"shopify:\/\/shop_images\/Madison_-_Before_and_After.jpg"}},"mobile_marquee_kmFn7W":{"type":"mobile_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Riley_H_-_mobile.jpg"}},"mobile_marquee_xQN7GP":{"type":"mobile_marquee","settings":{"image":"shopify:\/\/shop_images\/Randall_-_Before_and_After.jpg"}},"desktop_one_marquee_9MrmXE":{"type":"desktop_one_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Erica_R.jpg"}},"desktop_one_marquee_BNUPRn":{"type":"desktop_one_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Karen.jpg"}},"desktop_one_marquee_pD8RtA":{"type":"desktop_one_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Mike_H.jpg"}},"desktop_one_marquee_zxwFaL":{"type":"desktop_one_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Jessica_D.jpg"}},"desktop_one_marquee_VRQPgH":{"type":"desktop_one_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Tee_F.jpg"}},"desktop_one_marquee_zLUtzd":{"type":"desktop_one_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Brandy_F.jpg"}},"desktop_one_marquee_4YyEKj":{"type":"desktop_one_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Lisa_P.jpg"}},"desktop_one_marquee_9V3Wxc":{"type":"desktop_one_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Madison_F.jpg"}},"desktop_one_marquee_deXeqj":{"type":"desktop_one_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Riley_H.jpg"}},"desktop_one_marquee_Ppftif":{"type":"desktop_one_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_1_-_Randall_F.jpg"}},"desktop_two_marquee_TyWtHU":{"type":"desktop_two_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_4_-_Lonnie_R.jpg"}},"desktop_two_marquee_89dBXA":{"type":"desktop_two_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_4_-_Scott_W.jpg"}},"desktop_two_marquee_Jrd7Vf":{"type":"desktop_two_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_4_-_Amy_H.jpg"}},"desktop_two_marquee_7jmWqb":{"type":"desktop_two_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_4_-_Rosmaree_H.jpg"}},"desktop_two_marquee_FffGVP":{"type":"desktop_two_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_4_-_Barbara_B.jpg"}},"desktop_two_marquee_WPGpDa":{"type":"desktop_two_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_4_-_Jennifer_L.jpg"}},"desktop_two_marquee_UiFqbr":{"type":"desktop_two_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_4_-_Kevin_R.jpg"}},"desktop_two_marquee_UVHtgR":{"type":"desktop_two_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_4_-_Johnny_F.jpg"}},"desktop_two_marquee_eGCymA":{"type":"desktop_two_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_4_-_Lydia_C.jpg"}},"desktop_two_marquee_A9z869":{"type":"desktop_two_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_4_-_Kisha_M.jpg"}},"desktop_three_marquee_4d3PBk":{"type":"desktop_three_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_3_-_David_O.jpg"}},"desktop_three_marquee_gWidt9":{"type":"desktop_three_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_3_-_Dawn_H.jpg"}},"desktop_three_marquee_ecegj8":{"type":"desktop_three_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_3_-_Rosalind_T.jpg"}},"desktop_three_marquee_XqepiW":{"type":"desktop_three_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_3_-_Benjamin_A.jpg"}},"desktop_three_marquee_q9tCwa":{"type":"desktop_three_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_3_-_Meg_L.jpg"}},"desktop_three_marquee_LJwYed":{"type":"desktop_three_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_3_-_Richard_S.jpg"}},"desktop_three_marquee_78gX3M":{"type":"desktop_three_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_3_-_Vanya_W.jpg"}},"desktop_three_marquee_zWAd8J":{"type":"desktop_three_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_3_-_Alexis_F.jpg"}},"desktop_three_marquee_YE83Va":{"type":"desktop_three_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_3_-_Sureka_R.jpg"}},"desktop_three_marquee_qQr7nQ":{"type":"desktop_three_marquee","settings":{"image":"shopify:\/\/shop_images\/Row_3_-_Jerry_G.jpg"}}},"block_order":["mobile_marquee_Y9kKbW","mobile_marquee_r6jYix","mobile_marquee_mXEecK","mobile_marquee_j7HzV9","mobile_marquee_DXrG9X","mobile_marquee_8YPUGU","mobile_marquee_KiHYAd","mobile_marquee_DXRhXz","mobile_marquee_kmFn7W","mobile_marquee_xQN7GP","desktop_one_marquee_9MrmXE","desktop_one_marquee_BNUPRn","desktop_one_marquee_pD8RtA","desktop_one_marquee_zxwFaL","desktop_one_marquee_VRQPgH","desktop_one_marquee_zLUtzd","desktop_one_marquee_4YyEKj","desktop_one_marquee_9V3Wxc","desktop_one_marquee_deXeqj","desktop_one_marquee_Ppftif","desktop_two_marquee_TyWtHU","desktop_two_marquee_89dBXA","desktop_two_marquee_Jrd7Vf","desktop_two_marquee_7jmWqb","desktop_two_marquee_FffGVP","desktop_two_marquee_WPGpDa","desktop_two_marquee_UiFqbr","desktop_two_marquee_UVHtgR","desktop_two_marquee_eGCymA","desktop_two_marquee_A9z869","desktop_three_marquee_4d3PBk","desktop_three_marquee_gWidt9","desktop_three_marquee_ecegj8","desktop_three_marquee_XqepiW","desktop_three_marquee_q9tCwa","desktop_three_marquee_LJwYed","desktop_three_marquee_78gX3M","desktop_three_marquee_zWAd8J","desktop_three_marquee_YE83Va","desktop_three_marquee_qQr7nQ"],"custom_css":[".inner-container {max-width: 1080px; margin: auto; padding-top: 0 !important;}",".header-text h2 {text-align: center;}",".header-text ul {list-style: none; padding: 0; width: fit-content; margin: auto;}",".header-text li strong {background: #e7e9aeff;}","@media screen and (min-width: 769px) {.inner-container {flex-direction: column; } .left-container {display: flex; flex-direction: column; justify-content: center; } c-text-marquee .right-container {aspect-ratio: unset; }}","@media screen and (min-width: 1120px) {.inner-container {padding: 30px 0; }}"],"name":"C Text Marquee","settings":{"blurb":"","header":"<h2>Smile Now 🔁 Pay Later With Affordable Payment Plans!<\/h2><ul><li>✔️ <strong>NO CREDIT CHECK<\/strong> payment options<\/li><li>✔️ Spread Payments over <strong>6 months!<\/strong><\/li><li>✔️ Weekly, Bi-weekly, or Monthly payments. <a href=\"https:\/\/poponveneers.com\/pages\/payment-options\"><span style=\"text-decoration:underline\">Choose Now<\/span><\/a><\/li><\/ul>","features_grid":"","features_grid_link":"https:\/\/poponveneers.com\/pages\/am-i-a-candidate|https:\/\/poponveneers.com\/pages\/reviews|https:\/\/poponveneers.com\/pages\/payment-options","image_url":"https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/shoppay-blue_9d631621-0083-4501-a349-27ca3eef861e.png|https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/affirm_logo_blue_b0336b3a-a2f7-45d3-b91d-061b7a2134c7.png|https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/paypal_blue.png|https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/afterpay-blue.png|https:\/\/poponveneers.com\/cdn\/shop\/files\/klarna_logo_blue.png?v=1712158749|https:\/\/cdn.shopify.com\/s\/files\/1\/0382\/1761\/3450\/files\/zip_blue.png","content":"<h3>0%<\/h3><p>Interest free APR financing options<\/p><p>-<\/p><h3><a href=\"https:\/\/poponveneers.com\/pages\/payment-options\" title=\"https:\/\/poponveneers.com\/pages\/payment-options\"><strong>$29<\/strong><\/a><\/h3><p><a href=\"https:\/\/poponveneers.com\/pages\/payment-options\" title=\"https:\/\/poponveneers.com\/pages\/payment-options\">Low $29 payment option for veneers<\/a><\/p><p>-<\/p><h3>99.2%<\/h3><p>Of applicants approved<\/p>","button_link":"","button_text":""}},"customcode_content_generator_bbEwKj":{"type":"customcode-content-generator","blocks":{"section_header_Ak8VkR":{"type":"section_header","disabled":true,"settings":{"header":"\"POP ON VENEERS CHANGED MY LIFE\""}},"content_fBPJLW":{"type":"content","disabled":true,"settings":{"text_alignment":"c-text-center","content":"<p>⭐⭐⭐⭐⭐<br\/><br\/><\/p><p>See for yourself why Pop On is loved by thousands of customers!<\/p>"}},"button_rzcNFd":{"type":"button","settings":{"button_text":"SEE PAYMENT OPTIONS","button_link":"https:\/\/poponveneers.com\/pages\/payment-options"}},"liquid_VrT9WR":{"type":"liquid","disabled":true,"settings":{"liquid":"<div class=\"klaviyo-form-ReiK6m\"><\/div>\n<div class=\"klaviyo-form-QY4Y3g\"><\/div>"}}},"block_order":["section_header_Ak8VkR","content_fBPJLW","button_rzcNFd","liquid_VrT9WR"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customode_loox_reviews_RD4wjz":{"type":"customode-loox-reviews","name":"C Loox Reviews","settings":{"only_photos":false,"hide_thumbnails":true,"product_handle":"","aggregated":false,"data-limit":4,"maxwidth":1080}},"customcode_content_generator_JNGjUD":{"type":"customcode-content-generator","blocks":{"full_width_image_dR9xgC":{"type":"full_width_image","settings":{"m_image":"shopify:\/\/shop_images\/top_page_3_Desktop_2.png","d_image":"shopify:\/\/shop_images\/top_page_3_Desktop_2_133d1145-6162-41c1-b57a-a56fbc5effa5.png","link":"","lcp":false}},"liquid_4m83iM":{"type":"liquid","settings":{"liquid":"<div class=\"klaviyo-form-ReiK6m\"><\/div>\n<div class=\"klaviyo-form-QY4Y3g\"><\/div>"}},"content_LULdRx":{"type":"content","disabled":true,"settings":{"text_alignment":"c-text-center","content":"<h4>🤔 IS POP ON VENEERS THE SAME AS GOING TO THE DENTIST?<br\/><br\/><\/h4><p>Pop On Veneers® are for cosmetic use only—they’re designed to enhance the <em>appearance <\/em>of your smile, not to treat, diagnose, or fix dental issues. They’re not a substitute for professional dental care. Don’t use Pop On Veneers if you have loose teeth or untreated dental issues.<\/p><p><br\/>We always recommend seeing your dentist regularly. Think of Pop On as an accessory and confidence boost—while your dentist keeps everything working behind the scenes.<\/p>"}}},"block_order":["full_width_image_dR9xgC","liquid_4m83iM","content_LULdRx"],"custom_css":[".content-block.block-full-width-image {width: 100%; max-width: 1400px; margin: auto;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_content_generator_QNkfQq":{"type":"customcode-content-generator","blocks":{"button_ewz8GV":{"type":"button","disabled":true,"settings":{"button_text":"FAQ","button_link":"https:\/\/poponveneers.com\/pages\/frequently-asked-questions-1"}},"accented_header_djPwNz":{"type":"accented_header","settings":{"content":"<h2><strong>SMILE<\/strong> WITH CONFIDENCE<\/h2><h4>THE EXCLUSIVE POPON DESIGN PROCESS<\/h4>"}},"image_content_ghqN4k":{"type":"image_content","settings":{"image":"shopify:\/\/shop_images\/Veneers_and_model_gif_forreplo_website_1.gif","link":"","lcp":false}},"image_content_Qq98Ba":{"type":"image_content","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/7835ef23-ab0f-4baf-8de1-841d08201d2a.jpg","link":"https:\/\/poponveneers.com\/collections\/pop-on-bling","lcp":false}},"liquid_98yQng":{"type":"liquid","settings":{"liquid":"<div class=\"klaviyo-form-ReiK6m\"><\/div>\n<div class=\"klaviyo-form-QY4Y3g\"><\/div>"}}},"block_order":["button_ewz8GV","accented_header_djPwNz","image_content_ghqN4k","image_content_Qq98Ba","liquid_98yQng"],"name":"C Content Generator","settings":{"d_padding_top":false,"d_padding_bottom":true}},"customcode_global_search_gLQH7K":{"type":"customcode-global-search","blocks":{"faq_block_9JaQX7":{"type":"faq_block","settings":{"bg_image":"shopify:\/\/shop_images\/faq-1.png","faq_link":"https:\/\/poponveneers.com\/blogs\/faq\/can-you-eat-with-pop-on-veneers","faq_title":"Can I eat with Pop On Smiles?"}},"faq_block_iG6gPF":{"type":"faq_block","settings":{"bg_image":"shopify:\/\/shop_images\/faq-2.png","faq_link":"https:\/\/poponveneers.com\/blogs\/faq\/how-can-pop-on-veneers-help-me","faq_title":"What if I'm missing a lot of teeth?"}},"faq_block_nHrr6z":{"type":"faq_block","settings":{"bg_image":"shopify:\/\/shop_images\/faq-3.png","faq_link":"https:\/\/poponveneers.com\/blogs\/faq\/what-are-the-payment-plan-options","faq_title":"What are my affordable payment options?"}},"faq_block_gHKCUh":{"type":"faq_block","settings":{"bg_image":"shopify:\/\/shop_images\/faq-4.png","faq_link":"https:\/\/poponveneers.com\/blogs\/faq\/how-fast-can-i-get-my-veneers-how-long-does-it-take?_pos=2&_sid=96abea59e&_ss=r","faq_title":"How soon can I get my smile?"}},"faq_block_9q9T6B":{"type":"faq_block","settings":{"bg_image":"shopify:\/\/shop_images\/faq-5.png","faq_link":"https:\/\/poponveneers.com\/blogs\/faq\/what-color-should-i-choose","faq_title":"What are the color choices?"}},"faq_block_qXwqJ4":{"type":"faq_block","settings":{"bg_image":"shopify:\/\/shop_images\/faq-6.png","faq_link":"https:\/\/poponveneers.com\/blogs\/faq\/do-i-need-to-go-the-dentist-to-get-pop-on-veneers","faq_title":"Do I need to go to the dentist for this?"}},"faq_block_HqkXCB":{"type":"faq_block","settings":{"bg_image":"shopify:\/\/shop_images\/faq-7.png","faq_link":"https:\/\/poponveneers.com\/blogs\/faq\/how-do-i-pay-with-my-hsa-or-fsa-card?_pos=2&_sid=093e28edd&_ss=r","faq_title":"Do you accept HSA\/FSA?"}},"faq_block_7GP7mM":{"type":"faq_block","settings":{"bg_image":"shopify:\/\/shop_images\/faq-8.png","faq_link":"https:\/\/poponveneers.com\/blogs\/faq\/can-i-really-take-my-own-impression","faq_title":"Can I really take impressions at home?"}}},"block_order":["faq_block_9JaQX7","faq_block_iG6gPF","faq_block_nHrr6z","faq_block_gHKCUh","faq_block_9q9T6B","faq_block_qXwqJ4","faq_block_HqkXCB","faq_block_7GP7mM"],"name":"C Global Search","settings":{"header":"<h2>Frequently Asked Questions<\/h2><p>Pop On Answers<\/p>","display_faq_grid":true,"grid_center_image":"shopify:\/\/shop_images\/faq-center1.png"}},"customcode_content_generator_ftjDJ6":{"type":"customcode-content-generator","blocks":{"button_FqWdwh":{"type":"button","settings":{"button_text":"FAQ","button_link":"https:\/\/poponveneers.com\/pages\/frequently-asked-questions-1"}}},"block_order":["button_FqWdwh"],"name":"C Content Generator","settings":{"d_padding_top":false,"d_padding_bottom":false}},"customcode_content_generator_eqpeMD":{"type":"customcode-content-generator","blocks":{"content_GrA3e4":{"type":"content","settings":{"text_alignment":"c-text-center","content":"<h4><strong><br\/>Is Pop On Veneers the same as going to the dentist?<br\/><br\/><\/strong><\/h4><p>Pop On Veneers® are for cosmetic use only—they’re designed to enhance the <em>appearance<\/em> of your smile, not to treat, diagnose, or fix dental issues. They’re not a substitute for professional dental care. Don’t use Pop On Veneers if you have loose teeth or untreated dental issues.<br\/><br\/><\/p><p>We always recommend seeing your dentist regularly. Think of Pop On as an accessory and  confidence boost—while your dentist keeps everything working behind the scenes.<\/p>"}}},"block_order":["content_GrA3e4"],"name":"Disclaimer","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_product_comparison_kt4fR4":{"type":"customcode-product-comparison","blocks":{"product_eFPyg6":{"type":"product","settings":{"title":"Full Set","description":"Both Top and Bottom Included","price_display":"$499 | $699","blurb":"","image":"shopify:\/\/shop_images\/Homepage_Image_1-min.png"}},"product_ydnaJH":{"type":"product","settings":{"title":"Half Set","description":"Just Top or Just Bottom","price_display":"$299 | $499","blurb":"","image":"shopify:\/\/shop_images\/Homepage_Image_2-min.png"}},"callout_4fiB7x":{"type":"callout","settings":{"bg_color":"#d3dff6","header":"<h2><strong>Smile Now, Pay Later<\/strong><\/h2><h3>Payment Plans that work for all<\/h3>","action_title":"You choose when you pay:","callout_link":"https:\/\/poponveneers.com\/pages\/payment-options","action_items":"$39\/month|$29\/month"}},"letter_gbMBwk":{"type":"letter","settings":{"badge":"shopify:\/\/shop_images\/Icon_Pop_On_Promise.png","title":"The Pop On Promise","top_content":"<p>We are committed to delivering a smile that you’ll love! All our orders are backed by the Pop On Promise. In case there’s any issue with the fit, we will remake your Pop On Smile up to two times. Our dedicated team is here for you every step of the way!<\/p><ul><li>Backed by the Pop On Promise<\/li><li>Up to two remakes<\/li><li>Dedicated support team every step of the way!<\/li><\/ul>","bottom_image":"shopify:\/\/shop_images\/Loss_Protection_1.png","bottom_content":"<p>We recently introduced the option of adding a 1 Year Loss Protection Plan so if anything happens to your Pop On Smile, we’ll make it for you again. No questions asked! Our goal is to ensure you never have to worry about being without your smile.<\/p>","signature":"shopify:\/\/shop_images\/Isaac_Hakimi.svg","author":"<p><strong>Isaac Hakimi<br\/><\/strong>CEO And Co-Founder<\/p>"}}},"block_order":["product_eFPyg6","product_ydnaJH","callout_4fiB7x","letter_gbMBwk"],"custom_css":["c-product-comparison .letter-container img.c-bottom-image {max-width: 30%;}","c-product-comparison .letter-container img.c-author {max-width: 150px;}","c-product-comparison .letter-container .c-badge {max-width: 125px; top: 20px;}","@media screen and (max-width: 1023px) {.inner-container {flex-direction: column-reverse; margin-top: 40px; }}"],"name":"C Product Comparison","settings":{}},"customcode_content_generator_MzGtiz":{"type":"customcode-content-generator","blocks":{"liquid_jRXNHg":{"type":"liquid","settings":{"liquid":"<div class=\"klaviyo-form-ReiK6m\"><\/div>\n<div class=\"klaviyo-form-QY4Y3g\"><\/div>"}}},"block_order":["liquid_jRXNHg"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_marquee_FTkUyc":{"type":"customcode-marquee","blocks":{"image_XT4FP4":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Layer_1-4.svg"}},"image_NGWhAE":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Layer_1-3.svg"}},"image_ccntgd":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Layer_1_08e9f4d1-c333-4f9a-8717-af454b714862.svg"}},"image_8DjMPE":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Layer_1-1.svg"}},"image_r9FX6U":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Layer_1-2.svg"}},"image_G7cqh6":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Layer_1-5.svg"}}},"block_order":["image_XT4FP4","image_NGWhAE","image_ccntgd","image_8DjMPE","image_r9FX6U","image_G7cqh6"],"name":"C Marquee","settings":{"show_separator":true,"bg_color":"","marquee_type":"image","font_color":"","text":""}},"customcode_grid_blocks_n4BQG4":{"type":"customcode-grid-blocks","blocks":{"column_dXbNGr":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/1_1.png","title":"","content":"<p>Kit arrives & make your impressions<\/p>","box_color":"#4ba0ed"}},"column_eW3W3W":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/2_f9fdf556-d2b7-4189-b15a-cb8e870090a4.png","title":"","content":"<p>Ship them back with label included<\/p>","box_color":"#4ba0ed"}},"column_HcqKz9":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/3_04d5a665-5b36-4922-81fd-f95b2df0cc6a.png","title":"","content":"<p>Pop On designs your 100% custom smile<\/p>","box_color":"#4ba0ed"}},"column_DtTn7K":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/4_09386e95-3406-4f4d-ba66-8d13db854c79.png","title":"","content":"<p>Your smile delivered<br\/>Smile with Confidence!<\/p>","box_color":"#4ba0ed"}}},"block_order":["column_dXbNGr","column_eW3W3W","column_HcqKz9","column_DtTn7K"],"name":"C Grid Blocks","settings":{"bg_color":"","header":"IT'S EASY!","content":"","bottom_content":"","grid_type":"type-three","mobile_grid":2,"desktop_grid":4,"text_content_color":"#808080"}},"customcode_content_generator_hgppwT":{"type":"customcode-content-generator","blocks":{"liquid_CFXK7Q":{"type":"liquid","settings":{"liquid":"<div class=\"klaviyo-form-ReiK6m\"><\/div>\n<div class=\"klaviyo-form-QY4Y3g\"><\/div>"}},"image_content_nUPM9z":{"type":"image_content","settings":{"image":"shopify:\/\/shop_images\/4_free_gifts_graphic_1_updated_version_8605b87c-7646-4b8d-8bd7-1e486b532e52.png","link":"","lcp":false}}},"block_order":["liquid_CFXK7Q","image_content_nUPM9z"],"custom_css":[".inner-container {margin-bottom: 40px;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_guarantee_box_DxGRVr":{"type":"customcode-guarantee-box","blocks":{"row_T4krGx":{"type":"row","settings":{"image":"shopify:\/\/shop_images\/d22c7ba4-8480-4c65-b65b-923df5e2d829.png","content":"<h4>4 FREE Gifts<\/h4><p>We're gifting you 4 surprises when you order your veneers!<\/p>"}},"row_t8BrXJ":{"type":"row","settings":{"image":"shopify:\/\/shop_images\/Did_you_know_Icon_-_3_e2ea2ee0-e542-456d-84ac-e7689900858c.png","content":"<h4>Digital Backup = NO molds again!<\/h4><p>When you reorder, there's no need to make teeth molds again! We have your digital file! As long as there are no changes, we'll start making your smile as soon as you order your spares!<\/p>"}},"row_L8N7k8":{"type":"row","settings":{"image":"shopify:\/\/shop_images\/Did_you_know_Icon_-_2_1.png","content":"<h4>Any Color<\/h4><p>You're welcome to try a new color when you reorder your smile. The design of your smile will be the same, but the color change will give you a new look!<\/p>"}}},"block_order":["row_T4krGx","row_t8BrXJ","row_L8N7k8"],"name":"C Guarantee Box","settings":{"icon":"shopify:\/\/shop_images\/Did_you_know_text.png","check_icon":"shopify:\/\/shop_images\/Check_Mark.png","header":"<h2>BUY ONCE,<br\/><strong>BENEFITS FOR LIFE<\/strong><\/h2>","bg_color":"#f3f3f3","link":"https:\/\/poponveneers.com\/products\/spareveneers"}},"customcode_content_generator_Mqp76Q":{"type":"customcode-content-generator","blocks":{"liquid_L3BhjC":{"type":"liquid","settings":{"liquid":"<div class=\"klaviyo-form-ReiK6m\"><\/div>\n<div class=\"klaviyo-form-QY4Y3g\"><\/div>"}}},"block_order":["liquid_L3BhjC"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}}},"order":["customcode_content_generator_jFH6wz","customcode_content_generator_zKpeVw","customcode_content_generator_43YJKQ","customode_loox_reviews_DrrX8Y","1762453897bad50063","customcode_text_marquee_f7WPtj","customcode_content_generator_bbEwKj","customode_loox_reviews_RD4wjz","customcode_content_generator_JNGjUD","customcode_content_generator_QNkfQq","customcode_global_search_gLQH7K","customcode_content_generator_ftjDJ6","customcode_content_generator_eqpeMD","customcode_product_comparison_kt4fR4","customcode_content_generator_MzGtiz","customcode_marquee_FTkUyc","customcode_grid_blocks_n4BQG4","customcode_content_generator_hgppwT","customcode_guarantee_box_DxGRVr","customcode_content_generator_Mqp76Q"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "custom.homepage",
+  "name": "Home Page Group 1 Alt",
+  "sections": {
+    "customcode_content_generator_jFH6wz": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_tCUQX3": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "<div id=\"ab-one\" class=\"c-inner\">\n<a href=\"https://poponveneers.com/pages/payment-options\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n</a>\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n<a href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_300k-min.png?v=1767035797\">\n</a>\n</div>"
+          }
+        },
+        "liquid_GiDyQW": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "<div id=\"ab-two\" class=\"c-inner c-custom\">\n<a href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Money_Back_Guarantee.png?v=1765309039\">\n</a>\n\n</div>"
+          }
+        },
+        "liquid_AJEckC": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div id=\"ab-three\" class=\"c-inner c-mobile\">\n<a style=\"visibility: hidden; padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n<a style=\"padding-right: 0px !important; border-right: none;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_350k.png?v=1781541581\">\n</a>\n<a style=\"visibility: hidden; padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n</div>\n\n<div id=\"ab-four\" class=\"c-inner c-mobile\">\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/payment-options\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n</a>\n<a href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_Pop_On_Promise_2.png?v=1777983216\">\n</a>\n</div>"
+          }
+        },
+        "liquid_XNAWTQ": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div id=\"ab-five\" class=\"c-inner c-desktop\">\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_350k.png?v=1781541581\">\n</a>\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n<a href=\"https://poponveneers.com/pages/payment-options\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n</a>\n<a class=\"c-desktop\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_Pop_On_Promise_2.png?v=1777983216\">\n</a>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_tCUQX3",
+        "liquid_GiDyQW",
+        "liquid_AJEckC",
+        "liquid_XNAWTQ"
+      ],
+      "custom_css": [
+        ".inner-container {gap: 10px;}",
+        ".c-inner {justify-content: center; gap: 5px; max-width: 700px; margin: auto;}",
+        ".c-inner > *:not(:last-child) {border-right: 1px solid #7c221d;}",
+        ".c-inner.c-custom {max-width: 150px;}",
+        "@media screen and (max-width: 768px) {c-content-generator {padding-top: 0 !important; }}",
+        "@media screen and (min-width: 769px) {.c-inner.c-custom {max-width: 250px; } .content-block.block-liquid[data-index=\"1\"] {margin-bottom: 30px; }}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": false
+      }
+    },
+    "customcode_content_generator_zKpeVw": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_yfhyJU": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<style>\n.custom-container {\n  position: relative;\n  display: flex;\n}\n.custom-container .custom-mobile {\n  display: block;\n}\n.custom-container .custom-desktop {\n  display: none;\n}\n.custom-container video {\n  width: 100%;\n  height: auto;\n  display: block;\n}\n.custom-container .ccc-button {\n  text-decoration: none;\n  background: linear-gradient(90deg, #cd9a37 0%, #eedb9a 100%);\n  color: #0f4c81;\n  position: absolute;\n  left: 50%;\n  transform: translate(-50%, 0);\n  bottom: calc(15px * (100vw / 320px));\n    padding: calc(5px * (100vw / 320px)) calc(25px * (100vw / 320px));\n    font-size: calc(15px * (100vw / 320px)) !important;\n    font-weight: 600;\n    border-radius: 10px;\n}\n@media screen and (min-width: 769px) {\n  .custom-container .custom-mobile {\n    display: none;\n  }\n  .custom-container .custom-desktop {\n    display: block;\n    max-width: 1400px;\n    margin: auto;\n  }\n  .custom-container .ccc-button {\n      font-size: calc(16px * (100vw / 769px)) !important;\n    padding: calc(12px * (100vw / 769px)) calc(60px * (100vw / 769px)) !important;\n    bottom: calc(15px * (100vw / 769px)) !important;\n}\n}\n@media screen and (min-width: 1400px) {\n  .custom-container .ccc-button {\n    font-size: 22px !important;\n    padding: 25px 90px !important;\n    bottom: 20px !important;\n  }\n}\n</style>\n<a href=\"https://poponveneers.com/pages/am-i-a-candidate\" class=\"custom-container\">\n  <video\n    class=\"custom-desktop\"\n    src=\"https://cdn.shopify.com/videos/c/o/v/a8fb3803f1f24fc1bcd30cb56e78eb9a.mp4\"\n    autoplay\n    muted\n    loop\n    playsinline\n  ></video>\n\n  <video\n    class=\"custom-mobile\"\n    src=\"https://cdn.shopify.com/videos/c/o/v/aca958ae377c4ec984cdc2b35e62a302.mp4\"\n    autoplay\n    muted\n    loop\n    playsinline\n  ></video>\n  <div class=\"ccc-button\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n  \tGET STARTED\n  </div>\n</a>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_yfhyJU"
+      ],
+      "custom_css": [
+        "c-content-generator .block-liquid {padding: 0 !important;}",
+        "> * {}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": false,
+        "d_padding_bottom": false
+      }
+    },
+    "customcode_content_generator_43YJKQ": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "full_width_image_wJkQwm": {
+          "type": "full_width_image",
+          "settings": {
+            "m_image": "shopify://shop_images/Website_Banner_Valentines_Mobile.png",
+            "d_image": "shopify://shop_images/Website_Banner_Valentines_Desktop_8a06d793-cbec-4329-b3f6-18215739ca33.png",
+            "link": "",
+            "lcp": true
+          }
+        },
+        "content_nVXG86": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<p><br/></p>"
+          }
+        },
+        "button_tnmU3Q": {
+          "type": "button",
+          "settings": {
+            "button_text": "GET STARTED",
+            "button_link": "https://poponveneers.com/pages/am-i-a-candidate"
+          }
+        },
+        "full_width_image_maBKjb": {
+          "type": "full_width_image",
+          "disabled": true,
+          "settings": {
+            "m_image": "shopify://shop_images/top_page_3_Desktop_1-min_e68ecf6f-a982-4a4b-89ef-0e9a278a8d86.png",
+            "d_image": "shopify://shop_images/top_page_3_Desktop_1-min_e68ecf6f-a982-4a4b-89ef-0e9a278a8d86.png",
+            "link": "",
+            "lcp": false
+          }
+        },
+        "liquid_7DkxxD": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "full_width_image_wJkQwm",
+        "content_nVXG86",
+        "button_tnmU3Q",
+        "full_width_image_maBKjb",
+        "liquid_7DkxxD"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".inner-container {gap: 0;}",
+        "a.c-button {background-color: #02bf63 !important; margin-bottom: 15px;}",
+        ".content-block.block-full-width-image {width: 100%; max-width: 1400px; margin: auto;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": false,
+        "d_padding_bottom": false
+      }
+    },
+    "customode_loox_reviews_RD4wjz": {
+      "type": "customode-loox-reviews",
+      "name": "C Loox Reviews",
+      "settings": {
+        "only_photos": false,
+        "hide_thumbnails": true,
+        "product_handle": "",
+        "aggregated": false,
+        "data-limit": 4,
+        "maxwidth": 1080
+      }
+    },
+    "customcode_text_marquee_gFxhT8": {
+      "type": "customcode-text-marquee",
+      "blocks": {
+        "mobile_marquee_m8bfa4": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Erica_R_-_mobile.jpg"
+          }
+        },
+        "mobile_marquee_rnCXrz": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Karen_-_mobile.jpg"
+          }
+        },
+        "mobile_marquee_XedJGr": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Mike_H_-_Before_and_After.jpg"
+          }
+        },
+        "mobile_marquee_W9LtAU": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/jessica_-_before_and_after.png"
+          }
+        },
+        "mobile_marquee_7UJii7": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Tee_F_-_mobile.jpg"
+          }
+        },
+        "mobile_marquee_jJpyaH": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Brandy_-_Before_and_after.png"
+          }
+        },
+        "mobile_marquee_nnjVna": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Lisa_-_Before_and_After.png"
+          }
+        },
+        "mobile_marquee_WqfbYj": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Madison_-_Before_and_After.jpg"
+          }
+        },
+        "mobile_marquee_UfLhgH": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Riley_H_-_mobile.jpg"
+          }
+        },
+        "mobile_marquee_z4Di8f": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Randall_-_Before_and_After.jpg"
+          }
+        },
+        "desktop_one_marquee_J7rq36": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Erica_R.jpg"
+          }
+        },
+        "desktop_one_marquee_37xhAD": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Karen.jpg"
+          }
+        },
+        "desktop_one_marquee_PDjhJg": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Mike_H.jpg"
+          }
+        },
+        "desktop_one_marquee_BwNdFG": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Jessica_D.jpg"
+          }
+        },
+        "desktop_one_marquee_z3w8tG": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Tee_F.jpg"
+          }
+        },
+        "desktop_one_marquee_McC4Ne": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Brandy_F.jpg"
+          }
+        },
+        "desktop_one_marquee_qFBDnW": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Lisa_P.jpg"
+          }
+        },
+        "desktop_one_marquee_QfH6YE": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Madison_F.jpg"
+          }
+        },
+        "desktop_one_marquee_83ywhf": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Riley_H.jpg"
+          }
+        },
+        "desktop_one_marquee_LGKfTC": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Randall_F.jpg"
+          }
+        },
+        "desktop_two_marquee_gqGXRk": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Lonnie_R.jpg"
+          }
+        },
+        "desktop_two_marquee_8VK93f": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Scott_W.jpg"
+          }
+        },
+        "desktop_two_marquee_NCeF4C": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Amy_H.jpg"
+          }
+        },
+        "desktop_two_marquee_Aym4EA": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Rosmaree_H.jpg"
+          }
+        },
+        "desktop_two_marquee_bhxa6N": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Barbara_B.jpg"
+          }
+        },
+        "desktop_two_marquee_6yjcfg": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Jennifer_L.jpg"
+          }
+        },
+        "desktop_two_marquee_BCejiX": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Kevin_R.jpg"
+          }
+        },
+        "desktop_two_marquee_B8Lp99": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Johnny_F.jpg"
+          }
+        },
+        "desktop_two_marquee_H7t96q": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Lydia_C.jpg"
+          }
+        },
+        "desktop_two_marquee_fxhr6x": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Kisha_M.jpg"
+          }
+        },
+        "desktop_three_marquee_c6V4ir": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_David_O.jpg"
+          }
+        },
+        "desktop_three_marquee_YRyWRm": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Dawn_H.jpg"
+          }
+        },
+        "desktop_three_marquee_jrc3Vk": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Rosalind_T.jpg"
+          }
+        },
+        "desktop_three_marquee_9WdGw3": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Benjamin_A.jpg"
+          }
+        },
+        "desktop_three_marquee_8gbAjC": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Meg_L.jpg"
+          }
+        },
+        "desktop_three_marquee_T4WR9q": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Richard_S.jpg"
+          }
+        },
+        "desktop_three_marquee_fVQ36E": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Vanya_W.jpg"
+          }
+        },
+        "desktop_three_marquee_qaYMYH": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Alexis_F.jpg"
+          }
+        },
+        "desktop_three_marquee_4tbG3f": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Sureka_R.jpg"
+          }
+        },
+        "desktop_three_marquee_dXr6eB": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Jerry_G.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "mobile_marquee_m8bfa4",
+        "mobile_marquee_rnCXrz",
+        "mobile_marquee_XedJGr",
+        "mobile_marquee_W9LtAU",
+        "mobile_marquee_7UJii7",
+        "mobile_marquee_jJpyaH",
+        "mobile_marquee_nnjVna",
+        "mobile_marquee_WqfbYj",
+        "mobile_marquee_UfLhgH",
+        "mobile_marquee_z4Di8f",
+        "desktop_one_marquee_J7rq36",
+        "desktop_one_marquee_37xhAD",
+        "desktop_one_marquee_PDjhJg",
+        "desktop_one_marquee_BwNdFG",
+        "desktop_one_marquee_z3w8tG",
+        "desktop_one_marquee_McC4Ne",
+        "desktop_one_marquee_qFBDnW",
+        "desktop_one_marquee_QfH6YE",
+        "desktop_one_marquee_83ywhf",
+        "desktop_one_marquee_LGKfTC",
+        "desktop_two_marquee_gqGXRk",
+        "desktop_two_marquee_8VK93f",
+        "desktop_two_marquee_NCeF4C",
+        "desktop_two_marquee_Aym4EA",
+        "desktop_two_marquee_bhxa6N",
+        "desktop_two_marquee_6yjcfg",
+        "desktop_two_marquee_BCejiX",
+        "desktop_two_marquee_B8Lp99",
+        "desktop_two_marquee_H7t96q",
+        "desktop_two_marquee_fxhr6x",
+        "desktop_three_marquee_c6V4ir",
+        "desktop_three_marquee_YRyWRm",
+        "desktop_three_marquee_jrc3Vk",
+        "desktop_three_marquee_9WdGw3",
+        "desktop_three_marquee_8gbAjC",
+        "desktop_three_marquee_T4WR9q",
+        "desktop_three_marquee_fVQ36E",
+        "desktop_three_marquee_qaYMYH",
+        "desktop_three_marquee_4tbG3f",
+        "desktop_three_marquee_dXr6eB"
+      ],
+      "custom_css": [
+        ".inner-container {max-width: 1080px; margin: auto; padding-top: 0 !important;}",
+        ".header-text h2 {text-align: center;}",
+        ".header-text ul {list-style: none; padding: 0; width: fit-content; margin: auto;}",
+        ".header-text li strong {background: #e7e9aeff;}",
+        ".video-carousel-section {display: none;}",
+        "@media screen and (min-width: 769px) {.inner-container {flex-direction: column; } c-text-marquee .right-container {aspect-ratio: unset; }}",
+        "@media screen and (min-width: 1120px) {.inner-container {padding: 30px 0; }}"
+      ],
+      "name": "C Text Marquee",
+      "settings": {
+        "blurb": "",
+        "header": "<h2>Smile Now 🔁 Pay Later With Affordable Payment Plans!</h2><ul><li>✔️ <strong>NO CREDIT CHECK</strong> payment options</li><li>✔️ Spread Payments over <strong>6 months!</strong></li><li>✔️ Weekly, Bi-weekly, or Monthly payments. <a href=\"https://poponveneers.com/pages/payment-options\"><span style=\"text-decoration:underline\">Choose Now</span></a></li></ul>",
+        "features_grid": "",
+        "features_grid_link": "https://poponveneers.com/pages/am-i-a-candidate|https://poponveneers.com/pages/reviews|https://poponveneers.com/pages/payment-options",
+        "image_url": "https://cdn.shopify.com/s/files/1/0382/1761/3450/files/shoppay-blue_9d631621-0083-4501-a349-27ca3eef861e.png|https://cdn.shopify.com/s/files/1/0382/1761/3450/files/affirm_logo_blue_b0336b3a-a2f7-45d3-b91d-061b7a2134c7.png|https://cdn.shopify.com/s/files/1/0382/1761/3450/files/paypal_blue.png|https://cdn.shopify.com/s/files/1/0382/1761/3450/files/afterpay-blue.png|https://poponveneers.com/cdn/shop/files/klarna_logo_blue.png?v=1712158749|https://cdn.shopify.com/s/files/1/0382/1761/3450/files/zip_blue.png",
+        "content": "<h3>0%</h3><p>Interest free APR financing options</p><p>-</p><h3><a href=\"https://poponveneers.com/pages/payment-options\" title=\"https://poponveneers.com/pages/payment-options\"><strong>$29</strong></a></h3><p><a href=\"https://poponveneers.com/pages/payment-options\" title=\"https://poponveneers.com/pages/payment-options\">Low $29 payment option for veneers</a></p><p>-</p><h3>99.2%</h3><p>Of applicants approved</p>",
+        "button_link": "",
+        "button_text": ""
+      }
+    },
+    "customcode_content_generator_bbEwKj": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "section_header_Ak8VkR": {
+          "type": "section_header",
+          "disabled": true,
+          "settings": {
+            "header": "\"POP ON VENEERS CHANGED MY LIFE\""
+          }
+        },
+        "content_fBPJLW": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<p>⭐⭐⭐⭐⭐<br/><br/></p><p>See for yourself why Pop On is loved by thousands of customers!</p>"
+          }
+        },
+        "button_rzcNFd": {
+          "type": "button",
+          "settings": {
+            "button_text": "SEE PAYMENT OPTIONS",
+            "button_link": "https://poponveneers.com/pages/payment-options"
+          }
+        },
+        "liquid_VrT9WR": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "section_header_Ak8VkR",
+        "content_fBPJLW",
+        "button_rzcNFd",
+        "liquid_VrT9WR"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "1762453897bad50063": {
+      "type": "_blocks",
+      "blocks": {
+        "loox_reviews_loox_trust_badge_9BK3Lx": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-trust-badge/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "layout": "horizontal-slim",
+            "alignment": "left",
+            "scheme-type": "default",
+            "review-title": "reviews",
+            "rating-icon": true,
+            "average-rating": false,
+            "loox-branding": false,
+            "review-count": true,
+            "open-reviews": true,
+            "show-border": false,
+            "border-radius": 8,
+            "font-size": 20,
+            "background-color": "",
+            "secondary-background-color": "",
+            "text-color": "#0f4c81",
+            "rating-icon-color": "#0f4c81",
+            "border-color": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_trust_badge_9BK3Lx"
+      ],
+      "custom_css": [
+        "> div {max-width: 1080px; margin: auto; display: flex !important;}"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "customcode_text_marquee_AamLbM": {
+      "type": "customcode-text-marquee",
+      "blocks": {
+        "mobile_marquee_iceNHR": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Erica_R_-_mobile.jpg"
+          }
+        },
+        "mobile_marquee_QtWcYx": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Karen_-_mobile.jpg"
+          }
+        },
+        "mobile_marquee_UeDV4C": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Mike_H_-_Before_and_After.jpg"
+          }
+        },
+        "mobile_marquee_NttTKb": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/jessica_-_before_and_after.png"
+          }
+        },
+        "mobile_marquee_8V4hBf": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Tee_F_-_mobile.jpg"
+          }
+        },
+        "mobile_marquee_89MBtN": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Brandy_-_Before_and_after.png"
+          }
+        },
+        "mobile_marquee_7JYd9j": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Lisa_-_Before_and_After.png"
+          }
+        },
+        "mobile_marquee_A3Xdf4": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Madison_-_Before_and_After.jpg"
+          }
+        },
+        "mobile_marquee_tycRRN": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Riley_H_-_mobile.jpg"
+          }
+        },
+        "mobile_marquee_Pph4Tt": {
+          "type": "mobile_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Randall_-_Before_and_After.jpg"
+          }
+        },
+        "desktop_one_marquee_YCAyka": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Erica_R.jpg"
+          }
+        },
+        "desktop_one_marquee_a7qDVU": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Karen.jpg"
+          }
+        },
+        "desktop_one_marquee_Jqywdt": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Mike_H.jpg"
+          }
+        },
+        "desktop_one_marquee_NKDwfc": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Jessica_D.jpg"
+          }
+        },
+        "desktop_one_marquee_9LdPGq": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Tee_F.jpg"
+          }
+        },
+        "desktop_one_marquee_nGnaAq": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Brandy_F.jpg"
+          }
+        },
+        "desktop_one_marquee_cJx3R9": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Lisa_P.jpg"
+          }
+        },
+        "desktop_one_marquee_aApmmN": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Madison_F.jpg"
+          }
+        },
+        "desktop_one_marquee_ftLrqa": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Riley_H.jpg"
+          }
+        },
+        "desktop_one_marquee_wqeei9": {
+          "type": "desktop_one_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_1_-_Randall_F.jpg"
+          }
+        },
+        "desktop_two_marquee_gb7HKR": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Lonnie_R.jpg"
+          }
+        },
+        "desktop_two_marquee_xTpq4M": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Scott_W.jpg"
+          }
+        },
+        "desktop_two_marquee_WPHBFq": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Amy_H.jpg"
+          }
+        },
+        "desktop_two_marquee_P6Gb7U": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Rosmaree_H.jpg"
+          }
+        },
+        "desktop_two_marquee_wkEERM": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Barbara_B.jpg"
+          }
+        },
+        "desktop_two_marquee_B6jcQX": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Jennifer_L.jpg"
+          }
+        },
+        "desktop_two_marquee_LrV8ke": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Kevin_R.jpg"
+          }
+        },
+        "desktop_two_marquee_jeipNR": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Johnny_F.jpg"
+          }
+        },
+        "desktop_two_marquee_JdACRf": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Lydia_C.jpg"
+          }
+        },
+        "desktop_two_marquee_h4DM9U": {
+          "type": "desktop_two_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_4_-_Kisha_M.jpg"
+          }
+        },
+        "desktop_three_marquee_iczGci": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_David_O.jpg"
+          }
+        },
+        "desktop_three_marquee_NagC4m": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Dawn_H.jpg"
+          }
+        },
+        "desktop_three_marquee_i8ybWL": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Rosalind_T.jpg"
+          }
+        },
+        "desktop_three_marquee_Rp7tWn": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Benjamin_A.jpg"
+          }
+        },
+        "desktop_three_marquee_pHmafe": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Meg_L.jpg"
+          }
+        },
+        "desktop_three_marquee_6FF9Lp": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Richard_S.jpg"
+          }
+        },
+        "desktop_three_marquee_jm7q6M": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Vanya_W.jpg"
+          }
+        },
+        "desktop_three_marquee_j4YxQH": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Alexis_F.jpg"
+          }
+        },
+        "desktop_three_marquee_xB4tJ4": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Sureka_R.jpg"
+          }
+        },
+        "desktop_three_marquee_37UHc4": {
+          "type": "desktop_three_marquee",
+          "settings": {
+            "image": "shopify://shop_images/Row_3_-_Jerry_G.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "mobile_marquee_iceNHR",
+        "mobile_marquee_QtWcYx",
+        "mobile_marquee_UeDV4C",
+        "mobile_marquee_NttTKb",
+        "mobile_marquee_8V4hBf",
+        "mobile_marquee_89MBtN",
+        "mobile_marquee_7JYd9j",
+        "mobile_marquee_A3Xdf4",
+        "mobile_marquee_tycRRN",
+        "mobile_marquee_Pph4Tt",
+        "desktop_one_marquee_YCAyka",
+        "desktop_one_marquee_a7qDVU",
+        "desktop_one_marquee_Jqywdt",
+        "desktop_one_marquee_NKDwfc",
+        "desktop_one_marquee_9LdPGq",
+        "desktop_one_marquee_nGnaAq",
+        "desktop_one_marquee_cJx3R9",
+        "desktop_one_marquee_aApmmN",
+        "desktop_one_marquee_ftLrqa",
+        "desktop_one_marquee_wqeei9",
+        "desktop_two_marquee_gb7HKR",
+        "desktop_two_marquee_xTpq4M",
+        "desktop_two_marquee_WPHBFq",
+        "desktop_two_marquee_P6Gb7U",
+        "desktop_two_marquee_wkEERM",
+        "desktop_two_marquee_B6jcQX",
+        "desktop_two_marquee_LrV8ke",
+        "desktop_two_marquee_jeipNR",
+        "desktop_two_marquee_JdACRf",
+        "desktop_two_marquee_h4DM9U",
+        "desktop_three_marquee_iczGci",
+        "desktop_three_marquee_NagC4m",
+        "desktop_three_marquee_i8ybWL",
+        "desktop_three_marquee_Rp7tWn",
+        "desktop_three_marquee_pHmafe",
+        "desktop_three_marquee_6FF9Lp",
+        "desktop_three_marquee_jm7q6M",
+        "desktop_three_marquee_j4YxQH",
+        "desktop_three_marquee_xB4tJ4",
+        "desktop_three_marquee_37UHc4"
+      ],
+      "custom_css": [
+        ".inner-container {max-width: 1080px; margin: auto; padding-top: 0 !important;}",
+        ".header-text h2 {text-align: center;}",
+        ".header-text li strong {background: #e7e9aeff;}",
+        ".klaviyo-form-ReiK6m {display: none;}",
+        "c-text-marquee .right-container {display: none;}",
+        "@media screen and (min-width: 769px) {.inner-container {flex-direction: column; } .left-container {display: flex; flex-direction: column; justify-content: center; }}",
+        "@media screen and (min-width: 1120px) {.inner-container {padding: 30px 0; }}"
+      ],
+      "name": "C Text Marquee",
+      "settings": {
+        "blurb": "",
+        "header": "<h2>Smile Now 🔁 Pay Later With Affordable Payment Plans!</h2><ul><li>✔️ <strong>NO CREDIT CHECK</strong> payment options</li><li>✔️ Spread Payments over <strong>6 months!</strong></li><li>✔️ Weekly, Bi-weekly, or Monthly payments. <a href=\"https://poponveneers.com/pages/payment-options\"><span style=\"text-decoration:underline\">Choose Now</span></a></li></ul>",
+        "features_grid": "",
+        "features_grid_link": "https://poponveneers.com/pages/am-i-a-candidate|https://poponveneers.com/pages/reviews|https://poponveneers.com/pages/payment-options",
+        "image_url": "https://cdn.shopify.com/s/files/1/0382/1761/3450/files/shoppay-blue_9d631621-0083-4501-a349-27ca3eef861e.png|https://cdn.shopify.com/s/files/1/0382/1761/3450/files/affirm_logo_blue_b0336b3a-a2f7-45d3-b91d-061b7a2134c7.png|https://cdn.shopify.com/s/files/1/0382/1761/3450/files/paypal_blue.png|https://cdn.shopify.com/s/files/1/0382/1761/3450/files/afterpay-blue.png|https://poponveneers.com/cdn/shop/files/klarna_logo_blue.png?v=1712158749|https://cdn.shopify.com/s/files/1/0382/1761/3450/files/zip_blue.png",
+        "content": "<h3>0%</h3><p>Interest free APR financing options</p><p>-</p><h3><a href=\"https://poponveneers.com/pages/payment-options\" title=\"https://poponveneers.com/pages/payment-options\"><strong>$29</strong></a></h3><p><a href=\"https://poponveneers.com/pages/payment-options\" title=\"https://poponveneers.com/pages/payment-options\">Low $29 payment option for veneers</a></p><p>-</p><h3>99.2%</h3><p>Of applicants approved</p>",
+        "button_link": "",
+        "button_text": ""
+      }
+    },
+    "customcode_content_generator_JNGjUD": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "full_width_image_dR9xgC": {
+          "type": "full_width_image",
+          "settings": {
+            "m_image": "shopify://shop_images/top_page_3_Desktop_2.png",
+            "d_image": "shopify://shop_images/top_page_3_Desktop_2_133d1145-6162-41c1-b57a-a56fbc5effa5.png",
+            "link": "",
+            "lcp": false
+          }
+        },
+        "liquid_4m83iM": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        },
+        "content_LULdRx": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<h4>🤔 IS POP ON VENEERS THE SAME AS GOING TO THE DENTIST?<br/><br/></h4><p>Pop On Veneers® are for cosmetic use only—they’re designed to enhance the <em>appearance </em>of your smile, not to treat, diagnose, or fix dental issues. They’re not a substitute for professional dental care. Don’t use Pop On Veneers if you have loose teeth or untreated dental issues.</p><p><br/>We always recommend seeing your dentist regularly. Think of Pop On as an accessory and confidence boost—while your dentist keeps everything working behind the scenes.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "full_width_image_dR9xgC",
+        "liquid_4m83iM",
+        "content_LULdRx"
+      ],
+      "custom_css": [
+        ".content-block.block-full-width-image {width: 100%; max-width: 1400px; margin: auto;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_content_generator_QNkfQq": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "button_ewz8GV": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_text": "FAQ",
+            "button_link": "https://poponveneers.com/pages/frequently-asked-questions-1"
+          }
+        },
+        "accented_header_djPwNz": {
+          "type": "accented_header",
+          "settings": {
+            "content": "<h2><strong>SMILE</strong> WITH CONFIDENCE</h2><h4>THE EXCLUSIVE POPON DESIGN PROCESS</h4>"
+          }
+        },
+        "image_content_ghqN4k": {
+          "type": "image_content",
+          "settings": {
+            "image": "shopify://shop_images/Veneers_and_model_gif_forreplo_website_1.gif",
+            "link": "",
+            "lcp": false
+          }
+        },
+        "image_content_Qq98Ba": {
+          "type": "image_content",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/7835ef23-ab0f-4baf-8de1-841d08201d2a.jpg",
+            "link": "https://poponveneers.com/collections/pop-on-bling",
+            "lcp": false
+          }
+        },
+        "liquid_98yQng": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "button_ewz8GV",
+        "accented_header_djPwNz",
+        "image_content_ghqN4k",
+        "image_content_Qq98Ba",
+        "liquid_98yQng"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": false,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_global_search_gLQH7K": {
+      "type": "customcode-global-search",
+      "blocks": {
+        "faq_block_9JaQX7": {
+          "type": "faq_block",
+          "settings": {
+            "bg_image": "shopify://shop_images/faq-1.png",
+            "faq_link": "https://poponveneers.com/blogs/faq/can-you-eat-with-pop-on-veneers",
+            "faq_title": "Can I eat with Pop On Smiles?"
+          }
+        },
+        "faq_block_iG6gPF": {
+          "type": "faq_block",
+          "settings": {
+            "bg_image": "shopify://shop_images/faq-2.png",
+            "faq_link": "https://poponveneers.com/blogs/faq/how-can-pop-on-veneers-help-me",
+            "faq_title": "What if I'm missing a lot of teeth?"
+          }
+        },
+        "faq_block_nHrr6z": {
+          "type": "faq_block",
+          "settings": {
+            "bg_image": "shopify://shop_images/faq-3.png",
+            "faq_link": "https://poponveneers.com/blogs/faq/what-are-the-payment-plan-options",
+            "faq_title": "What are my affordable payment options?"
+          }
+        },
+        "faq_block_gHKCUh": {
+          "type": "faq_block",
+          "settings": {
+            "bg_image": "shopify://shop_images/faq-4.png",
+            "faq_link": "https://poponveneers.com/blogs/faq/how-fast-can-i-get-my-veneers-how-long-does-it-take?_pos=2&_sid=96abea59e&_ss=r",
+            "faq_title": "How soon can I get my smile?"
+          }
+        },
+        "faq_block_9q9T6B": {
+          "type": "faq_block",
+          "settings": {
+            "bg_image": "shopify://shop_images/faq-5.png",
+            "faq_link": "https://poponveneers.com/blogs/faq/what-color-should-i-choose",
+            "faq_title": "What are the color choices?"
+          }
+        },
+        "faq_block_qXwqJ4": {
+          "type": "faq_block",
+          "settings": {
+            "bg_image": "shopify://shop_images/faq-6.png",
+            "faq_link": "https://poponveneers.com/blogs/faq/do-i-need-to-go-the-dentist-to-get-pop-on-veneers",
+            "faq_title": "Do I need to go to the dentist for this?"
+          }
+        },
+        "faq_block_HqkXCB": {
+          "type": "faq_block",
+          "settings": {
+            "bg_image": "shopify://shop_images/faq-7.png",
+            "faq_link": "https://poponveneers.com/blogs/faq/how-do-i-pay-with-my-hsa-or-fsa-card?_pos=2&_sid=093e28edd&_ss=r",
+            "faq_title": "Do you accept HSA/FSA?"
+          }
+        },
+        "faq_block_7GP7mM": {
+          "type": "faq_block",
+          "settings": {
+            "bg_image": "shopify://shop_images/faq-8.png",
+            "faq_link": "https://poponveneers.com/blogs/faq/can-i-really-take-my-own-impression",
+            "faq_title": "Can I really take impressions at home?"
+          }
+        }
+      },
+      "block_order": [
+        "faq_block_9JaQX7",
+        "faq_block_iG6gPF",
+        "faq_block_nHrr6z",
+        "faq_block_gHKCUh",
+        "faq_block_9q9T6B",
+        "faq_block_qXwqJ4",
+        "faq_block_HqkXCB",
+        "faq_block_7GP7mM"
+      ],
+      "name": "C Global Search",
+      "settings": {
+        "header": "<h2>Frequently Asked Questions</h2><p>Pop On Answers</p>",
+        "display_faq_grid": true,
+        "grid_center_image": "shopify://shop_images/faq-center1.png"
+      }
+    },
+    "customcode_content_generator_ftjDJ6": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "button_FqWdwh": {
+          "type": "button",
+          "settings": {
+            "button_text": "FAQ",
+            "button_link": "https://poponveneers.com/pages/frequently-asked-questions-1"
+          }
+        }
+      },
+      "block_order": [
+        "button_FqWdwh"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": false,
+        "d_padding_bottom": false
+      }
+    },
+    "customcode_content_generator_eqpeMD": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "content_GrA3e4": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<h4><strong><br/>Is Pop On Veneers the same as going to the dentist?<br/><br/></strong></h4><p>Pop On Veneers® are for cosmetic use only—they’re designed to enhance the <em>appearance</em> of your smile, not to treat, diagnose, or fix dental issues. They’re not a substitute for professional dental care. Don’t use Pop On Veneers if you have loose teeth or untreated dental issues.<br/><br/></p><p>We always recommend seeing your dentist regularly. Think of Pop On as an accessory and  confidence boost—while your dentist keeps everything working behind the scenes.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_GrA3e4"
+      ],
+      "name": "Disclaimer",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_product_comparison_kt4fR4": {
+      "type": "customcode-product-comparison",
+      "blocks": {
+        "product_eFPyg6": {
+          "type": "product",
+          "settings": {
+            "title": "Full Set",
+            "description": "Both Top and Bottom Included",
+            "price_display": "$499 | $699",
+            "blurb": "",
+            "image": "shopify://shop_images/Homepage_Image_1-min.png"
+          }
+        },
+        "product_ydnaJH": {
+          "type": "product",
+          "settings": {
+            "title": "Half Set",
+            "description": "Just Top or Just Bottom",
+            "price_display": "$299 | $499",
+            "blurb": "",
+            "image": "shopify://shop_images/Homepage_Image_2-min.png"
+          }
+        },
+        "callout_4fiB7x": {
+          "type": "callout",
+          "settings": {
+            "bg_color": "#d3dff6",
+            "header": "<h2><strong>Smile Now, Pay Later</strong></h2><h3>Payment Plans that work for all</h3>",
+            "action_title": "You choose when you pay:",
+            "callout_link": "https://poponveneers.com/pages/payment-options",
+            "action_items": "$39/month|$29/month"
+          }
+        },
+        "letter_gbMBwk": {
+          "type": "letter",
+          "settings": {
+            "badge": "shopify://shop_images/Icon_Pop_On_Promise.png",
+            "title": "The Pop On Promise",
+            "top_content": "<p>We are committed to delivering a smile that you’ll love! All our orders are backed by the Pop On Promise. In case there’s any issue with the fit, we will remake your Pop On Smile up to two times. Our dedicated team is here for you every step of the way!</p><ul><li>Backed by the Pop On Promise</li><li>Up to two remakes</li><li>Dedicated support team every step of the way!</li></ul>",
+            "bottom_image": "shopify://shop_images/Loss_Protection_1.png",
+            "bottom_content": "<p>We recently introduced the option of adding a 1 Year Loss Protection Plan so if anything happens to your Pop On Smile, we’ll make it for you again. No questions asked! Our goal is to ensure you never have to worry about being without your smile.</p>",
+            "signature": "shopify://shop_images/Isaac_Hakimi.svg",
+            "author": "<p><strong>Isaac Hakimi<br/></strong>CEO And Co-Founder</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_eFPyg6",
+        "product_ydnaJH",
+        "callout_4fiB7x",
+        "letter_gbMBwk"
+      ],
+      "custom_css": [
+        "c-product-comparison .letter-container img.c-bottom-image {max-width: 30%;}",
+        "c-product-comparison .letter-container img.c-author {max-width: 150px;}",
+        "c-product-comparison .letter-container .c-badge {max-width: 125px; top: 20px;}",
+        "@media screen and (max-width: 1023px) {.inner-container {flex-direction: column-reverse; margin-top: 40px; }}"
+      ],
+      "name": "C Product Comparison",
+      "settings": {
+        "button_link": "",
+        "button_text": ""
+      }
+    },
+    "customcode_content_generator_MzGtiz": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_jRXNHg": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_jRXNHg"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_marquee_FTkUyc": {
+      "type": "customcode-marquee",
+      "blocks": {
+        "image_XT4FP4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Layer_1-4.svg"
+          }
+        },
+        "image_NGWhAE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Layer_1-3.svg"
+          }
+        },
+        "image_ccntgd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Layer_1_08e9f4d1-c333-4f9a-8717-af454b714862.svg"
+          }
+        },
+        "image_8DjMPE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Layer_1-1.svg"
+          }
+        },
+        "image_r9FX6U": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Layer_1-2.svg"
+          }
+        },
+        "image_G7cqh6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Layer_1-5.svg"
+          }
+        }
+      },
+      "block_order": [
+        "image_XT4FP4",
+        "image_NGWhAE",
+        "image_ccntgd",
+        "image_8DjMPE",
+        "image_r9FX6U",
+        "image_G7cqh6"
+      ],
+      "name": "C Marquee",
+      "settings": {
+        "show_separator": true,
+        "bg_color": "",
+        "marquee_type": "image",
+        "font_color": "",
+        "text": ""
+      }
+    },
+    "customcode_grid_blocks_n4BQG4": {
+      "type": "customcode-grid-blocks",
+      "blocks": {
+        "column_dXbNGr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_1.png",
+            "title": "",
+            "content": "<p>Kit arrives & make your impressions</p>",
+            "box_color": "#4ba0ed"
+          }
+        },
+        "column_eW3W3W": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_f9fdf556-d2b7-4189-b15a-cb8e870090a4.png",
+            "title": "",
+            "content": "<p>Ship them back with label included</p>",
+            "box_color": "#4ba0ed"
+          }
+        },
+        "column_HcqKz9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_04d5a665-5b36-4922-81fd-f95b2df0cc6a.png",
+            "title": "",
+            "content": "<p>Pop On designs your 100% custom smile</p>",
+            "box_color": "#4ba0ed"
+          }
+        },
+        "column_DtTn7K": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4_09386e95-3406-4f4d-ba66-8d13db854c79.png",
+            "title": "",
+            "content": "<p>Your smile delivered<br/>Smile with Confidence!</p>",
+            "box_color": "#4ba0ed"
+          }
+        }
+      },
+      "block_order": [
+        "column_dXbNGr",
+        "column_eW3W3W",
+        "column_HcqKz9",
+        "column_DtTn7K"
+      ],
+      "name": "C Grid Blocks",
+      "settings": {
+        "bg_color": "",
+        "header": "IT'S EASY!",
+        "content": "",
+        "bottom_content": "",
+        "grid_type": "type-three",
+        "mobile_grid": 2,
+        "desktop_grid": 4,
+        "text_content_color": "#808080"
+      }
+    },
+    "customcode_content_generator_hgppwT": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_CFXK7Q": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        },
+        "image_content_nUPM9z": {
+          "type": "image_content",
+          "settings": {
+            "image": "shopify://shop_images/4_free_gifts_graphic_1_updated_version_8605b87c-7646-4b8d-8bd7-1e486b532e52.png",
+            "link": "",
+            "lcp": false
+          }
+        }
+      },
+      "block_order": [
+        "liquid_CFXK7Q",
+        "image_content_nUPM9z"
+      ],
+      "custom_css": [
+        ".inner-container {margin-bottom: 40px;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_guarantee_box_DxGRVr": {
+      "type": "customcode-guarantee-box",
+      "blocks": {
+        "row_T4krGx": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/d22c7ba4-8480-4c65-b65b-923df5e2d829.png",
+            "content": "<h4>4 FREE Gifts</h4><p>We're gifting you 4 surprises when you order your veneers!</p>"
+          }
+        },
+        "row_t8BrXJ": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Did_you_know_Icon_-_3_e2ea2ee0-e542-456d-84ac-e7689900858c.png",
+            "content": "<h4>Digital Backup = NO molds again!</h4><p>When you reorder, there's no need to make teeth molds again! We have your digital file! As long as there are no changes, we'll start making your smile as soon as you order your spares!</p>"
+          }
+        },
+        "row_L8N7k8": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Did_you_know_Icon_-_2_1.png",
+            "content": "<h4>Any Color</h4><p>You're welcome to try a new color when you reorder your smile. The design of your smile will be the same, but the color change will give you a new look!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "row_T4krGx",
+        "row_t8BrXJ",
+        "row_L8N7k8"
+      ],
+      "name": "C Guarantee Box",
+      "settings": {
+        "icon": "shopify://shop_images/Did_you_know_text.png",
+        "check_icon": "shopify://shop_images/Check_Mark.png",
+        "header": "<h2>BUY ONCE,<br/><strong>BENEFITS FOR LIFE</strong></h2>",
+        "bg_color": "#f3f3f3",
+        "link": "https://poponveneers.com/products/spareveneers"
+      }
+    },
+    "customcode_content_generator_Mqp76Q": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_L3BhjC": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_L3BhjC"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    }
+  },
+  "order": [
+    "customcode_content_generator_jFH6wz",
+    "customcode_content_generator_zKpeVw",
+    "customcode_content_generator_43YJKQ",
+    "customode_loox_reviews_RD4wjz",
+    "customcode_text_marquee_gFxhT8",
+    "customcode_content_generator_bbEwKj",
+    "1762453897bad50063",
+    "customcode_text_marquee_AamLbM",
+    "customcode_content_generator_JNGjUD",
+    "customcode_content_generator_QNkfQq",
+    "customcode_global_search_gLQH7K",
+    "customcode_content_generator_ftjDJ6",
+    "customcode_content_generator_eqpeMD",
+    "customcode_product_comparison_kt4fR4",
+    "customcode_content_generator_MzGtiz",
+    "customcode_marquee_FTkUyc",
+    "customcode_grid_blocks_n4BQG4",
+    "customcode_content_generator_hgppwT",
+    "customcode_guarantee_box_DxGRVr",
+    "customcode_content_generator_Mqp76Q"
+  ]
+}
