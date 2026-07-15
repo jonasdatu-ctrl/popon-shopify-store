@@ -1,1 +1,38 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"content_direction":"column","gap":32,"color_scheme":"","padding-block-start":40,"padding-block-end":80}},"customcode_accordion_alt_NQGyjW":{"type":"customcode-accordion-alt","blocks":{"accordion_EVQfxP":{"type":"accordion","settings":{"question":"HELLO WORLD","answer":"<p>HI!<\/p><p><\/p>","liquid":"{% render 'customcode-video-carousel-slider', video_set: 'color-choices' %}"}},"accordion_VkpbVt":{"type":"accordion","settings":{"question":"","answer":"","liquid":""}}},"block_order":["accordion_EVQfxP","accordion_VkpbVt"],"name":"C Accordion Alt","settings":{"header":"","link":"","name":"","mobile_layout":"column","desktop_layout":"row-reverse"}}},"order":["main","customcode_accordion_alt_NQGyjW"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "customcode_video_reviews_carousel_6cCJ9g": {
+      "type": "customcode-video-reviews-carousel",
+      "name": "C YouTube Reviews",
+      "settings": {
+        "heading": "Video Reviews",
+        "base_handle": "video-reviews",
+        "thumbnail_quality": "hqdefault",
+        "use_feed_view": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "customcode_video_reviews_carousel_6cCJ9g"
+  ]
+}
