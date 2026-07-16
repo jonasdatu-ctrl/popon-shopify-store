@@ -518,85 +518,6 @@
         "data-limit": 4,
         "maxwidth": 1080
       }
-    },
-    "178422525568ea04cb": {
-      "type": "_blocks",
-      "blocks": {
-        "amazon_mcf_and_buy_with_prime_promotion_banner_container_JqJ67J": {
-          "type": "shopify://apps/amazon-mcf-and-buy-with-prime/blocks/promotion-banner-container/cd9463cc-4da0-4f9f-92a6-6e3f345eb3ce",
-          "settings": {
-            "horizontal_alignment": "center"
-          }
-        },
-        "amazon_mcf_and_buy_with_prime_delivery_card_nnmFyp": {
-          "type": "shopify://apps/amazon-mcf-and-buy-with-prime/blocks/delivery_card/cd9463cc-4da0-4f9f-92a6-6e3f345eb3ce",
-          "settings": {
-            "target_id": "",
-            "free_shipping_threshold": "",
-            "color_mode": "light",
-            "background_color": "",
-            "text_color": "",
-            "font_family": "",
-            "font_size_base": 14,
-            "corner_style": "rounded",
-            "border_radius": 24
-          }
-        },
-        "amazon_mcf_and_buy_with_prime_promise_delivery_DJgPmY": {
-          "type": "shopify://apps/amazon-mcf-and-buy-with-prime/blocks/promise_delivery/cd9463cc-4da0-4f9f-92a6-6e3f345eb3ce",
-          "settings": {
-            "message_variant": "default",
-            "show_exception_message": false,
-            "background_color": "#F9F9F9",
-            "transparent_background": false,
-            "color": "#000000",
-            "font": "assistant_n4",
-            "font_size": 16,
-            "horizontal_alignment": "center",
-            "corner_radius": 0,
-            "top-padding": 40,
-            "bottom-padding": 40,
-            "left-padding": 0,
-            "right-padding": 0,
-            "top-margin": 0,
-            "bottom-margin": 0,
-            "left-margin": 0,
-            "right-margin": 0
-          }
-        }
-      },
-      "block_order": [
-        "amazon_mcf_and_buy_with_prime_promotion_banner_container_JqJ67J",
-        "amazon_mcf_and_buy_with_prime_delivery_card_nnmFyp",
-        "amazon_mcf_and_buy_with_prime_promise_delivery_DJgPmY"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
     }
   },
   "order": [
@@ -607,7 +528,6 @@
     "customcode_accordion_alt_6VUBdt",
     "customcode_accordion_alt_qMrMQG",
     "customcode_content_generator_rUW68y",
-    "customode_loox_reviews_3WdAFq",
-    "178422525568ea04cb"
+    "customode_loox_reviews_3WdAFq"
   ]
 }
