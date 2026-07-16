@@ -1,1 +1,687 @@
-{"sections":{"main":{"type":"product-information","blocks":{"media-gallery":{"type":"_product-media-gallery","static":true,"settings":{"media_presentation":"grid","media_columns":"two","image_gap":4,"large_first_image":false,"icons_style":"none","slideshow_controls_style":"counter","slideshow_mobile_controls_style":"dots","thumbnail_position":"right","thumbnail_width":44,"aspect_ratio":"adapt","constrain_to_viewport":true,"media_fit":"contain","media_radius":0,"extend_media":false,"zoom":true,"video_loop":false,"hide_variants":true,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"product-details":{"type":"_product-details","static":true,"settings":{"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","details_position":"flex-start","gap":28,"sticky_details_desktop":true,"inherit_color_scheme":true,"color_scheme":"scheme-1","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":24,"padding-block-end":24,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"group_icgrde":{"type":"group","name":"Header","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"text_xrnftG":{"type":"text","name":"Product title","settings":{"text":"<h1>{{ closest.product.title }}<\/h1>","width":"100%","max_width":"normal","alignment":"left","type_preset":"h3","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"price_tVjtKg":{"type":"price","settings":{"show_sale_price_first":true,"show_installments":false,"show_tax_info":false,"type_preset":"paragraph","width":"100%","alignment":"left","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","color":"var(--color-foreground)","padding-block-start":4,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["text_xrnftG","price_tVjtKg"]},"divider_VJhene":{"type":"_divider","name":"t:names.divider","settings":{"thickness":1,"corner_radius":"square","width_percent":100,"padding-block-start":0,"padding-block-end":0},"blocks":{}},"variant_picker_R3rGDr":{"type":"variant-picker","settings":{"variant_style":"buttons","show_swatches":false,"alignment":"left","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"buy_buttons_eYQEYi":{"type":"buy-buttons","settings":{"stacking":true,"show_pickup_availability":false,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"quantity":{"type":"quantity","static":true,"settings":{},"blocks":{}},"add-to-cart":{"type":"add-to-cart","static":true,"settings":{"style_class":"button"},"blocks":{}},"accelerated-checkout":{"type":"accelerated-checkout","static":true,"settings":{},"blocks":{}}},"block_order":[]},"text_aEtTtq":{"type":"text","name":"Product description","settings":{"text":"{{ closest.product.description }}","width":"100%","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["group_icgrde","divider_VJhene","variant_picker_R3rGDr","buy_buttons_eYQEYi","text_aEtTtq"]}},"disabled":true,"settings":{"content_width":"content-center-aligned","desktop_media_position":"left","equal_columns":false,"limit_details_width":false,"gap":48,"color_scheme":"","padding-block-start":0,"padding-block-end":0}},"customcode_featured_product_HRwfDi":{"type":"customcode-featured-product","blocks":{"title_iFe33P":{"type":"title","settings":{"title_override":"","show_reviews":false,"custom_review":"","m_margin_bottom":0,"d_margin_bottom":0}},"text_generator_TAJK8P":{"type":"text_generator","settings":{"m_display":true,"d_display":true,"text":"<p>⭐ ⭐ ⭐ ⭐ ⭐<\/p>","font_color":"","font_alignment":"left","m_font_size":14,"d_font_size":20,"m_margin_bottom":0,"d_margin_bottom":0}},"tags_BBgAEx":{"type":"tags","settings":{"tag":"Instant Freshness|Spray and Go|Alcohol-Free|Lightweight Mist"}},"text_generator_xFWQQD":{"type":"text_generator","settings":{"m_display":true,"d_display":true,"text":"<p>A smooth cool mint, fast-acting mist that refreshes instantly, neutralizes odor, and keeps you feeling confidently fresh— use on the go, or whenever you’re desiring a fresh boost, no brushing required.<\/p>","font_color":"","font_alignment":"left","m_font_size":14,"d_font_size":14,"m_margin_bottom":0,"d_margin_bottom":0}},"buy_box_v2_mrTwCh":{"type":"buy_box_v2","settings":{"default_selector":"subs","subscription_features":"Monthly supply delivered to your door|Pause or cancel anytime"}},"description_EbxCM7":{"type":"description","disabled":true,"settings":{"m_margin_bottom":10,"d_margin_bottom":20}}},"block_order":["title_iFe33P","text_generator_TAJK8P","tags_BBgAEx","text_generator_xFWQQD","buy_box_v2_mrTwCh","description_EbxCM7"],"name":"C Featured Product","settings":{"product_override":"","enable_partially":false,"plan_fee":0,"display_variant_price":true,"additional_product_tag":"","partially_additional_product":"","freebie_fee":0,"bottom_text":"We’re All In! Prices include $99 non refundable plan fee (before taxes)","mobile_count":"2.3","desktop_count":"1"}},"17601015186c120833":{"type":"_blocks","blocks":{"bundler_bundler_target_element_6hbyLr":{"type":"shopify:\/\/apps\/bundler\/blocks\/bundler-target-element\/7a6ae1b8-3b16-449b-8429-8bb89a62c664","settings":{}}},"block_order":["bundler_bundler_target_element_6hbyLr"],"disabled":true,"settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"section_width":"page-width","section_height":"","section_height_custom":50,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0}},"customcode_video_with_text_LmkhF9":{"type":"customcode-video-with-text","name":"C Video with Text","settings":{"video_file":"shopify:\/\/files\/videos\/Hannah How to Breath Spray - WEB V1.mp4","video_url":"","rich_text":"<h3><strong>Freshness, Simplified<\/strong><\/h3><p>Our fine mist spray evenly coats your mouth, helping reduce odor and refresh your breath in seconds—so you can feel confident without interrupting your day.\u2028<\/p>"}},"customcode_accordion_alt_6VUBdt":{"type":"customcode-accordion-alt","blocks":{"accordion_qhQ3mg":{"type":"accordion","settings":{"question":"🌿 Natural Mint Blend","answer":"<p>A smooth cool burst that instantly revitalizes the senses—delivering that crisp,  just-brushed feeling, anytime you need a reset.<\/p>"}},"accordion_HQqMhw":{"type":"accordion","settings":{"question":"💧 Cetylpyridinium Chloride (CPC)","answer":"<p>A clinically trusted ingredient that helps neutralize odor-causing bacteria—quietly working beneath the surface to leave your breath feeling clean, balanced, and refreshed.<\/p>"}},"accordion_U6DCJ7":{"type":"accordion","settings":{"question":"Full Ingredient List","answer":"<p><strong>Ingredients List:<\/strong><br\/>Aqua, Glycerin, PEG-40 Hydrogenated Castor Oil, Aroma, Menthol, Potassium Sorbate, Sodium Benzoate, Cetylpyridinium Chloride, Citric Acid, Sucralose<\/p>"}}},"block_order":["accordion_qhQ3mg","accordion_HQqMhw","accordion_U6DCJ7"],"name":"C Accordion Alt","settings":{"header":"KEY INGREDIENTS","link":"","name":"","image":"shopify:\/\/shop_images\/Oral_Spray_PDP_Image_9_1.png","mobile_layout":"column-reverse","desktop_layout":"row-reverse"}},"customcode_accordion_alt_qMrMQG":{"type":"customcode-accordion-alt","blocks":{"accordion_gcEfWr":{"type":"accordion","settings":{"question":"How often can I use it?","answer":"<p>As often as you need.<\/p><p>Our Fresh Breath Spray is designed for convenient, daily use—whether it’s after meals, before meetings, or anytime you want a quick refresh.<\/p>"}},"accordion_8QN9Wp":{"type":"accordion","settings":{"question":"Does it just mask odor or actually help with bad breath?","answer":"<p>It does both.\u2028<\/p><p>Our formula helps neutralize odor-causing bacteria while delivering a clean, refreshing flavor—so you’re not just covering it up, you’re addressing it.<\/p>"}},"accordion_NExCp6":{"type":"accordion","settings":{"question":"How quickly does it work?","answer":"<p>Instantly.<\/p><p>Just one or two sprays delivers a fast burst of freshness, helping you feel clean and confident within seconds.<\/p>"}}},"block_order":["accordion_gcEfWr","accordion_8QN9Wp","accordion_NExCp6"],"name":"C Accordion Alt","settings":{"header":"FAQ","link":"","name":"","mobile_layout":"column","desktop_layout":"row-reverse"}},"customcode_content_generator_rUW68y":{"type":"customcode-content-generator","blocks":{"content_FQRx6B":{"type":"content","settings":{"text_alignment":"c-text-center","content":"<h2><strong>What are customers saying?<\/strong><\/h2>"}}},"block_order":["content_FQRx6B"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customode_loox_reviews_3WdAFq":{"type":"customode-loox-reviews","name":"C Loox Reviews","settings":{"only_photos":false,"hide_thumbnails":false,"product_handle":"","aggregated":true,"data-limit":4,"maxwidth":1080}}},"order":["main","customcode_featured_product_HRwfDi","17601015186c120833","customcode_video_with_text_LmkhF9","customcode_accordion_alt_6VUBdt","customcode_accordion_alt_qMrMQG","customcode_content_generator_rUW68y","customode_loox_reviews_3WdAFq"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "grid",
+            "media_columns": "two",
+            "image_gap": 4,
+            "large_first_image": false,
+            "icons_style": "none",
+            "slideshow_controls_style": "counter",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "right",
+            "thumbnail_width": 44,
+            "aspect_ratio": "adapt",
+            "constrain_to_viewport": true,
+            "media_fit": "contain",
+            "media_radius": 0,
+            "extend_media": false,
+            "zoom": true,
+            "video_loop": false,
+            "hide_variants": true,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "details_position": "flex-start",
+            "gap": 28,
+            "sticky_details_desktop": true,
+            "inherit_color_scheme": true,
+            "color_scheme": "scheme-1",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_icgrde": {
+              "type": "group",
+              "name": "Header",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_xrnftG": {
+                  "type": "text",
+                  "name": "Product title",
+                  "settings": {
+                    "text": "<h1>{{ closest.product.title }}</h1>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h3",
+                    "font": "var(--font-primary--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "price_tVjtKg": {
+                  "type": "price",
+                  "settings": {
+                    "show_sale_price_first": true,
+                    "show_installments": false,
+                    "show_tax_info": false,
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "left",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "color": "var(--color-foreground)",
+                    "padding-block-start": 4,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_xrnftG",
+                "price_tVjtKg"
+              ]
+            },
+            "divider_VJhene": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "width_percent": 100,
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {}
+            },
+            "variant_picker_R3rGDr": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": false,
+                "alignment": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "buy_buttons_eYQEYi": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "text_aEtTtq": {
+              "type": "text",
+              "name": "Product description",
+              "settings": {
+                "text": "{{ closest.product.description }}",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-primary--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "group_icgrde",
+            "divider_VJhene",
+            "variant_picker_R3rGDr",
+            "buy_buttons_eYQEYi",
+            "text_aEtTtq"
+          ]
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": false,
+        "limit_details_width": false,
+        "gap": 48,
+        "color_scheme": "",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "customcode_featured_product_HRwfDi": {
+      "type": "customcode-featured-product",
+      "blocks": {
+        "title_iFe33P": {
+          "type": "title",
+          "settings": {
+            "title_override": "",
+            "show_reviews": false,
+            "custom_review": "",
+            "m_margin_bottom": 0,
+            "d_margin_bottom": 0
+          }
+        },
+        "text_generator_TAJK8P": {
+          "type": "text_generator",
+          "settings": {
+            "m_display": true,
+            "d_display": true,
+            "text": "<p>⭐ ⭐ ⭐ ⭐ ⭐</p>",
+            "font_color": "",
+            "font_alignment": "left",
+            "m_font_size": 14,
+            "d_font_size": 20,
+            "m_margin_bottom": 0,
+            "d_margin_bottom": 0
+          }
+        },
+        "tags_BBgAEx": {
+          "type": "tags",
+          "settings": {
+            "tag": "Instant Freshness|Spray and Go|Alcohol-Free|Lightweight Mist"
+          }
+        },
+        "text_generator_xFWQQD": {
+          "type": "text_generator",
+          "settings": {
+            "m_display": true,
+            "d_display": true,
+            "text": "<p>A smooth cool mint, fast-acting mist that refreshes instantly, neutralizes odor, and keeps you feeling confidently fresh— use on the go, or whenever you’re desiring a fresh boost, no brushing required.</p>",
+            "font_color": "",
+            "font_alignment": "left",
+            "m_font_size": 14,
+            "d_font_size": 14,
+            "m_margin_bottom": 0,
+            "d_margin_bottom": 0
+          }
+        },
+        "buy_box_v2_mrTwCh": {
+          "type": "buy_box_v2",
+          "settings": {
+            "default_selector": "subs",
+            "subscription_features": "Monthly supply delivered to your door|Pause or cancel anytime"
+          }
+        },
+        "description_EbxCM7": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "title_iFe33P",
+        "text_generator_TAJK8P",
+        "tags_BBgAEx",
+        "text_generator_xFWQQD",
+        "buy_box_v2_mrTwCh",
+        "description_EbxCM7"
+      ],
+      "name": "C Featured Product",
+      "settings": {
+        "product_override": "",
+        "enable_partially": false,
+        "plan_fee": 0,
+        "display_variant_price": true,
+        "additional_product_tag": "",
+        "partially_additional_product": "",
+        "freebie_fee": 0,
+        "bottom_text": "We’re All In! Prices include $99 non refundable plan fee (before taxes)",
+        "mobile_count": "2.3",
+        "desktop_count": "1"
+      }
+    },
+    "17601015186c120833": {
+      "type": "_blocks",
+      "blocks": {
+        "bundler_bundler_target_element_6hbyLr": {
+          "type": "shopify://apps/bundler/blocks/bundler-target-element/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "bundler_bundler_target_element_6hbyLr"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "customcode_video_with_text_LmkhF9": {
+      "type": "customcode-video-with-text",
+      "name": "C Video with Text",
+      "settings": {
+        "video_file": "shopify://files/videos/Hannah How to Breath Spray - WEB V1.mp4",
+        "video_url": "",
+        "rich_text": "<h3><strong>Freshness, Simplified</strong></h3><p>Our fine mist spray evenly coats your mouth, helping reduce odor and refresh your breath in seconds—so you can feel confident without interrupting your day. </p>"
+      }
+    },
+    "customcode_accordion_alt_6VUBdt": {
+      "type": "customcode-accordion-alt",
+      "blocks": {
+        "accordion_qhQ3mg": {
+          "type": "accordion",
+          "settings": {
+            "question": "🌿 Natural Mint Blend",
+            "answer": "<p>A smooth cool burst that instantly revitalizes the senses—delivering that crisp,  just-brushed feeling, anytime you need a reset.</p>",
+            "liquid": ""
+          }
+        },
+        "accordion_HQqMhw": {
+          "type": "accordion",
+          "settings": {
+            "question": "💧 Cetylpyridinium Chloride (CPC)",
+            "answer": "<p>A clinically trusted ingredient that helps neutralize odor-causing bacteria—quietly working beneath the surface to leave your breath feeling clean, balanced, and refreshed.</p>",
+            "liquid": ""
+          }
+        },
+        "accordion_U6DCJ7": {
+          "type": "accordion",
+          "settings": {
+            "question": "Full Ingredient List",
+            "answer": "<p><strong>Ingredients List:</strong><br/>Aqua, Glycerin, PEG-40 Hydrogenated Castor Oil, Aroma, Menthol, Potassium Sorbate, Sodium Benzoate, Cetylpyridinium Chloride, Citric Acid, Sucralose</p>",
+            "liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "accordion_qhQ3mg",
+        "accordion_HQqMhw",
+        "accordion_U6DCJ7"
+      ],
+      "name": "C Accordion Alt",
+      "settings": {
+        "header": "KEY INGREDIENTS",
+        "link": "",
+        "name": "",
+        "image": "shopify://shop_images/Oral_Spray_PDP_Image_9_1.png",
+        "mobile_layout": "column-reverse",
+        "desktop_layout": "row-reverse"
+      }
+    },
+    "customcode_accordion_alt_qMrMQG": {
+      "type": "customcode-accordion-alt",
+      "blocks": {
+        "accordion_gcEfWr": {
+          "type": "accordion",
+          "settings": {
+            "question": "How often can I use it?",
+            "answer": "<p>As often as you need.</p><p>Our Fresh Breath Spray is designed for convenient, daily use—whether it’s after meals, before meetings, or anytime you want a quick refresh.</p>",
+            "liquid": ""
+          }
+        },
+        "accordion_8QN9Wp": {
+          "type": "accordion",
+          "settings": {
+            "question": "Does it just mask odor or actually help with bad breath?",
+            "answer": "<p>It does both. </p><p>Our formula helps neutralize odor-causing bacteria while delivering a clean, refreshing flavor—so you’re not just covering it up, you’re addressing it.</p>",
+            "liquid": ""
+          }
+        },
+        "accordion_NExCp6": {
+          "type": "accordion",
+          "settings": {
+            "question": "How quickly does it work?",
+            "answer": "<p>Instantly.</p><p>Just one or two sprays delivers a fast burst of freshness, helping you feel clean and confident within seconds.</p>",
+            "liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "accordion_gcEfWr",
+        "accordion_8QN9Wp",
+        "accordion_NExCp6"
+      ],
+      "name": "C Accordion Alt",
+      "settings": {
+        "header": "FAQ",
+        "link": "",
+        "name": "",
+        "mobile_layout": "column",
+        "desktop_layout": "row-reverse"
+      }
+    },
+    "customcode_content_generator_rUW68y": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "content_FQRx6B": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<h2><strong>What are customers saying?</strong></h2>"
+          }
+        }
+      },
+      "block_order": [
+        "content_FQRx6B"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customode_loox_reviews_3WdAFq": {
+      "type": "customode-loox-reviews",
+      "name": "C Loox Reviews",
+      "settings": {
+        "only_photos": false,
+        "hide_thumbnails": false,
+        "product_handle": "",
+        "aggregated": true,
+        "data-limit": 4,
+        "maxwidth": 1080
+      }
+    },
+    "1784223668d6b60cbf": {
+      "type": "_blocks",
+      "blocks": {
+        "loox_reviews_loox_snippets_widget_RKRa4N": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-snippets-widget/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "reviews-type": "product-reviews",
+            "reviews-limit": 10,
+            "alignment": "center",
+            "max-width": "",
+            "color-scheme": "default",
+            "shadow": "",
+            "show-rating": true,
+            "show-image": true,
+            "hide-arrows-mobile": false,
+            "font-size": 14,
+            "show-border": false,
+            "border-radius": 16,
+            "background-color": "",
+            "text-color": "",
+            "name-color": "",
+            "rating-icon-color": "",
+            "border-color": "",
+            "shadow-color": "",
+            "product_selection": "top-bottom-teeth"
+          }
+        },
+        "loox_reviews_loox_dynamic_carousel_dcXipa": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-carousel/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "corner-radius": 40,
+            "items-per-view": 2,
+            "items-per-view-mobile": 3,
+            "max-characters": 180,
+            "autoplay": false,
+            "autoplay-delay": 5,
+            "main-color": "#AE8868",
+            "stars-color": "#FF8D00",
+            "show-review-text": true,
+            "text-color": "",
+            "reviewer-name-color": "",
+            "verified-badge-color": "",
+            "quote-marks-icon": "style-1",
+            "quote-marks-icon-color": "",
+            "review-background-color": "",
+            "product-ids": "oral-mist"
+          }
+        },
+        "loox_reviews_loox_dynamic_section_r8a8jz": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "store_reviews_only",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_snippets_widget_RKRa4N",
+        "loox_reviews_loox_dynamic_carousel_dcXipa",
+        "loox_reviews_loox_dynamic_section_r8a8jz"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "17842236881415aea8": {
+      "type": "_blocks",
+      "blocks": {
+        "loox_reviews_loox_gallery_carousel_section_mJHWqp": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-gallery-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "maxWidth": 1100,
+            "borderRadius": 60,
+            "itemsPerView": 5,
+            "mobileItemsPerView": 1,
+            "imageRatio": "1",
+            "reviewerNameColor": "#ffffff",
+            "starsColor": "#ffffff",
+            "arrows_backgroundColor": "#FFFFFF",
+            "arrows_iconColor": "#9A9A9A",
+            "shadow": "none",
+            "border_active": false,
+            "border_width": 2,
+            "border_color": "#000000",
+            "productIds": "oral-mist"
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_gallery_carousel_section_mJHWqp"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "customcode_featured_product_HRwfDi",
+    "17601015186c120833",
+    "customcode_video_with_text_LmkhF9",
+    "customcode_accordion_alt_6VUBdt",
+    "customcode_accordion_alt_qMrMQG",
+    "customcode_content_generator_rUW68y",
+    "customode_loox_reviews_3WdAFq",
+    "1784223668d6b60cbf",
+    "17842236881415aea8"
+  ]
+}
