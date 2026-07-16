@@ -529,11 +529,11 @@
             "reviews_to_display": "store_reviews_only",
             "default_tab": "automatic",
             "only_photos": false,
-            "aggregated": false,
+            "aggregated": true,
             "limit": 20,
             "hide_thumbnails": false,
             "maxwidth": 1080,
-            "is_sample": true
+            "is_sample": false
           }
         }
       },
