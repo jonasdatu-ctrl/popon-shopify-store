@@ -156,22 +156,6 @@
             "custom_html": ""
           }
         },
-        "accordion_89jVHP": {
-          "type": "accordion",
-          "settings": {
-            "accordion_title": "<p>See How Your Veneers Are Made ▶️</p>",
-            "video_link": "",
-            "video": "shopify://files/videos/tolstoy_218bf3cb-cef2-4147-802b-8ae5e9f712ee.webm",
-            "content": "",
-            "page": "",
-            "display_html_content": false,
-            "text": "",
-            "additional_content": "",
-            "button_link": "",
-            "button_text": "",
-            "custom_html": "<a style=\"display: none;\" href=\"tel:639682228232\" data-ga-label=\"HELLO WORLD\">\nClick Me! \n</a>\n<div style=\"display: none;\" data-ga-label=\"HELLO-WORLD\">\n CLICK ME!\n</div>"
-          }
-        },
         "accordion_4jYDgz": {
           "type": "accordion",
           "settings": {
@@ -188,12 +172,12 @@
             "custom_html": ""
           }
         },
-        "accordion_9MBfGx": {
+        "accordion_QCXE7h": {
           "type": "accordion",
           "settings": {
-            "accordion_title": "<p>Product Details</p>",
+            "accordion_title": "<p>How Fast Can I Get Them?</p>",
             "video_link": "",
-            "content": "<ul><li>At-Home Impression Kit  (retail $49) to make impression molds from the comfort of your home</li><li>Free Upgrade 2 day Shipping all directions</li><li>Prepaid return label to ship your impressions back to POP ON in NYC</li><li>Backed by the Pop On Promise</li><li>Pop On Veneers® are designed exclusively for cosmetic use, providing a simple and effective way to enhance the appearance of your smile. They are not intended to diagnose, treat, cure, or prevent any medical or dental condition. Pop On Veneers® are not a substitute for professional dental care or treatment and are purely for aesthetic purposes.</li></ul>",
+            "content": "<p><em><strong>Yes! We are the fastest in the nation!</strong></em></p><p><strong>Shipping Time </strong>- Orders in the continental US ship free via Fedex/UPS 2 Business Day, in all directions!</p><p>Express overnight shipping available for additional fees.</p><p><strong>Production Time</strong> -<br/>Standard: 2 weeks after impression approval.</p><p>Rush Production: 1 week after impression approval. Select rush in shipping<br/>Please note: rush processing fee is per order, and does not apply to all future orders or remakes. Not available for alternative financed orders.</p>",
             "page": "",
             "display_html_content": false,
             "text": "",
@@ -203,12 +187,28 @@
             "custom_html": ""
           }
         },
-        "accordion_QCXE7h": {
+        "accordion_89jVHP": {
           "type": "accordion",
           "settings": {
-            "accordion_title": "<p>Shipping Information</p>",
+            "accordion_title": "<p>See How Your Veneers Are Made ▶️</p>",
             "video_link": "",
-            "content": "<p><span style=\"text-decoration:underline\"><strong>Shipping Time: </strong></span>Orders in the continental US are eligible for FREE 2-Day shipping with UPS, in all directions!</p><p><span style=\"text-decoration:underline\"><strong>Lab Time and Shipping:</strong></span></p><p><strong>Standard:</strong> 2 weeks in lab time after impression approval.</p><p><strong>Rush:</strong> 1 week in lab time after impression approval (available for non-financed orders) Select rush in shipping methods. Please note: the rush processing fee is per order, and does not apply to all future orders or remakes.  </p>",
+            "video": "shopify://files/videos/tolstoy_218bf3cb-cef2-4147-802b-8ae5e9f712ee.webm",
+            "content": "",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "<a style=\"display: none;\" href=\"tel:639682228232\" data-ga-label=\"HELLO WORLD\">\nClick Me! \n</a>\n<div style=\"display: none;\" data-ga-label=\"HELLO-WORLD\">\n CLICK ME!\n</div>"
+          }
+        },
+        "accordion_9MBfGx": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>Product Details</p>",
+            "video_link": "",
+            "content": "<ul><li>At-Home Impression Kit  (retail $49) to make impression molds from the comfort of your home</li><li>Free Upgrade 2 day Shipping all directions</li><li>Prepaid return label to ship your impressions back to POP ON in NYC</li><li>Backed by the Pop On Promise</li><li>Pop On Veneers® are designed exclusively for cosmetic use, providing a simple and effective way to enhance the appearance of your smile. They are not intended to diagnose, treat, cure, or prevent any medical or dental condition. Pop On Veneers® are not a substitute for professional dental care or treatment and are purely for aesthetic purposes.</li></ul>",
             "page": "",
             "display_html_content": false,
             "text": "",
@@ -265,10 +265,10 @@
         "product_scroller_rJUNVc",
         "accordion_QwaWNg",
         "accordion_UktWGK",
-        "accordion_89jVHP",
         "accordion_4jYDgz",
-        "accordion_9MBfGx",
         "accordion_QCXE7h",
+        "accordion_89jVHP",
+        "accordion_9MBfGx",
         "accordion_kGyPtf",
         "freebies_n4mTXi"
       ],
