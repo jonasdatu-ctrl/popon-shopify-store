@@ -171,7 +171,7 @@
         "liquid_nJzgGE": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div id=\"am-i-latch\" class=\"klaviyo-form-ReG8j9\"></div>"
+            "liquid": "<div class=\"klaviyo-form-ReG8j9\"></div>"
           }
         }
       },
