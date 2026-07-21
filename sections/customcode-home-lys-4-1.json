@@ -165,7 +165,7 @@
         "liquid_nkWyyk": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div style=\"display: none;\" id=\"am-i-latch\">\n</div>"
+            "liquid": "<div style=\"height: 1px; width: 100%; display: none;\" id=\"am-i-latch\">\n</div>"
           }
         },
         "liquid_nJzgGE": {
