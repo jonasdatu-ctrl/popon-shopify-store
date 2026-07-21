@@ -159,6 +159,25 @@
         "maxwidth": 1080
       }
     },
+    "customcode_content_generator_q4nRTg": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_nJzgGE": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReG8j9\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_nJzgGE"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
     "customcode_text_marquee_f7WPtj": {
       "type": "customcode-text-marquee",
       "blocks": {
@@ -1374,6 +1393,7 @@
     "customcode_content_generator_9tyKAt",
     "customcode_content_generator_43YJKQ",
     "customode_loox_reviews_RD4wjz",
+    "customcode_content_generator_q4nRTg",
     "customcode_text_marquee_f7WPtj",
     "customcode_content_generator_bbEwKj",
     "1762453897bad50063",
