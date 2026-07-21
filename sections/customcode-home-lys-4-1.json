@@ -179,6 +179,9 @@
         "liquid_nkWyyk",
         "liquid_nJzgGE"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {#first_name_01KY0CYHAZ4XNSMXKNTV75HHDK, input[type=\"text\"], input[type=\"email\"] {font-size: 16px !important; }}"
+      ],
       "name": "C Content Generator",
       "settings": {
         "d_padding_top": true,
