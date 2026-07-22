@@ -12,6 +12,7 @@
 {% if template.suffix == 'love-your-smile-4' %}
   <script>
     document.addEventListener('click', function (event) {
+      console.log("CLICK!");
        // Check if the click occurred inside the specified Klaviyo form container
       if (event.target.closest('.klaviyo-form-QY4Y3g')) {
         const inputElement = document.getElementById('first_name_01KY0CYHAZ4XNSMXKNTV75HHDK');
