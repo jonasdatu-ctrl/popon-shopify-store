@@ -50,12 +50,12 @@
                       | append: '.png'
                     %}
                     {% assign file_image = file_name | file_img_url %}
-                    <a href="{{ sublink.url }} class="sublink-title">
+                    <div class="sublink-title">
                       {% if file_image contains '?v=' and link.title contains 'SHOP' %}
                         <img src="{{ file_image }}" alt="{{ link.title }}">
                       {% endif %}                      
-                      <p href="{{ sublink.url }}">{{ sublink.title }}</>
-                    </a>
+                      <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                    </div>
                     </div>
                   {% endfor %}
                 </div>
