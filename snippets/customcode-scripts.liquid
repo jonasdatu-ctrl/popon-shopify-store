@@ -381,6 +381,7 @@
     connectedCallback() {
       this.mainMenu = this.querySelector('[data-menu="main"]');
       this.overlay = document.querySelector('.c-menu-overlay');
+      this.trigger = document.querySelector('[data-menu-trigger]');
 
       this.bindHamburger();
       this.bindCloseButtons();
@@ -388,27 +389,41 @@
       this.bindBackButton();
       this.bindOverlayClick();
     }
+    open() {
+      this.classList.add('is-active');
+      this.removeAttribute('inert');
+      if (this.trigger) this.trigger.setAttribute('aria-expanded', 'true');
+      this.showOverlay();
+    }
+    close() {
+      this.classList.remove('is-active');
+      this.setAttribute('inert', '');
+      if (this.trigger) this.trigger.setAttribute('aria-expanded', 'false');
+      this.closeSubMenu();
+      this.hideOverlay();
+    }
     bindHamburger() {
-      const trigger = document.querySelector('[data-menu-trigger]');
-      if (trigger) {
-        trigger.addEventListener('click', () => {
-          this.classList.add('is-active');
-          this.showOverlay();
-        });
-      }
+      if (!this.trigger) return;
+      this.trigger.addEventListener('click', () => this.open());
+      this.trigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.trigger.click();
+        }
+      });
     }
     bindCloseButtons() {
       this.querySelectorAll('[data-menu-close]').forEach((btn) => {
-        btn.addEventListener('click', () => {
-          this.classList.remove('is-active');
-          this.closeSubMenu();
-          this.hideOverlay();
-        });
+        btn.addEventListener('click', () => this.close());
       });
     }
     closeSubMenu() {
       this.querySelectorAll('.c-submenu-drawer').forEach((drawer) => {
         drawer.classList.remove('is-active');
+        drawer.setAttribute('inert', '');
+      });
+      this.querySelectorAll('[data-has-children]').forEach((link) => {
+        link.setAttribute('aria-expanded', 'false');
       });
     }
     bindMenuLinks() {
@@ -421,6 +436,14 @@
           const submenu = link.querySelector('.c-submenu-drawer');
           if (submenu && submenu.dataset.menuLevel === '2') {
             submenu.classList.add('is-active');
+            submenu.removeAttribute('inert');
+            link.setAttribute('aria-expanded', 'true');
+          }
+        });
+        link.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            link.click();
           }
         });
       });
@@ -439,8 +462,8 @@
       this.querySelectorAll('[data-submenu-close]').forEach((closeBtn) => {
         closeBtn.addEventListener('click', (e) => {
           // 1. Prevents the click from reaching the parent menu link wrapper
-          e.stopPropagation(); 
-          
+          e.stopPropagation();
+
           // 2. Checks if the button text contains "SHOP" (case-insensitive)
           if (closeBtn.textContent.toUpperCase().includes('SHOP')) {
             window.location.href = '/pages/shop';
@@ -451,17 +474,22 @@
           const drawer = e.currentTarget.closest('.c-submenu-drawer');
           if (drawer) {
             drawer.classList.remove('is-active');
+            drawer.setAttribute('inert', '');
+            const parentLink = drawer.closest('[data-has-children]');
+            if (parentLink) parentLink.setAttribute('aria-expanded', 'false');
+          }
+        });
+        closeBtn.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            closeBtn.click();
           }
         });
       });
-    }    
+    }
     bindOverlayClick() {
       if (!this.overlay) return;
-      this.overlay.addEventListener('click', () => {
-        this.classList.remove('is-active');
-        this.closeSubMenu();
-        this.hideOverlay();
-      });
+      this.overlay.addEventListener('click', () => this.close());
     }
     showOverlay() {
       if (!this.overlay) return;

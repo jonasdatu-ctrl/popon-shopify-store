@@ -32,7 +32,14 @@
   class="header-drawer {{ class }}"
   style="--menu-image-border-radius: {{ image_border_radius }}px;"
 >
-  <div data-menu-trigger class="c-hamburger">{% render 'customcode-icons', icon: 'hamburger' %}</div>
+  <div
+    data-menu-trigger
+    class="c-hamburger"
+    tabindex="0"
+    role="button"
+    aria-expanded="false"
+    aria-label="Open menu"
+  >{% render 'customcode-icons', icon: 'hamburger' %}</div>
   {% comment %}
     <details
       id="Details-menu-drawer-container"

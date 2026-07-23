@@ -14,31 +14,56 @@
   c-menu-drawer .c-menu-drawer .link-item .link-title svg {width: 24px;}  
   c-menu-drawer .c-menu-drawer div[data-has-children] {cursor: pointer; -webkit-tap-highlight-color: transparent;}
   c-menu-drawer .c-submenu-drawer {position: absolute; width: 100%; height: 100%; transform: translateX(100%); top: 0; left: 20px; transition: transform 0.3s ease; background-color: white;}
-  c-menu-drawer .c-submenu-drawer.is-active {transform: translateX(0); left: 0;}  
-  c-menu-drawer .c-submenu-drawer [data-submenu-close] {display: flex; gap: 10px; padding: 10px;}  
-  c-menu-drawer .c-submenu-drawer [data-submenu-close] svg {width: 24px; transform: rotate(180deg);}  
-  c-menu-drawer .c-submenu-drawer .sublink-title {display: flex; flex-wrap: nowrap; gap: 10px; align-items: center;}  
-  c-menu-drawer .c-submenu-drawer .sublink-title img {max-width: 70px; aspect-ratio: 1; object-fit: cover;}  
+  c-menu-drawer .c-submenu-drawer.is-active {transform: translateX(0); left: 0;}
+  c-menu-drawer .c-submenu-drawer [data-submenu-close] {display: flex; gap: 10px; padding: 10px;}
+  c-menu-drawer .c-submenu-drawer [data-submenu-close] svg {width: 24px; transform: rotate(180deg);}
+  c-menu-drawer .c-submenu-drawer .sublink-title {display: flex; flex-wrap: nowrap; gap: 10px; align-items: center; -webkit-tap-highlight-color: transparent;}
+  c-menu-drawer .c-submenu-drawer .sublink-title img {max-width: 70px; aspect-ratio: 1; object-fit: cover;}
   c-menu-drawer .menu-footer {background: #eee; padding: 20px;}
+
+  /* Link hover/active/focus feedback */
+  c-menu-drawer .c-menu-drawer div[data-has-children],
+  c-menu-drawer .c-menu-drawer [data-menu="main"] > .link-item > a,
+  c-menu-drawer .c-submenu-drawer .sublink-title {
+    padding-inline: 8px;
+    margin-inline: -8px;
+    border-radius: 6px;
+    transition: background-color 0.15s ease;
+  }
+  c-menu-drawer .c-menu-drawer div[data-has-children]:active,
+  c-menu-drawer .c-menu-drawer div[data-has-children]:focus-visible,
+  c-menu-drawer .c-menu-drawer [data-menu="main"] > .link-item > a:active,
+  c-menu-drawer .c-menu-drawer [data-menu="main"] > .link-item > a:focus-visible,
+  c-menu-drawer .c-submenu-drawer .sublink-title:active,
+  c-menu-drawer .c-submenu-drawer .sublink-title:focus-visible {
+    background-color: #f0f0f0;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    c-menu-drawer .c-menu-drawer div[data-has-children]:hover,
+    c-menu-drawer .c-menu-drawer [data-menu="main"] > .link-item > a:hover,
+    c-menu-drawer .c-submenu-drawer .sublink-title:hover {
+      background-color: #f0f0f0;
+    }
+  }
 {% endstyle %}
 
-<c-menu-drawer>
+<c-menu-drawer inert>
   <div class="c-menu-drawer">
-    <button data-menu-close class="close">{% render 'customcode-icons', icon: 'close' %}</button>
+    <button data-menu-close class="close" aria-label="Close menu">{% render 'customcode-icons', icon: 'close' %}</button>
 
     <div data-menu="main">
       {% for link in linklists[section.settings.menu].links %}
         <div class="link-item">
-          <{% if link.links.size > 0 %}div data-has-children{% else %}a href="{{ link.url }}"{% endif %}>
+          <{% if link.links.size > 0 %}div data-has-children tabindex="0" role="button" aria-expanded="false"{% else %}a href="{{ link.url }}"{% endif %}>
             <div class="link-title">
               {{ link.title }}
               {% if link.links.size > 0 %}
                 {% render 'customcode-icons', icon: "right-arrow" %}
               {% endif %}
             </div>
-            {% if link.links.size > 0 %}              
-              <div data-menu-level="2" class="c-submenu-drawer">
-                <div data-submenu-close>{% render 'customcode-icons', icon: "right-arrow" %}{{ link.title }}</div>
+            {% if link.links.size > 0 %}
+              <div data-menu-level="2" class="c-submenu-drawer" inert>
+                <div data-submenu-close tabindex="0" role="button">{% render 'customcode-icons', icon: "right-arrow" %}{{ link.title }}</div>
                 <div class="submenu-content">
                   {% for sublink in link.links %}
                     <div class="link-item">
