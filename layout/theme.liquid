@@ -109,6 +109,12 @@
         {% endcomment %}
       {% endif %}
 
+      {% comment %} Display for LYS4 custom template for AB testing {% endcomment %}
+      {% if template.suffix == 'love-your-smile-4' %}
+        {% sections 'customcode-home-lys-4-1' %}
+        {% sections 'customcode-home-lys-4-2' %}
+      {% endif %}
+
       {% comment %} Display LYS TEMPLATE {% endcomment %}
       {% if page.metafields.custom.custom_page_display == 'Love Your Smile Template'
         or template.suffix == 'love-your-smile-1'

@@ -9,6 +9,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" async></script>
 
+{% comment %} Other scripts {% endcomment %}
+{% if template.suffix == 'love-your-smile-4' %}
+  <script>
+    document.addEventListener('click', function (event) {
+       // Check if the click occurred inside the specified Klaviyo form container
+      if (event.target.closest('.klaviyo-form-YnnUa3')) {
+        const inputElement = document.getElementById('first_name_01KY0CYHAZ4XNSMXKNTV75HHDK');
+        if (inputElement) {
+          // Focus the element
+          inputElement.focus();
+        }
+      }
+    });
+  </script>
+{% endif %}
+
 {% comment %} UTILITIES {% endcomment %}
 <script>
   let tippyInstances = [];
@@ -2355,7 +2371,7 @@
         const navigate = function () {
           window.location.href = link.href;
         };
-        setTimeout(navigate, 5000);
+        setTimeout(navigate, 1000);
     });
   });
 </script>

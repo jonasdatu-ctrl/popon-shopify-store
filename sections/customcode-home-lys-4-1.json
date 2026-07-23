@@ -9,7 +9,7 @@
  */
 {
   "type": "custom.homepage",
-  "name": "Home Page Group 1 Alt",
+  "name": "LYS Group 4",
   "sections": {
     "customcode_content_generator_Vjyy8i": {
       "type": "customcode-content-generator",
@@ -67,7 +67,7 @@
         "liquid_yrYFJE": {
           "type": "liquid",
           "settings": {
-            "liquid": "<style>\n.custom-container {\n  position: relative;\n  display: flex;\n}\n.custom-container .custom-mobile {\n  display: block;\n}\n.custom-container .custom-desktop {\n  display: none;\n}\n.custom-container video {\n  width: 100%;\n  height: auto;\n  display: block;\n}\n.custom-container .ccc-button {\n  text-decoration: none;\n  background: linear-gradient(90deg, #cd9a37 0%, #eedb9a 100%);\n  color: #0f4c81;\n  position: absolute;\n  left: 50%;\n  transform: translate(-50%, 0);\n  bottom: calc(15px * (100vw / 320px));\n    padding: calc(5px * (100vw / 320px)) calc(25px * (100vw / 320px));\n    font-size: calc(15px * (100vw / 320px)) !important;\n    font-weight: 600;\n    border-radius: 10px;\n}\n@media screen and (min-width: 769px) {\n  .custom-container .custom-mobile {\n    display: none;\n  }\n  .custom-container .custom-desktop {\n    display: block;\n    max-width: 1400px;\n    margin: auto;\n  }\n  .custom-container .ccc-button {\n      font-size: calc(16px * (100vw / 769px)) !important;\n    padding: calc(12px * (100vw / 769px)) calc(60px * (100vw / 769px)) !important;\n    bottom: calc(15px * (100vw / 769px)) !important;\n}\n}\n@media screen and (min-width: 1400px) {\n  .custom-container .ccc-button {\n    font-size: 22px !important;\n    padding: 25px 90px !important;\n    bottom: 20px !important;\n  }\n}\n</style>\n<a href=\"https://poponveneers.com/pages/am-i-a-candidate\" class=\"custom-container\">\n  <video\n    class=\"custom-desktop\"\n    src=\"https://cdn.shopify.com/videos/c/o/v/a8fb3803f1f24fc1bcd30cb56e78eb9a.mp4\"\n    autoplay\n    muted\n    loop\n    playsinline\n  ></video>\n\n  <video\n    class=\"custom-mobile\"\n    src=\"https://cdn.shopify.com/videos/c/o/v/aca958ae377c4ec984cdc2b35e62a302.mp4\"\n    autoplay\n    muted\n    loop\n    playsinline\n  ></video>\n  <div class=\"ccc-button\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n  \tGET STARTED\n  </div>\n</a>"
+            "liquid": "<style>\n.custom-container {\n  position: relative;\n  display: flex;\n}\n.custom-container .custom-mobile {\n  display: block;\n}\n.custom-container .custom-desktop {\n  display: none;\n}\n.custom-container video {\n  width: 100%;\n  height: auto;\n  display: block;\n}\n.custom-container .ccc-button {\n  text-decoration: none;\n  background: linear-gradient(90deg, #cd9a37 0%, #eedb9a 100%);\n  color: #0f4c81;\n  position: absolute;\n  left: 50%;\n  transform: translate(-50%, 0);\n  bottom: calc(15px * (100vw / 320px));\n  padding: calc(5px * (100vw / 320px)) calc(25px * (100vw / 320px));\n  font-size: calc(15px * (100vw / 320px)) !important;\n  font-weight: 600;\n  border-radius: 10px;\n}\n\n@media screen and (min-width: 769px) {\n  .custom-container .custom-mobile {\n    display: none;\n  }\n  .custom-container .custom-desktop {\n    display: block;\n    max-width: 1400px;\n    margin: auto;\n  }\n  .custom-container .ccc-button {\n    font-size: calc(16px * (100vw / 769px)) !important;\n    padding: calc(12px * (100vw / 769px)) calc(60px * (100vw / 769px)) !important;\n    bottom: calc(15px * (100vw / 769px)) !important;\n  }\n}\n\n@media screen and (min-width: 1400px) {\n  .custom-container .ccc-button {\n    font-size: 22px !important;\n    padding: 25px 90px !important;\n    bottom: 20px !important;\n  }\n}\n</style>\n\n<!-- Anchor Link Banner -->\n<a href=\"#am-i-latch\" class=\"custom-container\" id=\"customVideoBanner\">\n  <video\n    class=\"custom-desktop\"\n    src=\"https://cdn.shopify.com/videos/c/o/v/a8fb3803f1f24fc1bcd30cb56e78eb9a.mp4\"\n    autoplay\n    muted\n    loop\n    playsinline\n  ></video>\n\n  <video\n    class=\"custom-mobile\"\n    src=\"https://cdn.shopify.com/videos/c/o/v/aca958ae377c4ec984cdc2b35e62a302.mp4\"\n    autoplay\n    muted\n    loop\n    playsinline\n  ></video>\n\n  <span class=\"ccc-button\">\n    GET STARTED\n  </span>\n</a>\n\n<!-- Immediate Focus & Scroll Script -->\n<script>\n  document.getElementById('customVideoBanner').addEventListener('click', function(e) {\n    const inputElement = document.getElementById('first_name_01KY0CYHAZ4XNSMXKNTV75HHDK');\n    const targetSection = document.getElementById('am-i-latch');\n\n    if (inputElement) {\n      // 1. Focus IMMEDIATELY inside the click event so mobile opens the keyboard\n      inputElement.focus();\n\n      // 2. Override default jump so we can smoothly align the target section\n      if (targetSection) {\n        e.preventDefault();\n        \n        // Small RAF frame ensures keyboard initialization doesn't freeze the scroll animation\n        requestAnimationFrame(function() {\n          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });\n        });\n      }\n    }\n  });\n</script>"
           }
         }
       },
@@ -124,7 +124,7 @@
           "type": "liquid",
           "disabled": true,
           "settings": {
-            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+            "liquid": "<div class=\"klaviyo-form-YnnUa3\"></div>\n<div class=\"klaviyo-form-WBY2N5\"></div>"
           }
         }
       },
@@ -157,6 +157,35 @@
         "aggregated": true,
         "data-limit": 4,
         "maxwidth": 1080
+      }
+    },
+    "customcode_content_generator_q4nRTg": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_nkWyyk": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div style=\"height: 1px; width: 100%;\" id=\"am-i-latch\">\n</div>"
+          }
+        },
+        "liquid_nJzgGE": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"klaviyo-form-ReG8j9\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_nkWyyk",
+        "liquid_nJzgGE"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {#first_name_01KY0CYHAZ4XNSMXKNTV75HHDK, input[type=\"text\"], input[type=\"email\"] {font-size: 16px !important; }}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
       }
     },
     "customcode_text_marquee_f7WPtj": {
@@ -450,7 +479,7 @@
         ".header-text h2 {text-align: center;}",
         ".header-text ul {list-style: none; padding: 0; width: fit-content; margin: auto;}",
         ".header-text li strong {background: #e7e9aeff;}",
-        ".video-carousel-section {display: none;}",
+        ".klaviyo-form-ReiK6m,.video-carousel-section {display: none;}",
         "@media screen and (min-width: 769px) {.inner-container {flex-direction: column; } c-text-marquee .right-container {aspect-ratio: unset; }}",
         "@media screen and (min-width: 1120px) {.inner-container {padding: 30px 0; }}"
       ],
@@ -495,7 +524,7 @@
           "type": "liquid",
           "disabled": true,
           "settings": {
-            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+            "liquid": "<div class=\"klaviyo-form-YnnUa3\"></div>\n<div class=\"klaviyo-form-WBY2N5\"></div>"
           }
         }
       },
@@ -896,7 +925,7 @@
         "liquid_4m83iM": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+            "liquid": "<div class=\"klaviyo-form-YnnUa3\"></div>\n<div class=\"klaviyo-form-WBY2N5\"></div>"
           }
         },
         "content_LULdRx": {
@@ -959,7 +988,7 @@
         "liquid_98yQng": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+            "liquid": "<div class=\"klaviyo-form-YnnUa3\"></div>\n<div class=\"klaviyo-form-WBY2N5\"></div>"
           }
         }
       },
@@ -1151,7 +1180,7 @@
         "liquid_jRXNHg": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+            "liquid": "<div class=\"klaviyo-form-YnnUa3\"></div>\n<div class=\"klaviyo-form-WBY2N5\"></div>"
           }
         }
       },
@@ -1285,7 +1314,7 @@
         "liquid_CFXK7Q": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+            "liquid": "<div class=\"klaviyo-form-YnnUa3\"></div>\n<div class=\"klaviyo-form-WBY2N5\"></div>"
           }
         },
         "image_content_nUPM9z": {
@@ -1355,7 +1384,7 @@
         "liquid_L3BhjC": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"klaviyo-form-ReiK6m\"></div>\n<div class=\"klaviyo-form-QY4Y3g\"></div>"
+            "liquid": "<div class=\"klaviyo-form-YnnUa3\"></div>\n<div class=\"klaviyo-form-WBY2N5\"></div>"
           }
         }
       },
@@ -1374,6 +1403,7 @@
     "customcode_content_generator_9tyKAt",
     "customcode_content_generator_43YJKQ",
     "customode_loox_reviews_RD4wjz",
+    "customcode_content_generator_q4nRTg",
     "customcode_text_marquee_f7WPtj",
     "customcode_content_generator_bbEwKj",
     "1762453897bad50063",
