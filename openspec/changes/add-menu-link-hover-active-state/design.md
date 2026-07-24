@@ -72,6 +72,9 @@ This is what actually closes the screen-reader/tab-order gap: `transform`-based 
 **10. `CMenuDrawer.bindHamburger` / `bindCloseButtons` / `bindOverlayClick` are consolidated into `open()` / `close()` methods.**
 Three separate click handlers previously duplicated (or, for the overlay, were about to duplicate a third time) the same "toggle `is-active`, show/hide overlay" sequence. Adding `inert` and `aria-expanded` toggling to that sequence made the duplication worth removing at the same time — `open()`/`close()` are now the one place that sequence lives.
 
+**11. `div[data-has-children]` and the top-level leaf `<a>` need `display: flex; align-items: center;` added explicitly — found via live browser testing, not caught in review.**
+Post-implementation, the parent toggle rows showed huge vertical gaps between them. Root cause: both selectors were left at their default `display` (block for the div, inline for the `<a>`) while their only in-flow child, `.link-title`, is `display: flex`. `.sublink-title` was never affected because it already had its own `display: flex` from before this change — which is exactly why the bug was isolated to "parent menu" rows and not sub-links. Fix: both selectors get `display: flex; align-items: center;` directly, and `.link-title` gets `flex: 1` added to its existing rule so it still fills the row (preserving the `justify-content: space-between` right-aligned arrow icon) now that its parent is a flex container instead of a block box.
+
 ## Risks / Trade-offs
 
 - **`-webkit-tap-highlight-color` is non-standard (WebKit/Blink-derived).** Firefox desktop ignores it silently — no risk, since there's nothing to suppress there in the first place (same accepted trade-off as the prior change).

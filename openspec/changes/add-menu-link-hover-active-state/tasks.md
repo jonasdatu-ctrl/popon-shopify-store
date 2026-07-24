@@ -24,6 +24,7 @@
 
 ## 4. Verification
 
+- [x] 4.0 Fix regression found during live testing: `div[data-has-children]` and the top-level leaf `a` were missing `display: flex`, causing huge vertical gaps between parent rows (their child `.link-title` is flex but they weren't, unlike `.sublink-title` which already was). Added `display: flex; align-items: center;` to both, and `flex: 1` to `.link-title` so it still fills the row.
 - [ ] 4.1 In a desktop browser, hover over a top-level link and a sub-link inside an open submenu — confirm the inset gray box appears/clears correctly and doesn't affect layout or the submenu's slide-in animation.
 - [ ] 4.2 On desktop, click a top-level link and a sub-link and confirm the gray box shows as press feedback.
 - [ ] 4.3 Using Tab key navigation on desktop starting from the hamburger, confirm: the trigger is reachable and Enter/Space opens the drawer; parent rows are reachable and Enter/Space opens their submenu with the gray focus box shown; sub-links are reachable with the gray focus box shown; the back/close row is reachable and Enter/Space closes the submenu. Confirm the gray box does not appear from a mouse click alone (`:focus-visible`, not `:focus`).

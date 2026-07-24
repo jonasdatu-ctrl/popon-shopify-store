@@ -10,7 +10,7 @@
   c-menu-drawer .c-menu-drawer [data-menu="main"] {height: 100%; position: relative;}
   c-menu-drawer .c-menu-drawer .link-item {padding: 10px 0;}  
   c-menu-drawer .c-menu-drawer .link-item * {font-size: 18px;}  
-  c-menu-drawer .c-menu-drawer .link-item .link-title {display: flex; gap: 10px; justify-content: space-between; align-items: center;}  
+  c-menu-drawer .c-menu-drawer .link-item .link-title {display: flex; flex: 1; gap: 10px; justify-content: space-between; align-items: center;}
   c-menu-drawer .c-menu-drawer .link-item .link-title svg {width: 24px;}  
   c-menu-drawer .c-menu-drawer div[data-has-children] {cursor: pointer; -webkit-tap-highlight-color: transparent;}
   c-menu-drawer .c-submenu-drawer {position: absolute; width: 100%; height: 100%; transform: translateX(100%); top: 0; left: 20px; transition: transform 0.3s ease; background-color: white;}
@@ -22,6 +22,11 @@
   c-menu-drawer .menu-footer {background: #eee; padding: 20px;}
 
   /* Link hover/active/focus feedback */
+  c-menu-drawer .c-menu-drawer div[data-has-children],
+  c-menu-drawer .c-menu-drawer [data-menu="main"] > .link-item > a {
+    display: flex;
+    align-items: center;
+  }
   c-menu-drawer .c-menu-drawer div[data-has-children],
   c-menu-drawer .c-menu-drawer [data-menu="main"] > .link-item > a,
   c-menu-drawer .c-submenu-drawer .sublink-title {
