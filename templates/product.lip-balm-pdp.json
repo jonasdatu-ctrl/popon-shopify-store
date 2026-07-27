@@ -529,6 +529,56 @@
         "desktop_layout": "row-reverse"
       }
     },
+    "17851701481f444029": {
+      "type": "_blocks",
+      "blocks": {
+        "amazon_reviews_grid_widget_block_product_GCRX6N": {
+          "type": "shopify://apps/amazon-reviews/blocks/grid-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "reviewsType": "image_first",
+            "showProductPicture": true,
+            "showDate": true,
+            "fixedReviewsHeight": false,
+            "textStyle": "plain",
+            "alignment": "left",
+            "infoPosition": "top",
+            "ratingStyle": "left"
+          }
+        }
+      },
+      "block_order": [
+        "amazon_reviews_grid_widget_block_product_GCRX6N"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "customcode_content_generator_rUW68y": {
       "type": "customcode-content-generator",
       "blocks": {
@@ -536,7 +586,7 @@
           "type": "content",
           "settings": {
             "text_alignment": "c-text-center",
-            "content": "<h2><strong>What are customers saying?</strong></h2>"
+            "content": "<h3><strong>MORE REVIEWS FROM POP ON</strong></h3>"
           }
         }
       },
@@ -570,6 +620,7 @@
     "customcode_image_with_text_KdMiQa",
     "customcode_accordion_alt_6VUBdt",
     "customcode_accordion_alt_qMrMQG",
+    "17851701481f444029",
     "customcode_content_generator_rUW68y",
     "customode_loox_reviews_3WdAFq"
   ]
