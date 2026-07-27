@@ -192,9 +192,14 @@
           body: JSON.stringify({
             id: giftVariantId,
             quantity: 1,
-            attributes: {
-              '_rebuy_ignore': 'true'
-            },
+if (window.Rebuy && window.Rebuy.SmartCart) {
+      setTimeout(() => {
+        if (window.Rebuy.SmartCart.isShowing()) {
+          window.Rebuy.SmartCart.hide();
+        }
+        window.Rebuy.SmartCart.start();
+      }, 100);
+    }
             rebuy: false            
           })
         });
