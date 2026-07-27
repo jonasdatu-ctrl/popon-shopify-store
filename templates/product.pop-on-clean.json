@@ -439,18 +439,6 @@
         "padding-block-end": 0
       }
     },
-    "customode_loox_reviews_cEqnD6": {
-      "type": "customode-loox-reviews",
-      "name": "C Loox Reviews",
-      "settings": {
-        "only_photos": false,
-        "hide_thumbnails": false,
-        "product_handle": "",
-        "aggregated": true,
-        "data-limit": 4,
-        "maxwidth": 1080
-      }
-    },
     "178515665221a3be15": {
       "type": "_blocks",
       "blocks": {
@@ -500,6 +488,18 @@
         "gradient_direction": "to top",
         "padding-block-start": 0,
         "padding-block-end": 0
+      }
+    },
+    "customode_loox_reviews_cEqnD6": {
+      "type": "customode-loox-reviews",
+      "name": "C Loox Reviews",
+      "settings": {
+        "only_photos": false,
+        "hide_thumbnails": false,
+        "product_handle": "",
+        "aggregated": true,
+        "data-limit": 4,
+        "maxwidth": 1080
       }
     }
   },
