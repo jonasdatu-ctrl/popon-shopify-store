@@ -192,7 +192,12 @@
           body: JSON.stringify({
             id: giftVariantId,
             quantity: 1,
-if (window.Rebuy && window.Rebuy.SmartCart) {
+            rebuy: false            
+          })
+        });
+
+        console.log(`Gift variant ${giftVariantId} added to cart.`);
+        if (window.Rebuy && window.Rebuy.SmartCart) {
       setTimeout(() => {
         if (window.Rebuy.SmartCart.isShowing()) {
           window.Rebuy.SmartCart.hide();
@@ -200,11 +205,6 @@ if (window.Rebuy && window.Rebuy.SmartCart) {
         window.Rebuy.SmartCart.start();
       }, 100);
     }
-            rebuy: false            
-          })
-        });
-
-        console.log(`Gift variant ${giftVariantId} added to cart.`);
       } catch (err) {
         console.error('Failed to process gift variant:', err);
       }
