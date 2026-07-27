@@ -1,1 +1,1046 @@
-{"sections":{"main":{"type":"product-information","blocks":{"media-gallery":{"type":"_product-media-gallery","static":true,"settings":{"media_presentation":"grid","media_columns":"two","image_gap":4,"large_first_image":false,"icons_style":"none","slideshow_controls_style":"counter","slideshow_mobile_controls_style":"dots","thumbnail_position":"right","thumbnail_width":44,"aspect_ratio":"adapt","constrain_to_viewport":true,"media_fit":"contain","media_radius":0,"extend_media":false,"zoom":true,"video_loop":false,"hide_variants":true,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"product-details":{"type":"_product-details","static":true,"settings":{"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","details_position":"flex-start","gap":28,"sticky_details_desktop":true,"inherit_color_scheme":true,"color_scheme":"scheme-1","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":24,"padding-block-end":24,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"group_icgrde":{"type":"group","name":"Header","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"placeholder":"","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"text_xrnftG":{"type":"text","name":"Product title","settings":{"text":"<h1>{{ closest.product.title }}<\/h1>","width":"100%","max_width":"normal","alignment":"left","type_preset":"h3","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"price_tVjtKg":{"type":"price","settings":{"show_sale_price_first":true,"show_installments":false,"show_tax_info":false,"type_preset":"paragraph","width":"100%","alignment":"left","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","color":"var(--color-foreground)","padding-block-start":4,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["text_xrnftG","price_tVjtKg"]},"divider_VJhene":{"type":"_divider","name":"t:names.divider","settings":{"thickness":1,"corner_radius":"square","width_percent":100,"padding-block-start":0,"padding-block-end":0},"blocks":{}},"variant_picker_R3rGDr":{"type":"variant-picker","settings":{"variant_style":"buttons","show_swatches":false,"alignment":"left","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"buy_buttons_eYQEYi":{"type":"buy-buttons","settings":{"stacking":true,"show_pickup_availability":false,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"quantity":{"type":"quantity","static":true,"settings":{},"blocks":{}},"add-to-cart":{"type":"add-to-cart","static":true,"settings":{"style_class":"button"},"blocks":{}},"accelerated-checkout":{"type":"accelerated-checkout","static":true,"settings":{},"blocks":{}}},"block_order":[]},"text_aEtTtq":{"type":"text","name":"Product description","settings":{"text":"{{ closest.product.description }}","width":"100%","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["group_icgrde","divider_VJhene","variant_picker_R3rGDr","buy_buttons_eYQEYi","text_aEtTtq"]}},"disabled":true,"settings":{"content_width":"content-center-aligned","desktop_media_position":"left","equal_columns":false,"limit_details_width":false,"gap":48,"color_scheme":"","padding-block-start":0,"padding-block-end":0}},"customcode_featured_product_HRwfDi":{"type":"customcode-featured-product","blocks":{"title_iFe33P":{"type":"title","settings":{"title_override":"","show_reviews":true,"custom_review":"","m_margin_bottom":10,"d_margin_bottom":20}},"buy_box_v2_F9QmYw":{"type":"buy_box_v2","settings":{"default_selector":"subs","subscription_features":"Monthly supply delivered to your door|Free shipping on all subscription orders|Pause or cancel anytime"}},"variant_selector_pVYxPC":{"type":"variant_selector","disabled":true,"settings":{"container_type":"grid-type","title_placement":"within","hide_thumb_images":"Denominations | Qty | Color","hide_option_title":"","hide_most_popular":"Denominations | Qty","display_dynamic_variant_image":false,"display_price_diff":false,"price_diff_settings":"whole","m_margin_bottom":10,"d_margin_bottom":20}},"selling_plan_cKNXyy":{"type":"selling_plan","disabled":true,"settings":{"rounding":true,"otp":"","sbs":"","subscription_description":"","m_margin_bottom":10,"d_margin_bottom":20}},"upload_lift_app_block_B7z4ex":{"type":"shopify:\/\/apps\/upload-lift\/blocks\/app-block\/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca","disabled":true,"settings":{"product":"{{ product }}","field":""}},"buy_button_dT4wwt":{"type":"buy_button","disabled":true,"settings":{"blurb":"","display_payment":true,"footer_blurb":"","display_compare_price":false,"display_alt_financing":false,"alt_financing_link":"","alt_financing_text":"","display_bottom_payment":false,"alt_financing_footer":"","m_margin_bottom":10,"d_margin_bottom":20}},"description_EbxCM7":{"type":"description","disabled":true,"settings":{"m_margin_bottom":10,"d_margin_bottom":20}},"accordion_cMYdC4":{"type":"accordion","disabled":true,"settings":{"accordion_title":"<p>TERMS AND CONDITIONS<\/p>","video_link":"","content":"","page":"termsandconditions","display_html_content":false,"text":"","additional_content":"","button_link":"","button_text":""}},"accordion_9fTwmq":{"type":"accordion","disabled":true,"settings":{"accordion_title":"<p>PRIVACY POLICY<\/p>","video_link":"","content":"","page":"privacypolicy","display_html_content":false,"text":"","additional_content":"","button_link":"","button_text":""}},"accordion_pNGji3":{"type":"accordion","disabled":true,"settings":{"accordion_title":"<p>POP ON PROMISE<\/p>","video_link":"","content":"","page":"promise","display_html_content":false,"text":"","additional_content":"","button_link":"","button_text":""}}},"block_order":["title_iFe33P","buy_box_v2_F9QmYw","variant_selector_pVYxPC","selling_plan_cKNXyy","upload_lift_app_block_B7z4ex","buy_button_dT4wwt","description_EbxCM7","accordion_cMYdC4","accordion_9fTwmq","accordion_pNGji3"],"name":"C Featured Product","settings":{"product_override":"","enable_partially":false,"plan_fee":0,"display_variant_price":true,"additional_product_tag":"","partially_additional_product":"","freebie_fee":0,"bottom_text":"We’re All In! Prices include $99 non refundable plan fee (before taxes)","mobile_count":"1","desktop_count":"1"}},"17601015186c120833":{"type":"_blocks","blocks":{"bundler_bundler_target_element_6hbyLr":{"type":"shopify:\/\/apps\/bundler\/blocks\/bundler-target-element\/7a6ae1b8-3b16-449b-8429-8bb89a62c664","settings":{}}},"block_order":["bundler_bundler_target_element_6hbyLr"],"settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"section_width":"page-width","section_height":"","section_height_custom":50,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0}},"customcode_content_generator_TfQjNU":{"type":"customcode-content-generator","blocks":{"liquid_Up8ffW":{"type":"liquid","settings":{"liquid":"<script>\ndocument.addEventListener('DOMContentLoaded', function () {\n  const triggers = document.querySelectorAll(\n    'a[href=\"#product-info-container\"], c-sticky-atc .inner-container div.c-button'\n  );\n\n  \/\/ Target the actual ATC button to simulate\n  const buyButton = document.querySelector('c-buy-box-v2 .cbb-add-to-cart');\n\n  if (!buyButton) return;\n\n  triggers.forEach(function (el) {\n    el.addEventListener('click', function (e) {\n      \/\/ Stop default behavior and bubbling\n      e.preventDefault();\n      e.stopImmediatePropagation();\n\n      \/\/ Simulate click on the real ATC button\n      buyButton.click();\n    });\n  });\n});\n<\/script>"}}},"block_order":["liquid_Up8ffW"],"name":"C Content Generator","settings":{"d_padding_top":false,"d_padding_bottom":false}},"customcode_content_generator_GrEmhb":{"type":"customcode-content-generator","blocks":{"liquid_peWyxy":{"type":"liquid","settings":{"liquid":"<div id=\"custom-container-test\">\n          <h4 style=\"text-align: center; margin-bottom: 10px; color: #003659; font-weight: normal;\">\n            Trending On TikTok\n          <\/h4>\n          <fw-embed-feed\n            channel=\"pop_on\"\n            mode=\"row\"\n            open_in=\"default\"\n            max_videos=\"0\"\n            placement=\"middle\"\n            player_placement=\"bottom-right\"\n            playlist=\"5R7p7w\"\n          ><\/fw-embed-feed>\n        <\/div>"}}},"block_order":["liquid_peWyxy"],"custom_css":["#custom-container-test {max-width: 1080px; margin: auto;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_content_generator_pzWitx":{"type":"customcode-content-generator","blocks":{"liquid_eNAakc":{"type":"liquid","settings":{"liquid":"<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n<\/div>\n<\/a>"}}},"block_order":["liquid_eNAakc"],"custom_css":["a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}","a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}","a .price-container s {font-size: 16px; opacity: 0.8;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":false}},"customcode_animated_container_haE6Pj":{"type":"customcode-animated-container","name":"C Animated Container","settings":{"header":"<h2><strong>What's in a pouch? <\/strong><\/h2><p>Premium blend for fresh breath & smooth energy.<\/p>","upper-left":"Energy (Caffeine, Alpha GPC, L-Theanine)","upper-right":"Cool Mint Flavor","lower-left":"Nicotine Free","lower-right":"Zero Sugar"}},"customcode_content_generator_QBdEYt":{"type":"customcode-content-generator","blocks":{"liquid_33d8Ba":{"type":"liquid","settings":{"liquid":"<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n<\/div>\n<\/a>"}}},"block_order":["liquid_33d8Ba"],"custom_css":["a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}","a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}","a .price-container s {font-size: 16px; opacity: 0.8;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":false}},"customcode_image_banner_kYWMgw":{"type":"customcode-image-banner","name":"C Image Banner","settings":{"d_padding_top":false,"d_padding_bottom":false,"header":"","m_image":"shopify:\/\/shop_images\/Skoal_vs_Pop_On_Pouch_comparison_3_V2.png","m_max_width":0,"d_image":"shopify:\/\/shop_images\/Skoal_vs_Pop_On_Pouch_comparison_3_V2.png","d_max_width":1000}},"customcode_content_generator_ENFLbP":{"type":"customcode-content-generator","blocks":{"liquid_gmpt7m":{"type":"liquid","settings":{"liquid":"<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n<\/div>\n<\/a>"}}},"block_order":["liquid_gmpt7m"],"custom_css":["a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}","a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}","a .price-container s {font-size: 16px; opacity: 0.8;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_animated_triangle_NetdDY":{"type":"customcode-animated-triangle","blocks":{"corner_GH68bp":{"type":"corner","settings":{"position":"top","label":"<p><strong>Caffeine<br\/><\/strong>Fast Energy<\/p>","description":"<p><strong>Caffeine <\/strong>(50mg) Provides a controlled boost of alertness and wakefulness without the \"crash\" of high-dose alternatives.<\/p>"}},"corner_xB9Bcd":{"type":"corner","settings":{"position":"left","label":"<p><strong>Alpha GPC<\/strong><br\/>Smooth Focus<\/p>","description":"<p><strong>Alpha GPC <\/strong>(50mg) Sharper Focus: <br\/>Supports cognitive function, memory, and the \"mind-muscle connection\" for peak mental performance.<\/p>"}},"corner_VkzERK":{"type":"corner","settings":{"position":"right","label":"<p><strong>L-Theanine<br\/><\/strong>Smooth Attentiveness<\/p>","description":"<p><strong>L-Theanine <\/strong>(50mg) The \"Zen\" Factor:<br\/>Pairs perfectly with caffeine to eliminate jitters, promoting a calm, \"flow-state\" focus.<\/p>"}}},"block_order":["corner_GH68bp","corner_xB9Bcd","corner_VkzERK"],"custom_css":["c-animated-triangle .interactive-triangle__description {margin: 50px auto 0 auto;}"],"name":"C Animated Triangle","settings":{"display_p_top":true,"display_p_bottom":true,"header":"<p><strong>The Science Behind The Pouch<\/strong><\/p><h2><strong>The Perfect Trifecta<\/strong><\/h2>","image":"shopify:\/\/shop_images\/Science_in_a_pouch_graphic_A_V5_8f12f3f8-cf45-4a22-ba94-946a8505349a.png"}},"customcode_content_generator_pq8ypD":{"type":"customcode-content-generator","blocks":{"liquid_q6pWtk":{"type":"liquid","settings":{"liquid":"<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n<\/div>\n<\/a>"}}},"block_order":["liquid_q6pWtk"],"custom_css":["a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}","a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}","a .price-container s {font-size: 16px; opacity: 0.8;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_product_features_YDBrCH":{"type":"customcode-product-features","blocks":{"feature_yf83gJ":{"type":"feature","settings":{"icon":"shopify:\/\/shop_images\/Gycerin_icon_fe0a5913-883a-4c6f-a0fe-7b9ac1cc8435.png","content":"<h4>Glycerin<\/h4><p>Acts as a humectant to help keep your oral mucosa hydrated, ensuring your breath stays fresh longer.<\/p>"}},"feature_Nb79UH":{"type":"feature","settings":{"icon":"shopify:\/\/shop_images\/Zero_Sugar_icon_b266e83b-c720-41a7-9df4-c60e2507e489.png","content":"<h4>Zero Sugar<\/h4><p>Unlike sugary energy drinks that feed plaque-causing bacteria, our formula is \"smile-safe\".<\/p>"}},"feature_3jHPB6":{"type":"feature","settings":{"icon":"shopify:\/\/shop_images\/Sodium_Citrate_icon_fc18170b-87db-4d78-a1e6-eb321d409ebf.png","content":"<h4>Sodium Citrate<\/h4><p>Works as a buffer to keep your mouth at a healthy, balanced level, help prevent the \"dry-mouth\" feeling often caused by caffeine.<\/p>"}},"feature_QrwNgF":{"type":"feature","settings":{"icon":"shopify:\/\/shop_images\/Sodium_Bicarbonate_icon_63213e9d-e561-4d51-921a-c6aed23c595d.png","content":"<h4>Sodium Bicarbonate<\/h4><p>Neutralizes the mouth's pH, tackling the acidic environment where bad-breath bacteria thrive<\/p>"}}},"block_order":["feature_yf83gJ","feature_Nb79UH","feature_3jHPB6","feature_QrwNgF"],"name":"C Product Features","settings":{"header_icon":"shopify:\/\/shop_images\/Formula_icon_ad015c5f-8bd4-4155-b304-891c46f1ce80.png","header":"The \"Fresh Breath\" Formula","main_image":"shopify:\/\/shop_images\/Fresh_Breath_Formula_1_Image_1.png"}},"customcode_content_generator_RdPNkm":{"type":"customcode-content-generator","blocks":{"liquid_EJ3iJc":{"type":"liquid","settings":{"liquid":"<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n<\/div>\n<\/a>"}}},"block_order":["liquid_EJ3iJc"],"custom_css":["a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}","a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}","a .price-container s {font-size: 16px; opacity: 0.8;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_timeline_section_nnyNq7":{"type":"customcode-timeline-section","blocks":{"step_GULY8b":{"type":"step","settings":{"image":"shopify:\/\/shop_images\/How_to_use_image_1.png","number":"1","across_icon":"shopify:\/\/shop_images\/How_to_use_icons-01.png","heading":"","text":"Moisten pouch with tongue to reduce tingling","image_position":"left"}},"step_4bQN3e":{"type":"step","settings":{"image":"shopify:\/\/shop_images\/How_to_use_image_2.png","number":"2","across_icon":"shopify:\/\/shop_images\/How_to_use_icons-02.png","heading":"","text":"Place a pouch between your lip & gums","image_position":"right"}},"step_VhUEDE":{"type":"step","settings":{"image":"shopify:\/\/shop_images\/How_to_use_image_3.png","number":"3","across_icon":"shopify:\/\/shop_images\/How_to_use_icons-03.png","heading":"","text":"Discard pouch after use","image_position":"left"}}},"block_order":["step_GULY8b","step_4bQN3e","step_VhUEDE"],"custom_css":[".step-number {font-size: 26px; color: #cd9a37;}",".step-text {text-align: center;}"],"name":"Stepped Image Process","settings":{"display_ripples":false,"display_bracket":false,"display_circles":true}},"customcode_content_generator_xHmeFQ":{"type":"customcode-content-generator","blocks":{"liquid_QkNMm9":{"type":"liquid","settings":{"liquid":"<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n<\/div>\n<\/a>"}}},"block_order":["liquid_QkNMm9"],"custom_css":["a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}","a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}","a .price-container s {font-size: 16px; opacity: 0.8;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_image_banner_r8drAa":{"type":"customcode-image-banner","name":"C Image Banner","settings":{"d_padding_top":true,"d_padding_bottom":true,"header":"<h3>Why Pouches Crush It<\/h3>","m_image":"shopify:\/\/shop_images\/Pop_On_Pouches_Why_Pouches_Crush_it_A_V2_Mobile_2_B.png","d_image":"shopify:\/\/shop_images\/Pop_On_Pouches_Why_Pouches_Crush_it_A_V2_Mobile_2_B.png","d_max_width":1000}},"customcode_content_generator_x7aKJV":{"type":"customcode-content-generator","blocks":{"liquid_RABpM7":{"type":"liquid","settings":{"liquid":"<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n<\/div>\n<\/a>"}}},"block_order":["liquid_RABpM7"],"custom_css":["a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}","a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}","a .price-container s {font-size: 16px; opacity: 0.8;}"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customcode_accordion_alt_UpWmfB":{"type":"customcode-accordion-alt","blocks":{"accordion_UXCBAr":{"type":"accordion","settings":{"question":"What are Pop On Energy Pouches?","answer":"<p>Pop On Energy Pouches are a <strong>nicotine-free<\/strong> way to enjoy clean energy and fresh breath in a discreet pouch. They are smoke-free, spit-free, and hands-free, making them easy to use anytime, anywhere.<\/p><p>Each pouch contains 50 mg of caffeine and Alpha GPC and L-Theanine for smooth focus in a discreet pouch placed under the upper lip on your gum line.<\/p><p>Pop On Energy Pouches are intended for 18+ adult use only.<\/p>","liquid":""}},"accordion_98iAkM":{"type":"accordion","settings":{"question":"Who are Pop On Energy Pouches for?","answer":"<p>Pop On Energy Pouches are designed for adults looking for a convenient, discreet energy boost and fresh breath experience.<\/p><p>They are ideal for people who want:<\/p><ul><li>A portable alternative to energy drinks<\/li><li>Fresh breath throughout the day<\/li><li>A hands-free energy option<\/li><li>A nicotine-free pouch experience<\/li><\/ul><p>If you are sensitive to caffeine or prefer to avoid caffeine, this product may not be for you.<\/p>","liquid":""}},"accordion_fk6tzk":{"type":"accordion","settings":{"question":"Are Pop On Pouches nicotine-free?","answer":"<p>Yes. Pop On Pouches contain <strong>zero nicotine and zero tobacco<\/strong>.<\/p>","liquid":""}},"accordion_XabanF":{"type":"accordion","settings":{"question":"What are Pop On Pouches used for?","answer":"<p>They are designed to provide <strong>clean energy, fresh breath, and a discreet, hands-free alternative to energy drinks or gum<\/strong>.<\/p>","liquid":""}},"accordion_eF38fR":{"type":"accordion","settings":{"question":"How do Pop On Pouches work?","answer":"<p>Place a pouch <strong>under your upper lip<\/strong>. The ingredients gradually release and are absorbed through the gums and oral lining.<\/p>","liquid":""}},"accordion_byC68y":{"type":"accordion","settings":{"question":"Do you have to chew or suck on the pouch?","answer":"<p>No. Simply place the pouch under your lip and let it work.<\/p>","liquid":""}}},"block_order":["accordion_UXCBAr","accordion_98iAkM","accordion_fk6tzk","accordion_XabanF","accordion_eF38fR","accordion_byC68y"],"name":"C Accordion Alt","settings":{"header":"FAQs","link":"https:\/\/poponveneers.com\/pages\/pouch-faq","name":"SEE MORE FAQS","mobile_layout":"column","desktop_layout":"row-reverse"}},"customcode_content_generator_rUW68y":{"type":"customcode-content-generator","blocks":{"content_FQRx6B":{"type":"content","settings":{"text_alignment":"c-text-center","content":"<h2><strong>What are customers saying?<\/strong><\/h2>"}}},"block_order":["content_FQRx6B"],"name":"C Content Generator","settings":{"d_padding_top":true,"d_padding_bottom":true}},"customode_loox_reviews_3WdAFq":{"type":"customode-loox-reviews","name":"C Loox Reviews","settings":{"only_photos":false,"hide_thumbnails":false,"product_handle":"","aggregated":true,"data-limit":4,"maxwidth":1080}},"customcode_sticky_atc_3tNdbK":{"type":"customcode-sticky-atc","custom_css":["c-sticky-atc {background-color: transparent; padding: 10px;}","c-sticky-atc .inner-container div.c-button {background-color: #02bf63; color: white; border-radius: 8px; padding: 5px 15px;}","c-sticky-atc .inner-container div.c-button .product-price {right: 10px !important;}","c-sticky-atc .inner-container div.c-button s {font-size: 16px; opacity: 0.8;}"],"name":"C Sticky ATC","settings":{"product_context":"","title":"","button_text":"ADD TO CART","display_prices":false}}},"order":["main","customcode_featured_product_HRwfDi","17601015186c120833","customcode_content_generator_TfQjNU","customcode_content_generator_GrEmhb","customcode_content_generator_pzWitx","customcode_animated_container_haE6Pj","customcode_content_generator_QBdEYt","customcode_image_banner_kYWMgw","customcode_content_generator_ENFLbP","customcode_animated_triangle_NetdDY","customcode_content_generator_pq8ypD","customcode_product_features_YDBrCH","customcode_content_generator_RdPNkm","customcode_timeline_section_nnyNq7","customcode_content_generator_xHmeFQ","customcode_image_banner_r8drAa","customcode_content_generator_x7aKJV","customcode_accordion_alt_UpWmfB","customcode_content_generator_rUW68y","customode_loox_reviews_3WdAFq","customcode_sticky_atc_3tNdbK"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "grid",
+            "media_columns": "two",
+            "image_gap": 4,
+            "large_first_image": false,
+            "icons_style": "none",
+            "slideshow_controls_style": "counter",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "right",
+            "thumbnail_width": 44,
+            "aspect_ratio": "adapt",
+            "constrain_to_viewport": true,
+            "media_fit": "contain",
+            "media_radius": 0,
+            "extend_media": false,
+            "zoom": true,
+            "video_loop": false,
+            "hide_variants": true,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "details_position": "flex-start",
+            "gap": 28,
+            "sticky_details_desktop": true,
+            "inherit_color_scheme": true,
+            "color_scheme": "scheme-1",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_icgrde": {
+              "type": "group",
+              "name": "Header",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_xrnftG": {
+                  "type": "text",
+                  "name": "Product title",
+                  "settings": {
+                    "text": "<h1>{{ closest.product.title }}</h1>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h3",
+                    "font": "var(--font-primary--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "price_tVjtKg": {
+                  "type": "price",
+                  "settings": {
+                    "show_sale_price_first": true,
+                    "show_installments": false,
+                    "show_tax_info": false,
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "left",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "color": "var(--color-foreground)",
+                    "padding-block-start": 4,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_xrnftG",
+                "price_tVjtKg"
+              ]
+            },
+            "divider_VJhene": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "width_percent": 100,
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {}
+            },
+            "variant_picker_R3rGDr": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": false,
+                "alignment": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "buy_buttons_eYQEYi": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "text_aEtTtq": {
+              "type": "text",
+              "name": "Product description",
+              "settings": {
+                "text": "{{ closest.product.description }}",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-primary--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "group_icgrde",
+            "divider_VJhene",
+            "variant_picker_R3rGDr",
+            "buy_buttons_eYQEYi",
+            "text_aEtTtq"
+          ]
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": false,
+        "limit_details_width": false,
+        "gap": 48,
+        "color_scheme": "",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "customcode_featured_product_HRwfDi": {
+      "type": "customcode-featured-product",
+      "blocks": {
+        "title_iFe33P": {
+          "type": "title",
+          "settings": {
+            "title_override": "",
+            "show_reviews": true,
+            "custom_review": "",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "buy_box_v2_F9QmYw": {
+          "type": "buy_box_v2",
+          "settings": {
+            "default_selector": "subs",
+            "subscription_features": "Monthly supply delivered to your door|Free shipping on all subscription orders|Pause or cancel anytime"
+          }
+        },
+        "variant_selector_pVYxPC": {
+          "type": "variant_selector",
+          "disabled": true,
+          "settings": {
+            "container_type": "grid-type",
+            "title_placement": "within",
+            "hide_thumb_images": "Denominations | Qty | Color",
+            "hide_option_title": "",
+            "hide_most_popular": "Denominations | Qty",
+            "display_dynamic_variant_image": false,
+            "display_price_diff": false,
+            "price_diff_settings": "whole",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "selling_plan_cKNXyy": {
+          "type": "selling_plan",
+          "disabled": true,
+          "settings": {
+            "rounding": true,
+            "otp": "",
+            "sbs": "",
+            "subscription_description": "",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "upload_lift_app_block_B7z4ex": {
+          "type": "shopify://apps/upload-lift/blocks/app-block/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
+          "disabled": true,
+          "settings": {
+            "product": "{{ product }}",
+            "field": ""
+          }
+        },
+        "buy_button_dT4wwt": {
+          "type": "buy_button",
+          "disabled": true,
+          "settings": {
+            "blurb": "",
+            "display_payment": true,
+            "footer_blurb": "",
+            "display_compare_price": false,
+            "display_alt_financing": false,
+            "alt_financing_link": "",
+            "alt_financing_text": "",
+            "display_bottom_payment": false,
+            "alt_financing_footer": "",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "description_EbxCM7": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "accordion_cMYdC4": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "accordion_title": "<p>TERMS AND CONDITIONS</p>",
+            "video_link": "",
+            "content": "",
+            "page": "termsandconditions",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": ""
+          }
+        },
+        "accordion_9fTwmq": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "accordion_title": "<p>PRIVACY POLICY</p>",
+            "video_link": "",
+            "content": "",
+            "page": "privacypolicy",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": ""
+          }
+        },
+        "accordion_pNGji3": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "accordion_title": "<p>POP ON PROMISE</p>",
+            "video_link": "",
+            "content": "",
+            "page": "promise",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_iFe33P",
+        "buy_box_v2_F9QmYw",
+        "variant_selector_pVYxPC",
+        "selling_plan_cKNXyy",
+        "upload_lift_app_block_B7z4ex",
+        "buy_button_dT4wwt",
+        "description_EbxCM7",
+        "accordion_cMYdC4",
+        "accordion_9fTwmq",
+        "accordion_pNGji3"
+      ],
+      "name": "C Featured Product",
+      "settings": {
+        "product_override": "",
+        "enable_partially": false,
+        "plan_fee": 0,
+        "display_variant_price": true,
+        "additional_product_tag": "",
+        "partially_additional_product": "",
+        "freebie_fee": 0,
+        "bottom_text": "We’re All In! Prices include $99 non refundable plan fee (before taxes)",
+        "mobile_count": "1",
+        "desktop_count": "1"
+      }
+    },
+    "1785169818890c93bd": {
+      "type": "_blocks",
+      "blocks": {
+        "amazon_reviews_grid_widget_block_product_YkUBbH": {
+          "type": "shopify://apps/amazon-reviews/blocks/grid-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "reviewsType": "image_first",
+            "showProductPicture": true,
+            "showDate": true,
+            "fixedReviewsHeight": false,
+            "textStyle": "plain",
+            "alignment": "left",
+            "infoPosition": "top",
+            "ratingStyle": "left"
+          }
+        }
+      },
+      "block_order": [
+        "amazon_reviews_grid_widget_block_product_YkUBbH"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "17601015186c120833": {
+      "type": "_blocks",
+      "blocks": {
+        "bundler_bundler_target_element_6hbyLr": {
+          "type": "shopify://apps/bundler/blocks/bundler-target-element/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "bundler_bundler_target_element_6hbyLr"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "customcode_content_generator_TfQjNU": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_Up8ffW": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<script>\ndocument.addEventListener('DOMContentLoaded', function () {\n  const triggers = document.querySelectorAll(\n    'a[href=\"#product-info-container\"], c-sticky-atc .inner-container div.c-button'\n  );\n\n  // Target the actual ATC button to simulate\n  const buyButton = document.querySelector('c-buy-box-v2 .cbb-add-to-cart');\n\n  if (!buyButton) return;\n\n  triggers.forEach(function (el) {\n    el.addEventListener('click', function (e) {\n      // Stop default behavior and bubbling\n      e.preventDefault();\n      e.stopImmediatePropagation();\n\n      // Simulate click on the real ATC button\n      buyButton.click();\n    });\n  });\n});\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_Up8ffW"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": false,
+        "d_padding_bottom": false
+      }
+    },
+    "customcode_content_generator_GrEmhb": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_peWyxy": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div id=\"custom-container-test\">\n          <h4 style=\"text-align: center; margin-bottom: 10px; color: #003659; font-weight: normal;\">\n            Trending On TikTok\n          </h4>\n          <fw-embed-feed\n            channel=\"pop_on\"\n            mode=\"row\"\n            open_in=\"default\"\n            max_videos=\"0\"\n            placement=\"middle\"\n            player_placement=\"bottom-right\"\n            playlist=\"5R7p7w\"\n          ></fw-embed-feed>\n        </div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_peWyxy"
+      ],
+      "custom_css": [
+        "#custom-container-test {max-width: 1080px; margin: auto;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_content_generator_pzWitx": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_eNAakc": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n</div>\n</a>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_eNAakc"
+      ],
+      "custom_css": [
+        "a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}",
+        "a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}",
+        "a .price-container s {font-size: 16px; opacity: 0.8;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": false
+      }
+    },
+    "customcode_animated_container_haE6Pj": {
+      "type": "customcode-animated-container",
+      "name": "C Animated Container",
+      "settings": {
+        "header": "<h2><strong>What's in a pouch? </strong></h2><p>Premium blend for fresh breath & smooth energy.</p>",
+        "upper-left": "Energy (Caffeine, Alpha GPC, L-Theanine)",
+        "upper-right": "Cool Mint Flavor",
+        "lower-left": "Nicotine Free",
+        "lower-right": "Zero Sugar"
+      }
+    },
+    "customcode_content_generator_QBdEYt": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_33d8Ba": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n</div>\n</a>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_33d8Ba"
+      ],
+      "custom_css": [
+        "a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}",
+        "a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}",
+        "a .price-container s {font-size: 16px; opacity: 0.8;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": false
+      }
+    },
+    "customcode_image_banner_kYWMgw": {
+      "type": "customcode-image-banner",
+      "name": "C Image Banner",
+      "settings": {
+        "d_padding_top": false,
+        "d_padding_bottom": false,
+        "header": "",
+        "m_image": "shopify://shop_images/Skoal_vs_Pop_On_Pouch_comparison_3_V2.png",
+        "m_max_width": 0,
+        "d_image": "shopify://shop_images/Skoal_vs_Pop_On_Pouch_comparison_3_V2.png",
+        "d_max_width": 1000
+      }
+    },
+    "customcode_content_generator_ENFLbP": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_gmpt7m": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n</div>\n</a>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_gmpt7m"
+      ],
+      "custom_css": [
+        "a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}",
+        "a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}",
+        "a .price-container s {font-size: 16px; opacity: 0.8;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_animated_triangle_NetdDY": {
+      "type": "customcode-animated-triangle",
+      "blocks": {
+        "corner_GH68bp": {
+          "type": "corner",
+          "settings": {
+            "position": "top",
+            "label": "<p><strong>Caffeine<br/></strong>Fast Energy</p>",
+            "description": "<p><strong>Caffeine </strong>(50mg) Provides a controlled boost of alertness and wakefulness without the \"crash\" of high-dose alternatives.</p>"
+          }
+        },
+        "corner_xB9Bcd": {
+          "type": "corner",
+          "settings": {
+            "position": "left",
+            "label": "<p><strong>Alpha GPC</strong><br/>Smooth Focus</p>",
+            "description": "<p><strong>Alpha GPC </strong>(50mg) Sharper Focus: <br/>Supports cognitive function, memory, and the \"mind-muscle connection\" for peak mental performance.</p>"
+          }
+        },
+        "corner_VkzERK": {
+          "type": "corner",
+          "settings": {
+            "position": "right",
+            "label": "<p><strong>L-Theanine<br/></strong>Smooth Attentiveness</p>",
+            "description": "<p><strong>L-Theanine </strong>(50mg) The \"Zen\" Factor:<br/>Pairs perfectly with caffeine to eliminate jitters, promoting a calm, \"flow-state\" focus.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "corner_GH68bp",
+        "corner_xB9Bcd",
+        "corner_VkzERK"
+      ],
+      "custom_css": [
+        "c-animated-triangle .interactive-triangle__description {margin: 50px auto 0 auto;}"
+      ],
+      "name": "C Animated Triangle",
+      "settings": {
+        "display_p_top": true,
+        "display_p_bottom": true,
+        "header": "<p><strong>The Science Behind The Pouch</strong></p><h2><strong>The Perfect Trifecta</strong></h2>",
+        "image": "shopify://shop_images/Science_in_a_pouch_graphic_A_V5_8f12f3f8-cf45-4a22-ba94-946a8505349a.png"
+      }
+    },
+    "customcode_content_generator_pq8ypD": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_q6pWtk": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n</div>\n</a>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_q6pWtk"
+      ],
+      "custom_css": [
+        "a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}",
+        "a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}",
+        "a .price-container s {font-size: 16px; opacity: 0.8;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_product_features_YDBrCH": {
+      "type": "customcode-product-features",
+      "blocks": {
+        "feature_yf83gJ": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Gycerin_icon_fe0a5913-883a-4c6f-a0fe-7b9ac1cc8435.png",
+            "content": "<h4>Glycerin</h4><p>Acts as a humectant to help keep your oral mucosa hydrated, ensuring your breath stays fresh longer.</p>"
+          }
+        },
+        "feature_Nb79UH": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Zero_Sugar_icon_b266e83b-c720-41a7-9df4-c60e2507e489.png",
+            "content": "<h4>Zero Sugar</h4><p>Unlike sugary energy drinks that feed plaque-causing bacteria, our formula is \"smile-safe\".</p>"
+          }
+        },
+        "feature_3jHPB6": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Sodium_Citrate_icon_fc18170b-87db-4d78-a1e6-eb321d409ebf.png",
+            "content": "<h4>Sodium Citrate</h4><p>Works as a buffer to keep your mouth at a healthy, balanced level, help prevent the \"dry-mouth\" feeling often caused by caffeine.</p>"
+          }
+        },
+        "feature_QrwNgF": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Sodium_Bicarbonate_icon_63213e9d-e561-4d51-921a-c6aed23c595d.png",
+            "content": "<h4>Sodium Bicarbonate</h4><p>Neutralizes the mouth's pH, tackling the acidic environment where bad-breath bacteria thrive</p>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_yf83gJ",
+        "feature_Nb79UH",
+        "feature_3jHPB6",
+        "feature_QrwNgF"
+      ],
+      "name": "C Product Features",
+      "settings": {
+        "header_icon": "shopify://shop_images/Formula_icon_ad015c5f-8bd4-4155-b304-891c46f1ce80.png",
+        "header": "The \"Fresh Breath\" Formula",
+        "main_image": "shopify://shop_images/Fresh_Breath_Formula_1_Image_1.png"
+      }
+    },
+    "customcode_content_generator_RdPNkm": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_EJ3iJc": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n</div>\n</a>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_EJ3iJc"
+      ],
+      "custom_css": [
+        "a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}",
+        "a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}",
+        "a .price-container s {font-size: 16px; opacity: 0.8;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_timeline_section_nnyNq7": {
+      "type": "customcode-timeline-section",
+      "blocks": {
+        "step_GULY8b": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/How_to_use_image_1.png",
+            "number": "1",
+            "across_icon": "shopify://shop_images/How_to_use_icons-01.png",
+            "heading": "",
+            "text": "Moisten pouch with tongue to reduce tingling",
+            "image_position": "left"
+          }
+        },
+        "step_4bQN3e": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/How_to_use_image_2.png",
+            "number": "2",
+            "across_icon": "shopify://shop_images/How_to_use_icons-02.png",
+            "heading": "",
+            "text": "Place a pouch between your lip & gums",
+            "image_position": "right"
+          }
+        },
+        "step_VhUEDE": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/How_to_use_image_3.png",
+            "number": "3",
+            "across_icon": "shopify://shop_images/How_to_use_icons-03.png",
+            "heading": "",
+            "text": "Discard pouch after use",
+            "image_position": "left"
+          }
+        }
+      },
+      "block_order": [
+        "step_GULY8b",
+        "step_4bQN3e",
+        "step_VhUEDE"
+      ],
+      "custom_css": [
+        ".step-number {font-size: 26px; color: #cd9a37;}",
+        ".step-text {text-align: center;}"
+      ],
+      "name": "Stepped Image Process",
+      "settings": {
+        "display_ripples": false,
+        "display_bracket": false,
+        "display_circles": true
+      }
+    },
+    "customcode_content_generator_xHmeFQ": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_QkNMm9": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n</div>\n</a>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_QkNMm9"
+      ],
+      "custom_css": [
+        "a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}",
+        "a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}",
+        "a .price-container s {font-size: 16px; opacity: 0.8;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_image_banner_r8drAa": {
+      "type": "customcode-image-banner",
+      "name": "C Image Banner",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true,
+        "header": "<h3>Why Pouches Crush It</h3>",
+        "m_image": "shopify://shop_images/Pop_On_Pouches_Why_Pouches_Crush_it_A_V2_Mobile_2_B.png",
+        "d_image": "shopify://shop_images/Pop_On_Pouches_Why_Pouches_Crush_it_A_V2_Mobile_2_B.png",
+        "d_max_width": 1000
+      }
+    },
+    "customcode_content_generator_x7aKJV": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_RABpM7": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<a href=\"#product-info-container\" class=\"c-desktop\">\nADD TO CART\n<div class=\"price-container\">\n           \n</div>\n</a>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_RABpM7"
+      ],
+      "custom_css": [
+        "a {padding: 10px 15px; border-radius: 8px; background-color: #02bf63; color: white; font-weight: 600; text-align: center; max-width: 400px; margin: auto; position: relative; justify-content: center; font-size: 18px;}",
+        "a .price-container {position: absolute; right: 10px; transform: translate(0, -50%); top: 50%;}",
+        "a .price-container s {font-size: 16px; opacity: 0.8;}"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customcode_accordion_alt_UpWmfB": {
+      "type": "customcode-accordion-alt",
+      "blocks": {
+        "accordion_UXCBAr": {
+          "type": "accordion",
+          "settings": {
+            "question": "What are Pop On Energy Pouches?",
+            "answer": "<p>Pop On Energy Pouches are a <strong>nicotine-free</strong> way to enjoy clean energy and fresh breath in a discreet pouch. They are smoke-free, spit-free, and hands-free, making them easy to use anytime, anywhere.</p><p>Each pouch contains 50 mg of caffeine and Alpha GPC and L-Theanine for smooth focus in a discreet pouch placed under the upper lip on your gum line.</p><p>Pop On Energy Pouches are intended for 18+ adult use only.</p>",
+            "liquid": ""
+          }
+        },
+        "accordion_98iAkM": {
+          "type": "accordion",
+          "settings": {
+            "question": "Who are Pop On Energy Pouches for?",
+            "answer": "<p>Pop On Energy Pouches are designed for adults looking for a convenient, discreet energy boost and fresh breath experience.</p><p>They are ideal for people who want:</p><ul><li>A portable alternative to energy drinks</li><li>Fresh breath throughout the day</li><li>A hands-free energy option</li><li>A nicotine-free pouch experience</li></ul><p>If you are sensitive to caffeine or prefer to avoid caffeine, this product may not be for you.</p>",
+            "liquid": ""
+          }
+        },
+        "accordion_fk6tzk": {
+          "type": "accordion",
+          "settings": {
+            "question": "Are Pop On Pouches nicotine-free?",
+            "answer": "<p>Yes. Pop On Pouches contain <strong>zero nicotine and zero tobacco</strong>.</p>",
+            "liquid": ""
+          }
+        },
+        "accordion_XabanF": {
+          "type": "accordion",
+          "settings": {
+            "question": "What are Pop On Pouches used for?",
+            "answer": "<p>They are designed to provide <strong>clean energy, fresh breath, and a discreet, hands-free alternative to energy drinks or gum</strong>.</p>",
+            "liquid": ""
+          }
+        },
+        "accordion_eF38fR": {
+          "type": "accordion",
+          "settings": {
+            "question": "How do Pop On Pouches work?",
+            "answer": "<p>Place a pouch <strong>under your upper lip</strong>. The ingredients gradually release and are absorbed through the gums and oral lining.</p>",
+            "liquid": ""
+          }
+        },
+        "accordion_byC68y": {
+          "type": "accordion",
+          "settings": {
+            "question": "Do you have to chew or suck on the pouch?",
+            "answer": "<p>No. Simply place the pouch under your lip and let it work.</p>",
+            "liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "accordion_UXCBAr",
+        "accordion_98iAkM",
+        "accordion_fk6tzk",
+        "accordion_XabanF",
+        "accordion_eF38fR",
+        "accordion_byC68y"
+      ],
+      "name": "C Accordion Alt",
+      "settings": {
+        "header": "FAQs",
+        "link": "https://poponveneers.com/pages/pouch-faq",
+        "name": "SEE MORE FAQS",
+        "mobile_layout": "column",
+        "desktop_layout": "row-reverse"
+      }
+    },
+    "customcode_content_generator_rUW68y": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "content_FQRx6B": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<h2><strong>What are customers saying?</strong></h2>"
+          }
+        }
+      },
+      "block_order": [
+        "content_FQRx6B"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customode_loox_reviews_3WdAFq": {
+      "type": "customode-loox-reviews",
+      "name": "C Loox Reviews",
+      "settings": {
+        "only_photos": false,
+        "hide_thumbnails": false,
+        "product_handle": "",
+        "aggregated": true,
+        "data-limit": 4,
+        "maxwidth": 1080
+      }
+    },
+    "customcode_sticky_atc_3tNdbK": {
+      "type": "customcode-sticky-atc",
+      "custom_css": [
+        "c-sticky-atc {background-color: transparent; padding: 10px;}",
+        "c-sticky-atc .inner-container div.c-button {background-color: #02bf63; color: white; border-radius: 8px; padding: 5px 15px;}",
+        "c-sticky-atc .inner-container div.c-button .product-price {right: 10px !important;}",
+        "c-sticky-atc .inner-container div.c-button s {font-size: 16px; opacity: 0.8;}"
+      ],
+      "name": "C Sticky ATC",
+      "settings": {
+        "product_context": "",
+        "title": "",
+        "button_text": "ADD TO CART",
+        "display_prices": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "customcode_featured_product_HRwfDi",
+    "1785169818890c93bd",
+    "17601015186c120833",
+    "customcode_content_generator_TfQjNU",
+    "customcode_content_generator_GrEmhb",
+    "customcode_content_generator_pzWitx",
+    "customcode_animated_container_haE6Pj",
+    "customcode_content_generator_QBdEYt",
+    "customcode_image_banner_kYWMgw",
+    "customcode_content_generator_ENFLbP",
+    "customcode_animated_triangle_NetdDY",
+    "customcode_content_generator_pq8ypD",
+    "customcode_product_features_YDBrCH",
+    "customcode_content_generator_RdPNkm",
+    "customcode_timeline_section_nnyNq7",
+    "customcode_content_generator_xHmeFQ",
+    "customcode_image_banner_r8drAa",
+    "customcode_content_generator_x7aKJV",
+    "customcode_accordion_alt_UpWmfB",
+    "customcode_content_generator_rUW68y",
+    "customode_loox_reviews_3WdAFq",
+    "customcode_sticky_atc_3tNdbK"
+  ]
+}
