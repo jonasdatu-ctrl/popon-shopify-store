@@ -177,6 +177,53 @@
         "type": "shopify://apps/referral-program-shopjar/blocks/app-shopjar/bf205236-47cf-42ff-acf9-5de1b0804e4d",
         "disabled": false,
         "settings": {}
+      },
+      "2680175748099902610": {
+        "type": "shopify://apps/amazon-reviews/blocks/product-rating-snippet-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "disabled": false,
+        "settings": {}
+      },
+      "16475345141933610880": {
+        "type": "shopify://apps/amazon-reviews/blocks/sticky-compact-widget-block-embed.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "disabled": true,
+        "settings": {
+          "font": "default",
+          "variant": "basic",
+          "themeId": "light",
+          "verticalPositionId": "top",
+          "horizontalPositionId": "right",
+          "minimize": false,
+          "slideType": "rating",
+          "showDate": true
+        }
+      },
+      "2220407886192455742": {
+        "type": "shopify://apps/amazon-reviews/blocks/trust-widget-block-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "disabled": true,
+        "settings": {
+          "font": "default",
+          "themeId": "light",
+          "variant": "message",
+          "message": "Our customers have rated us",
+          "position": "top",
+          "transparent": 1
+        }
+      },
+      "12366796244750993390": {
+        "type": "shopify://apps/amazon-reviews/blocks/sticky-compact-widget-block-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "disabled": true,
+        "settings": {
+          "font": "default",
+          "variant": "trust",
+          "themeId": "light",
+          "verticalPositionId": "top",
+          "horizontalPositionId": "right",
+          "minimize": false,
+          "slideType": "rating",
+          "showDate": true,
+          "message": "Our customers have rated us",
+          "transparent": 1
+        }
       }
     },
     "color_schemes": {
