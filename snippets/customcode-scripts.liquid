@@ -175,6 +175,7 @@
 
     // 3. Gift Addition Task
     const processGiftVariant = async () => {
+      Rebuy.SmartCart.skip_open = true;
       console.log("[Gift Script] Checking giftVariantId...", giftVariantId);
       if (!giftVariantId) return;
 
@@ -203,9 +204,11 @@
 
         if (response.ok) {
           console.log(`[Gift Script] Gift variant ${giftVariantId} added to cart.`);
+          Rebuy.SmartCart.skip_open = false;
           // Optional: Refresh page or cart drawer here if needed
         } else {
           console.error('[Gift Script] Add to cart failed:', await response.json());
+          Rebuy.SmartCart.skip_open = false;
         }
       } catch (err) {
         console.error('[Gift Script] Failed to process gift variant:', err);
