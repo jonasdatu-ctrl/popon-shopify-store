@@ -146,13 +146,14 @@
   </script>
 {% endif %}
 <script>
-  //Parameter based functions
   (function () {
     // 1. Extraction Logic
     const params = new URLSearchParams(window.location.search);
     const caseId = params.get('caseId');
     const orderEmail = params.get('orderEmail');
     const giftVariantId = params.get('variantgift');
+
+    console.log("[Gift Script] Extracted giftVariantId:", giftVariantId);
 
     if (caseId) {
       localStorage.setItem('previousVeneerOrder', caseId);
@@ -162,31 +163,33 @@
       localStorage.setItem('previousOrderEmail', orderEmail);
     }
 
-    // 2. DOM Population Logic
-    document.addEventListener('DOMContentLoaded', function() {
+    // 2. DOM Population Task
+    const populateFields = () => {
       const emailField = document.querySelector('input[name="properties[Previous-Order-Email]"]');
       const storedEmail = localStorage.getItem('previousOrderEmail');
 
       if (emailField && storedEmail) {
         emailField.value = storedEmail;
       }
-    });
+    };
 
-    document.addEventListener('DOMContentLoaded', async () => {
-      console.log(giftVariantId);
+    // 3. Gift Addition Task
+    const processGiftVariant = async () => {
+      console.log("[Gift Script] Checking giftVariantId...", giftVariantId);
       if (!giftVariantId) return;
 
       try {
-        console.log("STARTING...");
+        console.log("[Gift Script] STARTING cart fetch...");
         const cart = await fetch('/cart.js').then(r => r.json());
 
         const exists = cart.items.some(
           item => String(item.variant_id) === String(giftVariantId)
         );
-        console.log("EXISTS...")
+        
+        console.log("[Gift Script] Item exists in cart:", exists);
         if (exists) return;
 
-        await fetch('/cart/add.js', {
+        const response = await fetch('/cart/add.js', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -198,11 +201,28 @@
           })
         });
 
-        console.log(`Gift variant ${giftVariantId} added to cart.`);
+        if (response.ok) {
+          console.log(`[Gift Script] Gift variant ${giftVariantId} added to cart.`);
+          // Optional: Refresh page or cart drawer here if needed
+        } else {
+          console.error('[Gift Script] Add to cart failed:', await response.json());
+        }
       } catch (err) {
-        console.error('Failed to process gift variant:', err);
+        console.error('[Gift Script] Failed to process gift variant:', err);
       }
-    });  
+    };
+
+    // Safe execution helper (handles both pre- and post-DOMContentLoaded states)
+    const runOnReady = (fn) => {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', fn);
+      } else {
+        fn(); // DOM is already ready, run immediately
+      }
+    };
+
+    runOnReady(populateFields);
+    runOnReady(processGiftVariant);
 
   })();
 </script>
