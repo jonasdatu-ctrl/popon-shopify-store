@@ -128,6 +128,7 @@
           "settings": {
             "accordion_title": "<p>What Color Should I Choose? ▶️</p>",
             "video_link": "",
+            "above_content": "",
             "video": "shopify://files/videos/36- Comparing all 3 color options (1).mov",
             "content": "",
             "page": "",
@@ -145,6 +146,7 @@
           "settings": {
             "accordion_title": "<p>Eating With Pop On Veneers®? ▶️</p>",
             "video_link": "",
+            "above_content": "",
             "video": "shopify://files/videos/Jessica eating apple 1.2.mp4",
             "content": "<p><br/>Pop On Veneers® are designed for cosmetic use to enhance the <em>appearance</em> of your smile. Each person's experience eating with Pop On Veneers® may vary.<br/><br/></p>",
             "page": "",
@@ -161,6 +163,7 @@
           "settings": {
             "accordion_title": "<p>What If They Don’t Fit?</p>",
             "video_link": "",
+            "above_content": "",
             "content": "",
             "page": "",
             "display_html_content": true,
@@ -177,6 +180,7 @@
           "settings": {
             "accordion_title": "<p>How Fast Can I Get Them?</p>",
             "video_link": "",
+            "above_content": "",
             "content": "<p><em><strong>Yes! We are the fastest in the nation!</strong></em></p><p><strong>Shipping Time </strong>- Orders in the continental US ship free via Fedex/UPS 2 Business Day, in all directions!</p><p>Express overnight shipping available for additional fees.</p><p><strong>Production Time</strong> -<br/>Standard: 2 weeks after impression approval.</p><p>Rush Production: 1 week after impression approval. Select rush in shipping<br/>Please note: rush processing fee is per order, and does not apply to all future orders or remakes. Not available for alternative financed orders.</p>",
             "page": "",
             "display_html_content": false,
@@ -192,6 +196,7 @@
           "settings": {
             "accordion_title": "<p>What is 100% Custom Made?</p>",
             "video_link": "",
+            "above_content": "<p>Your smile is one-of-a-kind! Check out how our designers start with your teeth molds, combine digital technology with skilled hand craftsmanship, to create a smile that's made just for you! </p>",
             "video": "shopify://files/videos/tolstoy_218bf3cb-cef2-4147-802b-8ae5e9f712ee.webm",
             "content": "",
             "page": "",
@@ -208,6 +213,7 @@
           "settings": {
             "accordion_title": "<p>Product Details</p>",
             "video_link": "",
+            "above_content": "",
             "content": "<ul><li>At-Home Impression Kit  (retail $49) to make impression molds from the comfort of your home</li><li>Free Upgrade 2 day Shipping all directions (Excludes HI, AK, & PO Box)</li><li>Prepaid return label to ship your impressions back to POP ON in NYC</li><li>Backed by the Pop On Promise</li><li>Pop On Veneers® are designed exclusively for cosmetic use, providing a simple and effective way to enhance the appearance of your smile. They are not intended to diagnose, treat, cure, or prevent any medical or dental condition. Pop On Veneers® are not a substitute for professional dental care or treatment and are purely for aesthetic purposes.</li></ul>",
             "page": "",
             "display_html_content": false,
@@ -224,6 +230,7 @@
           "settings": {
             "accordion_title": "<p>Around NYC?</p>",
             "video_link": "",
+            "above_content": "",
             "content": "",
             "page": "",
             "display_html_content": true,
