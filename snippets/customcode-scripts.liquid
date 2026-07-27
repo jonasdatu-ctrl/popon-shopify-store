@@ -176,6 +176,7 @@
       if (!giftVariantId) return;
 
       try {
+        console.log("STARTING...");
         const cart = await fetch('/cart.js').then(r => r.json());
 
         const exists = cart.items.some(
