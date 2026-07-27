@@ -182,7 +182,7 @@
         const exists = cart.items.some(
           item => String(item.variant_id) === String(giftVariantId)
         );
-
+        console.log("EXISTS...")
         if (exists) return;
 
         await fetch('/cart/add.js', {
