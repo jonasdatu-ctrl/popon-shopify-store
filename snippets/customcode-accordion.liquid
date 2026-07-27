@@ -4,6 +4,11 @@
     <span class="accordion-icon" aria-hidden="true">+</span>
   </div>
   <div class="accordion-content c-hidden" aria-hidden="true">
+    {% if block.settings.above_content != null %}
+      <div class="content-container">
+        {{ block.settings.above_content }}
+      </div>
+    {% endif %}    
     {% if block.settings.video_link != null %}
       <div class="video-container">
         <iframe
