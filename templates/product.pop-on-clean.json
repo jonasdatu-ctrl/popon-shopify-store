@@ -442,13 +442,12 @@
     "178515665221a3be15": {
       "type": "_blocks",
       "blocks": {
-        "amazon_reviews_carousel_widget_block_product_A4LPn7": {
-          "type": "shopify://apps/amazon-reviews/blocks/carousel-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "amazon_reviews_grid_widget_block_product_QdQU48": {
+          "type": "shopify://apps/amazon-reviews/blocks/grid-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
           "settings": {
             "font": "default",
             "themeId": "light",
             "reviewsType": "image_first",
-            "autoscroll": true,
             "showProductPicture": true,
             "showDate": true,
             "fixedReviewsHeight": false,
@@ -460,7 +459,7 @@
         }
       },
       "block_order": [
-        "amazon_reviews_carousel_widget_block_product_A4LPn7"
+        "amazon_reviews_grid_widget_block_product_QdQU48"
       ],
       "settings": {
         "content_direction": "column",
