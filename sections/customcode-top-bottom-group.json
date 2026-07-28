@@ -42,30 +42,6 @@
             "d_margin_bottom": 10
           }
         },
-        "callout_NqcAUQ": {
-          "type": "callout",
-          "disabled": true,
-          "settings": {
-            "text": "Congrats! You won a $20 extra discount! Claim now!",
-            "highlight": "$20 extra",
-            "highlight_color": "#ff5c89",
-            "tooltip": "",
-            "m_margin_bottom": 10,
-            "d_margin_bottom": 10
-          }
-        },
-        "callout_F9eHDE": {
-          "type": "callout",
-          "disabled": true,
-          "settings": {
-            "text": "💥 YOU WON EXTRA $20 OFF - $220 OFF IF YOU ORDER NOW!",
-            "highlight": "EXTRA $20 OFF",
-            "highlight_color": "#ff5c89",
-            "tooltip": "",
-            "m_margin_bottom": 10,
-            "d_margin_bottom": 10
-          }
-        },
         "variant_selector_TY9TJL": {
           "type": "variant_selector",
           "settings": {
@@ -97,19 +73,6 @@
             "d_margin_bottom": 20
           }
         },
-        "product_scroller_kgwNfV": {
-          "type": "product_scroller",
-          "disabled": true,
-          "settings": {
-            "header": "Buy now and earn free gifts",
-            "image_set": "https://poponveneers.com/cdn/shop/files/Screenshot_2025-07-17_at_12.49.26_AM.png?v=1752684637&width=1080|https://poponveneers.com/cdn/shop/files/Screenshot_2025-07-17_at_12.49.35_AM.png?v=1752684640&width=1080|https://poponveneers.com/cdn/shop/files/Screenshot_2025-07-17_at_12.49.41_AM.png?v=1752684644&width=1080|https://poponveneers.com/cdn/shop/files/Screenshot_2025-07-17_at_12.49.49_AM.png?v=1752684647&width=1080",
-            "product_set": "3D Models of Your Teeth|Mirrored Case|6 Cleaning Tablets|Toothbrush",
-            "tag_set": "Free|Free|Free|Free",
-            "html": "",
-            "m_margin_bottom": 10,
-            "d_margin_bottom": 20
-          }
-        },
         "product_scroller_rJUNVc": {
           "type": "product_scroller",
           "settings": {
@@ -120,42 +83,6 @@
             "html": "",
             "m_margin_bottom": 10,
             "d_margin_bottom": 20
-          }
-        },
-        "accordion_QwaWNg": {
-          "type": "accordion",
-          "disabled": true,
-          "settings": {
-            "accordion_title": "<p>What Color Should I Choose? ▶️</p>",
-            "video_link": "",
-            "above_content": "",
-            "video": "shopify://files/videos/36- Comparing all 3 color options (1).mov",
-            "content": "",
-            "page": "",
-            "display_html_content": false,
-            "text": "",
-            "additional_content": "",
-            "button_link": "",
-            "button_text": "",
-            "custom_html": ""
-          }
-        },
-        "accordion_UktWGK": {
-          "type": "accordion",
-          "disabled": true,
-          "settings": {
-            "accordion_title": "<p>Eating With Pop On Veneers®? ▶️</p>",
-            "video_link": "",
-            "above_content": "",
-            "video": "shopify://files/videos/Jessica eating apple 1.2.mp4",
-            "content": "<p><br/>Pop On Veneers® are designed for cosmetic use to enhance the <em>appearance</em> of your smile. Each person's experience eating with Pop On Veneers® may vary.<br/><br/></p>",
-            "page": "",
-            "display_html_content": false,
-            "text": "",
-            "additional_content": "",
-            "button_link": "",
-            "button_text": "",
-            "custom_html": ""
           }
         },
         "accordion_4jYDgz": {
@@ -224,6 +151,79 @@
             "custom_html": ""
           }
         },
+        "callout_NqcAUQ": {
+          "type": "callout",
+          "disabled": true,
+          "settings": {
+            "text": "Congrats! You won a $20 extra discount! Claim now!",
+            "highlight": "$20 extra",
+            "highlight_color": "#ff5c89",
+            "tooltip": "",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 10
+          }
+        },
+        "callout_F9eHDE": {
+          "type": "callout",
+          "disabled": true,
+          "settings": {
+            "text": "💥 YOU WON EXTRA $20 OFF - $220 OFF IF YOU ORDER NOW!",
+            "highlight": "EXTRA $20 OFF",
+            "highlight_color": "#ff5c89",
+            "tooltip": "",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 10
+          }
+        },
+        "product_scroller_kgwNfV": {
+          "type": "product_scroller",
+          "disabled": true,
+          "settings": {
+            "header": "Buy now and earn free gifts",
+            "image_set": "https://poponveneers.com/cdn/shop/files/Screenshot_2025-07-17_at_12.49.26_AM.png?v=1752684637&width=1080|https://poponveneers.com/cdn/shop/files/Screenshot_2025-07-17_at_12.49.35_AM.png?v=1752684640&width=1080|https://poponveneers.com/cdn/shop/files/Screenshot_2025-07-17_at_12.49.41_AM.png?v=1752684644&width=1080|https://poponveneers.com/cdn/shop/files/Screenshot_2025-07-17_at_12.49.49_AM.png?v=1752684647&width=1080",
+            "product_set": "3D Models of Your Teeth|Mirrored Case|6 Cleaning Tablets|Toothbrush",
+            "tag_set": "Free|Free|Free|Free",
+            "html": "",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "accordion_QwaWNg": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "accordion_title": "<p>What Color Should I Choose? ▶️</p>",
+            "video_link": "",
+            "above_content": "",
+            "video": "shopify://files/videos/36- Comparing all 3 color options (1).mov",
+            "content": "",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": ""
+          }
+        },
+        "accordion_UktWGK": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "accordion_title": "<p>Eating With Pop On Veneers®? ▶️</p>",
+            "video_link": "",
+            "above_content": "",
+            "video": "shopify://files/videos/Jessica eating apple 1.2.mp4",
+            "content": "<p><br/>Pop On Veneers® are designed for cosmetic use to enhance the <em>appearance</em> of your smile. Each person's experience eating with Pop On Veneers® may vary.<br/><br/></p>",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": ""
+          }
+        },
         "accordion_kGyPtf": {
           "type": "accordion",
           "disabled": true,
@@ -264,18 +264,18 @@
       "block_order": [
         "title_EkQyn7",
         "scarcity_Y7Mxyf",
-        "callout_NqcAUQ",
-        "callout_F9eHDE",
         "variant_selector_TY9TJL",
         "buy_button_RVBmwk",
-        "product_scroller_kgwNfV",
         "product_scroller_rJUNVc",
-        "accordion_QwaWNg",
-        "accordion_UktWGK",
         "accordion_4jYDgz",
         "accordion_QCXE7h",
         "accordion_89jVHP",
         "accordion_9MBfGx",
+        "callout_NqcAUQ",
+        "callout_F9eHDE",
+        "product_scroller_kgwNfV",
+        "accordion_QwaWNg",
+        "accordion_UktWGK",
         "accordion_kGyPtf",
         "freebies_n4mTXi"
       ],
