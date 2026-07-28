@@ -255,21 +255,28 @@
     };
 
     // Helper: Wait for Rebuy SDK to be ready
-    const waitForRebuy = (timeout = 10000, interval = 100) => {
-      return new Promise((resolve, reject) => {
-        const startTime = Date.now();
-        const check = () => {
-          if (window.Rebuy && window.Rebuy.SmartCart) {
-            resolve(window.Rebuy);
-          } else if (Date.now() - startTime >= timeout) {
-            reject(new Error('[Gift Script] Timeout waiting for Rebuy SDK'));
-          } else {
-            setTimeout(check, interval);
-          }
-        };
-        check();
-      });
+const waitForRebuy = (timeout = 10000, interval = 100) => {
+  return new Promise((resolve, reject) => {
+    const startTime = Date.now();
+
+    const check = () => {
+      console.log("[Gift Script] window.Rebuy:", window.Rebuy);
+      console.log("[Gift Script] SmartCart:", window.Rebuy?.SmartCart);
+
+      if (window.Rebuy && window.Rebuy.SmartCart) {
+        console.log("[Gift Script] Rebuy ready");
+        resolve(window.Rebuy);
+      } else if (Date.now() - startTime >= timeout) {
+        console.log("[Gift Script] Rebuy timeout");
+        reject(new Error("Timeout"));
+      } else {
+        setTimeout(check, interval);
+      }
     };
+
+    check();
+  });
+};
 
     // 3. Gift Addition Task
     const processGiftVariant = async () => {
@@ -278,7 +285,9 @@
 
       try {
         // Safely wait for Rebuy to load before reading/modifying SmartCart
-        await waitForRebuy();
+console.log("[Gift Script] Waiting for Rebuy...");
+await waitForRebuy();
+console.log("[Gift Script] Rebuy loaded");
 
         Rebuy.SmartCart.skip_open = true;
 
