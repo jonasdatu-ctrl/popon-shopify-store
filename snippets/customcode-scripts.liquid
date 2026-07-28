@@ -202,7 +202,6 @@
 
         if (response.ok) {
           console.log(`[Gift Script] Gift variant ${giftVariantId} added to cart.`);
-          // Optional: Refresh page or cart drawer here if needed
         } else {
           console.error('[Gift Script] Add to cart failed:', await response.json());
         }
@@ -211,20 +210,11 @@
       }
     };
 
-    // Safe execution helper (handles both pre- and post-DOMContentLoaded states)
-    {% comment %} const runOnReady = (fn) => {
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', fn);
-      } else {
-        fn(); // DOM is already ready, run immediately
-      }
-    };
-
-    runOnReady(populateFields);
-    runOnReady(processGiftVariant); {% endcomment %}
-
-        populateFields()
-    processGiftVariant()
+    // Run both tasks after DOM Content is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      populateFields();
+      processGiftVariant();
+    });
 
   })();
 </script>
