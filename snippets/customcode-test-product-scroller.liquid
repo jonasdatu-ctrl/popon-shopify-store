@@ -1,0 +1,47 @@
+{% style %}
+    .product-scroller {border-top: 0.5px solid #003659FF; padding-top: 10px; margin-top: 10px;}
+    .product-scroller .scroller-header{display: flex; justify-content: space-between; align-items: center; gap: 5px; text-wrap-style: balance;}
+    .product-scroller .scroller-header p {color: #003659; font-weight: 600; font-size: 12px; margin: 0;}
+    .product-scroller .scroller-header span {font-size: 10px; margin: 0; font-weight: 600; background-color: #02bf63; color: white; padding: 0 3px; border-radius: 3px; min-width: max-content;}    
+    .product-scroller .scroller-container {display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; margin-top: 15px;}
+    .product-scroller .scroller-container .scroller-image {position: relative;}
+    .product-scroller .scroller-container .scroller-image .scroller-tag {position: absolute; left: 50%; transform: translate(-50%, -50%); padding: 0 3px; border-radius: 3px; background-color: #02bf63; color: white; font-size: 10px; font-weight: 600; text-align: center;}
+    .product-scroller .scroller-container .scroller-image p {margin-top: 5px; text-align: center; font-size: 12px; text-wrap-style: balance; font-weight: 500; color: #004659;}
+    .product-scroller .bottom-label {text-align: right; font-weight: 600; color: #003659; margin-top: 10px;}
+    @media screen and (min-width: 769px) {
+        .product-scroller .scroller-header p {font-size: 14px;}
+        .product-scroller .scroller-header span {font-size: 12px;}
+        .product-scroller .scroller-container .scroller-image .scroller-tag {font-size: 12px;}
+    }
+{% endstyle %}
+
+{% assign image_set = block.settings.image_set | split: '|' %}
+{% assign product_set = block.settings.product_set | split: '|' %}
+{% assign tag_set = block.settings.tag_set | split: '|' %}
+
+<div class="product-scroller">
+    <div class="scroller-header">
+        <p>{{ block.settings.header }}</p>
+        <span>
+            {{ image_set.size }}/{{ image_set.size }} UNLOCKED
+        </span>
+    </div>
+    <div class="scroller-container">
+        {% for image in image_set %}
+            <div class="scroller-image">
+                {% if tag_set[forloop.index0] != '' %}
+                    <div class="scroller-tag">
+                        {{ tag_set[forloop.index0] }}
+                    </div>
+                {% endif %}                
+                <img src="{{ image }}">
+                <p>{{ product_set[forloop.index0] }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    {% if block.settings.html != null %}
+        <div class="bottom-label">
+            {{ block.settings.html }}
+        </div>
+    {% endif %}
+</div>
