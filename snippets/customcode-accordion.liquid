@@ -61,5 +61,10 @@
         {{ block.settings.custom_html }}
       </div>
     {% endif %}
+    {% if block.settings.custom_liquid != blank %}
+      <div class="custom-html-container">
+        {{ block.settings.custom_liquid }}
+      </div>
+    {% endif %}    
   </div>
 </c-accordion>
