@@ -191,59 +191,50 @@
     };
 
     // 3. Gift Addition Task
-    const processGiftVariant = async () => {
-      console.log("[Gift Script] Checking giftVariantId...", giftVariantId);
-      if (!giftVariantId) return;
+const processGiftVariant = async () => {
+  console.log("[Gift Script] Checking giftVariantId...", giftVariantId);
+  if (!giftVariantId) return;
 
-      try {
-        // Safely wait for Rebuy to load before reading/modifying SmartCart
-        await waitForRebuy();
+  try {
+    await waitForRebuy();
 
-        Rebuy.SmartCart.skip_open = true;
+    const cart = await fetch('/cart.js').then(r => r.json());
 
-        console.log("[Gift Script] STARTING cart fetch...");
-        const cart = await fetch('/cart.js').then(r => r.json());
+    const exists = cart.items.some(
+      item => String(item.variant_id) === String(giftVariantId)
+    );
+    
+    if (exists) return;
 
-        const exists = cart.items.some(
-          item => String(item.variant_id) === String(giftVariantId)
-        );
-        
-        console.log("[Gift Script] Item exists in cart:", exists);
-        if (exists) {
-          Rebuy.SmartCart.skip_open = false;
-          return;
-        }
-
-        const response = await fetch('/cart/add.js', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            id: giftVariantId,
-            quantity: 1,
-            rebuy: false            
-          })
-        });
-
-        if (response.ok) {
-          console.log(`[Gift Script] Gift variant ${giftVariantId} added to cart.`);
-          
-          // Trigger Rebuy to refresh its internal cart UI state if method exists
-          if (typeof Rebuy.SmartCart.show === 'function') {
-            Rebuy.SmartCart.show();
-          }
-        } else {
-          console.error('[Gift Script] Add to cart failed:', await response.json());
-        }
-      } catch (err) {
-        console.error('[Gift Script] Failed to process gift variant:', err);
-      } finally {
-        if (window.Rebuy && window.Rebuy.SmartCart) {
-          Rebuy.SmartCart.skip_open = false;
-        }
-      }
-    };
+    // Use Rebuy's native add-to-cart API which strictly honors skip_open
+    if (window.Rebuy && window.Rebuy.Cart) {
+      await Rebuy.Cart.addItem({
+        id: giftVariantId,
+        quantity: 1
+      }, {
+        skip_open: true // Explicitly prevents drawer opening
+      });
+      console.log(`[Gift Script] Gift variant ${giftVariantId} added quietly via Rebuy.`);
+    } else {
+      // Fallback: If Rebuy.Cart isn't available, mute SmartCart before native add
+      Rebuy.SmartCart.skip_open = true;
+      
+      await fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: giftVariantId, quantity: 1, rebuy: false })
+      });
+      
+      // Force hide in case Rebuy tried to open anyway
+      setTimeout(() => {
+        if (Rebuy.SmartCart) Rebuy.SmartCart.hide();
+        Rebuy.SmartCart.skip_open = false;
+      }, 50);
+    }
+  } catch (err) {
+    console.error('[Gift Script] Failed to process gift variant:', err);
+  }
+};
 
     // Safe execution helper (handles both pre- and post-DOMContentLoaded states)
     const runOnReady = (fn) => {
