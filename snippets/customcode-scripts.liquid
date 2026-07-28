@@ -335,9 +335,13 @@
       }
     };
 
-    runOnReady(populateFields);
-    runOnReady(processGiftVariant);
+console.log("[Gift Script] Before populate");
+populateFields();
 
+console.log("[Gift Script] Before processGiftVariant");
+processGiftVariant();
+
+console.log("[Gift Script] After processGiftVariant call");
   })();
 </script>
 
