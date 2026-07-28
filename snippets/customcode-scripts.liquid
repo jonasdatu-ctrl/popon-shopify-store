@@ -211,7 +211,7 @@
     };
 
     // Run both tasks after DOM Content is loaded
-    document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('load', () => {
       populateFields();
       processGiftVariant();
     });
