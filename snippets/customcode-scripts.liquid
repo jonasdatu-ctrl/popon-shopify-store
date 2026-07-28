@@ -285,9 +285,9 @@ const waitForRebuy = (timeout = 10000, interval = 100) => {
 
       try {
         // Safely wait for Rebuy to load before reading/modifying SmartCart
-console.log("[Gift Script] Waiting for Rebuy...");
+{% comment %} console.log("[Gift Script] Waiting for Rebuy...");
 await waitForRebuy();
-console.log("[Gift Script] Rebuy loaded");
+console.log("[Gift Script] Rebuy loaded"); {% endcomment %}
 
         Rebuy.SmartCart.skip_open = true;
 
