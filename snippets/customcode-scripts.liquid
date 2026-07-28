@@ -289,7 +289,7 @@ const waitForRebuy = (timeout = 10000, interval = 100) => {
 await waitForRebuy();
 console.log("[Gift Script] Rebuy loaded"); {% endcomment %}
 
-        Rebuy.SmartCart.skip_open = true;
+        {% comment %} Rebuy.SmartCart.skip_open = true; {% endcomment %}
 
         console.log("[Gift Script] STARTING cart fetch...");
         const cart = await fetch('/cart.js').then(r => r.json());
@@ -330,7 +330,7 @@ console.log("[Gift Script] Rebuy loaded"); {% endcomment %}
         console.error('[Gift Script] Failed to process gift variant:', err);
       } finally {
         if (window.Rebuy && window.Rebuy.SmartCart) {
-          Rebuy.SmartCart.skip_open = false;
+          {% comment %} Rebuy.SmartCart.skip_open = false; {% endcomment %}
         }
       }
     };
