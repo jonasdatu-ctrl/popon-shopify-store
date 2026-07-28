@@ -312,7 +312,7 @@
           
           // Trigger Rebuy to refresh its internal cart UI state if method exists
           if (typeof Rebuy.SmartCart.show === 'function') {
-            Rebuy.SmartCart.show();
+            {% comment %} Rebuy.SmartCart.show(); {% endcomment %}
           }
         } else {
           console.error('[Gift Script] Add to cart failed:', await response.json());
