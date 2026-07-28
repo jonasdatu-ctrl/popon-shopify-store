@@ -85,6 +85,23 @@
             "d_margin_bottom": 20
           }
         },
+        "accordion_qdpkej": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>What Are The 4 FREE Gifts?</p>",
+            "video_link": "",
+            "above_content": "",
+            "content": "",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": "{% render 'customcode-test-product-scroller' %}"
+          }
+        },
         "accordion_4jYDgz": {
           "type": "accordion",
           "settings": {
@@ -153,23 +170,6 @@
             "button_text": "",
             "custom_html": "",
             "custom_liquid": ""
-          }
-        },
-        "accordion_qdpkej": {
-          "type": "accordion",
-          "settings": {
-            "accordion_title": "<p>What You Get</p>",
-            "video_link": "",
-            "above_content": "",
-            "content": "",
-            "page": "",
-            "display_html_content": false,
-            "text": "",
-            "additional_content": "",
-            "button_link": "",
-            "button_text": "",
-            "custom_html": "",
-            "custom_liquid": "{% render 'customcode-test-product-scroller' %}"
           }
         },
         "callout_NqcAUQ": {
@@ -291,11 +291,11 @@
         "variant_selector_TY9TJL",
         "buy_button_RVBmwk",
         "product_scroller_rJUNVc",
+        "accordion_qdpkej",
         "accordion_4jYDgz",
         "accordion_QCXE7h",
         "accordion_89jVHP",
         "accordion_9MBfGx",
-        "accordion_qdpkej",
         "callout_NqcAUQ",
         "callout_F9eHDE",
         "product_scroller_kgwNfV",
@@ -305,7 +305,7 @@
         "freebies_n4mTXi"
       ],
       "custom_css": [
-        "[data-row-index=\"9\"] {display: none;}"
+        "[data-row-index=\"5\"] {display: none;}"
       ],
       "name": "C Featured Product",
       "settings": {
