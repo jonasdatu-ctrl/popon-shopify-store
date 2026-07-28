@@ -212,7 +212,7 @@
     };
 
     // Safe execution helper (handles both pre- and post-DOMContentLoaded states)
-    const runOnReady = (fn) => {
+    {% comment %} const runOnReady = (fn) => {
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', fn);
       } else {
@@ -221,7 +221,10 @@
     };
 
     runOnReady(populateFields);
-    runOnReady(processGiftVariant);
+    runOnReady(processGiftVariant); {% endcomment %}
+
+        populateFields()
+    processGiftVariant()
 
   })();
 </script>
