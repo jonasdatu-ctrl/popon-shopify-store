@@ -99,7 +99,8 @@
             "additional_content": "<ul><li>Backed by the Pop On Promise</li><li>Up to<strong> two remakes included </strong>for the perfect fit</li><li>Dedicated support team every step of the way!</li></ul>",
             "button_link": "",
             "button_text": "",
-            "custom_html": ""
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "accordion_QCXE7h": {
@@ -115,7 +116,8 @@
             "additional_content": "",
             "button_link": "",
             "button_text": "",
-            "custom_html": ""
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "accordion_89jVHP": {
@@ -132,7 +134,8 @@
             "additional_content": "",
             "button_link": "",
             "button_text": "",
-            "custom_html": "<a style=\"display: none;\" href=\"tel:639682228232\" data-ga-label=\"HELLO WORLD\">\nClick Me! \n</a>\n<div style=\"display: none;\" data-ga-label=\"HELLO-WORLD\">\n CLICK ME!\n</div>"
+            "custom_html": "<a style=\"display: none;\" href=\"tel:639682228232\" data-ga-label=\"HELLO WORLD\">\nClick Me! \n</a>\n<div style=\"display: none;\" data-ga-label=\"HELLO-WORLD\">\n CLICK ME!\n</div>",
+            "custom_liquid": ""
           }
         },
         "accordion_9MBfGx": {
@@ -148,7 +151,25 @@
             "additional_content": "",
             "button_link": "",
             "button_text": "",
-            "custom_html": ""
+            "custom_html": "",
+            "custom_liquid": ""
+          }
+        },
+        "accordion_qdpkej": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>What You Get</p>",
+            "video_link": "",
+            "above_content": "",
+            "content": "",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": "{% render 'customcode-test-product-scroller' %}"
           }
         },
         "callout_NqcAUQ": {
@@ -203,7 +224,8 @@
             "additional_content": "",
             "button_link": "",
             "button_text": "",
-            "custom_html": ""
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "accordion_UktWGK": {
@@ -221,7 +243,8 @@
             "additional_content": "",
             "button_link": "",
             "button_text": "",
-            "custom_html": ""
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "accordion_kGyPtf": {
@@ -239,7 +262,8 @@
             "additional_content": "<ul><li>No need to make impressions with the kit at home, we'll scan your teeth in our NYC office.</li><li>No Additional fee.</li></ul>",
             "button_link": "https://poponveneers.com/products/pop-on-veneers-in-person-nyc",
             "button_text": "Learn more",
-            "custom_html": ""
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "freebies_n4mTXi": {
@@ -271,6 +295,7 @@
         "accordion_QCXE7h",
         "accordion_89jVHP",
         "accordion_9MBfGx",
+        "accordion_qdpkej",
         "callout_NqcAUQ",
         "callout_F9eHDE",
         "product_scroller_kgwNfV",
@@ -279,7 +304,9 @@
         "accordion_kGyPtf",
         "freebies_n4mTXi"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "[data-row-index=\"9\"] {display: none;}"
+      ],
       "name": "C Featured Product",
       "settings": {
         "product_override": "top-bottom-teeth",
