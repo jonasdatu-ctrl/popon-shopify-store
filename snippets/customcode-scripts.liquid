@@ -173,13 +173,34 @@
       }
     };
 
+    // Helper: Wait for Rebuy SDK to be ready
+    const waitForRebuy = (timeout = 10000, interval = 100) => {
+      return new Promise((resolve, reject) => {
+        const startTime = Date.now();
+        const check = () => {
+          if (window.Rebuy && window.Rebuy.SmartCart) {
+            resolve(window.Rebuy);
+          } else if (Date.now() - startTime >= timeout) {
+            reject(new Error('[Gift Script] Timeout waiting for Rebuy SDK'));
+          } else {
+            setTimeout(check, interval);
+          }
+        };
+        check();
+      });
+    };
+
     // 3. Gift Addition Task
     const processGiftVariant = async () => {
-      Rebuy.SmartCart.skip_open = true;
       console.log("[Gift Script] Checking giftVariantId...", giftVariantId);
       if (!giftVariantId) return;
 
       try {
+        // Safely wait for Rebuy to load before reading/modifying SmartCart
+        await waitForRebuy();
+
+        Rebuy.SmartCart.skip_open = true;
+
         console.log("[Gift Script] STARTING cart fetch...");
         const cart = await fetch('/cart.js').then(r => r.json());
 
@@ -188,7 +209,10 @@
         );
         
         console.log("[Gift Script] Item exists in cart:", exists);
-        if (exists) return;
+        if (exists) {
+          Rebuy.SmartCart.skip_open = false;
+          return;
+        }
 
         const response = await fetch('/cart/add.js', {
           method: 'POST',
@@ -204,14 +228,20 @@
 
         if (response.ok) {
           console.log(`[Gift Script] Gift variant ${giftVariantId} added to cart.`);
-          Rebuy.SmartCart.skip_open = false;
-          // Optional: Refresh page or cart drawer here if needed
+          
+          // Trigger Rebuy to refresh its internal cart UI state if method exists
+          if (typeof Rebuy.SmartCart.show === 'function') {
+            Rebuy.SmartCart.show();
+          }
         } else {
           console.error('[Gift Script] Add to cart failed:', await response.json());
-          Rebuy.SmartCart.skip_open = false;
         }
       } catch (err) {
         console.error('[Gift Script] Failed to process gift variant:', err);
+      } finally {
+        if (window.Rebuy && window.Rebuy.SmartCart) {
+          Rebuy.SmartCart.skip_open = false;
+        }
       }
     };
 
@@ -229,7 +259,6 @@
 
   })();
 </script>
-
 {% comment %} WEB COMPONENTS {% endcomment %}
 <script>
   // SECTIONS
