@@ -25,19 +25,36 @@
           "settings": {
             "liquid": "<div id=\"ab-five\" class=\"c-inner c-desktop\">\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_350k.png?v=1781541581\">\n</a>\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n<a href=\"https://poponveneers.com/pages/payment-options\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n</a>\n<a class=\"c-desktop\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_Pop_On_Promise_2.png?v=1777983216\">\n</a>\n</div>"
           }
+        },
+        "liquid_MYkLCm": {
+          "type": "liquid",
+          "name": "Variant Mobile",
+          "settings": {
+            "liquid": "<div id=\"ab-three-variant\" class=\"c-inner c-mobile\">\n<a style=\"visibility: hidden; padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n<a style=\"padding-right: 0px !important; border-right: none;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_350k.png?v=1781541581\">\n</a>\n<a style=\"visibility: hidden; padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n</div>\n\n<div id=\"ab-four\" class=\"c-inner c-mobile\">\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/payment-options\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n</a>\n<a href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_Pop_On_Promise_2.png?v=1777983216\">\n</a>\n</div>"
+          }
+        },
+        "liquid_DxK8HK": {
+          "type": "liquid",
+          "name": "Variant Desktop",
+          "settings": {
+            "liquid": "<div id=\"ab-five-variant\" class=\"c-inner c-desktop\">\n<div style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_350k.png?v=1781541581\">\n</div>\n<div style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</div>\n<div href=\"https://poponveneers.com/pages/payment-options\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n</div>\n<div class=\"c-desktop\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_Pop_On_Promise_2.png?v=1777983216\">\n</div>\n</div>\n\n<script>\nconst links = document.querySelectorAll(\"#ab-five-variant > div\");\n\n  const targets = [\n    document.querySelector(\"#looxReviewsFrame\"),\n    document.querySelector(\"#shopify-section-sections--21678047461514__customcode_content_generator_QNkfQq > c-content-generator > div > div.content-block.block-accented-header\"),\n    document.querySelector(\"#shopify-section-sections--21678047461514__customcode_text_marquee_f7WPtj > c-text-marquee > div > div.right-container\"),\n    document.querySelector(\"#shopify-section-sections--21678047461514__customcode_product_comparison_kt4fR4\")\n  ];\n\n  links.forEach((link, index) => {\n    if (targets[index]) {\n      link.addEventListener(\"click\", function (e) {\n        e.preventDefault();\n        targets[index].scrollIntoView({\n          behavior: \"smooth\",\n          block: \"center\",\n          inline: \"nearest\"\n        });\n      });\n    }\n  });\n</script>"
+          }
         }
       },
       "block_order": [
         "liquid_JN9x4g",
-        "liquid_3nfNyb"
+        "liquid_3nfNyb",
+        "liquid_MYkLCm",
+        "liquid_DxK8HK"
       ],
       "custom_css": [
         ".inner-container {gap: 10px;}",
         ".c-inner {justify-content: center; gap: 5px; max-width: 700px; margin: auto;}",
         ".c-inner > *:not(:last-child) {border-right: 1px solid #7c221d;}",
         ".c-inner.c-custom {max-width: 150px;}",
+        "#ab-five-variant, #ab-three-variant {display: none; margin-bottom: 0;}",
         "@media screen and (max-width: 768px) {c-content-generator {padding-top: 0 !important; }}",
-        "@media screen and (min-width: 769px) {.c-inner.c-custom {max-width: 250px; } .content-block.block-liquid[data-index=\"1\"] {margin-bottom: 30px; }}"
+        "@media screen and (min-width: 769px) {.c-inner.c-custom {max-width: 250px; } .content-block.block-liquid[data-index=\"1\"], {margin-bottom: 30px; }}"
       ],
       "name": "C Content Generator",
       "settings": {
@@ -59,8 +76,13 @@
         "liquid_yrYFJE"
       ],
       "custom_css": [
-        "c-content-generator .block-liquid {padding: 0 !important;}",
-        "> * {}"
+        ".inner-container {gap: 10px;}",
+        ".c-inner {justify-content: center; gap: 5px; max-width: 700px; margin: auto;}",
+        ".c-inner > *:not(:last-child) {border-right: 1px solid #7c221d;}",
+        ".c-inner.c-custom {max-width: 150px;}",
+        "#ab-five-variant, #ab-three-variant {display: none; margin-bottom: 0;}",
+        "@media screen and (max-width: 768px) {c-content-generator {padding-top: 0 !important; }}",
+        "@media screen and (min-width: 769px) {.c-inner.c-custom {max-width: 250px; } .content-block.block-liquid[data-index=\"1\"] {margin-bottom: 30px; }}"
       ],
       "name": "C Content Generator",
       "settings": {
