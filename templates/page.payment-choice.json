@@ -125,7 +125,10 @@
         "c-product-comparison .letter-container img.c-author {max-width: 150px;}"
       ],
       "name": "C Product Comparison",
-      "settings": {}
+      "settings": {
+        "button_link": "",
+        "button_text": ""
+      }
     },
     "customcode_content_generator_HAB7Hk": {
       "type": "customcode-content-generator",
@@ -171,6 +174,25 @@
         "d_padding_top": true,
         "d_padding_bottom": true
       }
+    },
+    "customcode_content_generator_ai3WUE": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "liquid_DXT3yb": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<p>\n<p class=\"affirm-text\">*Rates from 0–36% APR. Payment options through Affirm are subject to an eligibility check and are provided by these lending partners: affirm.com/lenders. Options depend on your purchase amount, and a down payment may be required. CA residents: Loans by Affirm Loan Services, LLC are made or arranged pursuant to a California Financing Law license. For licenses and disclosures, see affirm.com/licenses. For example, a $800 purchase could be split into 12 monthly payments of $72.21 at 15% APR.</p>\n<Br>\n<p class=\"shoppay-text\">*Rates from 0%-36% APR. Payment options through Shop Pay Installments, are subject to an eligibility check and are provided by these lending partners: affirm.com/lenders. Options depend on your purchase amount, and a down payment may be required. State notices to consumers https://www.affirm.com/licenses. For example, a $800 purchase could be split into 12 monthly payments of $72.21 at 15% APR, or 4 interest-free payments of $200 every 2 weeks.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_DXT3yb"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
     }
   },
   "order": [
@@ -178,6 +200,7 @@
     "customcode_content_generator_UiQNgJ",
     "customcode_content_generator_fawCfh",
     "customcode_product_comparison_kJUT4a",
-    "customcode_content_generator_HAB7Hk"
+    "customcode_content_generator_HAB7Hk",
+    "customcode_content_generator_ai3WUE"
   ]
 }
