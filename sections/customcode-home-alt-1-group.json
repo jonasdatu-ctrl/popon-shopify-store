@@ -52,7 +52,7 @@
         ".c-inner {justify-content: center; gap: 5px; max-width: 700px; margin: auto;}",
         ".c-inner > *:not(:last-child) {border-right: 1px solid #7c221d;}",
         ".c-inner.c-custom {max-width: 150px;}",
-        "#ab-five-variant,#ab-three-variant, #ab-four-variant {display: none; margin-bottom: 0;}",
+        "[data-index=\"2\"],[data-index=\"3\"] {display: none;}",
         "@media screen and (max-width: 768px) {c-content-generator {padding-top: 0 !important; }}",
         "@media screen and (min-width: 769px) {.c-inner.c-custom {max-width: 250px; } .content-block.block-liquid[data-index=\"1\"] {margin-bottom: 30px; }}"
       ],
