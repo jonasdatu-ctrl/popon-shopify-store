@@ -14,20 +14,6 @@
     "customcode_content_generator_Vjyy8i": {
       "type": "customcode-content-generator",
       "blocks": {
-        "liquid_UeKyNY": {
-          "type": "liquid",
-          "disabled": true,
-          "settings": {
-            "liquid": "<div id=\"ab-one\" class=\"c-inner\">\n<a href=\"https://poponveneers.com/pages/payment-options\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n</a>\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n<a href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_300k-min.png?v=1767035797\">\n</a>\n</div>"
-          }
-        },
-        "liquid_gXcnPF": {
-          "type": "liquid",
-          "disabled": true,
-          "settings": {
-            "liquid": "<div id=\"ab-two\" class=\"c-inner c-custom\">\n<a href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Money_Back_Guarantee.png?v=1765309039\">\n</a>\n\n</div>"
-          }
-        },
         "liquid_JN9x4g": {
           "type": "liquid",
           "settings": {
@@ -42,8 +28,6 @@
         }
       },
       "block_order": [
-        "liquid_UeKyNY",
-        "liquid_gXcnPF",
         "liquid_JN9x4g",
         "liquid_3nfNyb"
       ],
