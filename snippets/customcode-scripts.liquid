@@ -153,7 +153,7 @@
     const orderEmail = params.get('orderEmail');
     // Used by CBuyButton below to tag add-to-cart requests with GWP properties.
     const freebieGwpVariantId = params.get('variantgift');
-    const isProductTemplate = {{ template.name == 'product' }};
+    const isProductTemplate = {{ template.name == 'product' | json }};
 
     if (caseId) {
       localStorage.setItem('previousVeneerOrder', caseId);
