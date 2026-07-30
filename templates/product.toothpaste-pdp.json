@@ -432,32 +432,32 @@
         "accordion_qhQ3mg": {
           "type": "accordion",
           "settings": {
-            "question": "✨ Vitamin E",
-            "answer": "<p>The healer.<br/><br/>A powerful antioxidant that helps support healthy-looking lips while protecting against environmental stressors.</p>",
+            "question": "🛡️ Sodium fluoride",
+            "answer": "<p>The Defender.</p><p>Helps strengthen tooth enamel and protect against cavities when used as directed.</p>",
             "liquid": ""
           }
         },
         "accordion_HQqMhw": {
           "type": "accordion",
           "settings": {
-            "question": "🌿 Aloe Vera",
-            "answer": "<p>The soother.</p><p>Calms and comforts dry lips, delivering a refreshing layer of hydration for a smooth, balanced feel.</p>",
-            "liquid": ""
-          }
-        },
-        "accordion_U6DCJ7": {
-          "type": "accordion",
-          "settings": {
-            "question": "🐝 Beeswax",
-            "answer": "<p>The protector.</p><p>Forms a breathable barrier that locks in moisture, helping to shield lips from dryness while keeping them soft and smooth.</p>",
+            "question": "✨ Hydrated silica",
+            "answer": "<p>The Polisher.</p><p>Gently helps remove everyday buildup and surface stains for a smoother, more polished appearance.</p>",
             "liquid": ""
           }
         },
         "accordion_xie6RK": {
           "type": "accordion",
           "settings": {
-            "question": "🌻Sunflower Seed Oil",
-            "answer": "<p>The nourisher.</p><p>Rich in essential fatty acids, it deeply conditions and replenishes—restoring softness with every swipe.</p>",
+            "question": "🌬️ Zinc lactate",
+            "answer": "<p>The Freshness Booster.</p><p>Helps maintain a cleaner-feeling mouth and support fresh breath as part of your daily routine.</p>",
+            "liquid": ""
+          }
+        },
+        "accordion_U6DCJ7": {
+          "type": "accordion",
+          "settings": {
+            "question": "🦷 Tetrapotassium pyrophosphate",
+            "answer": "<p>The Tartar Fighter.</p><p>Helps reduce tartar buildup to support a cleaner, smoother smile between dental cleanings.</p>",
             "liquid": ""
           }
         }
@@ -465,8 +465,8 @@
       "block_order": [
         "accordion_qhQ3mg",
         "accordion_HQqMhw",
-        "accordion_U6DCJ7",
-        "accordion_xie6RK"
+        "accordion_xie6RK",
+        "accordion_U6DCJ7"
       ],
       "name": "C Accordion Alt",
       "settings": {
