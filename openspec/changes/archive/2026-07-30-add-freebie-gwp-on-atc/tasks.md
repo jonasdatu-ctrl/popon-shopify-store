@@ -24,10 +24,10 @@
 
 ## 5. Verify
 
-- [ ] 5.1 On a product page with `?variantgift=<valid-id>`, click add-to-cart and confirm two cart lines appear: main product with `_freebiegwp_role: main`, freebie with `_freebiegwp_role: freebie`, matching `_freebiegwp` timestamps (check via `/cart.js` or cart drawer line-item properties).
-- [ ] 5.2 Click add-to-cart a second time on the same page and confirm a second, independently-timestamped main+freebie pair is added (four lines total, not merged quantities).
-- [ ] 5.3 With `?variantgift=<sold-out-or-invalid-id>`, click add-to-cart and confirm the main product is added normally with its `_freebiegwp` properties, no freebie line appears, and no error is shown to the customer.
-- [ ] 5.4 On a non-product page/template that still renders `<c-buy-button>` (e.g. a `landing-pro-pods` page) with `?variantgift=` present, click add-to-cart and confirm only the main product is added with no `_freebiegwp` properties and no freebie line.
-- [ ] 5.5 On a product page with no `variantgift` param, click add-to-cart and confirm behavior is unchanged from before this change (no `_freebiegwp` properties).
-- [ ] 5.6 On a product that has both an active upsell selection and `?variantgift=` present, click add-to-cart and confirm all three lines (main, upsell, freebie) are added together.
-- [ ] 5.7 Confirm the removed page-load behavior no longer fires: loading any page with `?variantgift=<id>` in the URL (without clicking add-to-cart) does not add anything to the cart.
+- [x] 5.1 On a product page with `?variantgift=<valid-id>`, click add-to-cart and confirm two cart lines appear: main product with `_freebiegwp_role: main`, freebie with `_freebiegwp_role: freebie`, matching `_freebiegwp` timestamps (check via `/cart.js` or cart drawer line-item properties).
+- [x] 5.2 Click add-to-cart a second time on the same page and confirm a second, independently-timestamped main+freebie pair is added (four lines total, not merged quantities).
+- [x] 5.3 With `?variantgift=<sold-out-or-invalid-id>`, click add-to-cart and confirm the main product is added normally with its `_freebiegwp` properties, no freebie line appears, and no error is shown to the customer.
+- [x] 5.4 On a non-product page/template that still renders `<c-buy-button>` (e.g. a `landing-pro-pods` page) with `?variantgift=` present, click add-to-cart and confirm only the main product is added with no `_freebiegwp` properties and no freebie line.
+- [x] 5.5 On a product page with no `variantgift` param, click add-to-cart and confirm behavior is unchanged from before this change (no `_freebiegwp` properties).
+- [x] 5.6 On a product that has both an active upsell selection and `?variantgift=` present, click add-to-cart and confirm all three lines (main, upsell, freebie) are added together.
+- [x] 5.7 Confirm the removed page-load behavior no longer fires: loading any page with `?variantgift=<id>` in the URL (without clicking add-to-cart) does not add anything to the cart.
