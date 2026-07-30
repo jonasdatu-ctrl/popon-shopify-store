@@ -306,7 +306,7 @@
           "settings": {
             "m_display": true,
             "d_display": true,
-            "text": "<p>A refreshing whitening toothpaste designed to gently lift everyday surface stains while helping protect against cavities. The smooth foaming formula leaves your teeth feeling polished and your whole mouth feeling fresh.</p>",
+            "text": "<p>A refreshing whitening toothpaste designed to gently lift everyday surface stains while helping protect against cavities. The smooth foaming formula leaves your teeth feeling polished and your whole mouth feeling fresh</p>",
             "font_color": "",
             "font_alignment": "left",
             "m_font_size": 14,
@@ -409,7 +409,7 @@
         "content_ajCM8t": {
           "type": "content",
           "settings": {
-            "content": "<h3><strong>Hydration, Anytime</strong></h3><p>Glide onto lips whenever hydration is needed.<br/>Use alone for a natural, soft finish or layer under your favorite lip products for a smoother, more hydrated base.<br/>Reapply whenever lips need a boost of moisture.<br/><br/></p>",
+            "content": "<h3><strong>A FRESHER WAY TO BRUSH</strong></h3><p>Turn an everyday habit into a clean, refreshing ritual. The lightweight formula foams smoothly across teeth and hard-to-reach spaces, helping lift everyday buildup and surface stains for a fresher, more polished clean.<br/><br/></p>",
             "font_color": "#003659",
             "font_align": "center"
           }
