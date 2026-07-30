@@ -420,7 +420,7 @@
       ],
       "name": "C Image with Text",
       "settings": {
-        "image": "shopify://shop_images/Lip_Balm_PDP_Graphics_4_V3_1.png",
+        "image": "shopify://shop_images/Pop_On_Toothpaste_PDP_Image_4.png",
         "max_width": 1400,
         "flex_direction": "column",
         "d_flex_direction": "row"
@@ -473,7 +473,7 @@
         "header": "KEY INGREDIENTS",
         "link": "",
         "name": "",
-        "image": "shopify://shop_images/Lip_Balm_PDP_Graphics_1_V2_V2_1.png",
+        "image": "shopify://shop_images/Pop_On_Toothpaste_PDP_Image_6.png",
         "mobile_layout": "column-reverse",
         "desktop_layout": "row-reverse"
       }
