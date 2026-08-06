@@ -50,7 +50,7 @@
         "liquid_DxK8HK"
       ],
       "custom_css": [
-        ".inner-container {gap: 10px;}",
+        ".inner-container {gap: 10px; cursor: pointer;}",
         ".c-inner {justify-content: center; gap: 5px; max-width: 700px; margin: auto;}",
         ".c-inner > *:not(:last-child) {border-right: 1px solid #7c221d;}",
         ".c-inner.c-custom {max-width: 150px;}",
