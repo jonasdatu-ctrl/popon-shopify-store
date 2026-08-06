@@ -101,12 +101,10 @@
 
       {% comment %} Customcode Groupings {% endcomment %}
       {% if template.name == 'index' %}
-        {% sections 'customcode-hp-1-group' %}
-        {% sections 'customcode-hp-2-group' %}
-        {% comment %}
-          {% sections 'customcode-home-alt-1-group' %}
-          {% sections 'customcode-home-alt-2-group' %}
-        {% endcomment %}
+        {% comment %} {% sections 'customcode-hp-1-group' %}
+        {% sections 'customcode-hp-2-group' %} {% endcomment %}
+        {% sections 'customcode-home-alt-1-group' %}
+        {% sections 'customcode-home-alt-2-group' %}
       {% endif %}
 
       {% comment %} Display for LYS4 custom template for AB testing {% endcomment %}
