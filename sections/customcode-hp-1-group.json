@@ -11,44 +11,46 @@
   "type": "custom.homepage",
   "name": "Home Page Group 1 Alt",
   "sections": {
-    "customcode_content_generator_jFH6wz": {
+    "customcode_content_generator_3UKKMX": {
       "type": "customcode-content-generator",
       "blocks": {
-        "liquid_tCUQX3": {
+        "liquid_egCnwD": {
           "type": "liquid",
           "disabled": true,
-          "settings": {
-            "liquid": "<div id=\"ab-one\" class=\"c-inner\">\n<a href=\"https://poponveneers.com/pages/payment-options\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n</a>\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n<a href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_300k-min.png?v=1767035797\">\n</a>\n</div>"
-          }
-        },
-        "liquid_GiDyQW": {
-          "type": "liquid",
-          "disabled": true,
-          "settings": {
-            "liquid": "<div id=\"ab-two\" class=\"c-inner c-custom\">\n<a href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Money_Back_Guarantee.png?v=1765309039\">\n</a>\n\n</div>"
-          }
-        },
-        "liquid_AJEckC": {
-          "type": "liquid",
           "settings": {
             "liquid": "<div id=\"ab-three\" class=\"c-inner c-mobile\">\n<a style=\"visibility: hidden; padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n<a style=\"padding-right: 0px !important; border-right: none;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_350k.png?v=1781541581\">\n</a>\n<a style=\"visibility: hidden; padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n</div>\n\n<div id=\"ab-four\" class=\"c-inner c-mobile\">\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/payment-options\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n</a>\n<a href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_Pop_On_Promise_2.png?v=1777983216\">\n</a>\n</div>"
           }
         },
-        "liquid_XNAWTQ": {
+        "liquid_PLjCQU": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<div id=\"ab-five\" class=\"c-inner c-desktop\">\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_350k.png?v=1781541581\">\n</a>\n<a style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</a>\n<a href=\"https://poponveneers.com/pages/payment-options\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n</a>\n<a class=\"c-desktop\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_Pop_On_Promise_2.png?v=1777983216\">\n</a>\n</div>"
+          }
+        },
+        "liquid_xAeHDN": {
+          "type": "liquid",
+          "name": "Variant Mobile",
+          "settings": {
+            "liquid": "<div id=\"ab-three-variant\" class=\"c-inner c-mobile\">\n  <div style=\"visibility: hidden; padding-right: 5px; cursor: pointer;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n  </div>\n  <div style=\"padding-right: 0px !important; border-right: none; cursor: pointer;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_350k.png?v=1781541581\">\n  </div>\n  <div style=\"visibility: hidden; padding-right: 5px; cursor: pointer;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n  </div>\n</div>\n\n<div id=\"ab-four-variant\" class=\"c-inner c-mobile\">\n  <div style=\"padding-right: 5px; cursor: pointer;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n  </div>\n  <div style=\"padding-right: 5px; cursor: pointer;\" href=\"https://poponveneers.com/pages/payment-options\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n  </div>\n  <div style=\"cursor: pointer;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_Pop_On_Promise_2.png?v=1777983216\">\n  </div>\n</div>\n\n<script>\n  document.addEventListener(\"DOMContentLoaded\", () => {\n    // Shared target selectors\n    const getTargets = () => [\n      document.querySelector(\"#looxReviewsFrame\"),\n      document.querySelector(\"#shopify-section-sections--21678047625354__customcode_content_generator_QNkfQq > c-content-generator > div > div.content-block.block-accented-header\"),\n      document.querySelector(\"#shopify-section-sections--21678047461514__customcode_text_marquee_f7WPtj > c-text-marquee > div > div.right-container\"),\n      document.querySelector(\"#shopify-section-sections--21678047461514__customcode_product_comparison_kt4fR4\")\n    ];\n\n    // Helper to attach smooth scroll listener to any variant container targeting <div> children\n    const setupVariant = (containerSelector, targetIndices) => {\n      const container = document.querySelector(containerSelector);\n      if (!container) return;\n\n      container.addEventListener(\"click\", (e) => {\n        const clickedDiv = e.target.closest(`${containerSelector} > div`);\n        if (!clickedDiv) return;\n\n        const divs = Array.from(container.children);\n        const divIndex = divs.indexOf(clickedDiv);\n        \n        // Map child index to target element\n        const targetIndex = targetIndices[divIndex];\n        const target = getTargets()[targetIndex];\n\n        if (target) {\n          e.preventDefault();\n          target.scrollIntoView({\n            behavior: \"smooth\",\n            block: \"center\",\n            inline: \"nearest\"\n          });\n        }\n      });\n    };\n\n    // Setup for 3-variant (Middle div targets index 0)\n    setupVariant(\"#ab-three-variant\", [0, 0, 0]);\n\n    // Setup for 4-variant (Maps 3 divs to target indices 1, 2, and 3)\n    setupVariant(\"#ab-four-variant\", [1, 2, 3]);\n  });\n</script>"
+          }
+        },
+        "liquid_dipRQa": {
+          "type": "liquid",
+          "name": "Variant Desktop",
+          "settings": {
+            "liquid": "<div id=\"ab-five-variant\" class=\"c-inner c-desktop\">\n<div style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_350k.png?v=1781541581\">\n</div>\n<div style=\"padding-right: 5px;\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_100_CUSTOM_MADE_ab651684-246c-49a7-a3e2-d32c59fc2b1d.png?v=1765295613\">\n</div>\n<div href=\"https://poponveneers.com/pages/payment-options\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icon_Affordable_payment-min_0dee2fd6-0154-4a46-ac21-6fd6f960d73b.png?v=1765295295\">\n</div>\n<div class=\"c-desktop\" href=\"https://poponveneers.com/pages/am-i-a-candidate\">\n<img src=\"https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Icons_Pop_On_Promise_2.png?v=1777983216\">\n</div>\n</div>\n\n<script>\n  document.addEventListener(\"DOMContentLoaded\", () => {\n    const container = document.querySelector(\"#ab-five-variant\");\n    if (!container) return;\n\n    // Use event delegation on the parent container\n    container.addEventListener(\"click\", (e) => {\n      // Find the clicked div inside #ab-five-variant\n      const clickedDiv = e.target.closest(\"#ab-five-variant > div\");\n      if (!clickedDiv) return;\n\n      // Re-query targets on click to ensure dynamically loaded elements are found\n      const targets = [\n        document.querySelector(\"#looxReviewsFrame\"),\n        document.querySelector(\"#shopify-section-sections--21678047461514__customcode_content_generator_QNkfQq > c-content-generator > div > div.content-block.block-accented-header\"),\n        document.querySelector(\"#shopify-section-sections--21678047461514__customcode_text_marquee_f7WPtj > c-text-marquee > div > div.right-container\"),\n        document.querySelector(\"#shopify-section-sections--21678047461514__customcode_product_comparison_kt4fR4\")\n      ];\n\n      // Get index of clicked div among its siblings\n      const links = Array.from(container.children);\n      const index = links.indexOf(clickedDiv);\n\n      const target = targets[index];\n\n      if (target) {\n        e.preventDefault();\n        target.scrollIntoView({\n          behavior: \"smooth\",\n          block: \"center\",\n          inline: \"nearest\"\n        });\n      } else {\n        console.warn(`Target at index ${index} not found in DOM.`);\n      }\n    });\n  });\n</script>"
           }
         }
       },
       "block_order": [
-        "liquid_tCUQX3",
-        "liquid_GiDyQW",
-        "liquid_AJEckC",
-        "liquid_XNAWTQ"
+        "liquid_egCnwD",
+        "liquid_PLjCQU",
+        "liquid_xAeHDN",
+        "liquid_dipRQa"
       ],
       "custom_css": [
-        ".inner-container {gap: 10px;}",
+        ".inner-container {gap: 10px; cursor: pointer;}",
         ".c-inner {justify-content: center; gap: 5px; max-width: 700px; margin: auto;}",
         ".c-inner > *:not(:last-child) {border-right: 1px solid #7c221d;}",
         ".c-inner.c-custom {max-width: 150px;}",
@@ -1387,7 +1389,7 @@
     }
   },
   "order": [
-    "customcode_content_generator_jFH6wz",
+    "customcode_content_generator_3UKKMX",
     "customcode_content_generator_zKpeVw",
     "customcode_content_generator_43YJKQ",
     "customode_loox_reviews_RD4wjz",
