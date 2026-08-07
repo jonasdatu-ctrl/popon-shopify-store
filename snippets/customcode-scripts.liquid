@@ -182,6 +182,7 @@
   // Sibling to the upsell listener below — independent of it, both react to the same event.
   document.addEventListener('main-variant:added', (event) => {
     const detail = event.detail || {};
+    alert("HELLO");
     console.log("HELLOR")
     console.log(detail.mainProductId);
     console.log(detail.freebieVariantId);
