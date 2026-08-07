@@ -1422,6 +1422,19 @@
     const detail = event.detail || {};
     if (!detail.success || !detail.freebieVariantId) return;
 
+    {% comment %} Modify this to restrict available Freebies {% endcomment %}
+    const VALID_FREEBIE_VARIANTS = [
+      '48040915697802'
+    ];
+
+    if (
+      !detail.success || 
+      !detail.freebieVariantId || 
+      !VALID_FREEBIE_VARIANTS.includes(String(detail.freebieVariantId))
+    ) {
+      return;
+    }    
+
     fetch('/cart/add.js', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
