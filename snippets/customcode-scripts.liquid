@@ -146,11 +146,43 @@
   </script>
 {% endif %}
 <script>
+    // 1. Extraction Logic
+    const params = new URLSearchParams(window.location.search);
+    const caseId = params.get('caseId');
+    const orderEmail = params.get('orderEmail');
+    // Used by CBuyButton below to tag add-to-cart requests with GWP properties.
+    const freebieGwpVariantId = params.get('variantgift');
+    const isProductTemplate = {{ template.name | json }} === 'product';    
+    
+    if (caseId) {
+      localStorage.setItem('previousVeneerOrder', caseId);
+    }
+
+    if (orderEmail) {
+      localStorage.setItem('previousOrderEmail', orderEmail);
+    }
+
+    // 2. DOM Population Task
+    const populateFields = () => {
+      const emailField = document.querySelector('input[name="properties[Previous-Order-Email(R)]"]');
+      const storedEmail = localStorage.getItem('previousOrderEmail');
+
+      if (emailField && storedEmail) {
+        emailField.value = storedEmail;
+      }
+    };
+
+    // Run after DOM Content is loaded
+    window.addEventListener('load', () => {
+      populateFields();
+    });
+</script>
+<script>
   // Adds the freebie GWP line item after CBuyButton successfully adds the main product.
   // Sibling to the upsell listener below — independent of it, both react to the same event.
   document.addEventListener('main-variant:added', (event) => {
     const detail = event.detail || {};
-    console.log("HELLOR");
+    console.log("HELLOR")
     console.log(detail.mainProductId);
     console.log(detail.freebieVariantId);
 
@@ -190,39 +222,8 @@
       })
       .catch((error) => console.error('[Freebie GWP]', error));
   });
-
-    // 1. Extraction Logic
-    const params = new URLSearchParams(window.location.search);
-    const caseId = params.get('caseId');
-    const orderEmail = params.get('orderEmail');
-    // Used by CBuyButton below to tag add-to-cart requests with GWP properties.
-    const freebieGwpVariantId = params.get('variantgift');
-    const isProductTemplate = {{ template.name | json }} === 'product';    
-    
-    if (caseId) {
-      localStorage.setItem('previousVeneerOrder', caseId);
-    }
-
-    if (orderEmail) {
-      localStorage.setItem('previousOrderEmail', orderEmail);
-    }
-
-    // 2. DOM Population Task
-    const populateFields = () => {
-      const emailField = document.querySelector('input[name="properties[Previous-Order-Email(R)]"]');
-      const storedEmail = localStorage.getItem('previousOrderEmail');
-
-      if (emailField && storedEmail) {
-        emailField.value = storedEmail;
-      }
-    };
-
-    // Run after DOM Content is loaded
-    window.addEventListener('load', () => {
-      populateFields();
-    });
-
 </script>
+
 
 {% comment %} WEB COMPONENTS {% endcomment %}
 <script>
