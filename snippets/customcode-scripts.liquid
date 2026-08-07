@@ -150,9 +150,10 @@
   // Sibling to the upsell listener below — independent of it, both react to the same event.
   document.addEventListener('main-variant:added', (event) => {
     const detail = event.detail || {};
-    if (!detail.success || !detail.freebieVariantId) return;
     console.log(detail.mainProductId);
     console.log(detail.freebieVariantId);
+
+    if (!detail.success || !detail.freebieVariantId) return;
 
     {% comment %} Modify this to restrict available Freebies {% endcomment %}
     const ALLOWED_FREEBIE_MAP = [
