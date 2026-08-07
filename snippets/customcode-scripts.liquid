@@ -151,7 +151,6 @@
   document.addEventListener('main-variant:added', (event) => {
     const detail = event.detail || {};
     if (!detail.success || !detail.freebieVariantId) return;
-    alert("HERE!");
     console.log(detail.mainProductId);
     console.log(detail.freebieVariantId);
 
