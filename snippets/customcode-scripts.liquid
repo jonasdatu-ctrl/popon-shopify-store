@@ -146,6 +146,48 @@
   </script>
 {% endif %}
 <script>
+  // Adds the freebie GWP line item after CBuyButton successfully adds the main product.
+  // Sibling to the upsell listener below — independent of it, both react to the same event.
+  document.addEventListener('main-variant:added', (event) => {
+    const detail = event.detail || {};
+    if (!detail.success || !detail.freebieVariantId) return;
+    alert("HERE!");
+    {% comment %} Modify this to restrict available Freebies {% endcomment %}
+    const ALLOWED_FREEBIE_MAP = [
+      { mainproductId: '5239520624778', freebieVariantId: '48040915697802' },
+    ];
+
+    if (!detail.success || !detail.freebieVariantId || !detail.mainProductId) return;
+
+    // Check if the combination of mainProductId and freebieVariantId exists in the mapping
+    const isValidPair = ALLOWED_FREEBIE_MAP.some(
+      (entry) =>
+        String(entry.mainproductId) === String(detail.mainProductId) &&
+        String(entry.freebieVariantId) === String(detail.freebieVariantId)
+    );
+
+    if (!isValidPair) {
+      console.warn('[Freebie GWP] Freebie variant not authorized for this main product.');
+      return;
+    }   
+
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        id: detail.freebieVariantId,
+        quantity: 1,
+        properties: {
+          _freebiegwp: detail.freebieGwpTimestamp,
+          _freebiegwp_role: 'freebie',
+        },
+      }),
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error('Failed to add freebie to cart');
+      })
+      .catch((error) => console.error('[Freebie GWP]', error));
+  });
 
     // 1. Extraction Logic
     const params = new URLSearchParams(window.location.search);
@@ -1417,48 +1459,6 @@
       }
     }
   }
-  // Adds the freebie GWP line item after CBuyButton successfully adds the main product.
-  // Sibling to the upsell listener below — independent of it, both react to the same event.
-  document.addEventListener('main-variant:added', (event) => {
-    const detail = event.detail || {};
-    if (!detail.success || !detail.freebieVariantId) return;
-    alert("HERE!");
-    {% comment %} Modify this to restrict available Freebies {% endcomment %}
-    const ALLOWED_FREEBIE_MAP = [
-      { mainproductId: '5239520624778', freebieVariantId: '48040915697802' },
-    ];
-
-    if (!detail.success || !detail.freebieVariantId || !detail.mainProductId) return;
-
-    // Check if the combination of mainProductId and freebieVariantId exists in the mapping
-    const isValidPair = ALLOWED_FREEBIE_MAP.some(
-      (entry) =>
-        String(entry.mainproductId) === String(detail.mainProductId) &&
-        String(entry.freebieVariantId) === String(detail.freebieVariantId)
-    );
-
-    if (!isValidPair) {
-      console.warn('[Freebie GWP] Freebie variant not authorized for this main product.');
-      return;
-    }   
-
-    fetch('/cart/add.js', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        id: detail.freebieVariantId,
-        quantity: 1,
-        properties: {
-          _freebiegwp: detail.freebieGwpTimestamp,
-          _freebiegwp_role: 'freebie',
-        },
-      }),
-    })
-      .then((response) => {
-        if (!response.ok) throw new Error('Failed to add freebie to cart');
-      })
-      .catch((error) => console.error('[Freebie GWP]', error));
-  });
   class CAccordion extends HTMLElement {
     constructor() {
       super();
