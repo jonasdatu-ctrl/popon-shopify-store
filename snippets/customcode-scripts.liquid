@@ -1311,6 +1311,7 @@
               success: addSucceeded,
               freebieGwpTimestamp,
               freebieVariantId: freebieGwpActive ? freebieGwpVariantId : null,
+              mainProductId: this.productContainer?.dataset?.productId || variantId // Passes the product ID
             },
           })
         );
