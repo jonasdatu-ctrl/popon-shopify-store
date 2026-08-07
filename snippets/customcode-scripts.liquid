@@ -152,6 +152,9 @@
     const detail = event.detail || {};
     if (!detail.success || !detail.freebieVariantId) return;
     alert("HERE!");
+    console.log(detail.mainProductId);
+    console.log(detail.freebieVariantId);
+
     {% comment %} Modify this to restrict available Freebies {% endcomment %}
     const ALLOWED_FREEBIE_MAP = [
       { mainproductId: '5239520624778', freebieVariantId: '48040915697802' },
