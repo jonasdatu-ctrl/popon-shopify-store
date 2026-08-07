@@ -1424,17 +1424,23 @@
     if (!detail.success || !detail.freebieVariantId) return;
 
     {% comment %} Modify this to restrict available Freebies {% endcomment %}
-    const VALID_FREEBIE_VARIANTS = [
-      '480409156978023'
+    const ALLOWED_FREEBIE_MAP = [
+      { mainproductId: '5239520624778', freebieVariantId: '48040915697802' },
     ];
 
-    if (
-      !detail.success || 
-      !detail.freebieVariantId || 
-      !VALID_FREEBIE_VARIANTS.includes(String(detail.freebieVariantId))
-    ) {
+    if (!detail.success || !detail.freebieVariantId || !detail.mainProductId) return;
+
+    // Check if the combination of mainProductId and freebieVariantId exists in the mapping
+    const isValidPair = ALLOWED_FREEBIE_MAP.some(
+      (entry) =>
+        String(entry.mainproductId) === String(detail.mainProductId) &&
+        String(entry.freebieVariantId) === String(detail.freebieVariantId)
+    );
+
+    if (!isValidPair) {
+      console.warn('[Freebie GWP] Freebie variant not authorized for this main product.');
       return;
-    }    
+    }   
 
     fetch('/cart/add.js', {
       method: 'POST',
