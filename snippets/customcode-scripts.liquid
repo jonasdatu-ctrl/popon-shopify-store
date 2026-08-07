@@ -1422,7 +1422,7 @@
   document.addEventListener('main-variant:added', (event) => {
     const detail = event.detail || {};
     if (!detail.success || !detail.freebieVariantId) return;
-
+    alert("HERE!");
     {% comment %} Modify this to restrict available Freebies {% endcomment %}
     const ALLOWED_FREEBIE_MAP = [
       { mainproductId: '5239520624778', freebieVariantId: '48040915697802' },
