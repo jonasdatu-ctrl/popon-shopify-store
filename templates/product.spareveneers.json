@@ -167,6 +167,23 @@
             "m_margin_bottom": 10,
             "d_margin_bottom": 20
           }
+        },
+        "accordion_aRPgb3": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>What Are The 4 FREE Gifts?</p>",
+            "video_link": "",
+            "above_content": "",
+            "content": "",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": "{% render 'customcode-test-product-scroller' %}"
+          }
         }
       },
       "block_order": [
@@ -180,9 +197,12 @@
         "accordion_kXEJBw",
         "accordion_JyttcX",
         "accordion_knpqUz",
-        "freebies_VnPDcN"
+        "freebies_VnPDcN",
+        "accordion_aRPgb3"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "[data-row-index=\"9\"] {display: none;}"
+      ],
       "name": "C Featured Product",
       "settings": {
         "product_override": "",
