@@ -168,6 +168,40 @@
             "d_margin_bottom": 20
           }
         },
+        "accordion_YNyXVb": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>Do I Make Molds Again?</p>",
+            "video_link": "",
+            "above_content": "",
+            "content": "<p><strong>Nope! No new molds are needed.</strong></p><p>We save a digital copy of your original impression molds, so we can use them to make your Spare Veneers without sending you another impression kit.</p><p>Your Spare Veneers will be designed the same way as your original veneers and may have slight differences due to the delicate finishing process, which is done by hand.</p><p><strong>Have your teeth changed since your original order?</strong></p><p>If you've had dental work or your teeth have shifted, you'll need to order regular Pop On Veneers so you can make new molds that reflect those changes.</p>",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
+          }
+        },
+        "accordion_pyJUEK": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>Is There A Discount?</p>",
+            "video_link": "",
+            "above_content": "",
+            "content": "<p><strong>Yes! As a Pop On customer, you save big on Spare Veneers.</strong> No coupon code needed!</p><p>Because we already have your digital molds, there’s no need for another impression kit. That means you can save:</p><p><strong>$440 OFF Double Arch Spare Veneers</strong></p><p><strong>$310 OFF Single Arch Spare Veneers</strong></p><p>Want the best value? Order <strong>2 Double Arch Spare Veneers for just $124.50 per arch.</strong></p>",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
+          }
+        },
         "accordion_aRPgb3": {
           "type": "accordion",
           "settings": {
@@ -184,6 +218,40 @@
             "custom_html": "",
             "custom_liquid": "{% render 'customcode-test-product-scroller' %}"
           }
+        },
+        "accordion_CmhzPQ": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>How Fast Can I Get Them?</p>",
+            "video_link": "",
+            "above_content": "",
+            "content": "<p>Since we already have your molds, <strong>we can start making your Spare Veneers right away!</strong></p><p><strong>Standard:</strong> Get your Spare Veneers made in about <strong>2 weeks</strong>.</p><p><strong>Rush:</strong> Get them made in <strong>1 week instead of 2!</strong> Just select <strong>Rush</strong> in the cart or the shipping methods at checkout. Available for non-financed orders; Rush fee applies per order.</p><p><strong>Shipping:</strong> Plus, get <strong>UPS 2-Day shipping</strong> in the continental U.S.</p>",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
+          }
+        },
+        "accordion_kB3k9K": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>FAQs</p>",
+            "video_link": "",
+            "above_content": "",
+            "content": "<p><strong>WHY WOULD I ORDER SPARE VENEERS?</strong></p><p>Many customers like having a backup set in case anything happens to their original veneers or to keep sets in different places, like at home and while traveling. You can also choose a different shade for your Spare Veneers, like Hollywood White for special occasions and Natural White for everyday wear.</p><p><strong>HOW LONG DO I HAVE TO ORDER SPARE VENEERS?</strong></p><p>You can order Spare Veneers up to 90 days after the purchase date of your original veneers.</p><p><strong>CAN I ORDER A DIFFERENT COLOR THAN MY ORIGINAL VENEERS?</strong></p><p>Absolutely! Feel free to choose any available shade for your Spare Veneers.</p><p><strong>IF I ORDERED TOP AND BOTTOM, CAN I ORDER A SPARE FOR JUST THE TOP OR BOTTOM?</strong></p><p>Yes! If you've previously ordered both, you can order a Spare Veneer for just the top or just the bottom.</p><p><strong>IF I ONLY ORDERED TOP OR BOTTOM, CAN I ORDER SPARE VENEERS FOR BOTH?</strong></p><p>Spare Veneers can only be made for an arch we've already designed for you. For example, if you previously ordered only the top, you can order a Spare Veneer for the top and regular Pop On Veneers for the bottom.</p><p><strong>IF I WASN'T HAPPY WITH MY ORIGINAL VENEERS, SHOULD I ORDER SPARE VENEERS?</strong></p><p>If you'd simply like a different shade, you can order Spare Veneers. If you'd like to change the fit or design, we don't recommend ordering Spare Veneers because they're made from your original digital molds. Please contact our team so we can help determine the best option.</p><p><strong>CAN I REMAKE MY SPARE VENEERS?</strong></p><p>Spare Veneers are made from the same digital molds used for your original veneers, so free remakes are not included. If you experience an issue with your Spare Veneers, please contact our team.</p><p><strong>HOW CAN I PAY FOR MY SPARE VENEERS?</strong></p><p>We accept our usual forms of payment for Spare Veneers, except <a href=\"http://Partial.ly\">Partial.ly</a>. <a href=\"http://Partial.ly\">Partial.ly</a> orders are not eligible for the Spare Veneers discount.</p><p><strong>IT'S BEEN MORE THAN 90 DAYS. CAN I STILL ORDER SPARE VENEERS?</strong></p><p>Please contact our team to find out whether your Spare Veneers can still be made from your original digital molds.</p>",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
+          }
         }
       },
       "block_order": [
@@ -198,10 +266,14 @@
         "accordion_JyttcX",
         "accordion_knpqUz",
         "freebies_VnPDcN",
-        "accordion_aRPgb3"
+        "accordion_YNyXVb",
+        "accordion_pyJUEK",
+        "accordion_aRPgb3",
+        "accordion_CmhzPQ",
+        "accordion_kB3k9K"
       ],
       "custom_css": [
-        "[data-row-index=\"9\"] {display: none;}"
+        "[data-row-index=\"9\"],[data-row-index=\"10\"],[data-row-index=\"11\"],[data-row-index=\"12\"],[data-row-index=\"13\"] {display: none;}"
       ],
       "name": "C Featured Product",
       "settings": {
