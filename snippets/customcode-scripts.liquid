@@ -25,6 +25,35 @@
   </script>
 {% endif %}
 
+{% if product.handle == 'top-bottom-teeth' %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const params = new URLSearchParams(window.location.search);
+      const hasVariantGift = params.has('variantgift') && params.get('variantgift').trim() !== '';
+
+      if (hasVariantGift) {
+        const flashSaleImgUrl = 'https://cdn.shopify.com/s/files/1/0382/1761/3450/files/Pop_On_Veneers_Flash_Sale_1.png?v=1786468870';
+
+        // Loop through all c-media-gallery elements on the page
+        document.querySelectorAll('c-media-gallery').forEach((gallery) => {
+          // Target every .swiper slider within c-media-gallery (main, thumbs, etc.)
+          const sliders = gallery.querySelectorAll('.swiper');
+
+          sliders.forEach((slider) => {
+            const firstImg = slider.querySelector('.swiper-slide img');
+            if (firstImg) {
+              firstImg.src = flashSaleImgUrl;
+              if (firstImg.hasAttribute('srcset')) {
+                firstImg.srcset = flashSaleImgUrl;
+              }
+            }
+          });
+        });
+      }
+    });
+  </script>
+{% endif %}
+
 {% comment %} UTILITIES {% endcomment %}
 <script>
   let tippyInstances = [];
