@@ -25,7 +25,7 @@
   </script>
 {% endif %}
 
-{% if product.handle == 'top-bottom-teeth' %}
+{% comment %} {% if product.handle == 'top-bottom-teeth' %}
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const params = new URLSearchParams(window.location.search);
@@ -52,7 +52,7 @@
       }
     });
   </script>
-{% endif %}
+{% endif %} {% endcomment %}
 
 {% comment %} UTILITIES {% endcomment %}
 <script>
@@ -206,7 +206,7 @@
       populateFields();
     });
 </script>
-<script>
+{% comment %} <script>
   // Adds the freebie GWP line item after CBuyButton successfully adds the main product.
   // Sibling to the upsell listener below — independent of it, both react to the same event.
   document.addEventListener('main-variant:added', (event) => {
@@ -248,7 +248,7 @@
       })
       .catch((error) => console.error('[Freebie GWP]', error));
   });
-</script>
+</script> {% endcomment %}
 
 
 {% comment %} WEB COMPONENTS {% endcomment %}
