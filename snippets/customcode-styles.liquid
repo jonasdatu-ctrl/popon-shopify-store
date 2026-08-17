@@ -42,6 +42,13 @@
   }
 
   /*---------- OVERRIDES ---------*/
+  /* Test results */
+  {% if page.handle == 'love-your-smile-1' %}
+    .header__column.header__column--left {visibility: hidden !important;}
+    .header__column.header__column--right {visibility: hidden !important;}
+  {% endif %}
+
+
   /* SWIPER */
   .swiper {visibility: hidden;}
   .swiper.swiper-initialized {visibility: visible;}
