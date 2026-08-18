@@ -171,14 +171,13 @@
           "type": "freebies",
           "settings": {
             "title": "What's included FREE with every purchase?",
-            "image_one": "shopify://shop_images/af55ef01-9691-4fc6-adeb-5972c5dc6b17.png",
-            "text_one": "30 Cleaning Tablets",
-            "image_two": "shopify://shop_images/84a52a47-2246-49de-ae89-989842ec1f34.png",
-            "text_two": "Pop On Foam",
-            "image_three": "shopify://shop_images/98423da2-1f47-49a6-94c4-b87747f1740d.png",
-            "text_three": "Clean & Go Case",
-            "image_four": "shopify://shop_images/Pop_On_toothbrush_product_images_2_eb9120ad-580e-438a-8d71-73687d378e99.png",
-            "text_four": "Toothbrush",
+            "image_one": "shopify://shop_images/Oral_Spray_PDP_Image_3.png",
+            "text_one": "Pop On Fresh Breath Spray",
+            "image_two": "shopify://shop_images/link-products-pop-on-lip-balm.png",
+            "text_two": "Pop On Lip Balm",
+            "image_three": "shopify://shop_images/Pop_On_Pouches_PDP_Image_15.png",
+            "text_three": "Pop On Pouch",
+            "text_four": "",
             "button_text": "Included Free",
             "m_margin_bottom": 10,
             "d_margin_bottom": 20
@@ -217,6 +216,7 @@
       "blocks": {
         "amazon_reviews_grid_widget_block_product_VGXRB7": {
           "type": "shopify://apps/amazon-reviews/blocks/grid-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "disabled": true,
           "settings": {
             "font": "default",
             "themeId": "light",
@@ -234,6 +234,7 @@
       "block_order": [
         "amazon_reviews_grid_widget_block_product_VGXRB7"
       ],
+      "disabled": true,
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
