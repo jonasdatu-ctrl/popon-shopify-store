@@ -15,7 +15,7 @@
         "title_RLTGBX": {
           "type": "title",
           "settings": {
-            "title_override": "<h1>Ultra Clean Bundle™</h1>",
+            "title_override": "<h1>Fresh On-The-Go Bundle™</h1>",
             "show_reviews": false,
             "custom_review": "(12)",
             "m_margin_bottom": 10,
@@ -82,6 +82,7 @@
           "settings": {
             "accordion_title": "<p><strong>See How Your Veneers Are Made ✨</strong></p>",
             "video_link": "",
+            "above_content": "",
             "video": "shopify://files/videos/tolstoy_218bf3cb-cef2-4147-802b-8ae5e9f712ee.webm",
             "content": "",
             "page": "",
@@ -90,7 +91,8 @@
             "additional_content": "",
             "button_link": "",
             "button_text": "",
-            "custom_html": ""
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "accordion_dtehUe": {
@@ -99,6 +101,7 @@
           "settings": {
             "accordion_title": "<p>Description</p>",
             "video_link": "",
+            "above_content": "",
             "content": "",
             "page": "",
             "display_html_content": true,
@@ -107,7 +110,8 @@
             "additional_content": "<ul><li>30-day warranty</li><li>Up to two remakes included for the perfect fit</li><li>Dedicated support team every step of the way!</li></ul>",
             "button_link": "",
             "button_text": "",
-            "custom_html": ""
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "accordion_ByhxAr": {
@@ -115,6 +119,7 @@
           "settings": {
             "accordion_title": "<p>Bundle Details</p>",
             "video_link": "",
+            "above_content": "",
             "content": "<p><strong>What Makes Ultra Clean Bundle Special</strong></p><p>The Ultra Clean Bundle includes a 30-day supply of powerful cleaning tablets, our Fresh Cleaning Foam, a soft-bristle brush designed for gentle care, and a dual-purpose storage and cleaning case with a built-in mirror. Whether you’re at home or on the go, this all-in-one set makes it easy to keep your oral appliances fresh, protected, and ready for everyday wear.</p><p><strong>Pop On Clean</strong></p><p>Drop one tablet into water to remove odors, stains, and 99.9% of bacteria from aligners, retainers, night guards, and dentures. A deep clean without the hassle.</p><p><strong>Pop On Foam</strong></p><p>This no-rinse foam refreshes your mouth and oral appliance wherever you are. Use it in your case, on your brush, or directly in your mouth for a quick, minty clean - no sink needed.</p><p><strong>Clean & Go Case</strong></p><p>Your soak-and-store solution. Use it to deep clean your appliance with tablets, or simply carry it safely wherever you go. It also has a handy mirror. Compact, sleek, and ready for daily use.</p><p><strong>Pop On Toothbrush</strong></p><p>Soft enough for delicate oral appliances, tough enough for everyday freshness. Use with foam or water to keep your appliance clean and your mouth feeling great.</p>",
             "page": "",
             "display_html_content": false,
@@ -122,7 +127,8 @@
             "additional_content": "",
             "button_link": "",
             "button_text": "",
-            "custom_html": ""
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "accordion_wjdWUJ": {
@@ -130,6 +136,7 @@
           "settings": {
             "accordion_title": "<p>Shipping Information</p>",
             "video_link": "",
+            "above_content": "",
             "content": "<p><strong>FREE SHIPPING </strong>available with USPS.</p>",
             "page": "",
             "display_html_content": false,
@@ -137,7 +144,8 @@
             "additional_content": "",
             "button_link": "",
             "button_text": "",
-            "custom_html": ""
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "accordion_Wxj6yq": {
@@ -146,6 +154,7 @@
           "settings": {
             "accordion_title": "<p>Around NYC?</p>",
             "video_link": "",
+            "above_content": "",
             "content": "",
             "page": "",
             "display_html_content": true,
@@ -154,7 +163,8 @@
             "additional_content": "<ul><li>No need to make impressions with the kit at home, we'll scan your teeth in our NYC office.</li><li>No Additional fee.</li></ul>",
             "button_link": "https://poponveneers.com/products/pop-on-veneers-in-person-nyc",
             "button_text": "Learn more",
-            "custom_html": ""
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "freebies_HLBndF": {
