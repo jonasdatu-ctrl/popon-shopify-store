@@ -116,6 +116,7 @@
         },
         "accordion_ByhxAr": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "accordion_title": "<p>Bundle Details</p>",
             "video_link": "",
@@ -170,7 +171,7 @@
         "freebies_HLBndF": {
           "type": "freebies",
           "settings": {
-            "title": "What's included FREE with every purchase?",
+            "title": "What's included in the Fresh On-The-Go Bundle?",
             "image_one": "shopify://shop_images/Oral_Spray_PDP_Image_3.png",
             "text_one": "Pop On Fresh Breath Spray",
             "image_two": "shopify://shop_images/link-products-pop-on-lip-balm.png",
@@ -178,7 +179,7 @@
             "image_three": "shopify://shop_images/Pop_On_Pouches_PDP_Image_15.png",
             "text_three": "Pop On Pouch",
             "text_four": "",
-            "button_text": "Included Free",
+            "button_text": "Included",
             "m_margin_bottom": 10,
             "d_margin_bottom": 20
           }
