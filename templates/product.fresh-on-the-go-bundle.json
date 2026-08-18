@@ -1,0 +1,554 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "customcode_featured_product_Dci89U": {
+      "type": "customcode-featured-product",
+      "blocks": {
+        "title_RLTGBX": {
+          "type": "title",
+          "settings": {
+            "title_override": "<h1>Ultra Clean Bundle™</h1>",
+            "show_reviews": false,
+            "custom_review": "(12)",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "callout_XCNXFf": {
+          "type": "callout",
+          "disabled": true,
+          "settings": {
+            "text": "🎁 You won an EXTRA $20 OFF below, if you order NOW!",
+            "highlight": "EXTRA $20 OFF",
+            "highlight_color": "#ff5c89",
+            "tooltip": "",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "variant_selector_3HH3r4": {
+          "type": "variant_selector",
+          "settings": {
+            "container_type": "grid-type",
+            "title_placement": "within",
+            "hide_thumb_images": "Color",
+            "hide_option_title": "Arch",
+            "hide_most_popular": "",
+            "display_dynamic_variant_image": false,
+            "display_price_diff": false,
+            "price_diff_settings": "whole",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "selling_plan_RGqBit": {
+          "type": "selling_plan",
+          "settings": {
+            "rounding": false,
+            "otp": "",
+            "sbs": "SUBSCRIBE & SAVE 15%",
+            "subscription_description": "<p>Ultra Clean Bundle delivered every <strong>1 </strong>month</p>",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "buy_button_mxEHNA": {
+          "type": "buy_button",
+          "settings": {
+            "blurb": "",
+            "display_payment": true,
+            "footer_blurb": "",
+            "display_compare_price": false,
+            "display_alt_financing": false,
+            "alt_financing_link": "https://poponveneers.com/products/popon-payment-plans",
+            "alt_financing_text": "ALTERNATIVE FINANCING",
+            "display_bottom_payment": false,
+            "alt_financing_footer": "<h5>$29/week plans | No Credit Check | <strong>NO DISCOUNTS</strong></h5>",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "accordion_JjE8aG": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "accordion_title": "<p><strong>See How Your Veneers Are Made ✨</strong></p>",
+            "video_link": "",
+            "video": "shopify://files/videos/tolstoy_218bf3cb-cef2-4147-802b-8ae5e9f712ee.webm",
+            "content": "",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": ""
+          }
+        },
+        "accordion_dtehUe": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "accordion_title": "<p>Description</p>",
+            "video_link": "",
+            "content": "",
+            "page": "",
+            "display_html_content": true,
+            "image": "shopify://shop_images/30_day_G.svg",
+            "text": "<p>Our 30-day \"Pop On Promise Warranty\" ensures you love your Pop On Veneers.</p>",
+            "additional_content": "<ul><li>30-day warranty</li><li>Up to two remakes included for the perfect fit</li><li>Dedicated support team every step of the way!</li></ul>",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": ""
+          }
+        },
+        "accordion_ByhxAr": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>Bundle Details</p>",
+            "video_link": "",
+            "content": "<p><strong>What Makes Ultra Clean Bundle Special</strong></p><p>The Ultra Clean Bundle includes a 30-day supply of powerful cleaning tablets, our Fresh Cleaning Foam, a soft-bristle brush designed for gentle care, and a dual-purpose storage and cleaning case with a built-in mirror. Whether you’re at home or on the go, this all-in-one set makes it easy to keep your oral appliances fresh, protected, and ready for everyday wear.</p><p><strong>Pop On Clean</strong></p><p>Drop one tablet into water to remove odors, stains, and 99.9% of bacteria from aligners, retainers, night guards, and dentures. A deep clean without the hassle.</p><p><strong>Pop On Foam</strong></p><p>This no-rinse foam refreshes your mouth and oral appliance wherever you are. Use it in your case, on your brush, or directly in your mouth for a quick, minty clean - no sink needed.</p><p><strong>Clean & Go Case</strong></p><p>Your soak-and-store solution. Use it to deep clean your appliance with tablets, or simply carry it safely wherever you go. It also has a handy mirror. Compact, sleek, and ready for daily use.</p><p><strong>Pop On Toothbrush</strong></p><p>Soft enough for delicate oral appliances, tough enough for everyday freshness. Use with foam or water to keep your appliance clean and your mouth feeling great.</p>",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": ""
+          }
+        },
+        "accordion_wjdWUJ": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>Shipping Information</p>",
+            "video_link": "",
+            "content": "<p><strong>FREE SHIPPING </strong>available with USPS.</p>",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": ""
+          }
+        },
+        "accordion_Wxj6yq": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "accordion_title": "<p>Around NYC?</p>",
+            "video_link": "",
+            "content": "",
+            "page": "",
+            "display_html_content": true,
+            "image": "shopify://shop_images/images_for_digital_impressions_in_nyc_1_1.png",
+            "text": "<p><strong>Get you teeth scanned at POP ON instead of doing impressions at home!</strong></p>",
+            "additional_content": "<ul><li>No need to make impressions with the kit at home, we'll scan your teeth in our NYC office.</li><li>No Additional fee.</li></ul>",
+            "button_link": "https://poponveneers.com/products/pop-on-veneers-in-person-nyc",
+            "button_text": "Learn more",
+            "custom_html": ""
+          }
+        },
+        "freebies_HLBndF": {
+          "type": "freebies",
+          "settings": {
+            "title": "What's included FREE with every purchase?",
+            "image_one": "shopify://shop_images/af55ef01-9691-4fc6-adeb-5972c5dc6b17.png",
+            "text_one": "30 Cleaning Tablets",
+            "image_two": "shopify://shop_images/84a52a47-2246-49de-ae89-989842ec1f34.png",
+            "text_two": "Pop On Foam",
+            "image_three": "shopify://shop_images/98423da2-1f47-49a6-94c4-b87747f1740d.png",
+            "text_three": "Clean & Go Case",
+            "image_four": "shopify://shop_images/Pop_On_toothbrush_product_images_2_eb9120ad-580e-438a-8d71-73687d378e99.png",
+            "text_four": "Toothbrush",
+            "button_text": "Included Free",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "title_RLTGBX",
+        "callout_XCNXFf",
+        "variant_selector_3HH3r4",
+        "selling_plan_RGqBit",
+        "buy_button_mxEHNA",
+        "accordion_JjE8aG",
+        "accordion_dtehUe",
+        "accordion_ByhxAr",
+        "accordion_wjdWUJ",
+        "accordion_Wxj6yq",
+        "freebies_HLBndF"
+      ],
+      "name": "C Featured Product",
+      "settings": {
+        "product_override": "",
+        "enable_partially": false,
+        "plan_fee": 0,
+        "display_variant_price": true,
+        "additional_product_tag": "",
+        "partially_additional_product": "",
+        "freebie_fee": 0,
+        "bottom_text": "We’re All In! Prices include $99 non refundable plan fee (before taxes)",
+        "mobile_count": "2.3",
+        "desktop_count": "1"
+      }
+    },
+    "178517016081f46b69": {
+      "type": "_blocks",
+      "blocks": {
+        "amazon_reviews_grid_widget_block_product_VGXRB7": {
+          "type": "shopify://apps/amazon-reviews/blocks/grid-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "reviewsType": "image_first",
+            "showProductPicture": true,
+            "showDate": true,
+            "fixedReviewsHeight": false,
+            "textStyle": "plain",
+            "alignment": "left",
+            "infoPosition": "top",
+            "ratingStyle": "left"
+          }
+        }
+      },
+      "block_order": [
+        "amazon_reviews_grid_widget_block_product_VGXRB7"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "grid",
+            "media_columns": "two",
+            "image_gap": 4,
+            "large_first_image": false,
+            "icons_style": "none",
+            "slideshow_controls_style": "counter",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "right",
+            "thumbnail_width": 44,
+            "aspect_ratio": "adapt",
+            "constrain_to_viewport": true,
+            "media_fit": "contain",
+            "media_radius": 0,
+            "extend_media": false,
+            "zoom": true,
+            "video_loop": false,
+            "hide_variants": true,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "details_position": "flex-start",
+            "gap": 28,
+            "sticky_details_desktop": true,
+            "inherit_color_scheme": true,
+            "color_scheme": "scheme-1",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_icgrde": {
+              "type": "group",
+              "name": "Header",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_xrnftG": {
+                  "type": "text",
+                  "name": "Product title",
+                  "settings": {
+                    "text": "<h1>{{ closest.product.title }}</h1>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h3",
+                    "font": "var(--font-primary--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "price_tVjtKg": {
+                  "type": "price",
+                  "settings": {
+                    "show_sale_price_first": true,
+                    "show_installments": false,
+                    "show_tax_info": false,
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "left",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "color": "var(--color-foreground)",
+                    "padding-block-start": 4,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_xrnftG",
+                "price_tVjtKg"
+              ]
+            },
+            "divider_VJhene": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "width_percent": 100,
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {}
+            },
+            "variant_picker_R3rGDr": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": false,
+                "alignment": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "buy_buttons_eYQEYi": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "text_aEtTtq": {
+              "type": "text",
+              "name": "Product description",
+              "settings": {
+                "text": "{{ closest.product.description }}",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-primary--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "group_icgrde",
+            "divider_VJhene",
+            "variant_picker_R3rGDr",
+            "buy_buttons_eYQEYi",
+            "text_aEtTtq"
+          ]
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": false,
+        "limit_details_width": false,
+        "gap": 48,
+        "color_scheme": "",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "customcode_content_generator_J6dJht": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "content_hmxHxL": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<h3><strong>MORE REVIEWS FROM POP ON</strong></h3>"
+          }
+        }
+      },
+      "block_order": [
+        "content_hmxHxL"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customode_loox_reviews_nyGgWe": {
+      "type": "customode-loox-reviews",
+      "name": "C Loox Reviews",
+      "settings": {
+        "only_photos": false,
+        "hide_thumbnails": false,
+        "product_handle": "",
+        "aggregated": true,
+        "data-limit": 4,
+        "maxwidth": 1080
+      }
+    }
+  },
+  "order": [
+    "customcode_featured_product_Dci89U",
+    "178517016081f46b69",
+    "main",
+    "customcode_content_generator_J6dJht",
+    "customode_loox_reviews_nyGgWe"
+  ]
+}
