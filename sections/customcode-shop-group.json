@@ -103,10 +103,19 @@
         "two_grid_zmBfye": {
           "type": "two_grid",
           "settings": {
-            "image_one": "shopify://shop_images/Square_Graphics_Shop_16_1.png",
-            "link_one": "https://poponveneers.com/products/pop-on-lip-balm",
-            "image_two": "shopify://shop_images/Square_Graphics_Shop_15_2_1.png",
-            "link_two": "https://poponveneers.com/products/oral-mist"
+            "image_one": "shopify://shop_images/Square_Graphics_Shop_19.png",
+            "link_one": "https://poponveneers.com/products/pop-on-whitening-toothpaste",
+            "image_two": "shopify://shop_images/Square_Graphics_Shop_16_1.png",
+            "link_two": "https://poponveneers.com/products/pop-on-lip-balm"
+          }
+        },
+        "two_grid_fbQwgA": {
+          "type": "two_grid",
+          "settings": {
+            "image_one": "shopify://shop_images/Square_Graphics_Shop_15_2_1.png",
+            "link_one": "https://poponveneers.com/products/oral-mist",
+            "image_two": "shopify://shop_images/Square_Graphics_Shop_22_1.png",
+            "link_two": "https://poponveneers.com/products/fresh-on-the-go-bundle"
           }
         },
         "two_grid_MDxKA3": {
@@ -196,6 +205,7 @@
         "image_content_B67mCY",
         "image_content_cUcRw4",
         "two_grid_zmBfye",
+        "two_grid_fbQwgA",
         "two_grid_MDxKA3",
         "two_grid_8y9kdF",
         "two_grid_WgadW9",
