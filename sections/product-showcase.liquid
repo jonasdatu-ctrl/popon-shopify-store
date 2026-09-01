@@ -1,6 +1,13 @@
 
 
-<div id="ProductShowcase-{{ section.id }}" class="product-showcase spacing-style" style="{% render 'spacing-style', settings: section.settings %}">
+<div
+  id="ProductShowcase-{{ section.id }}"
+  class="product-showcase spacing-style"
+  style="
+    --product-showcase-bg: {{ section.settings.background_color }};
+    {% render 'spacing-style', settings: section.settings %}
+  "
+>
   <div class="product-showcase__container" style="--product-showcase-max-width: {{ section.settings.max_width }}px;">
     <div class="product-showcase__image-wrapper">
       {% if section.settings.image != blank %}
@@ -30,6 +37,11 @@
 </div>
 
 {% stylesheet %}
+  .product-showcase {
+    background-color: var(--product-showcase-bg);
+    padding-inline: var(--page-margin);
+  }
+
   .product-showcase__container {
     display: grid;
     grid-template-columns: 1fr;
@@ -93,6 +105,15 @@
       "step": 10,
       "unit": "px",
       "default": 1300
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background"
     },
     {
       "type": "header",
