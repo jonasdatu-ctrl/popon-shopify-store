@@ -112,8 +112,8 @@
             "heading": "Protect your teeth",
             "text": "Helps reduce wear from grinding and clenching.",
             "icon_position": "top",
-            "heading_color": "#0B2447",
-            "text_color": "#4A4A4A"
+            "heading_color": "#0b2447",
+            "text_color": "#4a4a4a"
           },
           "blocks": {}
         },
@@ -124,8 +124,8 @@
             "heading": "Custom, not generic",
             "text": "Made from your exact smile for a comfortable fit.",
             "icon_position": "top",
-            "heading_color": "#0B2447",
-            "text_color": "#4A4A4A"
+            "heading_color": "#0b2447",
+            "text_color": "#4a4a4a"
           },
           "blocks": {}
         },
@@ -136,8 +136,8 @@
             "heading": "Built to last",
             "text": "Durable outside. Softer inside. Made for nightly wear.",
             "icon_position": "top",
-            "heading_color": "#0B2447",
-            "text_color": "#4A4A4A"
+            "heading_color": "#0b2447",
+            "text_color": "#4a4a4a"
           },
           "blocks": {}
         },
@@ -148,8 +148,8 @@
             "heading": "We keep it on file",
             "text": "Reorder anytime. No new impression needed.",
             "icon_position": "top",
-            "heading_color": "#0B2447",
-            "text_color": "#4A4A4A"
+            "heading_color": "#0b2447",
+            "text_color": "#4a4a4a"
           },
           "blocks": {}
         }
@@ -163,8 +163,74 @@
       "name": "Icon text grid",
       "settings": {
         "heading": "<h2>Why a custom-fit guard makes all the difference.</h2>",
-        "background_color": "#FFFFFF",
-        "heading_color": "#0B2447",
+        "background_color": "#ffffff",
+        "heading_color": "#0b2447",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "product_showcase_cEcHwz": {
+      "type": "product-showcase",
+      "blocks": {
+        "product_showcase_header_8GbzmW": {
+          "type": "product-showcase-header",
+          "settings": {
+            "heading": "<p>Custom made with a comfortable dual-layer design.</p>",
+            "heading_color": "#0B2447",
+            "font_size": 28,
+            "font_size_mobile": 22
+          },
+          "blocks": {}
+        },
+        "product_showcase_header_jdigzn": {
+          "type": "product-showcase-header",
+          "settings": {
+            "heading": "<p>Available in three colors.</p>",
+            "heading_color": "#0B2447",
+            "font_size": 24,
+            "font_size_mobile": 18
+          },
+          "blocks": {}
+        },
+        "product_showcase_variant_tEE7Yy": {
+          "type": "product-showcase-variant",
+          "settings": {
+            "icon": "shopify://shop_images/Night_guard_Product_Image_11-min.png",
+            "title": "Clear",
+            "title_color": "#0B2447"
+          },
+          "blocks": {}
+        },
+        "product_showcase_variant_6Xj8zq": {
+          "type": "product-showcase-variant",
+          "settings": {
+            "icon": "shopify://shop_images/Night_guard_Product_Image_11-min.png",
+            "title": "Blue",
+            "title_color": "#0B2447"
+          },
+          "blocks": {}
+        },
+        "product_showcase_variant_bTHwE8": {
+          "type": "product-showcase-variant",
+          "settings": {
+            "icon": "shopify://shop_images/Night_guard_Product_Image_11-min.png",
+            "title": "Pink",
+            "title_color": "#0B2447"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "product_showcase_header_8GbzmW",
+        "product_showcase_header_jdigzn",
+        "product_showcase_variant_tEE7Yy",
+        "product_showcase_variant_6Xj8zq",
+        "product_showcase_variant_bTHwE8"
+      ],
+      "name": "Product Showcase",
+      "settings": {
+        "image": "shopify://shop_images/halloween_bundle_1499_s.png",
+        "max_width": 1300,
         "padding-block-start": 40,
         "padding-block-end": 40
       }
@@ -699,6 +765,7 @@
   "order": [
     "night_guard_hero",
     "icon_text_grid_b48VUr",
+    "product_showcase_cEcHwz",
     "main",
     "customcode_featured_product_HRwfDi",
     "17601015186c120833",
