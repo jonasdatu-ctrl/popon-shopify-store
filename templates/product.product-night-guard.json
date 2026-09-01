@@ -231,7 +231,7 @@
       "settings": {
         "image": "shopify://shop_images/Howie_Mandel__250OFF_Web_Banner_V3_1_d04eeb11-f049-4faf-969f-98e839d5db5c.png",
         "max_width": 1300,
-        "background_color": "",
+        "background_color": "#E4F8F7",
         "padding-block-start": 40,
         "padding-block-end": 40
       }
@@ -493,6 +493,69 @@
         "color_scheme": "",
         "padding-block-start": 0,
         "padding-block-end": 0
+      }
+    },
+    "testimonial_slider_eXP4mj": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "testimonial_card_z8x6Hk": {
+          "type": "testimonial-card",
+          "settings": {
+            "rating": 5,
+            "quote": "Fits perfectly and feels so comfortable. I forget I'm even wearing it.",
+            "avatar": "shopify://shop_images/Zero_Sugar_icon_b266e83b-c720-41a7-9df4-c60e2507e489.png",
+            "name": "Sarah J.",
+            "star_color": "#FFB800",
+            "star_empty_color": "#E5E5E5",
+            "quote_color": "#0B2447",
+            "name_color": "#4A4A4A",
+            "divider_color": "#E5E5E5"
+          },
+          "blocks": {}
+        },
+        "testimonial_card_zbhw8j": {
+          "type": "testimonial-card",
+          "settings": {
+            "rating": 5,
+            "quote": "Way better than the boil-and-bite guards I've tried.",
+            "avatar": "shopify://shop_images/Sodium_Citrate_icon_fc18170b-87db-4d78-a1e6-eb321d409ebf.png",
+            "name": "Mike D.",
+            "star_color": "#FFB800",
+            "star_empty_color": "#E5E5E5",
+            "quote_color": "#0B2447",
+            "name_color": "#4A4A4A",
+            "divider_color": "#E5E5E5"
+          },
+          "blocks": {}
+        },
+        "testimonial_card_UEwgfX": {
+          "type": "testimonial-card",
+          "settings": {
+            "rating": 5,
+            "quote": "I wake up without jaw pain now. Game changer.",
+            "avatar": "shopify://shop_images/Sodium_Citrate_icon_fc18170b-87db-4d78-a1e6-eb321d409ebf.png",
+            "name": "Lisa K.",
+            "star_color": "#FFB800",
+            "star_empty_color": "#E5E5E5",
+            "quote_color": "#0B2447",
+            "name_color": "#4A4A4A",
+            "divider_color": "#E5E5E5"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "testimonial_card_z8x6Hk",
+        "testimonial_card_zbhw8j",
+        "testimonial_card_UEwgfX"
+      ],
+      "name": "Testimonial Slider",
+      "settings": {
+        "heading": "<h2>Real customers. Better nights.</h2>",
+        "background_color": "",
+        "heading_color": "#0B2447",
+        "padding-block-start": 40,
+        "padding-block-end": 40
       }
     },
     "customcode_featured_product_HRwfDi": {
@@ -768,6 +831,7 @@
     "icon_text_grid_b48VUr",
     "product_showcase_cEcHwz",
     "main",
+    "testimonial_slider_eXP4mj",
     "customcode_featured_product_HRwfDi",
     "17601015186c120833",
     "17851703850d429cc0",
