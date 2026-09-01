@@ -1,0 +1,93 @@
+
+
+<div
+  class="product-showcase-header-block"
+  style="
+    --product-showcase-header-color: {{ block.settings.heading_color }};
+    --product-showcase-header-font-size: {{ block.settings.font_size }}px;
+    --product-showcase-header-font-size-mobile: {{ block.settings.font_size_mobile }}px;
+  "
+  {{ block.shopify_attributes }}
+>
+  {{ block.settings.heading }}
+</div>
+
+{% stylesheet %}
+  .product-showcase-header-block {
+    width: 100%;
+    color: var(--product-showcase-header-color);
+    font-size: var(--product-showcase-header-font-size-mobile);
+  }
+
+  .product-showcase-header-block :where(p, h1, h2, h3, h4, h5, h6) {
+    margin: 0 0 0.5em;
+    color: inherit;
+    font-size: inherit;
+    font-weight: 700;
+  }
+
+  .product-showcase-header-block :where(p, h1, h2, h3, h4, h5, h6):last-child {
+    margin-block-end: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .product-showcase-header-block {
+      font-size: var(--product-showcase-header-font-size);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product showcase header",
+  "tag": null,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Custom made with a comfortable dual-layer design.</p><p>Available in three colors.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Text",
+      "default": "#0B2447"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size (desktop)",
+      "min": 16,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "label": "Font size (mobile)",
+      "min": 14,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 22
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product showcase header",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

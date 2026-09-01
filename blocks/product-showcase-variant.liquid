@@ -1,0 +1,83 @@
+
+
+<div
+  class="product-showcase-variant-block"
+  style="--product-showcase-variant-title-color: {{ block.settings.title_color }};"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.icon != blank %}
+    <span class="product-showcase-variant-block__icon">
+      {{ block.settings.icon | image_url: width: 200 | image_tag: loading: 'lazy', widths: '50, 100, 150, 200' }}
+    </span>
+  {% endif %}
+
+  {% if block.settings.title != blank %}
+    <span class="product-showcase-variant-block__title">{{ block.settings.title }}</span>
+  {% endif %}
+</div>
+
+{% stylesheet %}
+  .product-showcase-variant-block {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+  }
+
+  .product-showcase-variant-block__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+  }
+
+  .product-showcase-variant-block__icon img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .product-showcase-variant-block__title {
+    color: var(--product-showcase-variant-title-color);
+    font-size: 0.9em;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product showcase variant",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Clear"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title text",
+      "default": "#0B2447"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product showcase variant",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
