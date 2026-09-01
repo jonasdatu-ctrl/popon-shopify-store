@@ -85,6 +85,7 @@
         "icon_text": {
           "type": "icon-text",
           "settings": {
+            "icon": "shopify://shop_images/How_to_use_icons-03.png",
             "text": "Secure & encrypted checkout"
           },
           "blocks": {}
