@@ -1,14 +1,20 @@
 
 
-{% if block.settings.icon != blank %}
-  <span class="icon-text-block__icon">
-    {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '25, 50, 75, 100' }}
-  </span>
-{% endif %}
+<div
+  class="icon-text-block"
+  style="--icon-text-color: {{ block.settings.text_color }};"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.icon != blank %}
+    <span class="icon-text-block__icon">
+      {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '25, 50, 75, 100' }}
+    </span>
+  {% endif %}
 
-{% if block.settings.text != blank %}
-  <span class="icon-text-block__text">{{ block.settings.text }}</span>
-{% endif %}
+  {% if block.settings.text != blank %}
+    <span class="icon-text-block__text">{{ block.settings.text }}</span>
+  {% endif %}
+</div>
 
 {% stylesheet %}
   .icon-text-block {
@@ -18,7 +24,9 @@
   }
 
   .icon-text-block__icon {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 16px;
     flex-shrink: 0;
   }
@@ -27,9 +35,11 @@
     display: block;
     width: 100%;
     height: auto;
+    margin: 0 auto;
   }
 
   .icon-text-block__text {
+    color: var(--icon-text-color);
     font-size: 0.85em;
   }
 {% endstylesheet %}
@@ -37,7 +47,7 @@
 {% schema %}
 {
   "name": "Icon with text",
-  "class": "icon-text-block",
+  "tag": null,
   "settings": [
     {
       "type": "image_picker",
@@ -49,6 +59,16 @@
       "id": "text",
       "label": "Text",
       "default": "Secure & encrypted checkout"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#FFFFFF"
     }
   ],
   "presets": [

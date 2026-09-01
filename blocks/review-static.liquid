@@ -1,16 +1,25 @@
 
 
-<div class="review-static-block__stars" aria-hidden="true" style="--review-static-star-color: {{ block.settings.star_color }};">
-  {% for i in (1..5) %}
-    <svg class="review-static-block__star" viewBox="0 0 32 32" role="presentation">
-      <path d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z" />
-    </svg>
-  {% endfor %}
-</div>
+<div
+  class="review-static-block review-static-block--align-{{ block.settings.text_alignment }}"
+  style="
+    --review-static-star-color: {{ block.settings.star_color }};
+    --review-static-text-color: {{ block.settings.text_color }};
+  "
+  {{ block.shopify_attributes }}
+>
+  <div class="review-static-block__stars" aria-hidden="true">
+    {% for i in (1..5) %}
+      <svg class="review-static-block__star" viewBox="0 0 32 32" role="presentation">
+        <path d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z" />
+      </svg>
+    {% endfor %}
+  </div>
 
-{% if block.settings.text != blank %}
-  <p class="review-static-block__text">{{ block.settings.text }}</p>
-{% endif %}
+  {% if block.settings.text != blank %}
+    <p class="review-static-block__text">{{ block.settings.text }}</p>
+  {% endif %}
+</div>
 
 {% stylesheet %}
   .review-static-block {
@@ -18,6 +27,19 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 0.6em;
+    width: 100%;
+  }
+
+  .review-static-block--align-left {
+    justify-content: flex-start;
+  }
+
+  .review-static-block--align-center {
+    justify-content: center;
+  }
+
+  .review-static-block--align-right {
+    justify-content: flex-end;
   }
 
   .review-static-block__stars {
@@ -34,6 +56,7 @@
 
   .review-static-block__text {
     margin: 0;
+    color: var(--review-static-text-color);
     font-size: 0.9em;
   }
 {% endstylesheet %}
@@ -41,8 +64,42 @@
 {% schema %}
 {
   "name": "Review with text",
-  "class": "review-static-block",
+  "tag": null,
   "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Trusted by 20,000+ Pop On customers"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
     {
       "type": "color",
       "id": "star_color",
@@ -50,10 +107,10 @@
       "default": "#FFB800"
     },
     {
-      "type": "text",
-      "id": "text",
+      "type": "color",
+      "id": "text_color",
       "label": "Text",
-      "default": "Trusted by 20,000+ Pop On customers"
+      "default": "#FFFFFF"
     }
   ],
   "presets": [
