@@ -1,0 +1,91 @@
+
+
+{% if block.settings.badge_text != blank or block.settings.eyebrow_text != blank %}
+  <div class="text-badge-block__eyebrow">
+    {% if block.settings.badge_text != blank %}
+      <span class="text-badge-block__badge">{{ block.settings.badge_text }}</span>
+    {% endif %}
+    {% if block.settings.eyebrow_text != blank %}
+      <span class="text-badge-block__label">{{ block.settings.eyebrow_text }}</span>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% if block.settings.heading != blank %}
+  <div class="text-badge-block__heading">{{ block.settings.heading }}</div>
+{% endif %}
+
+{% stylesheet %}
+  .text-badge-block {
+    display: block;
+  }
+
+  .text-badge-block__eyebrow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6em;
+    margin-block-end: 0.6em;
+  }
+
+  .text-badge-block__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2em 0.6em;
+    background-color: rgb(var(--color-foreground-rgb));
+    color: rgb(var(--color-background-rgb));
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: 4px;
+  }
+
+  .text-badge-block__label {
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .text-badge-block__heading {
+    margin: 0;
+  }
+
+  .text-badge-block__heading :last-child {
+    margin-block-end: 0;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Text with badge",
+  "class": "text-badge-block",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "New"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_text",
+      "label": "Label text",
+      "default": "Made for Pop On customers"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<h2>Your smile by day. Protected at night.</h2>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text with badge",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,61 @@
+
+
+{% if block.settings.icon != blank %}
+  <span class="icon-text-block__icon">
+    {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '25, 50, 75, 100' }}
+  </span>
+{% endif %}
+
+{% if block.settings.text != blank %}
+  <span class="icon-text-block__text">{{ block.settings.text }}</span>
+{% endif %}
+
+{% stylesheet %}
+  .icon-text-block {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .icon-text-block__icon {
+    display: block;
+    width: 16px;
+    flex-shrink: 0;
+  }
+
+  .icon-text-block__icon img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .icon-text-block__text {
+    font-size: 0.85em;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Icon with text",
+  "class": "icon-text-block",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Secure & encrypted checkout"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon with text",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

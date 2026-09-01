@@ -9,6 +9,64 @@
  */
 {
   "sections": {
+    "night_guard_hero": {
+      "type": "night-guard-hero",
+      "blocks": {
+        "text_badge": {
+          "type": "text-badge",
+          "settings": {
+            "badge_text": "New",
+            "eyebrow_text": "Made for Pop On customers",
+            "heading": "<h2>Your smile by day. Protected at night.</h2>"
+          }
+        },
+        "richtext": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your custom Pop On Night Guard is designed to protect your teeth from grinding and clenching while you sleep.</p>"
+          }
+        },
+        "icon_list": {
+          "type": "icon-list",
+          "settings": {
+            "label_1": "Custom Made for Your Teeth",
+            "label_2": "Dual-Layer Protection",
+            "label_3": "Made in our FDA Registered Lab",
+            "label_4": "Easy Reorders"
+          }
+        },
+        "review": {
+          "type": "review-static",
+          "settings": {
+            "text": "Trusted by 20,000+ Pop On customers"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "label": "Get My Pop On Night Guard — $99",
+            "link": "shopify://collections/all"
+          }
+        },
+        "icon_text": {
+          "type": "icon-text",
+          "settings": {
+            "text": "Secure & encrypted checkout"
+          }
+        }
+      },
+      "block_order": [
+        "text_badge",
+        "richtext",
+        "icon_list",
+        "review",
+        "button",
+        "icon_text"
+      ],
+      "settings": {
+        "background_color": "#0B2447"
+      }
+    },
     "main": {
       "type": "product-information",
       "blocks": {
@@ -531,6 +589,7 @@
     }
   },
   "order": [
+    "night_guard_hero",
     "main",
     "customcode_featured_product_HRwfDi",
     "17601015186c120833",

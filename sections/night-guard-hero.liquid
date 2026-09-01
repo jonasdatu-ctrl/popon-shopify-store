@@ -1,0 +1,215 @@
+
+
+<div
+  id="NightGuardHero-{{ section.id }}"
+  class="night-guard-hero"
+  style="--night-guard-hero-bg: {{ section.settings.background_color }};"
+>
+  <div
+    class="night-guard-hero__container spacing-style"
+    style="{% render 'spacing-style', settings: section.settings %}"
+  >
+    <picture class="night-guard-hero__image-wrapper">
+      {% if section.settings.image_mobile != blank %}
+        <source
+          media="(max-width: 749px)"
+          srcset="
+            {{ section.settings.image_mobile | image_url: width: 750 }} 750w,
+            {{ section.settings.image_mobile | image_url: width: 1100 }} 1100w
+          "
+        >
+      {% endif %}
+      {% if section.settings.image_desktop != blank %}
+        <img
+          class="night-guard-hero__image"
+          src="{{ section.settings.image_desktop | image_url: width: 1500 }}"
+          srcset="
+            {{ section.settings.image_desktop | image_url: width: 750 }} 750w,
+            {{ section.settings.image_desktop | image_url: width: 1100 }} 1100w,
+            {{ section.settings.image_desktop | image_url: width: 1500 }} 1500w,
+            {{ section.settings.image_desktop | image_url: width: 2000 }} 2000w
+          "
+          sizes="(min-width: 750px) 50vw, 100vw"
+          width="{{ section.settings.image_desktop.width }}"
+          height="{{ section.settings.image_desktop.height }}"
+          alt="{{ section.settings.image_desktop.alt | escape }}"
+          loading="eager"
+          fetchpriority="high"
+        >
+      {% else %}
+        {{ 'hero-apparel-1' | placeholder_svg_tag: 'night-guard-hero__image night-guard-hero__image--placeholder' }}
+      {% endif %}
+    </picture>
+
+    <div class="night-guard-hero__content">
+      {% content_for 'blocks' %}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .night-guard-hero__container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .night-guard-hero__image-wrapper {
+    order: 1;
+    display: block;
+    margin: 0;
+  }
+
+  .night-guard-hero__image,
+  .night-guard-hero__image--placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .night-guard-hero__content {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    background-color: var(--night-guard-hero-bg);
+    padding: 2.5rem 1.5rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .night-guard-hero__container {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .night-guard-hero__content {
+      order: 1;
+      padding: 4rem;
+      justify-content: center;
+    }
+
+    .night-guard-hero__image-wrapper {
+      order: 2;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Night Guard Hero",
+  "tag": "section",
+  "class": "night-guard-hero-wrapper section-wrapper",
+  "blocks": [
+    {
+      "type": "text-badge"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "icon-list"
+    },
+    {
+      "type": "review-static"
+    },
+    {
+      "type": "button"
+    },
+    {
+      "type": "icon-text"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#0B2447"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Image (desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image (mobile)",
+      "info": "Optional. Falls back to the desktop image when not set."
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Night Guard Hero",
+      "category": "Custom",
+      "blocks": {
+        "text_badge": {
+          "type": "text-badge"
+        },
+        "richtext": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your custom Pop On Night Guard is designed to protect your teeth from grinding and clenching while you sleep.</p>"
+          }
+        },
+        "icon_list": {
+          "type": "icon-list"
+        },
+        "review": {
+          "type": "review-static"
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "label": "Get My Pop On Night Guard",
+            "link": "shopify://collections/all"
+          }
+        },
+        "icon_text": {
+          "type": "icon-text"
+        }
+      },
+      "block_order": [
+        "text_badge",
+        "richtext",
+        "icon_list",
+        "review",
+        "button",
+        "icon_text"
+      ]
+    }
+  ]
+}
+{% endschema %}

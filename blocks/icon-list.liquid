@@ -1,0 +1,130 @@
+
+
+<div class="icon-list-block__items">
+  {% for i in (1..4) %}
+    {% liquid
+      assign icon_key = 'icon_' | append: i
+      assign label_key = 'label_' | append: i
+      assign icon = block.settings[icon_key]
+      assign label = block.settings[label_key]
+    %}
+
+    {% if icon != blank %}
+      <div class="icon-list-block__item">
+        <span class="icon-list-block__icon">
+          {{ icon | image_url: width: 200 | image_tag: loading: 'lazy', widths: '50, 100, 150, 200' }}
+        </span>
+        {% if label != blank %}
+          <span class="icon-list-block__label">{{ label }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% stylesheet %}
+  .icon-list-block__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25em;
+  }
+
+  .icon-list-block__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+    max-width: 120px;
+  }
+
+  .icon-list-block__icon {
+    display: block;
+    width: 28px;
+  }
+
+  .icon-list-block__icon img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .icon-list-block__label {
+    font-size: 0.8em;
+    line-height: 1.3;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Icon list",
+  "class": "icon-list-block",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Item 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_1",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "label_1",
+      "label": "Label",
+      "default": "Custom Made for Your Teeth"
+    },
+    {
+      "type": "header",
+      "content": "Item 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_2",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "label_2",
+      "label": "Label",
+      "default": "Dual-Layer Protection"
+    },
+    {
+      "type": "header",
+      "content": "Item 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_3",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "label_3",
+      "label": "Label",
+      "default": "Made in our FDA Registered Lab"
+    },
+    {
+      "type": "header",
+      "content": "Item 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_4",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "label_4",
+      "label": "Label",
+      "default": "Easy Reorders"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon list",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
