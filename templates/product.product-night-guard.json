@@ -17,7 +17,12 @@
           "settings": {
             "badge_text": "New",
             "eyebrow_text": "Made for Pop On customers",
-            "heading": "<h2>Your smile by day. Protected at night.</h2>"
+            "heading": "<h2>Your smile by day. Protected at night.</h2>",
+            "text_alignment": "left",
+            "badge_bg_color": "#2f6fed",
+            "badge_text_color": "#ffffff",
+            "label_color": "#ffffff",
+            "heading_color": "#ffffff"
           },
           "blocks": {}
         },
@@ -56,15 +61,18 @@
             "icon_3": "shopify://shop_images/Sodium_Citrate_icon_fc18170b-87db-4d78-a1e6-eb321d409ebf.png",
             "label_3": "Made in our FDA Registered Lab",
             "icon_4": "shopify://shop_images/Zero_Sugar_icon_b266e83b-c720-41a7-9df4-c60e2507e489.png",
-            "label_4": "Easy Reorders"
+            "label_4": "Easy Reorders",
+            "label_color": "#ffffff"
           },
           "blocks": {}
         },
         "review": {
           "type": "review-static",
           "settings": {
+            "text": "Trusted by 20,000+ Pop On customers",
+            "text_alignment": "left",
             "star_color": "#ffb800",
-            "text": "Trusted by 20,000+ Pop On customers"
+            "text_color": "#ffffff"
           },
           "blocks": {}
         },
@@ -75,9 +83,9 @@
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
             "style_class": "button",
-            "width": "fit-content",
+            "width": "custom",
             "custom_width": 100,
-            "width_mobile": "fit-content",
+            "width_mobile": "custom",
             "custom_width_mobile": 100
           },
           "blocks": {}
@@ -86,7 +94,8 @@
           "type": "icon-text",
           "settings": {
             "icon": "shopify://shop_images/How_to_use_icons-03.png",
-            "text": "Secure & encrypted checkout"
+            "text": "Secure & encrypted checkout",
+            "text_color": "#ffffff"
           },
           "blocks": {}
         }
