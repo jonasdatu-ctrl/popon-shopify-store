@@ -26,12 +26,13 @@
           },
           "blocks": {}
         },
-        "richtext": {
+        "c_text_47qptz": {
           "type": "c-text",
+          "name": "C Text",
           "settings": {
             "text": "<p>Your custom Pop On Night Guard is designed to protect your teeth from grinding and clenching while you sleep.</p>",
             "text_alignment": "left",
-            "color": "#ffffff"
+            "color": "#FFFFFF"
           },
           "blocks": {}
         },
@@ -60,13 +61,15 @@
           },
           "blocks": {}
         },
-        "button": {
+        "c_button_bqxVrg": {
           "type": "c-button",
+          "name": "C Button",
           "settings": {
             "label": "Get My Pop On Night Guard — $99",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
-            "style_class": "button",
+            "background_color": "#2F6FED",
+            "text_color": "#FFFFFF",
             "width": "custom",
             "custom_width": 100,
             "width_mobile": "custom",
@@ -87,10 +90,10 @@
       },
       "block_order": [
         "text_badge",
-        "richtext",
+        "c_text_47qptz",
         "icon_list",
         "review",
-        "button",
+        "c_button_bqxVrg",
         "icon_text"
       ],
       "settings": {
