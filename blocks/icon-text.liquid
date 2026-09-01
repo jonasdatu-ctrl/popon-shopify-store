@@ -1,7 +1,7 @@
 
 
 <div
-  class="icon-text-block"
+  class="icon-text-block icon-text-block--align-{{ block.settings.text_alignment }}"
   style="--icon-text-color: {{ block.settings.text_color }};"
   {{ block.shopify_attributes }}
 >
@@ -21,6 +21,19 @@
     display: flex;
     align-items: center;
     gap: 0.5em;
+    width: 100%;
+  }
+
+  .icon-text-block--align-left {
+    justify-content: flex-start;
+  }
+
+  .icon-text-block--align-center {
+    justify-content: center;
+  }
+
+  .icon-text-block--align-right {
+    justify-content: flex-end;
   }
 
   .icon-text-block__icon {
@@ -59,6 +72,30 @@
       "id": "text",
       "label": "Text",
       "default": "Secure & encrypted checkout"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
     },
     {
       "type": "header",

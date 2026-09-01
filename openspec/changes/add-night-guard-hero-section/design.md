@@ -13,8 +13,9 @@ See `proposal.md` for motivation and `specs/night-guard-hero-section/spec.md` fo
 ## Goals / Non-Goals
 
 **Goals:**
-- Deliver the section and its four new blocks as idiomatic theme blocks, consistent with existing files like `blocks/text.liquid`, `blocks/button.liquid`, `blocks/icon.liquid`, `blocks/review.liquid`.
-- Keep the two reused block types (`text`, `button`) completely untouched — no modifications to existing blocks.
+- Deliver the section and its new blocks as idiomatic theme blocks, consistent with existing files like `blocks/text.liquid`, `blocks/button.liquid`, `blocks/icon.liquid`, `blocks/review.liquid`.
+- Keep the native `text` block completely untouched — no modifications to existing shared blocks.
+- Every custom block exposes explicit `color` settings for each font/background/badge color it renders, rather than inheriting theme defaults silently.
 - Make the responsive reorder (image-top on mobile, content-left/image-right on desktop) work via CSS only, no JS.
 
 **Non-Goals:**
@@ -41,12 +42,22 @@ Alternative considered: keep DOM order content-then-image and use `flex-directio
 ### New blocks and their settings
 | Block file | Settings |
 |---|---|
-| `blocks/text-badge.liquid` | `badge_text` (text, optional), `eyebrow_text` (text, optional), `heading` (richtext) |
-| `blocks/icon-list.liquid` | `icon_1`..`icon_4` (image_picker), `label_1`..`label_4` (text) — fixed slots, not child blocks, per proposal |
-| `blocks/review-static.liquid` | `text` (text) — 5-star markup is hardcoded in the block, not a setting |
-| `blocks/icon-text.liquid` | `icon` (image_picker), `text` (text) |
+| `blocks/text-badge.liquid` | `badge_text` (text, optional), `eyebrow_text` (text, optional), `heading` (richtext), `text_alignment` (left/center/right), `badge_bg_color`, `badge_text_color`, `label_color`, `heading_color` |
+| `blocks/icon-list.liquid` | `icon_1`..`icon_4` (image_picker), `label_1`..`label_4` (text) — fixed slots, not child blocks, per proposal; `label_color`. Icons are always center-aligned above their label (not a setting — see "Icon centering" below) |
+| `blocks/review-static.liquid` | `text` (text), `text_alignment` (left/center/right), `star_color`, `text_color` — 5-star markup is hardcoded in the block, not a setting |
+| `blocks/icon-text.liquid` | `icon` (image_picker), `text` (text), `text_alignment` (left/center/right), `text_color` |
+| `blocks/button-color.liquid` | `label`, `link`, `open_in_new_tab`, `background_color`, `text_color`, plus the same `width`/`custom_width`/`width_mobile`/`custom_width_mobile` sizing settings as the native `button` block |
 
-Reused without modification: `blocks/text.liquid` (richtext body), `blocks/button.liquid` (CTA).
+Reused without modification: `blocks/text.liquid` (richtext body) — it already exposes a `color` setting, so no change was needed there.
+
+### Colorable button: new `button-color` block instead of the native `button`
+The native `blocks/button.liquid` has no color settings — its appearance comes from theme-wide `.button`/`.button-secondary` CSS classes, shared by every button on the site. Adding background/text color settings there would mean modifying a global, widely-reused block, risking visual regressions anywhere else `button` is used in the theme. Instead, `blocks/button-color.liquid` is a new, section-scoped block: same label/link/size settings and `size-style` snippet reuse as the native button, plus explicit `background_color`/`text_color` settings. The section's `blocks` schema and preset now reference `button-color` instead of `button`.
+
+### Icon centering vs. alignment
+Per explicit user direction, icon-bearing blocks are treated differently from text-only blocks:
+- `icon-list`: icons are always centered above their label (fixed CSS, not a setting) — this is a bounded, always-4-or-fewer grid of trust icons where centered presentation is the intended look.
+- `icon-text`: gets a `text_alignment` setting (left/center/right) controlling the icon+text row as a unit, since it's a single inline row (icon beside text, not icon above text) that may need to sit anywhere in the content column.
+- `text-badge` and `review-static`: get `text_alignment` settings since they're primarily editable copy.
 
 ### Icon-list as fixed settings, not child blocks
 The proposal explicitly calls for "max 4 image picker settings and single line text settings" rather than a repeatable block-in-block structure (the pattern `sections/customcode-product-features.liquid` uses). Fixed settings are simpler for this bounded, non-growing case (exactly 4 trust icons in the reference design) and avoid the extra nesting complexity of blocks-within-a-block.
