@@ -14,7 +14,7 @@ See `proposal.md` for motivation and `specs/night-guard-hero-section/spec.md` fo
 
 **Goals:**
 - Deliver the section and its new blocks as idiomatic theme blocks, consistent with existing files like `blocks/text.liquid`, `blocks/button.liquid`, `blocks/icon.liquid`, `blocks/review.liquid`.
-- Keep the native `text` block completely untouched — no modifications to existing shared blocks.
+- Keep every native/shared theme block (`text`, `button`, etc.) completely untouched — this section uses only its own dedicated, "C "-prefixed custom blocks for anything that needs section-specific settings, following this theme's existing convention for custom blocks/sections (`C Image Text Badge`, `C Product Features`, `C Featured Product`, etc.).
 - Every custom block exposes explicit `color` settings for each font/background/badge color it renders, rather than inheriting theme defaults silently.
 - Make the responsive reorder (image-top on mobile, content-left/image-right on desktop) work via CSS only, no JS.
 
@@ -40,18 +40,23 @@ Alternative considered: keep DOM order content-then-image and use `flex-directio
 - `image_mobile` (`image_picker`, optional — falls back to `image_desktop` per spec)
 
 ### New blocks and their settings
-| Block file | Settings |
-|---|---|
-| `blocks/text-badge.liquid` | `badge_text` (text, optional), `eyebrow_text` (text, optional), `heading` (richtext), `text_alignment` (left/center/right), `badge_bg_color`, `badge_text_color`, `label_color`, `heading_color` |
-| `blocks/icon-list.liquid` | `icon_1`..`icon_4` (image_picker), `label_1`..`label_4` (text) — fixed slots, not child blocks, per proposal; `label_color`. Icons are always center-aligned above their label (not a setting — see "Icon centering" below) |
-| `blocks/review-static.liquid` | `text` (text), `text_alignment` (left/center/right), `star_color`, `text_color` — 5-star markup is hardcoded in the block, not a setting |
-| `blocks/icon-text.liquid` | `icon` (image_picker), `text` (text), `text_alignment` (left/center/right), `text_color` |
-| `blocks/button-color.liquid` | `label`, `link`, `open_in_new_tab`, `background_color`, `text_color`, plus the same `width`/`custom_width`/`width_mobile`/`custom_width_mobile` sizing settings as the native `button` block |
+| Block file | Schema name | Settings |
+|---|---|---|
+| `blocks/text-badge.liquid` | Text with badge | `badge_text` (text, optional), `eyebrow_text` (text, optional), `heading` (richtext), `text_alignment` (left/center/right), `badge_bg_color`, `badge_text_color`, `label_color`, `heading_color` |
+| `blocks/c-text.liquid` | C Text | `text` (richtext), `text_alignment` (left/center/right), `color` (text color) |
+| `blocks/icon-list.liquid` | Icon list | `icon_1`..`icon_4` (image_picker), `label_1`..`label_4` (text) — fixed slots, not child blocks, per proposal; `label_color`. Icons are always center-aligned above their label (not a setting — see "Icon centering" below) |
+| `blocks/review-static.liquid` | Review with text | `text` (text), `text_alignment` (left/center/right), `star_color`, `text_color` — 5-star markup is hardcoded in the block, not a setting |
+| `blocks/c-button.liquid` | C Button | `label`, `link`, `open_in_new_tab`, `background_color`, `text_color`, plus the same `width`/`custom_width`/`width_mobile`/`custom_width_mobile` sizing settings as the native `button` block |
+| `blocks/icon-text.liquid` | Icon with text | `icon` (image_picker), `text` (text), `text_alignment` (left/center/right), `text_color` |
 
-Reused without modification: `blocks/text.liquid` (richtext body) — it already exposes a `color` setting, so no change was needed there.
+No native block is reused in this section — see "Dedicated blocks instead of native `text`/`button`" below.
 
-### Colorable button: new `button-color` block instead of the native `button`
-The native `blocks/button.liquid` has no color settings — its appearance comes from theme-wide `.button`/`.button-secondary` CSS classes, shared by every button on the site. Adding background/text color settings there would mean modifying a global, widely-reused block, risking visual regressions anywhere else `button` is used in the theme. Instead, `blocks/button-color.liquid` is a new, section-scoped block: same label/link/size settings and `size-style` snippet reuse as the native button, plus explicit `background_color`/`text_color` settings. The section's `blocks` schema and preset now reference `button-color` instead of `button`.
+### Dedicated blocks instead of native `text`/`button`: `c-text` and `c-button`
+Both native `blocks/text.liquid` and `blocks/button.liquid` are shared, theme-wide blocks used across many other sections. `text.liquid` does already expose a `color` setting, but per explicit user direction this section avoids depending on native blocks at all for anything it needs to control — instead it gets its own dedicated blocks, named following this theme's existing "C "-prefixed custom-block convention (`C Image Text Badge`, `C Product Features`, etc.):
+- `blocks/c-text.liquid` ("C Text"): richtext + `text_alignment` + `color`, replacing the native `text` block for this section's body copy.
+- `blocks/c-button.liquid` ("C Button"): label/link/size settings (reusing the `size-style` snippet, same as native `button`) plus explicit `background_color`/`text_color` settings, replacing the native `button` block for this section's CTA.
+
+Neither native block is modified, so nothing else in the theme that uses `text` or `button` is affected.
 
 ### Icon centering vs. alignment
 Per explicit user direction, icon-bearing blocks are treated differently from text-only blocks:

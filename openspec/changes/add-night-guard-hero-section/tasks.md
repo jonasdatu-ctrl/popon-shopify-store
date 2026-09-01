@@ -11,7 +11,7 @@
 - [x] 2.1 Create `sections/night-guard-hero.liquid` scaffolding: two-column markup (image wrapper first, then content wrapper in DOM order) with `{% content_for 'blocks' %}` in the content wrapper, following the structural pattern of `sections/hero.liquid`
 - [x] 2.2 Add section settings: `background_color` (`color`), `image_desktop` (`image_picker`), `image_mobile` (`image_picker`); verify the content column background reflects `background_color` and image output falls back to `image_desktop` when `image_mobile` is unset
 - [x] 2.3 Add responsive CSS: single-column stacked layout (image on top, content below) by default, switching to a two-column grid at `min-width: 750px` with `order`/`grid-column` placing content first (left) and image second (right) without changing DOM order; verify visually at both a sub-750px and a 750px+ viewport
-- [x] 2.4 Register the section's allowed `blocks` list in its schema: `text-badge`, `text` (native), `icon-list`, `review-static`, `button-color`, `icon-text`; verify all six are addable from the theme editor and native `text` behaves unmodified
+- [x] 2.4 Register the section's allowed `blocks` list in its schema: `text-badge`, `c-text`, `icon-list`, `review-static`, `c-button`, `icon-text` (superseded from an earlier native-`text`/`button-color` iteration — see group 6); verify all six are addable from the theme editor
 - [x] 2.5 Add a section `presets` entry (with a representative starter set of blocks) so the section is selectable from "Add section" in the theme editor
 
 ## 3. Template integration
@@ -34,3 +34,11 @@
 - [x] 5.4 Add a `text_alignment` (left/center/right) setting to `text-badge`, `review-static`, and `icon-text`; verify each shifts as a unit when changed
 - [x] 5.5 Create `blocks/button-color.liquid` (label, link, open_in_new_tab, background_color, text_color, and the same width/custom-width settings as the native `button` block) since the native `button` block has no color settings and is shared theme-wide; swap the section's `blocks` schema and preset from `button` to `button-color`
 - [x] 5.6 Update `templates/product.product-night-guard.json`'s existing button block entry to `"type": "button-color"` with `background_color`/`text_color` settings, and add `text_alignment` to the existing `icon_text` block entry, preserving all other already-saved settings (uploaded icon URLs, star color, etc.)
+
+## 6. Dedicated C Text / C Button blocks (native-block avoidance)
+
+- [x] 6.1 Create `blocks/c-text.liquid` ("C Text": richtext `text`, `text_alignment`, `color`) and remove the section's dependency on the native `text` block entirely, per explicit user direction to avoid depending on native/shared blocks — follows the theme's existing "C "-prefixed custom-block naming convention
+- [x] 6.2 Rename `blocks/button-color.liquid` to `blocks/c-button.liquid` ("C Button"), delete the old file; same settings (label, link, open_in_new_tab, background_color, text_color, width/custom-width settings)
+- [x] 6.3 Update `sections/night-guard-hero.liquid`'s `blocks` schema list and `presets` block entries: `text` → `c-text`, `button-color`/`button` → `c-button`
+- [x] 6.4 Update `templates/product.product-night-guard.json`'s `richtext` block to `"type": "c-text"` and `button` block to `"type": "c-button"`, preserving already-saved content (button label/link/colors, richtext copy)
+- [x] 6.5 Validate all schema JSON and the full template JSON after the rename; confirm no stray references to `"type": "text"` or `"type": "button"` remain in `sections/night-guard-hero.liquid`

@@ -1,0 +1,86 @@
+
+
+<div
+  class="c-text-block c-text-block--align-{{ block.settings.text_alignment }}"
+  style="--c-text-color: {{ block.settings.color }};"
+  {{ block.shopify_attributes }}
+>
+  {{ block.settings.text }}
+</div>
+
+{% stylesheet %}
+  .c-text-block {
+    color: var(--c-text-color);
+  }
+
+  .c-text-block--align-left {
+    text-align: left;
+  }
+
+  .c-text-block--align-center {
+    text-align: center;
+  }
+
+  .c-text-block--align-right {
+    text-align: right;
+  }
+
+  .c-text-block :last-child {
+    margin-block-end: 0;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "C Text",
+  "tag": null,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Share information about your product</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Text color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Text",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

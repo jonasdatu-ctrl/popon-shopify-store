@@ -7,11 +7,11 @@
   {% else %}
     href="{{ block.settings.link }}"
   {% endif %}
-  class="button-color-block size-style"
+  class="c-button-block size-style"
   style="
     {% render 'size-style', settings: block.settings %}
-    --button-color-bg: {{ block.settings.background_color }};
-    --button-color-text: {{ block.settings.text_color }};
+    --c-button-bg: {{ block.settings.background_color }};
+    --c-button-color: {{ block.settings.text_color }};
   "
   {% if block.settings.open_in_new_tab %}
     target="_blank" rel="noopener noreferrer"
@@ -22,12 +22,12 @@
 </a>
 
 {% stylesheet %}
-  .button-color-block {
+  .c-button-block {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--button-color-bg);
-    color: var(--button-color-text);
+    background-color: var(--c-button-bg);
+    color: var(--c-button-color);
     text-decoration: none;
     text-align: center;
     border-radius: var(--style-border-radius-buttons, 4px);
@@ -36,14 +36,14 @@
     font-weight: 600;
   }
 
-  .button-color-block:hover {
+  .c-button-block:hover {
     opacity: 0.9;
   }
 {% endstylesheet %}
 
 {% schema %}
 {
-  "name": "Button",
+  "name": "C Button",
   "tag": null,
   "settings": [
     {
@@ -140,7 +140,7 @@
   ],
   "presets": [
     {
-      "name": "Button",
+      "name": "C Button",
       "category": "Custom",
       "settings": {
         "link": "shopify://collections/all"

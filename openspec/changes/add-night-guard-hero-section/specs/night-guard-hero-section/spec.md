@@ -34,7 +34,7 @@ The section SHALL expose independent image settings for the desktop image and th
 - **THEN** viewports under 750px render the desktop image
 
 ### Requirement: Block-driven content column
-The content column SHALL be composed of merchant-addable, reorderable, and removable blocks, consistent with the theme's existing block-based section pattern. The section SHALL support the following block types: text-badge, text (native), icon-list, review-static, button-color, and icon-text.
+The content column SHALL be composed of merchant-addable, reorderable, and removable blocks, consistent with the theme's existing block-based section pattern. The section SHALL support the following block types, all of which are dedicated custom blocks (none reuse or modify a native/shared theme block): text-badge, c-text, icon-list, review-static, c-button, and icon-text.
 
 #### Scenario: Merchant adds and reorders blocks
 - **WHEN** a merchant adds one or more supported block types to the section and changes their order in the theme editor
@@ -62,6 +62,17 @@ The text-badge block SHALL provide a single-line badge label, a single-line eyeb
 #### Scenario: Colors changed
 - **WHEN** a merchant sets the badge background, badge text, label text, or heading text color settings
 - **THEN** the corresponding element renders with that color instead of the default
+
+### Requirement: C Text block
+The C Text block SHALL provide a richtext field, a left/center/right alignment setting, and an explicit color setting for the text, without depending on or modifying the theme's native `text` block.
+
+#### Scenario: Text and color configured
+- **WHEN** a merchant sets the text field and the color setting on a C Text block
+- **THEN** the block renders the formatted text using that color
+
+#### Scenario: Alignment changed
+- **WHEN** a merchant sets the block's alignment setting to center or right
+- **THEN** the text shifts to that alignment
 
 ### Requirement: Icon-list block with up to 4 items
 The icon-list block SHALL provide exactly four fixed icon-and-label slots (an image picker and a single-line text field per slot). A slot SHALL NOT render if its image is not set. Each item's icon SHALL render centered above its label. The block SHALL provide an explicit color setting for the label text.
@@ -104,11 +115,11 @@ The icon-text block SHALL provide a single icon (image picker) and a single line
 - **WHEN** a merchant sets the text color setting
 - **THEN** the text renders using that color
 
-### Requirement: Button-color block
-The section SHALL provide a button block with explicit color settings for its background and text, independent of the theme's shared global button styling, so the CTA's colors are configurable per instance without altering the appearance of buttons elsewhere in the theme.
+### Requirement: C Button block
+The section SHALL provide a dedicated button block (not the native `button` block) with explicit color settings for its background and text, so the CTA's colors are configurable per instance without altering the appearance of buttons elsewhere in the theme.
 
 #### Scenario: Button colors configured
-- **WHEN** a merchant sets the button block's background and text color settings
+- **WHEN** a merchant sets the C Button block's background and text color settings
 - **THEN** the button renders with those colors
 - **AND** buttons rendered by the native `button` block elsewhere in the theme are unaffected
 
