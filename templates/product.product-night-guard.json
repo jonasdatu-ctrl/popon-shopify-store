@@ -176,7 +176,7 @@
           "type": "product-showcase-header",
           "settings": {
             "heading": "<p>Custom made with a comfortable dual-layer design.</p>",
-            "heading_color": "#0B2447",
+            "heading_color": "#0b2447",
             "font_size": 28,
             "font_size_mobile": 22
           },
@@ -186,7 +186,7 @@
           "type": "product-showcase-header",
           "settings": {
             "heading": "<p>Available in three colors.</p>",
-            "heading_color": "#0B2447",
+            "heading_color": "#0b2447",
             "font_size": 24,
             "font_size_mobile": 18
           },
@@ -197,7 +197,7 @@
           "settings": {
             "icon": "shopify://shop_images/Night_guard_Product_Image_11-min.png",
             "title": "Clear",
-            "title_color": "#0B2447"
+            "title_color": "#0b2447"
           },
           "blocks": {}
         },
@@ -206,7 +206,7 @@
           "settings": {
             "icon": "shopify://shop_images/Night_guard_Product_Image_11-min.png",
             "title": "Blue",
-            "title_color": "#0B2447"
+            "title_color": "#0b2447"
           },
           "blocks": {}
         },
@@ -215,7 +215,7 @@
           "settings": {
             "icon": "shopify://shop_images/Night_guard_Product_Image_11-min.png",
             "title": "Pink",
-            "title_color": "#0B2447"
+            "title_color": "#0b2447"
           },
           "blocks": {}
         }
@@ -229,8 +229,9 @@
       ],
       "name": "Product Showcase",
       "settings": {
-        "image": "shopify://shop_images/halloween_bundle_1499_s.png",
+        "image": "shopify://shop_images/Howie_Mandel__250OFF_Web_Banner_V3_1_d04eeb11-f049-4faf-969f-98e839d5db5c.png",
         "max_width": 1300,
+        "background_color": "",
         "padding-block-start": 40,
         "padding-block-end": 40
       }
