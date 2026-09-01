@@ -1,0 +1,106 @@
+
+
+<div
+  class="icon-text-card-block"
+  style="
+    --icon-text-card-heading-color: {{ block.settings.heading_color }};
+    --icon-text-card-text-color: {{ block.settings.text_color }};
+  "
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.icon != blank %}
+    <span class="icon-text-card-block__icon">
+      {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '25, 50, 75, 100' }}
+    </span>
+  {% endif %}
+
+  {% if block.settings.heading != blank %}
+    <span class="icon-text-card-block__heading">{{ block.settings.heading }}</span>
+  {% endif %}
+
+  {% if block.settings.text != blank %}
+    <span class="icon-text-card-block__text">{{ block.settings.text }}</span>
+  {% endif %}
+</div>
+
+{% stylesheet %}
+  .icon-text-card-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+  }
+
+  .icon-text-card-block__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+  }
+
+  .icon-text-card-block__icon img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .icon-text-card-block__heading {
+    color: var(--icon-text-card-heading-color);
+    font-weight: 700;
+  }
+
+  .icon-text-card-block__text {
+    color: var(--icon-text-card-text-color);
+    font-size: 0.9em;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Icon text card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Title",
+      "default": "Protect your teeth"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Description",
+      "default": "Helps reduce wear from grinding and clenching."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Title text",
+      "default": "#0B2447"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Description text",
+      "default": "#4A4A4A"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon text card",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

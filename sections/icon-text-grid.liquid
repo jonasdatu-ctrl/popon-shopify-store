@@ -1,0 +1,93 @@
+
+
+<div id="IconTextGrid-{{ section.id }}" class="icon-text-grid">
+  {% if section.settings.heading != blank %}
+    <div class="icon-text-grid__heading">{{ section.settings.heading }}</div>
+  {% endif %}
+
+  <div class="icon-text-grid__grid">
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% stylesheet %}
+  .icon-text-grid__heading {
+    margin: 0 0 1.5rem;
+    text-align: center;
+  }
+
+  .icon-text-grid__heading :last-child {
+    margin-block-end: 0;
+  }
+
+  .icon-text-grid__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .icon-text-grid__grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem 1.5rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Icon text grid",
+  "tag": "section",
+  "class": "icon-text-grid-wrapper section-wrapper",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<h2>Why a custom-fit guard makes all the difference.</h2>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon-text-card"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon text grid",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "icon-text-card",
+          "settings": {
+            "heading": "Protect your teeth",
+            "text": "Helps reduce wear from grinding and clenching."
+          }
+        },
+        {
+          "type": "icon-text-card",
+          "settings": {
+            "heading": "Custom, not generic",
+            "text": "Made from your exact smile for a comfortable fit."
+          }
+        },
+        {
+          "type": "icon-text-card",
+          "settings": {
+            "heading": "Built to last",
+            "text": "Durable outside. Softer inside. Made for nightly wear."
+          }
+        },
+        {
+          "type": "icon-text-card",
+          "settings": {
+            "heading": "We keep it on file",
+            "text": "Reorder anytime. No new impression needed."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
