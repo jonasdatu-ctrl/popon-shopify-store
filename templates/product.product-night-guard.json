@@ -32,7 +32,7 @@
           "settings": {
             "text": "<p>Your custom Pop On Night Guard is designed to protect your teeth from grinding and clenching while you sleep.</p>",
             "text_alignment": "left",
-            "color": "#FFFFFF"
+            "color": "#ffffff"
           },
           "blocks": {}
         },
@@ -68,8 +68,8 @@
             "label": "Get My Pop On Night Guard — $99",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
-            "background_color": "#2F6FED",
-            "text_color": "#FFFFFF",
+            "background_color": "#2f6fed",
+            "text_color": "#ffffff",
             "width": "custom",
             "custom_width": 100,
             "width_mobile": "custom",
@@ -100,6 +100,73 @@
         "background_color": "#0b2447",
         "padding-block-start": 0,
         "padding-block-end": 0
+      }
+    },
+    "icon_text_grid_b48VUr": {
+      "type": "icon-text-grid",
+      "blocks": {
+        "icon_text_card_a7Pfdp": {
+          "type": "icon-text-card",
+          "settings": {
+            "icon": "shopify://shop_images/Zero_Sugar_icon_b266e83b-c720-41a7-9df4-c60e2507e489.png",
+            "heading": "Protect your teeth",
+            "text": "Helps reduce wear from grinding and clenching.",
+            "icon_position": "top",
+            "heading_color": "#0B2447",
+            "text_color": "#4A4A4A"
+          },
+          "blocks": {}
+        },
+        "icon_text_card_UcjzBf": {
+          "type": "icon-text-card",
+          "settings": {
+            "icon": "shopify://shop_images/Sodium_Citrate_icon_fc18170b-87db-4d78-a1e6-eb321d409ebf.png",
+            "heading": "Custom, not generic",
+            "text": "Made from your exact smile for a comfortable fit.",
+            "icon_position": "top",
+            "heading_color": "#0B2447",
+            "text_color": "#4A4A4A"
+          },
+          "blocks": {}
+        },
+        "icon_text_card_adj6HT": {
+          "type": "icon-text-card",
+          "settings": {
+            "icon": "shopify://shop_images/Sodium_Bicarbonate_icon_63213e9d-e561-4d51-921a-c6aed23c595d.png",
+            "heading": "Built to last",
+            "text": "Durable outside. Softer inside. Made for nightly wear.",
+            "icon_position": "top",
+            "heading_color": "#0B2447",
+            "text_color": "#4A4A4A"
+          },
+          "blocks": {}
+        },
+        "icon_text_card_HBkHAF": {
+          "type": "icon-text-card",
+          "settings": {
+            "icon": "shopify://shop_images/How_to_use_icons-01.png",
+            "heading": "We keep it on file",
+            "text": "Reorder anytime. No new impression needed.",
+            "icon_position": "top",
+            "heading_color": "#0B2447",
+            "text_color": "#4A4A4A"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "icon_text_card_a7Pfdp",
+        "icon_text_card_UcjzBf",
+        "icon_text_card_adj6HT",
+        "icon_text_card_HBkHAF"
+      ],
+      "name": "Icon text grid",
+      "settings": {
+        "heading": "<h2>Why a custom-fit guard makes all the difference.</h2>",
+        "background_color": "#FFFFFF",
+        "heading_color": "#0B2447",
+        "padding-block-start": 40,
+        "padding-block-end": 40
       }
     },
     "main": {
@@ -631,6 +698,7 @@
   },
   "order": [
     "night_guard_hero",
+    "icon_text_grid_b48VUr",
     "main",
     "customcode_featured_product_HRwfDi",
     "17601015186c120833",
