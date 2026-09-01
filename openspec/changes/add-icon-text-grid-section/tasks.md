@@ -12,9 +12,15 @@
 - [x] 2.4 Add responsive grid CSS: `grid-template-columns: repeat(2, 1fr)` by default, switching to `repeat(4, 1fr)` at `min-width: 750px`, per the theme's existing breakpoint convention; verify visually at both a sub-750px and a 750px+ viewport with 1, 2, 3, and 4 blocks present
 - [x] 2.5 Add a section `presets` entry with a representative starter set of up to 4 `icon-text-card` blocks (using the reference screenshot's copy) so the section is selectable from "Add section" in the theme editor
 
-## 3. Verification
+## 3. Follow-up refinements
 
-- [ ] 3.1 Add the section to a page via the theme editor (or Shopify CLI theme dev preview) and confirm it renders matching `context/Screenshot 2026-09-01 180213.png` at desktop width
-- [ ] 3.2 Resize/emulate a sub-750px viewport and confirm the grid switches to 2 columns
-- [ ] 3.3 Confirm adding, removing, and reordering `icon-text-card` blocks in the theme editor all work without errors, and that a 5th block cannot be added
-- [x] 3.4 Confirm no existing sections, blocks, or templates (including `blocks/icon-text.liquid` and `blocks/icon-list.liquid`) were modified by this change — confirmed via `git status`: only the two new files (`blocks/icon-text-card.liquid`, `sections/icon-text-grid.liquid`) were added
+- [x] 3.1 Add `padding-block-start`/`padding-block-end` range settings to `sections/icon-text-grid.liquid` (default 40px) using the theme's `spacing-style` snippet, matching `sections/night-guard-hero.liquid`'s convention; verify padding is configurable and applied via the `spacing-style` class
+- [x] 3.2 Add section-level `background_color` and `heading_color` color settings to `icon-text-grid.liquid`; verify the section background and heading both pick up the configured colors
+- [x] 3.3 Add an `icon_position` select setting (`top`/`left`, default `top`) to `blocks/icon-text-card.liquid`; restructure the block markup so heading+description share a `__content` wrapper, and add `--icon-top` (column, centered) / `--icon-left` (row, icon beside content) CSS variants; verify both positions render correctly
+
+## 4. Verification
+
+- [ ] 4.1 Add the section to a page via the theme editor (or Shopify CLI theme dev preview) and confirm it renders matching `context/Screenshot 2026-09-01 180213.png` at desktop width
+- [ ] 4.2 Resize/emulate a sub-750px viewport and confirm the grid switches to 2 columns
+- [ ] 4.3 Confirm adding, removing, and reordering `icon-text-card` blocks in the theme editor all work without errors, and that a 5th block cannot be added
+- [x] 4.4 Confirm no existing sections, blocks, or templates (including `blocks/icon-text.liquid` and `blocks/icon-list.liquid`) were modified by this change — confirmed via `git status`: only the two new files (`blocks/icon-text-card.liquid`, `sections/icon-text-grid.liquid`) were added

@@ -1,7 +1,7 @@
 
 
 <div
-  class="icon-text-card-block"
+  class="icon-text-card-block icon-text-card-block--icon-{{ block.settings.icon_position }}"
   style="
     --icon-text-card-heading-color: {{ block.settings.heading_color }};
     --icon-text-card-text-color: {{ block.settings.text_color }};
@@ -14,22 +14,35 @@
     </span>
   {% endif %}
 
-  {% if block.settings.heading != blank %}
-    <span class="icon-text-card-block__heading">{{ block.settings.heading }}</span>
-  {% endif %}
+  {% if block.settings.heading != blank or block.settings.text != blank %}
+    <div class="icon-text-card-block__content">
+      {% if block.settings.heading != blank %}
+        <span class="icon-text-card-block__heading">{{ block.settings.heading }}</span>
+      {% endif %}
 
-  {% if block.settings.text != blank %}
-    <span class="icon-text-card-block__text">{{ block.settings.text }}</span>
+      {% if block.settings.text != blank %}
+        <span class="icon-text-card-block__text">{{ block.settings.text }}</span>
+      {% endif %}
+    </div>
   {% endif %}
 </div>
 
 {% stylesheet %}
   .icon-text-card-block {
     display: flex;
+    gap: 0.5em;
+  }
+
+  .icon-text-card-block--icon-top {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0.5em;
+  }
+
+  .icon-text-card-block--icon-left {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .icon-text-card-block__icon {
@@ -37,6 +50,7 @@
     align-items: center;
     justify-content: center;
     width: 32px;
+    flex-shrink: 0;
   }
 
   .icon-text-card-block__icon img {
@@ -44,6 +58,12 @@
     width: 100%;
     height: auto;
     margin: 0 auto;
+  }
+
+  .icon-text-card-block__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
   }
 
   .icon-text-card-block__heading {
@@ -78,6 +98,26 @@
       "id": "text",
       "label": "Description",
       "default": "Helps reduce wear from grinding and clenching."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "icon_position",
+      "label": "Icon position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "top"
     },
     {
       "type": "header",

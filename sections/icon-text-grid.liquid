@@ -1,6 +1,14 @@
 
 
-<div id="IconTextGrid-{{ section.id }}" class="icon-text-grid">
+<div
+  id="IconTextGrid-{{ section.id }}"
+  class="icon-text-grid spacing-style"
+  style="
+    --icon-text-grid-bg: {{ section.settings.background_color }};
+    --icon-text-grid-heading-color: {{ section.settings.heading_color }};
+    {% render 'spacing-style', settings: section.settings %}
+  "
+>
   {% if section.settings.heading != blank %}
     <div class="icon-text-grid__heading">{{ section.settings.heading }}</div>
   {% endif %}
@@ -11,8 +19,13 @@
 </div>
 
 {% stylesheet %}
+  .icon-text-grid {
+    background-color: var(--icon-text-grid-bg);
+  }
+
   .icon-text-grid__heading {
     margin: 0 0 1.5rem;
+    color: var(--icon-text-grid-heading-color);
     text-align: center;
   }
 
@@ -46,6 +59,46 @@
       "id": "heading",
       "label": "Heading",
       "default": "<h2>Why a custom-fit guard makes all the difference.</h2>"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading text",
+      "default": "#0B2447"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
     }
   ],
   "blocks": [

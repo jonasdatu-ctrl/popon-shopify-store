@@ -48,6 +48,31 @@ The grid of blocks SHALL display 2 columns below the theme's 750px breakpoint an
 - **WHEN** the section is viewed at a viewport 750px or wider
 - **THEN** the blocks lay out in a 4-column grid
 
+### Requirement: Configurable section padding
+The section SHALL provide merchant-configurable top and bottom padding, consistent with the theme's existing spacing convention.
+
+#### Scenario: Padding is changed
+- **WHEN** a merchant changes the section's top or bottom padding setting
+- **THEN** the rendered spacing above/below the section content reflects the configured value
+
+### Requirement: Configurable section colors
+The section SHALL provide merchant-configurable background and heading text colors.
+
+#### Scenario: Colors are changed
+- **WHEN** a merchant changes the section's background color or heading text color setting
+- **THEN** the section background and heading render using the configured colors
+
+### Requirement: Configurable icon position per block
+Each `icon-text-card` block SHALL let the merchant choose whether its icon displays above the title/description (stacked, centered) or to the left of the title/description (row layout).
+
+#### Scenario: Icon positioned on top
+- **WHEN** a block's icon position setting is "Top"
+- **THEN** the icon renders above the title and description, centered
+
+#### Scenario: Icon positioned on the left
+- **WHEN** a block's icon position setting is "Left"
+- **THEN** the icon renders to the left of the title and description
+
 ### Requirement: Selectable from theme editor
 The section and its block SHALL each expose a preset so merchants can add them from the theme editor's "Add section" / "Add block" lists.
 
