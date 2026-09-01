@@ -1,0 +1,151 @@
+
+
+<div
+  id="TestimonialSlider-{{ section.id }}"
+  class="testimonial-slider spacing-style"
+  style="
+    --testimonial-slider-bg: {{ section.settings.background_color }};
+    --testimonial-slider-heading-color: {{ section.settings.heading_color }};
+    {% render 'spacing-style', settings: section.settings %}
+  "
+>
+  {% if section.settings.heading != blank %}
+    <div class="testimonial-slider__heading">{{ section.settings.heading }}</div>
+  {% endif %}
+
+  <div class="testimonial-slider__track">
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% stylesheet %}
+  .testimonial-slider {
+    background-color: var(--testimonial-slider-bg);
+    padding-inline: var(--page-margin);
+  }
+
+  .testimonial-slider__heading {
+    margin: 0 0 1.5rem;
+    color: var(--testimonial-slider-heading-color);
+    text-align: center;
+  }
+
+  .testimonial-slider__heading :last-child {
+    margin-block-end: 0;
+  }
+
+  .testimonial-slider__track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1rem;
+    gap: 1.5rem;
+  }
+
+  .testimonial-slider__track > * {
+    flex: 0 0 66%;
+    scroll-snap-align: start;
+  }
+
+  @media screen and (min-width: 990px) {
+    .testimonial-slider__track {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow-x: visible;
+      gap: 2rem;
+    }
+
+    .testimonial-slider__track > * {
+      flex: initial;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Testimonial Slider",
+  "tag": "section",
+  "class": "testimonial-slider-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<h2>Real customers. Better nights.</h2>"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading text",
+      "default": "#0B2447"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial-card"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Slider",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "testimonial-card",
+          "settings": {
+            "quote": "Fits perfectly and feels so comfortable. I forget I'm even wearing it.",
+            "name": "Sarah J."
+          }
+        },
+        {
+          "type": "testimonial-card",
+          "settings": {
+            "quote": "Way better than the boil-and-bite guards I've tried.",
+            "name": "Mike D."
+          }
+        },
+        {
+          "type": "testimonial-card",
+          "settings": {
+            "quote": "I wake up without jaw pain now. Game changer.",
+            "name": "Lisa K."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
