@@ -77,13 +77,12 @@
           "blocks": {}
         },
         "button": {
-          "type": "button-color",
+          "type": "button",
           "settings": {
             "label": "Get My Pop On Night Guard — $99",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
-            "background_color": "#2f6fed",
-            "text_color": "#ffffff",
+            "style_class": "button",
             "width": "custom",
             "custom_width": 100,
             "width_mobile": "custom",
@@ -96,7 +95,7 @@
           "settings": {
             "icon": "shopify://shop_images/How_to_use_icons-03.png",
             "text": "Secure & encrypted checkout",
-            "text_alignment": "left",
+            "text_alignment": "center",
             "text_color": "#ffffff"
           },
           "blocks": {}
