@@ -688,6 +688,9 @@
         "accordion_gnNxBP",
         "accordion_gDQzaA"
       ],
+      "custom_css": [
+        ".value-container[data-index=\"1\"] img {display: none;}"
+      ],
       "name": "C Featured Product",
       "settings": {
         "product_override": "",
