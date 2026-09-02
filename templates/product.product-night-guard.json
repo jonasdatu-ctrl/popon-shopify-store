@@ -39,13 +39,13 @@
         "icon_list": {
           "type": "icon-list",
           "settings": {
-            "icon_1": "shopify://shop_images/Zero_Sugar_icon_b266e83b-c720-41a7-9df4-c60e2507e489.png",
+            "icon_1": "shopify://shop_images/Clipart_Night_guard_Icon_13.png",
             "label_1": "Custom Made for Your Teeth",
-            "icon_2": "shopify://shop_images/Zero_Sugar_icon_b266e83b-c720-41a7-9df4-c60e2507e489.png",
+            "icon_2": "shopify://shop_images/Clipart_Night_guard_Icon_14.png",
             "label_2": "Dual-Layer Protection",
-            "icon_3": "shopify://shop_images/Sodium_Citrate_icon_fc18170b-87db-4d78-a1e6-eb321d409ebf.png",
+            "icon_3": "shopify://shop_images/Clipart_Night_guard_Icon_15.png",
             "label_3": "Made in our FDA Registered Lab",
-            "icon_4": "shopify://shop_images/Zero_Sugar_icon_b266e83b-c720-41a7-9df4-c60e2507e489.png",
+            "icon_4": "shopify://shop_images/Clipart_Night_guard_Icon_16.png",
             "label_4": "Easy Reorders",
             "label_color": "#ffffff"
           },
@@ -98,6 +98,7 @@
       ],
       "settings": {
         "background_color": "#0b2447",
+        "image_desktop": "shopify://shop_images/Night_guard_Image_1.png",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
@@ -108,7 +109,7 @@
         "icon_text_card_a7Pfdp": {
           "type": "icon-text-card",
           "settings": {
-            "icon": "shopify://shop_images/Zero_Sugar_icon_b266e83b-c720-41a7-9df4-c60e2507e489.png",
+            "icon": "shopify://shop_images/Clipart_Night_guard_Icon_9.png",
             "heading": "Protect your teeth",
             "text": "Helps reduce wear from grinding and clenching.",
             "icon_position": "top",
@@ -120,7 +121,7 @@
         "icon_text_card_UcjzBf": {
           "type": "icon-text-card",
           "settings": {
-            "icon": "shopify://shop_images/Sodium_Citrate_icon_fc18170b-87db-4d78-a1e6-eb321d409ebf.png",
+            "icon": "shopify://shop_images/Clipart_Night_guard_Icon_10.png",
             "heading": "Custom, not generic",
             "text": "Made from your exact smile for a comfortable fit.",
             "icon_position": "top",
@@ -132,7 +133,7 @@
         "icon_text_card_adj6HT": {
           "type": "icon-text-card",
           "settings": {
-            "icon": "shopify://shop_images/Sodium_Bicarbonate_icon_63213e9d-e561-4d51-921a-c6aed23c595d.png",
+            "icon": "shopify://shop_images/Clipart_Night_guard_Icon_11.png",
             "heading": "Built to last",
             "text": "Durable outside. Softer inside. Made for nightly wear.",
             "icon_position": "top",
@@ -144,7 +145,7 @@
         "icon_text_card_HBkHAF": {
           "type": "icon-text-card",
           "settings": {
-            "icon": "shopify://shop_images/How_to_use_icons-01.png",
+            "icon": "shopify://shop_images/Clipart_Night_guard_Icon_12.png",
             "heading": "We keep it on file",
             "text": "Reorder anytime. No new impression needed.",
             "icon_position": "top",
