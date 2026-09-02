@@ -30,6 +30,8 @@
       ]
     </script>
 
+    {% assign option_value_image_overrides = product.metafields.custom.customcode_option_value_image_overrides.value %}
+
     {% for option in product.options_with_values %}
       <div class="option-container">
         {% unless block.settings.hide_option_title contains option.name %}
@@ -101,15 +103,23 @@
                     </div>
                   {% endif %}
                   <div class="option-image">
-                    {% assign key = value.name
-                      | replace: ' ', '_'
-                      | replace: '&', ''
-                      | replace: '(', ''
-                      | replace: ')', ''
-                    %}
-                    {% assign media = metaobjects.variant_option_values_image_display[key].variant_option_image.value %}
-                    {% if media != null %}
-                      {{ media | image_url: width: 120 | image_tag: class: 'option-image' }}
+                    {% assign override_image_url = null %}
+                    {% if option_value_image_overrides %}
+                      {% assign override_image_url = option_value_image_overrides[value.name] %}
+                    {% endif %}
+                    {% if override_image_url %}
+                      <img src="{{ override_image_url }}" class="option-image" alt="{{ value.name | escape }}">
+                    {% else %}
+                      {% assign key = value.name
+                        | replace: ' ', '_'
+                        | replace: '&', ''
+                        | replace: '(', ''
+                        | replace: ')', ''
+                      %}
+                      {% assign media = metaobjects.variant_option_values_image_display[key].variant_option_image.value %}
+                      {% if media != null %}
+                        {{ media | image_url: width: 120 | image_tag: class: 'option-image' }}
+                      {% endif %}
                     {% endif %}
                   </div>
                   {% unless block.settings.hide_thumb_images contains option.name %}
