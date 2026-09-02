@@ -98,6 +98,8 @@
       ],
       "settings": {
         "background_color": "#0b2447",
+        "image_desktop": "shopify://shop_images/PDP_Night_guard_2.png",
+        "image_mobile": "shopify://shop_images/PDP_Night_guard_1.png",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
