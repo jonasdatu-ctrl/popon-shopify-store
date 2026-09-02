@@ -196,7 +196,7 @@
         "product_showcase_variant_tEE7Yy": {
           "type": "product-showcase-variant",
           "settings": {
-            "icon": "shopify://shop_images/Night_guard_Product_Image_11-min.png",
+            "icon": "shopify://shop_images/Night_guard_White_transparent.png",
             "title": "Clear",
             "title_color": "#0b2447"
           },
@@ -205,7 +205,7 @@
         "product_showcase_variant_6Xj8zq": {
           "type": "product-showcase-variant",
           "settings": {
-            "icon": "shopify://shop_images/Night_guard_Product_Image_11-min.png",
+            "icon": "shopify://shop_images/Night_guard_Blue_transparent.png",
             "title": "Blue",
             "title_color": "#0b2447"
           },
@@ -214,7 +214,7 @@
         "product_showcase_variant_bTHwE8": {
           "type": "product-showcase-variant",
           "settings": {
-            "icon": "shopify://shop_images/Night_guard_Product_Image_11-min.png",
+            "icon": "shopify://shop_images/Night_guard_Pink_transparent.png",
             "title": "Pink",
             "title_color": "#0b2447"
           },
@@ -230,7 +230,7 @@
       ],
       "name": "Product Showcase",
       "settings": {
-        "image": "shopify://shop_images/Howie_Mandel__250OFF_Web_Banner_V3_1_d04eeb11-f049-4faf-969f-98e839d5db5c.png",
+        "image": "shopify://shop_images/Night_guard_White_with_info_transparent.png",
         "max_width": 1300,
         "background_color": "#e4f8f7",
         "padding-block-start": 40,
