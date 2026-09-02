@@ -80,7 +80,7 @@
         "icon_text": {
           "type": "icon-text",
           "settings": {
-            "icon": "shopify://shop_images/How_to_use_icons-03.png",
+            "icon": "shopify://shop_images/icons8-lock-100.png",
             "text": "Secure & encrypted checkout",
             "text_alignment": "center",
             "text_color": "#ffffff"
