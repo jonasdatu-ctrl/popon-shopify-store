@@ -593,6 +593,17 @@
             "d_margin_bottom": 20
           }
         },
+        "property_input_d9pzTM": {
+          "type": "property_input",
+          "settings": {
+            "required": true,
+            "placeholder": "Previous Order Email",
+            "property": "Previous-Order-Email(R)",
+            "tooltip": "Previous Order Email Address",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
         "upload_lift_app_block_B7z4ex": {
           "type": "shopify://apps/upload-lift/blocks/app-block/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
           "settings": {
@@ -681,6 +692,7 @@
         "title_iFe33P",
         "variant_selector_pVYxPC",
         "selling_plan_cKNXyy",
+        "property_input_d9pzTM",
         "upload_lift_app_block_B7z4ex",
         "buy_button_dT4wwt",
         "description_EbxCM7",
