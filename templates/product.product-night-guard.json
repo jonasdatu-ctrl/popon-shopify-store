@@ -570,7 +570,7 @@
         "variant_selector_pVYxPC": {
           "type": "variant_selector",
           "settings": {
-            "container_type": "flex-type",
+            "container_type": "grid-type",
             "title_placement": "within",
             "hide_thumb_images": "Denominations | Qty | Color",
             "hide_option_title": "",
@@ -665,7 +665,7 @@
             "accordion_title": "<p>How Fast Can I Get Them?</p>",
             "video_link": "",
             "above_content": "",
-            "content": "<p><em><strong>Yes! We are the fastest in the nation!</strong></em></p><p><strong>Shipping Time </strong>- Orders in the continental US ship free via Fedex/UPS 2 Business Day, in all directions!</p><p><em>The shipping carrier may change if our Shipping Department determines another carrier is a more secure delivery option.</em></p><p>Express overnight shipping available for additional fees.</p><p><strong>Production Time</strong> -<br/>Standard: 2 weeks after impression approval.</p><p>Rush Production: 1 week after impression approval. Select rush in shipping<br/>Please note: rush processing fee is per order, and does not apply to all future orders or remakes. Not available for alternative financed orders.</p>",
+            "content": "<p><strong>Production Time</strong> - 2 Weeks.</p><p><strong>Shipping Time </strong>- Orders in the continental US ship free via USPS 5-7 Business Days.</p><p>Fedex/UPS 2 Business Day shipping available for additional fees.</p>",
             "page": "",
             "display_html_content": false,
             "text": "",
