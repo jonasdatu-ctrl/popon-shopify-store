@@ -720,7 +720,7 @@
           "settings": {
             "icon": "shopify://shop_images/Sodium_Citrate_icon_fc18170b-87db-4d78-a1e6-eb321d409ebf.png",
             "heading": "Custom, not generic",
-            "text": "Made from your exact smile for a comfortable fit.",
+            "text": "",
             "icon_position": "left",
             "heading_color": "#0b2447",
             "text_color": "#4a4a4a"
@@ -758,6 +758,7 @@
         "icon_text_card_VVCFKY",
         "icon_text_card_Pzp6dN"
       ],
+      "disabled": true,
       "name": "Icon text grid",
       "settings": {
         "heading": "",
