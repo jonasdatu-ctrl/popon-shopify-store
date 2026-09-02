@@ -635,6 +635,23 @@
             "d_margin_bottom": 20
           }
         },
+        "accordion_nRBJDH": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>What If I'm Missing Teeth</p>",
+            "video_link": "",
+            "above_content": "<p>No problem! We'll cover only your existing teeth.</p>",
+            "content": "",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
+          }
+        },
         "accordion_hPbYaH": {
           "type": "accordion",
           "settings": {
@@ -696,6 +713,7 @@
         "upload_lift_app_block_B7z4ex",
         "buy_button_dT4wwt",
         "description_EbxCM7",
+        "accordion_nRBJDH",
         "accordion_hPbYaH",
         "accordion_gnNxBP",
         "accordion_gDQzaA"
