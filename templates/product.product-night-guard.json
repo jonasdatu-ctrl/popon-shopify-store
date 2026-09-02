@@ -575,7 +575,7 @@
             "hide_thumb_images": "Denominations | Qty | Color",
             "hide_option_title": "",
             "hide_most_popular": "Denominations | Qty",
-            "display_dynamic_variant_image": false,
+            "display_dynamic_variant_image": true,
             "display_price_diff": false,
             "price_diff_settings": "whole",
             "m_margin_bottom": 10,
