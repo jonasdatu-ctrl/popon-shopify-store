@@ -570,7 +570,7 @@
         "variant_selector_pVYxPC": {
           "type": "variant_selector",
           "settings": {
-            "container_type": "grid-type",
+            "container_type": "flex-type",
             "title_placement": "within",
             "hide_thumb_images": "Denominations | Qty | Color",
             "hide_option_title": "",
