@@ -620,6 +620,7 @@
         },
         "description_EbxCM7": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "m_margin_bottom": 10,
             "d_margin_bottom": 20
