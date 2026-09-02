@@ -65,7 +65,7 @@
           "type": "c-button",
           "name": "C Button",
           "settings": {
-            "label": "Get My Pop On Night Guard — $99",
+            "label": "Get My Pop On Night Guard",
             "link": "#shopify-section-template--22317894762634__customcode_featured_product_HRwfDi",
             "open_in_new_tab": false,
             "background_color": "#2f6fed",
@@ -98,7 +98,6 @@
       ],
       "settings": {
         "background_color": "#0b2447",
-        "image_desktop": "shopify://shop_images/Night_guard_Image_1.png",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
@@ -623,48 +622,49 @@
             "d_margin_bottom": 20
           }
         },
-        "accordion_cMYdC4": {
+        "accordion_hPbYaH": {
           "type": "accordion",
           "settings": {
-            "accordion_title": "<p>TERMS AND CONDITIONS</p>",
+            "accordion_title": "<p>Do I Get FREE Gifts?</p>",
             "video_link": "",
             "above_content": "",
             "content": "",
-            "page": "termsandconditions",
+            "page": "",
             "display_html_content": false,
             "text": "",
             "additional_content": "",
             "button_link": "",
             "button_text": "",
             "custom_html": "",
-            "custom_liquid": ""
+            "custom_liquid": "{% render 'customcode-test-product-scroller' %}"
           }
         },
-        "accordion_9fTwmq": {
+        "accordion_gnNxBP": {
           "type": "accordion",
           "settings": {
-            "accordion_title": "<p>PRIVACY POLICY</p>",
+            "accordion_title": "<p>What If They Don’t Fit?</p>",
             "video_link": "",
             "above_content": "",
             "content": "",
-            "page": "privacypolicy",
-            "display_html_content": false,
-            "text": "",
-            "additional_content": "",
+            "page": "",
+            "display_html_content": true,
+            "image": "shopify://shop_images/Icon_Pop_On_Promise.png",
+            "text": "<p>Our Pop On Promise ensures you love your Pop On Veneers.</p>",
+            "additional_content": "<ul><li>Backed by the Pop On Promise</li><li><strong>A free remakes included </strong>for the perfect fit</li><li>Dedicated support team every step of the way!</li></ul>",
             "button_link": "",
             "button_text": "",
             "custom_html": "",
             "custom_liquid": ""
           }
         },
-        "accordion_pNGji3": {
+        "accordion_gDQzaA": {
           "type": "accordion",
           "settings": {
-            "accordion_title": "<p>POP ON PROMISE</p>",
+            "accordion_title": "<p>How Fast Can I Get Them?</p>",
             "video_link": "",
             "above_content": "",
-            "content": "",
-            "page": "promise",
+            "content": "<p><em><strong>Yes! We are the fastest in the nation!</strong></em></p><p><strong>Shipping Time </strong>- Orders in the continental US ship free via Fedex/UPS 2 Business Day, in all directions!</p><p><em>The shipping carrier may change if our Shipping Department determines another carrier is a more secure delivery option.</em></p><p>Express overnight shipping available for additional fees.</p><p><strong>Production Time</strong> -<br/>Standard: 2 weeks after impression approval.</p><p>Rush Production: 1 week after impression approval. Select rush in shipping<br/>Please note: rush processing fee is per order, and does not apply to all future orders or remakes. Not available for alternative financed orders.</p>",
+            "page": "",
             "display_html_content": false,
             "text": "",
             "additional_content": "",
@@ -682,9 +682,9 @@
         "upload_lift_app_block_B7z4ex",
         "buy_button_dT4wwt",
         "description_EbxCM7",
-        "accordion_cMYdC4",
-        "accordion_9fTwmq",
-        "accordion_pNGji3"
+        "accordion_hPbYaH",
+        "accordion_gnNxBP",
+        "accordion_gDQzaA"
       ],
       "name": "C Featured Product",
       "settings": {
@@ -696,7 +696,7 @@
         "partially_additional_product": "",
         "freebie_fee": 0,
         "bottom_text": "We’re All In! Prices include $99 non refundable plan fee (before taxes)",
-        "mobile_count": "2.3",
+        "mobile_count": "1.3",
         "desktop_count": "1"
       }
     },
