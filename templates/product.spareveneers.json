@@ -170,6 +170,7 @@
         },
         "accordion_YNyXVb": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "accordion_title": "<p>Do I Make Molds Again?</p>",
             "video_link": "",
@@ -187,6 +188,7 @@
         },
         "accordion_pyJUEK": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "accordion_title": "<p>Is There A Discount?</p>",
             "video_link": "",
@@ -204,6 +206,7 @@
         },
         "accordion_aRPgb3": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "accordion_title": "<p>What Are The 4 FREE Gifts?</p>",
             "video_link": "",
@@ -221,6 +224,7 @@
         },
         "accordion_CmhzPQ": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "accordion_title": "<p>How Fast Can I Get Them?</p>",
             "video_link": "",
@@ -238,6 +242,7 @@
         },
         "accordion_kB3k9K": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "accordion_title": "<p>FAQs</p>",
             "video_link": "",
@@ -273,7 +278,11 @@
         "accordion_kB3k9K"
       ],
       "custom_css": [
-        "[data-row-index=\"9\"],[data-row-index=\"10\"],[data-row-index=\"11\"],[data-row-index=\"12\"],[data-row-index=\"13\"] {display: none;}"
+        ".value-container[data-index=\"2\"] p.most-popular-banner {opacity: 0 !important; display: none !important;}",
+        ".value-container[data-index=\"2\"] .option-value[first][active] {border: none !important;}",
+        ".value-container[data-index=\"2\"] .option-value[first] .info-container {border-radius: 8px !important;}",
+        ".value-container[data-index=\"2\"] .option-value[first] .info-container {border: 2px solid transparent !important;}",
+        ".value-container[data-index=\"2\"] .option-value[first][active] .info-container {border: 2px solid #003659 !important;}"
       ],
       "name": "C Featured Product",
       "settings": {
