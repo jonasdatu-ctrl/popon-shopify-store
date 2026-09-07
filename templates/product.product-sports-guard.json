@@ -1,0 +1,941 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "night_guard_hero": {
+      "type": "night-guard-hero",
+      "blocks": {
+        "text_badge": {
+          "type": "text-badge",
+          "settings": {
+            "badge_text": "New",
+            "eyebrow_text": "Made for Pop On customers",
+            "heading": "<h2>Your smile by day. Protected at night.</h2>",
+            "text_alignment": "left",
+            "badge_bg_color": "#2f6fed",
+            "badge_text_color": "#ffffff",
+            "label_color": "#ffffff",
+            "heading_color": "#ffffff"
+          },
+          "blocks": {}
+        },
+        "c_text_47qptz": {
+          "type": "c-text",
+          "name": "C Text",
+          "settings": {
+            "text": "<p>Your custom Pop On Night Guard is designed to protect your teeth from grinding and clenching while you sleep.</p>",
+            "text_alignment": "left",
+            "color": "#ffffff"
+          },
+          "blocks": {}
+        },
+        "icon_list": {
+          "type": "icon-list",
+          "settings": {
+            "icon_1": "shopify://shop_images/Clipart_Night_guard_Icon_13.png",
+            "label_1": "Custom Made for Your Teeth",
+            "icon_2": "shopify://shop_images/Clipart_Night_guard_Icon_14.png",
+            "label_2": "Dual-Layer Protection",
+            "icon_3": "shopify://shop_images/Clipart_Night_guard_Icon_15.png",
+            "label_3": "Made in our FDA Registered Lab",
+            "icon_4": "shopify://shop_images/Clipart_Night_guard_Icon_16.png",
+            "label_4": "Easy Reorders",
+            "label_color": "#ffffff"
+          },
+          "blocks": {}
+        },
+        "review": {
+          "type": "review-static",
+          "settings": {
+            "text": "Trusted by 20,000+ Pop On customers",
+            "text_alignment": "left",
+            "star_color": "#ffb800",
+            "text_color": "#ffffff"
+          },
+          "blocks": {}
+        },
+        "c_button_bqxVrg": {
+          "type": "c-button",
+          "name": "C Button",
+          "settings": {
+            "label": "Get My Pop On Night Guard",
+            "link": "#shopify-section-template--22314102096010__customcode_featured_product_HRwfDi",
+            "open_in_new_tab": false,
+            "background_color": "#2f6fed",
+            "text_color": "#ffffff",
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        },
+        "icon_text": {
+          "type": "icon-text",
+          "settings": {
+            "icon": "shopify://shop_images/icons8-lock-100.png",
+            "text": "Secure & encrypted checkout",
+            "text_alignment": "center",
+            "text_color": "#ffffff"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_badge",
+        "c_text_47qptz",
+        "icon_list",
+        "review",
+        "c_button_bqxVrg",
+        "icon_text"
+      ],
+      "settings": {
+        "background_color": "#0b2447",
+        "image_desktop": "shopify://shop_images/PDP_Night_guard_2.png",
+        "image_mobile": "shopify://shop_images/PDP_Night_guard_1.png",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "icon_text_grid_b48VUr": {
+      "type": "icon-text-grid",
+      "blocks": {
+        "icon_text_card_a7Pfdp": {
+          "type": "icon-text-card",
+          "settings": {
+            "icon": "shopify://shop_images/Clipart_Night_guard_Icon_9.png",
+            "heading": "Protect your teeth",
+            "text": "Helps reduce wear from grinding and clenching.",
+            "icon_position": "top",
+            "heading_color": "#0b2447",
+            "text_color": "#4a4a4a"
+          },
+          "blocks": {}
+        },
+        "icon_text_card_UcjzBf": {
+          "type": "icon-text-card",
+          "settings": {
+            "icon": "shopify://shop_images/Clipart_Night_guard_Icon_10.png",
+            "heading": "Custom, not generic",
+            "text": "Made from your exact smile for a comfortable fit.",
+            "icon_position": "top",
+            "heading_color": "#0b2447",
+            "text_color": "#4a4a4a"
+          },
+          "blocks": {}
+        },
+        "icon_text_card_adj6HT": {
+          "type": "icon-text-card",
+          "settings": {
+            "icon": "shopify://shop_images/Clipart_Night_guard_Icon_11.png",
+            "heading": "Built to last",
+            "text": "Durable outside. Softer inside. Made for nightly wear.",
+            "icon_position": "top",
+            "heading_color": "#0b2447",
+            "text_color": "#4a4a4a"
+          },
+          "blocks": {}
+        },
+        "icon_text_card_HBkHAF": {
+          "type": "icon-text-card",
+          "settings": {
+            "icon": "shopify://shop_images/Clipart_Night_guard_Icon_12.png",
+            "heading": "We keep it on file",
+            "text": "Reorder anytime. No new impression needed.",
+            "icon_position": "top",
+            "heading_color": "#0b2447",
+            "text_color": "#4a4a4a"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "icon_text_card_a7Pfdp",
+        "icon_text_card_UcjzBf",
+        "icon_text_card_adj6HT",
+        "icon_text_card_HBkHAF"
+      ],
+      "name": "Icon text grid",
+      "settings": {
+        "heading": "<h2>Why a custom-fit guard makes all the difference.</h2>",
+        "background_color": "#ffffff",
+        "heading_color": "#0b2447",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "product_showcase_cEcHwz": {
+      "type": "product-showcase",
+      "blocks": {
+        "product_showcase_header_8GbzmW": {
+          "type": "product-showcase-header",
+          "settings": {
+            "heading": "<p>Custom made with a comfortable dual-layer design.</p>",
+            "heading_color": "#0b2447",
+            "font_size": 28,
+            "font_size_mobile": 22
+          },
+          "blocks": {}
+        },
+        "product_showcase_header_jdigzn": {
+          "type": "product-showcase-header",
+          "settings": {
+            "heading": "<p>Available in three colors.</p>",
+            "heading_color": "#0b2447",
+            "font_size": 24,
+            "font_size_mobile": 18
+          },
+          "blocks": {}
+        },
+        "product_showcase_variant_tEE7Yy": {
+          "type": "product-showcase-variant",
+          "settings": {
+            "icon": "shopify://shop_images/Night_guard_White_transparent.png",
+            "title": "Clear",
+            "title_color": "#0b2447"
+          },
+          "blocks": {}
+        },
+        "product_showcase_variant_6Xj8zq": {
+          "type": "product-showcase-variant",
+          "settings": {
+            "icon": "shopify://shop_images/Night_guard_Blue_transparent.png",
+            "title": "Blue",
+            "title_color": "#0b2447"
+          },
+          "blocks": {}
+        },
+        "product_showcase_variant_bTHwE8": {
+          "type": "product-showcase-variant",
+          "settings": {
+            "icon": "shopify://shop_images/Night_guard_Pink_transparent.png",
+            "title": "Pink",
+            "title_color": "#0b2447"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "product_showcase_header_8GbzmW",
+        "product_showcase_header_jdigzn",
+        "product_showcase_variant_tEE7Yy",
+        "product_showcase_variant_6Xj8zq",
+        "product_showcase_variant_bTHwE8"
+      ],
+      "name": "Product Showcase",
+      "settings": {
+        "image": "shopify://shop_images/Night_guard_White_with_info_transparent.png",
+        "max_width": 1300,
+        "background_color": "#e4f8f7",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "grid",
+            "media_columns": "two",
+            "image_gap": 4,
+            "large_first_image": false,
+            "icons_style": "none",
+            "slideshow_controls_style": "counter",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "right",
+            "thumbnail_width": 44,
+            "aspect_ratio": "adapt",
+            "constrain_to_viewport": true,
+            "media_fit": "contain",
+            "media_radius": 0,
+            "extend_media": false,
+            "zoom": true,
+            "video_loop": false,
+            "hide_variants": true,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "details_position": "flex-start",
+            "gap": 28,
+            "sticky_details_desktop": true,
+            "inherit_color_scheme": true,
+            "color_scheme": "scheme-1",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_icgrde": {
+              "type": "group",
+              "name": "Header",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_xrnftG": {
+                  "type": "text",
+                  "name": "Product title",
+                  "settings": {
+                    "text": "<h1>{{ closest.product.title }}</h1>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h3",
+                    "font": "var(--font-primary--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "price_tVjtKg": {
+                  "type": "price",
+                  "settings": {
+                    "show_sale_price_first": true,
+                    "show_installments": false,
+                    "show_tax_info": false,
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "left",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "color": "var(--color-foreground)",
+                    "padding-block-start": 4,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_xrnftG",
+                "price_tVjtKg"
+              ]
+            },
+            "divider_VJhene": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "width_percent": 100,
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {}
+            },
+            "variant_picker_R3rGDr": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": false,
+                "alignment": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "buy_buttons_eYQEYi": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "text_aEtTtq": {
+              "type": "text",
+              "name": "Product description",
+              "settings": {
+                "text": "{{ closest.product.description }}",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-primary--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "group_icgrde",
+            "divider_VJhene",
+            "variant_picker_R3rGDr",
+            "buy_buttons_eYQEYi",
+            "text_aEtTtq"
+          ]
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": false,
+        "limit_details_width": false,
+        "gap": 48,
+        "color_scheme": "",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "testimonial_slider_eXP4mj": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "testimonial_card_z8x6Hk": {
+          "type": "testimonial-card",
+          "settings": {
+            "rating": 5,
+            "quote": "Fits perfectly and feels so comfortable. I forget I'm even wearing it.",
+            "name": "Sarah J.",
+            "star_color": "#ffb800",
+            "star_empty_color": "#e5e5e5",
+            "quote_color": "#0b2447",
+            "name_color": "#4a4a4a"
+          },
+          "blocks": {}
+        },
+        "testimonial_card_zbhw8j": {
+          "type": "testimonial-card",
+          "settings": {
+            "rating": 5,
+            "quote": "Way better than the boil-and-bite guards I've tried.",
+            "name": "Mike D.",
+            "star_color": "#ffb800",
+            "star_empty_color": "#e5e5e5",
+            "quote_color": "#0b2447",
+            "name_color": "#4a4a4a"
+          },
+          "blocks": {}
+        },
+        "testimonial_card_UEwgfX": {
+          "type": "testimonial-card",
+          "settings": {
+            "rating": 5,
+            "quote": "I wake up without jaw pain now. Game changer.",
+            "name": "Lisa K.",
+            "star_color": "#ffb800",
+            "star_empty_color": "#e5e5e5",
+            "quote_color": "#0b2447",
+            "name_color": "#4a4a4a"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "testimonial_card_z8x6Hk",
+        "testimonial_card_zbhw8j",
+        "testimonial_card_UEwgfX"
+      ],
+      "name": "Testimonial Slider",
+      "settings": {
+        "heading": "<h2>Real customers. Better nights.</h2>",
+        "background_color": "",
+        "heading_color": "#0b2447",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "customcode_featured_product_HRwfDi": {
+      "type": "customcode-featured-product",
+      "blocks": {
+        "title_iFe33P": {
+          "type": "title",
+          "settings": {
+            "title_override": "",
+            "show_reviews": true,
+            "custom_review": "",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "variant_selector_pVYxPC": {
+          "type": "variant_selector",
+          "settings": {
+            "container_type": "flex-type",
+            "title_placement": "within",
+            "hide_thumb_images": "Denominations | Qty | Color",
+            "hide_option_title": "",
+            "hide_most_popular": "Denominations | Qty",
+            "display_dynamic_variant_image": true,
+            "display_price_diff": false,
+            "price_diff_settings": "whole",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "selling_plan_cKNXyy": {
+          "type": "selling_plan",
+          "settings": {
+            "rounding": true,
+            "otp": "",
+            "sbs": "",
+            "subscription_description": "",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "property_input_d9pzTM": {
+          "type": "property_input",
+          "settings": {
+            "required": true,
+            "placeholder": "Previous Order Email",
+            "property": "Previous-Order-Email(R)",
+            "tooltip": "Previous Order Email Address",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "upload_lift_app_block_B7z4ex": {
+          "type": "shopify://apps/upload-lift/blocks/app-block/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
+          "settings": {
+            "product": "{{ product }}",
+            "field": ""
+          }
+        },
+        "buy_button_dT4wwt": {
+          "type": "buy_button",
+          "settings": {
+            "blurb": "",
+            "display_payment": true,
+            "footer_blurb": "",
+            "display_compare_price": false,
+            "display_alt_financing": false,
+            "alt_financing_link": "",
+            "alt_financing_text": "",
+            "display_bottom_payment": false,
+            "alt_financing_footer": "",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "description_EbxCM7": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
+        "accordion_nRBJDH": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>What If I'm Missing Teeth?</p>",
+            "video_link": "",
+            "above_content": "<p>No problem! We'll cover only your existing teeth.</p>",
+            "content": "",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
+          }
+        },
+        "accordion_hPbYaH": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>Do I Get FREE Gifts?</p>",
+            "video_link": "",
+            "above_content": "",
+            "content": "",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": "{% render 'customcode-test-product-scroller' %}"
+          }
+        },
+        "accordion_gnNxBP": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>What If They Don’t Fit?</p>",
+            "video_link": "",
+            "above_content": "",
+            "content": "",
+            "page": "",
+            "display_html_content": true,
+            "image": "shopify://shop_images/Icon_Pop_On_Promise.png",
+            "text": "<p>Our Pop On Promise ensures you love your Pop On Night Guards.</p>",
+            "additional_content": "<ul><li>Backed by the Pop On Promise</li><li><strong>A free remake included </strong>for the perfect fit</li><li>Dedicated support team every step of the way!</li></ul>",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
+          }
+        },
+        "accordion_gDQzaA": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>How Fast Can I Get Them?</p>",
+            "video_link": "",
+            "above_content": "",
+            "content": "<p><strong>Production Time</strong> - </p><p><strong>Shipping Time </strong>- Orders in the continental US ship free via USPS 5-7 Business Days.</p><p>Fedex/UPS 2 Business Day shipping available for additional fees.</p>",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_iFe33P",
+        "variant_selector_pVYxPC",
+        "selling_plan_cKNXyy",
+        "property_input_d9pzTM",
+        "upload_lift_app_block_B7z4ex",
+        "buy_button_dT4wwt",
+        "description_EbxCM7",
+        "accordion_nRBJDH",
+        "accordion_hPbYaH",
+        "accordion_gnNxBP",
+        "accordion_gDQzaA"
+      ],
+      "custom_css": [
+        ".value-container[data-index=\"1\"] img {display: none;}"
+      ],
+      "name": "C Featured Product",
+      "settings": {
+        "product_override": "",
+        "enable_partially": false,
+        "plan_fee": 0,
+        "display_variant_price": true,
+        "additional_product_tag": "",
+        "partially_additional_product": "",
+        "freebie_fee": 0,
+        "bottom_text": "We’re All In! Prices include $99 non refundable plan fee (before taxes)",
+        "mobile_count": "1.3",
+        "desktop_count": "1"
+      }
+    },
+    "icon_text_grid_4hDiXY": {
+      "type": "icon-text-grid",
+      "blocks": {
+        "icon_text_card_tjiNXD": {
+          "type": "icon-text-card",
+          "settings": {
+            "icon": "shopify://shop_images/Zero_Sugar_icon_b266e83b-c720-41a7-9df4-c60e2507e489.png",
+            "heading": "Protect your teeth",
+            "text": "Helps reduce wear from grinding and clenching.",
+            "icon_position": "left",
+            "heading_color": "#0b2447",
+            "text_color": "#4a4a4a"
+          },
+          "blocks": {}
+        },
+        "icon_text_card_YY3nHq": {
+          "type": "icon-text-card",
+          "settings": {
+            "icon": "shopify://shop_images/Sodium_Citrate_icon_fc18170b-87db-4d78-a1e6-eb321d409ebf.png",
+            "heading": "Custom, not generic",
+            "text": "",
+            "icon_position": "left",
+            "heading_color": "#0b2447",
+            "text_color": "#4a4a4a"
+          },
+          "blocks": {}
+        },
+        "icon_text_card_VVCFKY": {
+          "type": "icon-text-card",
+          "settings": {
+            "icon": "shopify://shop_images/Sodium_Bicarbonate_icon_63213e9d-e561-4d51-921a-c6aed23c595d.png",
+            "heading": "Built to last",
+            "text": "Durable outside. Softer inside. Made for nightly wear.",
+            "icon_position": "left",
+            "heading_color": "#0b2447",
+            "text_color": "#4a4a4a"
+          },
+          "blocks": {}
+        },
+        "icon_text_card_Pzp6dN": {
+          "type": "icon-text-card",
+          "settings": {
+            "icon": "shopify://shop_images/How_to_use_icons-01.png",
+            "heading": "We keep it on file",
+            "text": "Reorder anytime. No new impression needed.",
+            "icon_position": "left",
+            "heading_color": "#0b2447",
+            "text_color": "#4a4a4a"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "icon_text_card_tjiNXD",
+        "icon_text_card_YY3nHq",
+        "icon_text_card_VVCFKY",
+        "icon_text_card_Pzp6dN"
+      ],
+      "disabled": true,
+      "name": "Icon text grid",
+      "settings": {
+        "heading": "",
+        "background_color": "#ffffff",
+        "heading_color": "#0b2447",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "17601015186c120833": {
+      "type": "_blocks",
+      "blocks": {
+        "bundler_bundler_target_element_6hbyLr": {
+          "type": "shopify://apps/bundler/blocks/bundler-target-element/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "bundler_bundler_target_element_6hbyLr"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "17851703850d429cc0": {
+      "type": "_blocks",
+      "blocks": {
+        "amazon_reviews_grid_widget_block_product_3beqqM": {
+          "type": "shopify://apps/amazon-reviews/blocks/grid-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "reviewsType": "image_first",
+            "showProductPicture": true,
+            "showDate": true,
+            "fixedReviewsHeight": false,
+            "textStyle": "plain",
+            "alignment": "left",
+            "infoPosition": "top",
+            "ratingStyle": "left"
+          }
+        }
+      },
+      "block_order": [
+        "amazon_reviews_grid_widget_block_product_3beqqM"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "customcode_content_generator_rUW68y": {
+      "type": "customcode-content-generator",
+      "blocks": {
+        "content_FQRx6B": {
+          "type": "content",
+          "settings": {
+            "text_alignment": "c-text-center",
+            "content": "<h3><strong>MORE REVIEWS FROM POP ON</strong></h3>"
+          }
+        }
+      },
+      "block_order": [
+        "content_FQRx6B"
+      ],
+      "name": "C Content Generator",
+      "settings": {
+        "d_padding_top": true,
+        "d_padding_bottom": true
+      }
+    },
+    "customode_loox_reviews_3WdAFq": {
+      "type": "customode-loox-reviews",
+      "name": "C Loox Reviews",
+      "settings": {
+        "only_photos": false,
+        "hide_thumbnails": false,
+        "product_handle": "",
+        "aggregated": true,
+        "data-limit": 4,
+        "maxwidth": 1080
+      }
+    }
+  },
+  "order": [
+    "night_guard_hero",
+    "icon_text_grid_b48VUr",
+    "product_showcase_cEcHwz",
+    "main",
+    "testimonial_slider_eXP4mj",
+    "customcode_featured_product_HRwfDi",
+    "icon_text_grid_4hDiXY",
+    "17601015186c120833",
+    "17851703850d429cc0",
+    "customcode_content_generator_rUW68y",
+    "customode_loox_reviews_3WdAFq"
+  ]
+}
