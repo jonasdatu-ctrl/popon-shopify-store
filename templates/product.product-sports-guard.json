@@ -97,9 +97,9 @@
         "icon_text"
       ],
       "settings": {
-        "background_color": "#0b2447",
-        "image_desktop": "shopify://shop_images/PDP_Night_guard_2.png",
-        "image_mobile": "shopify://shop_images/PDP_Night_guard_1.png",
+        "background_color": "#000000",
+        "image_desktop": "shopify://shop_images/ChatGPT_Image_Sep_7_2026_10_45_44_AM.png",
+        "image_mobile": "shopify://shop_images/ChatGPT_Image_Sep_7_2026_10_45_44_AM.png",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
