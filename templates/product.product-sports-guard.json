@@ -83,9 +83,9 @@
           "type": "c-text",
           "name": "C Text",
           "settings": {
-            "text": "<p>Custom Fit • BPA-Free EVA • Made for Contact Sports</p>",
+            "text": "<h5>Custom Fit • BPA-Free EVA • Made for Contact Sports</h5>",
             "text_alignment": "center",
-            "color": "#FFFFFF"
+            "color": "#ffffff"
           },
           "blocks": {}
         },
@@ -109,6 +109,9 @@
         "review",
         "c_text_RMRrnw",
         "icon_text"
+      ],
+      "custom_css": [
+        "h5 {font-weight: normal;}"
       ],
       "settings": {
         "background_color": "#000000",
@@ -763,8 +766,8 @@
       ],
       "name": "C Accordion",
       "settings": {
-        "bg_color": "#FFFFFF",
-        "container_color": "#FFFFFF",
+        "bg_color": "#ffffff",
+        "container_color": "#ffffff",
         "section_header": "FAQs"
       }
     },
