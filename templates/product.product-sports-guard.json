@@ -722,35 +722,35 @@
           "type": "accordion",
           "settings": {
             "title": "How is the guard custom-made?",
-            "content": ""
+            "content": "<p>No guessing, no one-size-fits-all fit! You take an impression of their teeth at home with the included impression kit, ship it back to us, and our team custom-builds their Sport Guard around that exact mold.</p>"
           }
         },
         "accordion_wpcDh6": {
           "type": "accordion",
           "settings": {
             "title": "Is the material safe?",
-            "content": ""
+            "content": "<p>Absolutely! Their Sport Guard is made from medical-grade, BPA-free EVA — the same material used in professional sports mouthguards, so it's built to protect without anything you wouldn't want in their mouth.</p>"
           }
         },
         "accordion_P7MCEX": {
           "type": "accordion",
           "settings": {
             "title": "How do we get the impression?",
-            "content": ""
+            "content": "<p>It's included with every order! Your Sport Guard comes with an at-home impression kit — just follow the simple instructions, take the impression, and mail it back to us in the prepaid packaging. No dentist visit needed.</p>"
           }
         },
         "accordion_X8jA6t": {
           "type": "accordion",
           "settings": {
             "title": "How do we get the impression?",
-            "content": ""
+            "content": "<p>About 2 weeks from when we receive their impression — need it sooner? Ask about our Rush option.</p>"
           }
         },
         "accordion_WrAM4T": {
           "type": "accordion",
           "settings": {
             "title": "How do we clean it?",
-            "content": ""
+            "content": "<p>Keep it simple: rinse with cool water after every use and let it air dry. For a deeper clean between games, a Pop On Clean Tablet or the Pop On Pro Pod will keep it fresh.</p>"
           }
         }
       },
