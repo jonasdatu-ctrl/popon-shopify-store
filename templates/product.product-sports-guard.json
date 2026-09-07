@@ -36,31 +36,6 @@
           },
           "blocks": {}
         },
-        "icon_list": {
-          "type": "icon-list",
-          "settings": {
-            "icon_1": "shopify://shop_images/Clipart_Night_guard_Icon_13.png",
-            "label_1": "Custom Made for Your Teeth",
-            "icon_2": "shopify://shop_images/Clipart_Night_guard_Icon_14.png",
-            "label_2": "Dual-Layer Protection",
-            "icon_3": "shopify://shop_images/Clipart_Night_guard_Icon_15.png",
-            "label_3": "Made in our FDA Registered Lab",
-            "icon_4": "shopify://shop_images/Clipart_Night_guard_Icon_16.png",
-            "label_4": "Easy Reorders",
-            "label_color": "#ffffff"
-          },
-          "blocks": {}
-        },
-        "review": {
-          "type": "review-static",
-          "settings": {
-            "text": "Trusted by 20,000+ Pop On customers",
-            "text_alignment": "left",
-            "star_color": "#ffb800",
-            "text_color": "#ffffff"
-          },
-          "blocks": {}
-        },
         "c_button_bqxVrg": {
           "type": "c-button",
           "name": "C Button",
@@ -77,8 +52,46 @@
           },
           "blocks": {}
         },
+        "icon_list": {
+          "type": "icon-list",
+          "disabled": true,
+          "settings": {
+            "icon_1": "shopify://shop_images/Clipart_Night_guard_Icon_13.png",
+            "label_1": "Custom Made for Your Teeth",
+            "icon_2": "shopify://shop_images/Clipart_Night_guard_Icon_14.png",
+            "label_2": "Dual-Layer Protection",
+            "icon_3": "shopify://shop_images/Clipart_Night_guard_Icon_15.png",
+            "label_3": "Made in our FDA Registered Lab",
+            "icon_4": "shopify://shop_images/Clipart_Night_guard_Icon_16.png",
+            "label_4": "Easy Reorders",
+            "label_color": "#ffffff"
+          },
+          "blocks": {}
+        },
+        "review": {
+          "type": "review-static",
+          "disabled": true,
+          "settings": {
+            "text": "Custom Fit • BPA-Free EVA • Made for Contact Sports",
+            "text_alignment": "left",
+            "star_color": "#ffb800",
+            "text_color": "#ffffff"
+          },
+          "blocks": {}
+        },
+        "c_text_RMRrnw": {
+          "type": "c-text",
+          "name": "C Text",
+          "settings": {
+            "text": "<p>Custom Fit • BPA-Free EVA • Made for Contact Sports</p>",
+            "text_alignment": "center",
+            "color": "#FFFFFF"
+          },
+          "blocks": {}
+        },
         "icon_text": {
           "type": "icon-text",
+          "disabled": true,
           "settings": {
             "icon": "shopify://shop_images/icons8-lock-100.png",
             "text": "Secure & encrypted checkout",
@@ -91,9 +104,10 @@
       "block_order": [
         "text_badge",
         "c_text_47qptz",
+        "c_button_bqxVrg",
         "icon_list",
         "review",
-        "c_button_bqxVrg",
+        "c_text_RMRrnw",
         "icon_text"
       ],
       "settings": {
