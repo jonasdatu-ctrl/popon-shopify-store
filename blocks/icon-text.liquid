@@ -1,8 +1,6 @@
-
-
 <div
   class="icon-text-block icon-text-block--align-{{ block.settings.text_alignment }}"
-  style="--icon-text-color: {{ block.settings.text_color }};"
+  style="--icon-text-color: {{ block.settings.text_color }}; --icon-text-size: {{ block.settings.icon_text_size }}%;"
   {{ block.shopify_attributes }}
 >
   {% if block.settings.icon != blank %}
@@ -53,7 +51,7 @@
 
   .icon-text-block__text {
     color: var(--icon-text-color);
-    font-size: 0.85em;
+    font-size: var(--icon-text-size, 85%);
   }
 {% endstylesheet %}
 
@@ -72,6 +70,16 @@
       "id": "text",
       "label": "Text",
       "default": "Secure & encrypted checkout"
+    },
+    {
+      "type": "range",
+      "id": "icon_text_size",
+      "min": 50,
+      "max": 200,
+      "step": 5,
+      "unit": "%",
+      "label": "Text size",
+      "default": 85
     },
     {
       "type": "header",
