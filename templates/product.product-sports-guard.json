@@ -16,8 +16,8 @@
           "type": "text-badge",
           "settings": {
             "badge_text": "New",
-            "eyebrow_text": "Made for Pop On customers",
-            "heading": "<h2>Your smile by day. Protected at night.</h2>",
+            "eyebrow_text": "FOOTBALL SEASON IS HERE",
+            "heading": "<h3>THEIR SMILE CAN CHANGE WITH ONE HIT</h3>",
             "text_alignment": "left",
             "badge_bg_color": "#2f6fed",
             "badge_text_color": "#ffffff",
@@ -30,7 +30,7 @@
           "type": "c-text",
           "name": "C Text",
           "settings": {
-            "text": "<p>Your custom Pop On Night Guard is designed to protect your teeth from grinding and clenching while you sleep.</p>",
+            "text": "<p>Protect your loved one's smile before the next game.</p>",
             "text_alignment": "left",
             "color": "#ffffff"
           },
