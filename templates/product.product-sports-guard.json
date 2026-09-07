@@ -125,8 +125,8 @@
           "type": "icon-text-card",
           "settings": {
             "icon": "shopify://shop_images/Clipart_Night_guard_Icon_9.png",
-            "heading": "Protect your teeth",
-            "text": "Helps reduce wear from grinding and clenching.",
+            "heading": "CUSTOM-MADE FIT",
+            "text": "Made from their impressions for secure, comfortable coverage.",
             "icon_position": "top",
             "heading_color": "#0b2447",
             "text_color": "#4a4a4a"
@@ -137,8 +137,8 @@
           "type": "icon-text-card",
           "settings": {
             "icon": "shopify://shop_images/Clipart_Night_guard_Icon_10.png",
-            "heading": "Custom, not generic",
-            "text": "Made from your exact smile for a comfortable fit.",
+            "heading": "TOUGH + FLEXIBLE",
+            "text": "Sports-ready EVA cushions impact without a bulky feel.",
             "icon_position": "top",
             "heading_color": "#0b2447",
             "text_color": "#4a4a4a"
@@ -149,8 +149,8 @@
           "type": "icon-text-card",
           "settings": {
             "icon": "shopify://shop_images/Clipart_Night_guard_Icon_11.png",
-            "heading": "Built to last",
-            "text": "Durable outside. Softer inside. Made for nightly wear.",
+            "heading": "BPA-FREE MATERIAL",
+            "text": "Made with medical-grade EVA.",
             "icon_position": "top",
             "heading_color": "#0b2447",
             "text_color": "#4a4a4a"
@@ -161,8 +161,8 @@
           "type": "icon-text-card",
           "settings": {
             "icon": "shopify://shop_images/Clipart_Night_guard_Icon_12.png",
-            "heading": "We keep it on file",
-            "text": "Reorder anytime. No new impression needed.",
+            "heading": "THEIR STYLE",
+            "text": "Available in Clear, Red, Blue, or Red / White / Blue.",
             "icon_position": "top",
             "heading_color": "#0b2447",
             "text_color": "#4a4a4a"
@@ -178,7 +178,7 @@
       ],
       "name": "Icon text grid",
       "settings": {
-        "heading": "<h2>Why a custom-fit guard makes all the difference.</h2>",
+        "heading": "<h3>BUILT TO PROTECT. MADE TO PERFORM.</h3>",
         "background_color": "#ffffff",
         "heading_color": "#0b2447",
         "padding-block-start": 40,
