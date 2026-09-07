@@ -95,6 +95,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons8-lock-100.png",
             "text": "Secure & encrypted checkout",
+            "icon_text_size": 85,
             "text_alignment": "center",
             "text_color": "#ffffff"
           },
@@ -296,6 +297,7 @@
           "settings": {
             "icon": "shopify://shop_images/icons8-lock-100.png",
             "text": "Crafted from tough, flexible, BPA-free medical-grade EVA used to make sports mouthguards.",
+            "icon_text_size": 110,
             "text_alignment": "center",
             "text_color": "#000000"
           },
