@@ -62,7 +62,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>Can you eat with Pop On Veneers? </h2>",
+            "text": "<h2>What if I have sensitive teeth?</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -101,32 +101,6 @@
             "border_width": 1,
             "border_opacity": 100,
             "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_tGJPEM": {
-          "type": "text",
-          "name": "t:names.text",
-          "settings": {
-            "text": "<p>Pop On Veneers are designed for cosmetic use to enhance the <em>appearance</em> of your smile. Each person's experience eating with Pop On Veneers may vary.</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -226,7 +200,6 @@
       "block_order": [
         "text_yypeyE",
         "video_WgK3bN",
-        "text_tGJPEM",
         "group_yVtD4n"
       ],
       "custom_css": [
