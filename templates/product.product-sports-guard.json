@@ -385,6 +385,7 @@
         "product_showcase_variant_6Xj8zq",
         "product_showcase_variant_bTHwE8"
       ],
+      "disabled": true,
       "name": "Product Showcase",
       "settings": {
         "image": "shopify://shop_images/Night_guard_White_with_info_transparent.png",
@@ -701,6 +702,7 @@
         "testimonial_card_zbhw8j",
         "testimonial_card_UEwgfX"
       ],
+      "disabled": true,
       "name": "Testimonial Slider",
       "settings": {
         "heading": "<h2>Real customers. Better nights.</h2>",
@@ -708,6 +710,59 @@
         "heading_color": "#0b2447",
         "padding-block-start": 40,
         "padding-block-end": 40
+      }
+    },
+    "customcode_accordion_ABmXVD": {
+      "type": "customcode-accordion",
+      "blocks": {
+        "accordion_WgxbFg": {
+          "type": "accordion",
+          "settings": {
+            "title": "How is the guard custom-made?",
+            "content": ""
+          }
+        },
+        "accordion_wpcDh6": {
+          "type": "accordion",
+          "settings": {
+            "title": "Is the material safe?",
+            "content": ""
+          }
+        },
+        "accordion_P7MCEX": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do we get the impression?",
+            "content": ""
+          }
+        },
+        "accordion_X8jA6t": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do we get the impression?",
+            "content": ""
+          }
+        },
+        "accordion_WrAM4T": {
+          "type": "accordion",
+          "settings": {
+            "title": "How do we clean it?",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "accordion_WgxbFg",
+        "accordion_wpcDh6",
+        "accordion_P7MCEX",
+        "accordion_X8jA6t",
+        "accordion_WrAM4T"
+      ],
+      "name": "C Accordion",
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "container_color": "#FFFFFF",
+        "section_header": "FAQs"
       }
     },
     "customcode_featured_product_HRwfDi": {
@@ -1149,6 +1204,7 @@
     "product_showcase_cEcHwz",
     "main",
     "testimonial_slider_eXP4mj",
+    "customcode_accordion_ABmXVD",
     "customcode_featured_product_HRwfDi",
     "icon_text_grid_4hDiXY",
     "17601015186c120833",
