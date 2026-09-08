@@ -779,7 +779,7 @@
         "blurb_text_eyebrow_sports_guard": {
           "type": "blurb_text",
           "settings": {
-            "tag": "p",
+            "tag": "h5",
             "text": "CUSTOM-MADE SPORTS PROTECTION",
             "color": "#2f6fed",
             "m_margin_bottom": 4,
@@ -800,7 +800,7 @@
           "type": "price",
           "settings": {
             "show_compare_price": false,
-            "color": "#003659",
+            "color": "#2F6FED",
             "m_margin_bottom": 10,
             "d_margin_bottom": 16
           }
@@ -810,7 +810,7 @@
           "settings": {
             "tag": "h5",
             "text": "Includes At-Home Impression Kit",
-            "color": "#003659",
+            "color": "#2F6FED",
             "m_margin_bottom": 4,
             "d_margin_bottom": 6
           }
@@ -818,9 +818,9 @@
         "blurb_text_impression_kit_desc": {
           "type": "blurb_text",
           "settings": {
-            "tag": "p",
+            "tag": "h5",
             "text": "A custom-made sports guard created from their impressions for a secure, comfortable fit.",
-            "color": "#4A4A4A",
+            "color": "#2F6FED",
             "m_margin_bottom": 10,
             "d_margin_bottom": 16
           }
@@ -839,35 +839,6 @@
             "price_diff_settings": "whole",
             "m_margin_bottom": 10,
             "d_margin_bottom": 20
-          }
-        },
-        "selling_plan_cKNXyy": {
-          "type": "selling_plan",
-          "settings": {
-            "rounding": true,
-            "otp": "",
-            "sbs": "",
-            "subscription_description": "",
-            "m_margin_bottom": 10,
-            "d_margin_bottom": 20
-          }
-        },
-        "property_input_d9pzTM": {
-          "type": "property_input",
-          "settings": {
-            "required": true,
-            "placeholder": "Previous Order Email",
-            "property": "Previous-Order-Email(R)",
-            "tooltip": "Previous Order Email Address",
-            "m_margin_bottom": 10,
-            "d_margin_bottom": 20
-          }
-        },
-        "upload_lift_app_block_B7z4ex": {
-          "type": "shopify://apps/upload-lift/blocks/app-block/3c98bdcb-7587-4ade-bfe4-7d8af00d05ca",
-          "settings": {
-            "product": "{{ product }}",
-            "field": ""
           }
         },
         "buy_button_dT4wwt": {
@@ -905,6 +876,7 @@
         },
         "accordion_nRBJDH": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "accordion_title": "<p>What If I'm Missing Teeth?</p>",
             "video_link": "",
@@ -922,6 +894,7 @@
         },
         "accordion_hPbYaH": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "accordion_title": "<p>Do I Get FREE Gifts?</p>",
             "video_link": "",
@@ -939,6 +912,7 @@
         },
         "accordion_gnNxBP": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "accordion_title": "<p>What If They Don’t Fit?</p>",
             "video_link": "",
@@ -957,6 +931,7 @@
         },
         "accordion_gDQzaA": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "accordion_title": "<p>How Fast Can I Get Them?</p>",
             "video_link": "",
@@ -980,9 +955,6 @@
         "blurb_text_impression_kit_title",
         "blurb_text_impression_kit_desc",
         "variant_selector_pVYxPC",
-        "selling_plan_cKNXyy",
-        "property_input_d9pzTM",
-        "upload_lift_app_block_B7z4ex",
         "buy_button_dT4wwt",
         "icon_badges_sports_guard",
         "description_EbxCM7",
@@ -992,7 +964,8 @@
         "accordion_gDQzaA"
       ],
       "custom_css": [
-        ".value-container[data-index=\"1\"] img {display: none;}"
+        ".value-container[data-index=\"1\"] img {display: none;}",
+        "h5 {font-size: 1.25rem !important;}"
       ],
       "name": "C Featured Product",
       "settings": {
