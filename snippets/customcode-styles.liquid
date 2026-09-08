@@ -316,6 +316,14 @@
     c-featured-product .product-info-container .product-info-row c-callout.pdp-callout img.tooltip-icon {width: 10px; margin: auto 0 auto 5px; display: inline; cursor: pointer;}
     c-featured-product .product-info-container .product-info-row .cfp-tag-container {display: flex; padding: 5px 0; flex-wrap: wrap; gap: 5px;}
     c-featured-product .product-info-container .product-info-row .cfp-tag-container .cfp-tag-item {color: #003659; background-color: #ECECEC; padding: 3px 5px; border-radius: 4px;}
+    c-featured-product .product-info-container .product-info-row c-price.cfp-price {display: flex; align-items: baseline; gap: 8px;}
+    c-featured-product .product-info-container .product-info-row c-price.cfp-price .price-current {color: var(--cfp-price-color, #003659); font-weight: 700; font-size: 26px;}
+    c-featured-product .product-info-container .product-info-row c-price.cfp-price .price-compare {color: #767373; font-size: 16px; font-weight: 400;}
+    c-featured-product .product-info-container .product-info-row c-price.cfp-price .price-compare[hidden] {display: none;}
+    c-featured-product .product-info-container .product-info-row .cfp-icon-badges {display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 160px)); justify-content: center; gap: 16px 12px; text-align: center;}
+    c-featured-product .product-info-container .product-info-row .cfp-icon-badge {display: flex; flex-direction: column; align-items: center; gap: 6px; max-width: 160px; margin: 0 auto;}
+    c-featured-product .product-info-container .product-info-row .cfp-icon-badge__icon {width: 28px; height: 28px; object-fit: contain;}
+    c-featured-product .product-info-container .product-info-row .cfp-icon-badge__text {color: #003659; font-size: 11px; line-height: 1.3;}
     @media screen and (min-width: 769px) {
       c-featured-product .inner-container {padding: 20px 40px; flex-direction: row; gap: 30px;}
       c-featured-product .inner-container .media-container {max-width: calc(50% - 40px);}
@@ -323,6 +331,8 @@
       c-featured-product .product-info-container .product-info-row .pdp-title h1, c-featured-product .product-info-container .product-info-row .pdp-title p {font-size: 40px;}
       c-featured-product .product-info-container .product-info-row .pdp-callout * {font-size: 12px;}
       /* c-featured-product .product-info-container .product-info-row:not(.block-accordion) {margin: 0 0 20px 0;} */
+      c-featured-product .product-info-container .product-info-row c-price.cfp-price .price-current {font-size: 32px;}
+      c-featured-product .product-info-container .product-info-row c-price.cfp-price .price-compare {font-size: 20px;}
     }
 
     /* customcode-table-comparison */
@@ -910,7 +920,12 @@
   c-general-variant-selector .value-container.flex-type.more-than-three::-webkit-scrollbar {display: none; width: 0; height: 0;}
   c-general-variant-selector .value-container.flex-type.more-than-three .parent-option-value {flex: 0 0 calc((100% - 15px)/3.3);}
   c-general-variant-selector .value-container .parent-option-value {display: flex; flex-direction: column;}
-  c-general-variant-selector .option-value {border-radius: 8px; overflow: hidden; cursor: pointer; display: flex; flex-direction: column; height: 100%;}
+  c-general-variant-selector .option-value {position: relative; border-radius: 8px; overflow: hidden; cursor: pointer; display: flex; flex-direction: column; height: 100%;}
+  c-general-variant-selector .option-value .indicator-checkmark {display: none; position: absolute; top: 4px; right: 4px; z-index: 1; width: 18px; height: 18px; align-items: center; justify-content: center; border-radius: 50%; background-color: #003659; color: #ffffff;}
+  c-general-variant-selector .option-value .indicator-checkmark svg {width: 11px; height: 11px;}
+  c-general-variant-selector[data-indicator-style="checkmark"] .option-value[active] .indicator-checkmark {display: flex;}
+  c-general-variant-selector[data-indicator-style="checkmark"] .option-value[first][active] {border: none;}
+  c-general-variant-selector[data-indicator-style="checkmark"] .option-value:not([first])[active] .info-container {border: 2px solid transparent;}
   c-general-variant-selector .option-value[unavailable] {filter: greyscale(1); opacity: 0.6;}
   c-general-variant-selector .option-value[first][active] {border: 2px solid #003659;}
   c-general-variant-selector p.most-popular-banner {text-align: center; background-color: #FF5C89; color: white; font-weight: 700; font-size: 10px; opacity: 0;}

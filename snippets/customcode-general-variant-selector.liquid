@@ -4,6 +4,7 @@
     data-variant="{{ product.selected_or_first_available_variant.id }}"
     data-dynamic-price="{{ block.settings.dynamic_prices }}"
     data-dynamic-variant-image="{{ block.settings.display_dynamic_variant_image }}"
+    data-indicator-style="{{ block.settings.indicator_style | default: 'border' }}"
   >
     {% comment %}
       <script type="application/json" id="product-data">
@@ -83,6 +84,9 @@
                 {% endunless %}
                 data-variant-id="{{ value.variant.id }}"
               >
+                <span class="indicator-checkmark">
+                  {% render 'customcode-icons', icon: 'circled-check' %}
+                </span>
                 {% unless block.settings.hide_most_popular contains option.name %}
                   <p
                     class="most-popular-banner"

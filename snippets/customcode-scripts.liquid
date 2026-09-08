@@ -2078,6 +2078,53 @@
       h5.innerHTML = html;
     }
   }
+  class CPrice extends HTMLElement {
+    connectedCallback() {
+      this.currentEl = this.querySelector('.price-current');
+      this.compareEl = this.querySelector('.price-compare');
+      this.showCompare = this.getAttribute('data-show-compare') === 'true';
+
+      const featuredProduct = this.closest('c-featured-product');
+      if (!featuredProduct) return;
+
+      const pricingDataScript = featuredProduct.querySelector('#custom-product-data');
+      if (!pricingDataScript) return;
+
+      try {
+        this.pricingData = JSON.parse(pricingDataScript.textContent);
+      } catch (err) {
+        console.error('[c-price] Failed to parse custom pricing JSON:', err);
+        return;
+      }
+
+      featuredProduct.addEventListener('variant-changed', (event) => {
+        const variant = event.detail?.variant;
+        if (!variant) return;
+        this.updatePrice(variant.id);
+      });
+    }
+    updatePrice(variantId) {
+      if (!this.pricingData) return;
+
+      const pricing = this.pricingData.find((p) => Number(p.variant_id) === Number(variantId));
+      if (!pricing) return;
+
+      if (this.currentEl) {
+        this.currentEl.textContent = pricing.price;
+      }
+
+      if (this.compareEl) {
+        const hasCompare = pricing.price_compare_raw && Number(pricing.price_compare_raw) > Number(pricing.price_raw);
+        if (this.showCompare && hasCompare) {
+          this.compareEl.textContent = pricing.price_compare;
+          this.compareEl.hidden = false;
+        } else {
+          this.compareEl.textContent = '';
+          this.compareEl.hidden = true;
+        }
+      }
+    }
+  }
   class CBuyBoxV2 extends HTMLElement {
     constructor() {
       super();
@@ -2389,6 +2436,7 @@
     customElements.define('c-scarcity', CScarcity);
     customElements.define('c-callout', CCallout);
     customElements.define('c-buy-box-v2', CBuyBoxV2);
+    customElements.define('c-price', CPrice);
   });
 </script>
 

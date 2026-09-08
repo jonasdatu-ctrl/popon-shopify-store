@@ -98,6 +98,29 @@
                 {% endif %}
               </div>
 
+            {% when 'price' %}
+              {% liquid
+                assign current_variant = c_product.selected_or_first_available_variant
+                assign display_price = current_variant.metafields.custom.customcode_price_display.value[1] | default: current_variant.price
+                assign display_compare = current_variant.metafields.custom.customcode_price_display.value[0] | default: current_variant.compare_at_price
+                assign show_compare = false
+                if block.settings.show_compare_price and display_compare > display_price
+                  assign show_compare = true
+                endif
+              %}
+              <c-price
+                class="cfp-price"
+                data-show-compare="{{ block.settings.show_compare_price }}"
+                style="--cfp-price-color: {{ block.settings.color }};"
+              >
+                <span class="price-current">{{ display_price | money_without_trailing_zeros }}</span>
+                {% if show_compare %}
+                  <s class="price-compare">{{ display_compare | money_without_trailing_zeros }}</s>
+                {% else %}
+                  <s class="price-compare" hidden></s>
+                {% endif %}
+              </c-price>
+
             {% when 'blurb_text' %}
               <div class="blurb_text">
                 <{{ block.settings.tag }} style="color: {{ block.settings.color }};">
@@ -211,6 +234,34 @@
                   </div>
                 {% endfor %}
               </div>
+
+            {% when 'icon_badges' %}
+              {% liquid
+                assign badge_icons = block.settings.icon_urls | split: '|'
+                assign badge_texts = block.settings.texts | split: '|'
+                assign badge_count = badge_icons.size
+                if badge_texts.size > badge_count
+                  assign badge_count = badge_texts.size
+                endif
+              %}
+              {% if badge_count > 0 %}
+                <div class="cfp-icon-badges">
+                  {% for i in (1..badge_count) %}
+                    {% assign badge_icon = badge_icons[forloop.index0] | strip %}
+                    {% assign badge_text = badge_texts[forloop.index0] | strip %}
+                    {% if badge_icon != blank or badge_text != blank %}
+                      <div class="cfp-icon-badge">
+                        {% if badge_icon != blank %}
+                          <img class="cfp-icon-badge__icon" src="{{ badge_icon }}" alt="" loading="lazy" width="32" height="32">
+                        {% endif %}
+                        {% if badge_text != blank %}
+                          <span class="cfp-icon-badge__text">{{ badge_text }}</span>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              {% endif %}
 
             {% when 'product_scroller' %}
               {% render 'customcode-product-scroller', block: block %}
@@ -368,6 +419,36 @@
       ]
     },
     {
+      "type": "icon_badges",
+      "name": "Icon Badges",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon_urls",
+          "label": "Icon Image URLs",
+          "info": "One icon image link per badge, separated by |. Paste links copied from Shopify Files. Must line up in order with Badge Text below."
+        },
+        {
+          "type": "text",
+          "id": "texts",
+          "label": "Badge Text",
+          "info": "One label per badge, separated by |, in the same order as the icon links above."
+        },
+        {
+          "type": "number",
+          "id": "m_margin_bottom",
+          "label": "Mobile Margin Bottom",
+          "default": 10
+        },
+        {
+          "type": "number",
+          "id": "d_margin_bottom",
+          "label": "Desktop Margin Bottom",
+          "default": 20
+        }
+      ]
+    },
+    {
       "type": "html",
       "name": "HTML",
       "settings": [
@@ -482,6 +563,36 @@
           "type": "text",
           "id": "custom_review",
           "label": "Custom Review"
+        },
+        {
+          "type": "number",
+          "id": "m_margin_bottom",
+          "label": "Mobile Margin Bottom",
+          "default": 10
+        },
+        {
+          "type": "number",
+          "id": "d_margin_bottom",
+          "label": "Desktop Margin Bottom",
+          "default": 20
+        }
+      ]
+    },
+    {
+      "type": "price",
+      "name": "Price",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_compare_price",
+          "label": "Show Compare-At Price",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Price Color",
+          "default": "#003659"
         },
         {
           "type": "number",
@@ -658,6 +769,26 @@
           "id": "display_dynamic_variant_image",
           "label": "Display Dynamic Variant Image",
           "default": false
+        },
+        {
+          "type": "header",
+          "content": "Selection Indicator"
+        },
+        {
+          "type": "select",
+          "id": "indicator_style",
+          "label": "Selected Swatch Indicator",
+          "options": [
+            {
+              "value": "border",
+              "label": "Border highlight"
+            },
+            {
+              "value": "checkmark",
+              "label": "Checkmark badge"
+            }
+          ],
+          "default": "border"
         },
         {
           "type": "header",

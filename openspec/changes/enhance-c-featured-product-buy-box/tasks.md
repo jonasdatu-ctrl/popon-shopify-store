@@ -1,0 +1,35 @@
+## 1. Price block
+
+- [x] 1.1 Add `price` block schema entry to `sections/customcode-featured-product.liquid` (settings: optional `show_compare_price` checkbox, margin-bottom settings matching sibling blocks) and verify it appears as an addable block type in the theme editor for this section.
+- [x] 1.2 Add the `price` case to the block-render `{% case block.type %}` loop in `sections/customcode-featured-product.liquid`, rendering a `c-price` element with the current variant's price (via `customcode_price_display` override, falling back to `product.selected_or_first_available_variant.price`, formatted with `money_without_trailing_zeros`) and, when `show_compare_price` is enabled, the compare-at price in a `<s>` element. Verify by adding the block to a test product and confirming the correct initial price renders server-side.
+- [x] 1.3 Add a `CPrice` custom element class to `snippets/customcode-scripts.liquid` that, on `connectedCallback`, finds `this.closest('c-featured-product')` and listens for `variant-changed`, updating its price (and compare-price, if present) text from `event.detail.variant`; register it via `customElements.define('c-price', CPrice)`. Verify by selecting a different variant on a product with a `price` block and confirming the displayed price changes without a reload.
+- [x] 1.4 Add styles for `.price-current` / `.price-compare` (or equivalent selectors) to `snippets/customcode-styles.liquid` matching the reference design's large price treatment. Verify visually against `context/pop-on-guard-buy-box.png`.
+- [x] 1.5 Verify the scenarios in `specs/featured-product-price-block/spec.md`: no-override product, override product, live update on variant change, default-only-variant product (no selector present), compare-price enabled with and without a compare-at price set.
+
+## 2. Icon badges block
+
+- [x] 2.1 Add `icon_badges` block schema entry to `sections/customcode-featured-product.liquid` with `icon_urls` and `texts` text settings (each with `info` text explaining the `|`-separated, index-paired format) plus margin-bottom settings matching sibling blocks. Verify it appears as an addable block type in the theme editor.
+- [x] 2.2 Add the `icon_badges` case to the block-render loop: split both settings on `|`, iterate to the longer list's length, render one `.cfp-icon-badge` per index where either the icon or text at that index is non-blank (icon-only or text-only badges render when the other value is missing), and render nothing when both settings are blank. Verify with test values covering equal-length lists, icon-heavy mismatch, text-heavy mismatch, and both blank.
+- [x] 2.3 Add `.cfp-icon-badges` / `.cfp-icon-badge` grid styles to `snippets/customcode-styles.liquid` using `grid-template-columns: repeat(auto-fit, minmax(0, <cap>px))` with `justify-content: center`, matching the reference design's badge sizing. Verify visually with 1, 2, 3, and 4 badges that badges stay capped and centered rather than stretching, and wrap correctly on mobile widths.
+- [x] 2.4 Verify the scenarios in `specs/featured-product-icon-badges/spec.md`: equal-length lists, more icons than texts, more texts than icons, both blank, three-badge desktop layout, single-badge centering, mobile wrapping.
+
+## 3. Variant selector checkmark indicator
+
+- [x] 3.1 Add an `indicator_style` select setting (`border` default / `checkmark`) to the `variant_selector` block schema in `sections/customcode-featured-product.liquid`.
+- [x] 3.2 Pass `block.settings.indicator_style` into `customcode-general-variant-selector.liquid` as a data attribute on the `<c-general-variant-selector>` root, and add a checkmark badge element inside each `.option-value` (present in markup, hidden by default).
+- [x] 3.3 Add CSS to `snippets/customcode-styles.liquid` scoped under `c-general-variant-selector[data-indicator-style="checkmark"]` that hides the existing border-highlight rules and shows the checkmark badge only on `.option-value[active]`. Verify a product using the default setting renders pixel-identical to before this change, and a product with `indicator_style: checkmark` shows the checkmark badge on the selected swatch only.
+- [x] 3.4 Verify the scenarios in `specs/variant-selector-checkmark-indicator/spec.md`: default unchanged, checkmark enabled, checkmark moves when selection changes.
+
+## 4. Sports Guard PDP wiring
+
+- [x] 4.1 In `templates/product.product-sports-guard.json`, add a `blurb_text` block before `title_iFe33P` for the "CUSTOM-MADE SPORTS PROTECTION" eyebrow, matching the reference design's color/tag.
+- [x] 4.2 Add a new `price` block immediately after `title_iFe33P` in `block_order`.
+- [x] 4.3 Add a `blurb_text` (bold) + `blurb_text` or `description`-style block pair after the price block for "Includes At-Home Impression Kit" and its supporting sentence, matching the reference copy.
+- [x] 4.4 Set `indicator_style: "checkmark"` on `variant_selector_pVYxPC`'s settings.
+- [x] 4.5 Add a new `icon_badges` block after `buy_button_dT4wwt` in `block_order`, with `texts` populated for "Impression Kit Included", "Custom-Made Fit", and "Free Shipping". `icon_urls` left blank pending real CDN links for the three icon images — no existing shop asset URL could be confirmed from the repo alone; merchant/dev must paste the three links in the theme editor (see apply session notes).
+- [ ] 4.6 Load the live Pop On Sports Guard PDP in a browser (via `run`/theme dev server) and confirm the buy box visually matches `context/pop-on-guard-buy-box.png`: eyebrow, title, live price, impression-kit copy, description, checkmark swatches, quantity + Add to Cart, and the three-badge row. **Not done**: `shopify` CLI is available, but `shopify theme dev` requires an authenticated connection to the live store and a browser session to actually view the result — needs the user to run it (or explicitly ask for it) rather than being started unilaterally.
+
+## 5. Regression check
+
+- [ ] 5.1 Load at least one other existing product template that uses `customcode-featured-product.liquid` with a `variant_selector` block and confirm its swatches and buy box render unchanged (no `indicator_style` set, no new blocks added). **Not done**: same live-preview constraint as 4.6; verified instead by code review (the new CSS rules only match `[data-indicator-style="checkmark"]`, which is absent unless explicitly set, and are more specific than the pre-existing border rules so they can't be overridden accidentally).
+- [x] 5.2 Run the theme's linting/check command (e.g. `shopify theme check`) and confirm no new errors are introduced by the schema/snippet changes. Ran `shopify theme check`; found and fixed one new `ImgWidthAndHeight` error on the icon-badge `<img>` tag. Remaining errors on touched files (`MissingTemplate` on the pre-existing `customcode-scarcity.liquid.liquid` render typo, `ImgWidthAndHeight` on a pre-existing tooltip icon, `JSONMissingBlock` on pre-existing app-block references) are unrelated to this change and were present before it.
