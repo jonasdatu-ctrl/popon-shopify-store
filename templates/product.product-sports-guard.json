@@ -844,6 +844,10 @@
         "buy_button_dT4wwt": {
           "type": "buy_button",
           "settings": {
+            "button_text": "Add to Cart",
+            "sold_out_text": "Sold Out",
+            "background_color": "#2F6FED",
+            "text_color": "#FFFFFF",
             "blurb": "",
             "display_payment": true,
             "footer_blurb": "",
