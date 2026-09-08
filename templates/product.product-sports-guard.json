@@ -800,7 +800,7 @@
           "type": "price",
           "settings": {
             "show_compare_price": false,
-            "color": "#2F6FED",
+            "color": "#2f6fed",
             "m_margin_bottom": 10,
             "d_margin_bottom": 16
           }
@@ -833,7 +833,7 @@
             "hide_thumb_images": "Denominations | Qty | Color",
             "hide_option_title": "",
             "hide_most_popular": "Denominations | Qty",
-            "display_dynamic_variant_image": true,
+            "display_dynamic_variant_image": false,
             "indicator_style": "checkmark",
             "display_price_diff": false,
             "price_diff_settings": "whole",
@@ -846,8 +846,8 @@
           "settings": {
             "button_text": "Add to Cart",
             "sold_out_text": "Sold Out",
-            "background_color": "#2F6FED",
-            "text_color": "#FFFFFF",
+            "background_color": "#2f6fed",
+            "text_color": "#ffffff",
             "blurb": "",
             "display_payment": true,
             "footer_blurb": "",
