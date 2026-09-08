@@ -925,6 +925,7 @@
   c-general-variant-selector .indicator-checkmark {display: none; position: absolute; top: 0; right: 0; transform: translate(35%, -35%); z-index: 2; width: 22px; height: 22px; align-items: center; justify-content: center; border-radius: 50%; background-color: #003659; border: 2px solid #ffffff; color: #ffffff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);}
   c-general-variant-selector .indicator-checkmark svg {width: 13px; height: 11px;}
   c-general-variant-selector[data-indicator-style="checkmark"] .option-value[active] + .indicator-checkmark {display: flex;}
+  c-general-variant-selector[data-indicator-style="checkmark"] .option-value:not([first]) .most-popular-banner {height: 0; padding: 0; overflow: hidden;}
   c-general-variant-selector .option-value[unavailable] {filter: greyscale(1); opacity: 0.6;}
   c-general-variant-selector .option-value[first][active] {border: 2px solid #003659;}
   c-general-variant-selector p.most-popular-banner {text-align: center; background-color: #FF5C89; color: white; font-weight: 700; font-size: 10px; opacity: 0;}
