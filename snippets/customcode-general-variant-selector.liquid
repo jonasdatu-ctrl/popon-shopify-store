@@ -84,9 +84,6 @@
                 {% endunless %}
                 data-variant-id="{{ value.variant.id }}"
               >
-                <span class="indicator-checkmark">
-                  {% render 'customcode-icons', icon: 'circled-check' %}
-                </span>
                 {% unless block.settings.hide_most_popular contains option.name %}
                   <p
                     class="most-popular-banner"
@@ -199,6 +196,11 @@
                   {% endunless %}
                 </div>
               </div>
+              <span class="indicator-checkmark">
+                <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 5L4.5 8.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
             </div>
           {% endfor %}
         </div>
