@@ -57,6 +57,7 @@
     </div>
     <div class="product-info-container" id="product-info-container">
       {% for block in section.blocks %}
+        {% unless block.type == 'icon_badges' %}
         {% style %}
           .product-info-row:not(.block-accordion)[data-row-index="{{ forloop.index0 }}"] {
             margin: 0 0 {{block.settings.m_margin_bottom}}px 0;
@@ -235,42 +236,21 @@
                 {% endfor %}
               </div>
 
-            {% when 'icon_badges' %}
-              {% liquid
-                assign badge_icons = block.settings.icon_urls | split: '|'
-                assign badge_texts = block.settings.texts | split: '|'
-                assign badge_count = badge_icons.size
-                if badge_texts.size > badge_count
-                  assign badge_count = badge_texts.size
-                endif
-              %}
-              {% if badge_count > 0 %}
-                <div class="cfp-icon-badges">
-                  {% for i in (1..badge_count) %}
-                    {% assign badge_icon = badge_icons[forloop.index0] | strip %}
-                    {% assign badge_text = badge_texts[forloop.index0] | strip %}
-                    {% if badge_icon != blank or badge_text != blank %}
-                      <div class="cfp-icon-badge">
-                        {% if badge_icon != blank %}
-                          <img class="cfp-icon-badge__icon" src="{{ badge_icon }}" alt="" loading="lazy" width="32" height="32">
-                        {% endif %}
-                        {% if badge_text != blank %}
-                          <span class="cfp-icon-badge__text">{{ badge_text }}</span>
-                        {% endif %}
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-              {% endif %}
-
             {% when 'product_scroller' %}
               {% render 'customcode-product-scroller', block: block %}
 
             {% endcase %}
         </div>
+        {% endunless %}
       {% endfor %}
     </div>
   </div>
+
+  {% for block in section.blocks %}
+    {% if block.type == 'icon_badges' %}
+      {% render 'customcode-icon-badges', block: block %}
+    {% endif %}
+  {% endfor %}
 </c-featured-product>
 
 {% schema %}
