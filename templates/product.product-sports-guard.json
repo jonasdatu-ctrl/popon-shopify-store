@@ -309,7 +309,8 @@
       ],
       "custom_css": [
         ".icon-text-block {max-width: 410px; margin: auto;}",
-        ".icon-text-block__text {color: #003659; font-weight: 600;}"
+        ".icon-text-block__text {color: #003659; font-weight: 600;}",
+        ".icon-text-block__icon {width: 40px;}"
       ],
       "settings": {
         "content_direction": "column",
