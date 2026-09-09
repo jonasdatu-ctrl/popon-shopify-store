@@ -973,7 +973,6 @@
         "accordion_gDQzaA"
       ],
       "custom_css": [
-        ".value-container[data-index=\"1\"] img {display: none;}",
         ".block-blurb_text h5 {font-size: 1.25rem !important;}"
       ],
       "name": "C Featured Product",
