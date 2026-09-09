@@ -846,6 +846,17 @@
             "d_margin_bottom": 20
           }
         },
+        "property_input_aFky7L": {
+          "type": "property_input",
+          "settings": {
+            "required": true,
+            "placeholder": "Previous Order Email",
+            "property": "Previous-Order-Email(R)",
+            "tooltip": "Previous Order Email Address",
+            "m_margin_bottom": 10,
+            "d_margin_bottom": 20
+          }
+        },
         "buy_button_dT4wwt": {
           "type": "buy_button",
           "settings": {
@@ -964,6 +975,7 @@
         "blurb_text_impression_kit_title",
         "blurb_text_impression_kit_desc",
         "variant_selector_pVYxPC",
+        "property_input_aFky7L",
         "buy_button_dT4wwt",
         "icon_badges_sports_guard",
         "description_EbxCM7",
