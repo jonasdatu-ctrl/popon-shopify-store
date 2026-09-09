@@ -973,7 +973,8 @@
         "accordion_gDQzaA"
       ],
       "custom_css": [
-        ".block-blurb_text h5 {font-size: 1.25rem !important;}"
+        ".block-blurb_text h5 {font-size: 1.25rem !important;}",
+        "c-general-variant-selector .option-value:not([first]) .info-container {justify-content: end;}"
       ],
       "name": "C Featured Product",
       "settings": {
