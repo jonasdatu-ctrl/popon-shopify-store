@@ -327,6 +327,23 @@
             "d_margin_bottom": 20
           }
         },
+        "accordion_vN72Lp": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>What's Included FREE With Every Purchase?</p>",
+            "video_link": "",
+            "above_content": "",
+            "content": "",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": "{% render 'customcode-test-freebies' %}"
+          }
+        },
         "accordion_nbUzrp": {
           "type": "accordion",
           "settings": {
@@ -430,23 +447,6 @@
             "custom_liquid": ""
           }
         },
-        "freebies_rAHLCH": {
-          "type": "freebies",
-          "settings": {
-            "title": "What's included FREE with every purchase?",
-            "image_one": "shopify://shop_images/Screenshot_2025-07-17_at_12.49.26_AM.png",
-            "text_one": "3D Models of Your Teeth",
-            "image_two": "shopify://shop_images/Screenshot_2025-07-17_at_12.49.35_AM.png",
-            "text_two": "Mirrored Case",
-            "image_three": "shopify://shop_images/Screenshot_2025-07-17_at_12.49.41_AM.png",
-            "text_three": "6 Cleaning Tablets",
-            "image_four": "shopify://shop_images/Screenshot_2025-07-17_at_12.49.49_AM.png",
-            "text_four": "Toothbrush",
-            "button_text": "Included Free",
-            "m_margin_bottom": 10,
-            "d_margin_bottom": 20
-          }
-        },
         "html_ACFrEk": {
           "type": "html",
           "settings": {
@@ -461,13 +461,13 @@
         "blurb_text_UYbQUB",
         "variant_selector_ygyB3p",
         "buy_button_zKRDHV",
+        "accordion_vN72Lp",
         "accordion_nbUzrp",
         "accordion_Qt4mkw",
         "accordion_Pw3qcf",
         "accordion_W4tMxw",
         "accordion_Jpcgnn",
         "accordion_4pqhaE",
-        "freebies_rAHLCH",
         "html_ACFrEk"
       ],
       "custom_css": [

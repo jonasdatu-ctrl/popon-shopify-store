@@ -1,0 +1,35 @@
+{% style %}
+    .test-freebies {border-top: 0.5px solid #003659FF; padding-top: 10px; margin-top: 10px;}
+    .test-freebies .test-freebies-title {color: #003659; font-weight: 600; font-size: 14px; margin: 0 0 15px;}
+    .test-freebies .test-freebies-grid {display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;}
+    .test-freebies .test-freebies-item {display: flex; flex-direction: column;}
+    .test-freebies .test-freebies-item .test-freebies-image img {width: 100%; display: block; border-radius: 6px;}
+    .test-freebies .test-freebies-item .test-freebies-text {margin-top: 8px; text-align: center; font-size: 12px; font-weight: 500; color: #003659;}
+    .test-freebies .test-freebies-item .test-freebies-badge {display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 4px; font-size: 11px; font-weight: 600; color: #02bf63;}
+    .test-freebies .test-freebies-item .test-freebies-badge svg {width: 12px; height: 12px; flex-shrink: 0;}
+    @media screen and (min-width: 769px) {
+        .test-freebies .test-freebies-grid {grid-template-columns: repeat(4, 1fr);}
+        .test-freebies .test-freebies-title {font-size: 16px;}
+    }
+{% endstyle %}
+
+{% assign image_set = "https://poponveneers.com/cdn/shop/files/Screenshot_2025-07-17_at_12.49.26_AM.png?v=1752684637&width=1080|https://poponveneers.com/cdn/shop/files/Screenshot_2025-07-17_at_12.49.35_AM.png?v=1752684640&width=1080|https://poponveneers.com/cdn/shop/files/Screenshot_2025-07-17_at_12.49.41_AM.png?v=1752684644&width=1080|https://poponveneers.com/cdn/shop/files/Screenshot_2025-07-17_at_12.49.49_AM.png?v=1752684647&width=1080" | split: '|' %}
+{% assign text_set = "3D Models of Your Teeth|Mirrored Case|6 Cleaning Tablets|Toothbrush" | split: '|' %}
+
+<div class="test-freebies">
+    <p class="test-freebies-title">What's included FREE with every purchase?</p>
+    <div class="test-freebies-grid">
+        {% for image in image_set %}
+            <div class="test-freebies-item">
+                <div class="test-freebies-image">
+                    <img src="{{ image }}" alt="{{ text_set[forloop.index0] }}" loading="lazy">
+                </div>
+                <p class="test-freebies-text">{{ text_set[forloop.index0] }}</p>
+                <span class="test-freebies-badge">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#02bf63"/><path d="M7 12.5L10.5 16L17 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Included Free
+                </span>
+            </div>
+        {% endfor %}
+    </div>
+</div>
