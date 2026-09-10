@@ -881,7 +881,7 @@
           "type": "icon_badges",
           "settings": {
             "icon_urls": "",
-            "texts": "Impression Kit Included|Custom-Made Fit|Free Shipping",
+            "texts": "",
             "m_margin_bottom": 10,
             "d_margin_bottom": 20
           }
