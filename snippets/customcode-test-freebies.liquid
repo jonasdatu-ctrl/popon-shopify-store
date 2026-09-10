@@ -1,15 +1,21 @@
 {% style %}
-    .test-freebies {border-top: 0.5px solid #003659FF; padding-top: 10px; margin-top: 10px;}
-    .test-freebies .test-freebies-title {color: #003659; font-weight: 600; font-size: 14px; margin: 0 0 15px;}
-    .test-freebies .test-freebies-grid {display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;}
-    .test-freebies .test-freebies-item {display: flex; flex-direction: column;}
-    .test-freebies .test-freebies-item .test-freebies-image img {width: 100%; display: block; border-radius: 6px;}
-    .test-freebies .test-freebies-item .test-freebies-text {margin-top: 8px; text-align: center; font-size: 12px; font-weight: 500; color: #003659;}
-    .test-freebies .test-freebies-item .test-freebies-badge {display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 4px; font-size: 11px; font-weight: 600; color: #02bf63;}
-    .test-freebies .test-freebies-item .test-freebies-badge svg {width: 12px; height: 12px; flex-shrink: 0;}
+    .test-freebies {padding: 15px 0;}
+    .test-freebies .tf-title {text-align: center; color: #003659; line-height: normal; font-weight: 700; margin: 0 0 15px; font-size: 22px;}
+    .test-freebies .tf-grid {display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;}
+    .test-freebies .tf-item {padding: 10px 20px;}
+    .test-freebies .tf-item .tf-image img {width: 100%; height: auto; aspect-ratio: 1; margin-bottom: 15px; object-fit: contain; display: block;}
+    .test-freebies .tf-item .tf-text {text-align: center; color: #003659; line-height: normal; font-weight: 700; margin: 0; font-size: 12px;}
+    .test-freebies .tf-item .tf-badge {display: none;}
     @media screen and (min-width: 769px) {
-        .test-freebies .test-freebies-grid {grid-template-columns: repeat(4, 1fr);}
-        .test-freebies .test-freebies-title {font-size: 16px;}
+        .test-freebies .tf-title {font-size: 28px;}
+        .test-freebies .tf-grid {grid-template-columns: repeat(1, 1fr);}
+        .test-freebies .tf-item {background-color: #DEF0FCFF; border-radius: 0 10px 10px 0; overflow: hidden; display: flex; align-items: center; gap: 30px; padding: 10px 20px;}
+        .test-freebies .tf-item .tf-image {flex: 1; display: flex;}
+        .test-freebies .tf-item .tf-image img {margin: auto; margin-bottom: 0;}
+        .test-freebies .tf-item .tf-text-container {flex: 2; display: flex; flex-direction: column; gap: 5px;}
+        .test-freebies .tf-item .tf-text {text-align: left; padding-right: 50px; font-size: 20px;}
+        .test-freebies .tf-item .tf-badge {display: flex; flex-wrap: nowrap; align-items: center; gap: 5px; background-color: #ff5c89; padding: 3px 15px; border-radius: 999px; color: white; max-width: fit-content; font-weight: 600; font-size: 16px;}
+        .test-freebies .tf-item .tf-badge svg {width: 20px; height: 20px; flex-shrink: 0;}
     }
 {% endstyle %}
 
@@ -17,18 +23,20 @@
 {% assign text_set = "3D Models of Your Teeth|Mirrored Case|6 Cleaning Tablets|Toothbrush" | split: '|' %}
 
 <div class="test-freebies">
-    <p class="test-freebies-title">What's included FREE with every purchase?</p>
-    <div class="test-freebies-grid">
+    <p class="tf-title">What's included FREE with every purchase?</p>
+    <div class="tf-grid">
         {% for image in image_set %}
-            <div class="test-freebies-item">
-                <div class="test-freebies-image">
+            <div class="tf-item">
+                <div class="tf-image">
                     <img src="{{ image }}" alt="{{ text_set[forloop.index0] }}" loading="lazy">
                 </div>
-                <p class="test-freebies-text">{{ text_set[forloop.index0] }}</p>
-                <span class="test-freebies-badge">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#02bf63"/><path d="M7 12.5L10.5 16L17 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    Included Free
-                </span>
+                <div class="tf-text-container">
+                    <p class="tf-text">{{ text_set[forloop.index0] }}</p>
+                    <span class="tf-badge">
+                        <svg viewBox="0 0 16 16" fill="white" stroke="white" stroke-width="0" xmlns="http://www.w3.org/2000/svg"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path></svg>
+                        Included Free
+                    </span>
+                </div>
             </div>
         {% endfor %}
     </div>
