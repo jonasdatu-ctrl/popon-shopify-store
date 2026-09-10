@@ -16,8 +16,8 @@
           "type": "text-badge",
           "settings": {
             "badge_text": "New",
-            "eyebrow_text": "FOOTBALL SEASON IS HERE",
-            "heading": "<h2>THEIR SMILE CAN CHANGE WITH ONE HIT</h2>",
+            "eyebrow_text": "FOR ACTIVE POP ON CUSTOMERS",
+            "heading": "<h2>PROTECT YOUR SMILE WHILE YOU PLAY.</h2>",
             "text_alignment": "left",
             "badge_bg_color": "#2f6fed",
             "badge_text_color": "#ffffff",
@@ -30,7 +30,7 @@
           "type": "c-text",
           "name": "C Text",
           "settings": {
-            "text": "<p>Protect your loved one's smile before the next game.</p>",
+            "text": "<p>Custom-made sports protection using your saved digital scan. No new impressions needed.</p>",
             "text_alignment": "left",
             "color": "#ffffff"
           },
@@ -40,7 +40,7 @@
           "type": "c-button",
           "name": "C Button",
           "settings": {
-            "label": "PROTECT THEIR SMILE",
+            "label": "SHOP SPORTS GUARDS",
             "link": "#shopify-section-template--22314102096010__customcode_featured_product_HRwfDi",
             "open_in_new_tab": false,
             "background_color": "#2f6fed",
@@ -83,7 +83,7 @@
           "type": "c-text",
           "name": "C Text",
           "settings": {
-            "text": "<h5>Custom Fit • BPA-Free EVA • Made for Contact Sports</h5>",
+            "text": "<h5>Custom Fit • BPA-Free EVA • Made for Active Lifestyles</h5>",
             "text_alignment": "center",
             "color": "#ffffff"
           },
@@ -130,7 +130,7 @@
           "settings": {
             "icon": "shopify://shop_images/ChatGPT_Image_Sep_7_2026_11_49_11_AM_1.png",
             "heading": "CUSTOM-MADE FIT",
-            "text": "Made from their impressions for secure, comfortable coverage.",
+            "text": "Made from your saved scan for a secure, comfortable coverage.",
             "icon_position": "top",
             "heading_color": "#0b2447",
             "text_color": "#4a4a4a"
@@ -142,7 +142,7 @@
           "settings": {
             "icon": "shopify://shop_images/ChatGPT_Image_Sep_7_2026_11_49_42_AM.png",
             "heading": "TOUGH + FLEXIBLE",
-            "text": "Sports-ready EVA cushions impact without a bulky feel.",
+            "text": "Sport-ready EVA cushions impact without feeling bulky.",
             "icon_position": "top",
             "heading_color": "#0b2447",
             "text_color": "#4a4a4a"
@@ -153,8 +153,8 @@
           "type": "icon-text-card",
           "settings": {
             "icon": "shopify://shop_images/ChatGPT_Image_Sep_10_2026_08_53_34_AM.png",
-            "heading": "BPA-FREE MATERIAL",
-            "text": "Made with medical-grade EVA.",
+            "heading": "NO NEW IMPRESSIONS",
+            "text": "Act fast to your saved scan so you can get right to life.",
             "icon_position": "top",
             "heading_color": "#0b2447",
             "text_color": "#4a4a4a"
@@ -165,8 +165,8 @@
           "type": "icon-text-card",
           "settings": {
             "icon": "shopify://shop_images/ChatGPT_Image_Sep_7_2026_11_49_12_AM_4.png",
-            "heading": "THEIR STYLE",
-            "text": "Available in Clear, Red, Blue, or Red / White / Blue.",
+            "heading": "YOUR STYLE",
+            "text": "Available in Clear, Blue, Red, or Red / White / Blue.",
             "icon_position": "top",
             "heading_color": "#0b2447",
             "text_color": "#4a4a4a"
@@ -196,7 +196,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h3>CUSTOM PROTECTION IN 3 EASY STEPS</h3>",
+            "text": "<h3>YOUR CUSTOM GUARD IN 3 EASY STEPS</h3>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -222,13 +222,13 @@
           "type": "ai_gen_block_0249609",
           "settings": {
             "image_1": "shopify://shop_images/ChatGPT_Image_Sep_10_2026_12_48_47_PM_1.png",
-            "heading_1": "MAKE THEIR IMPRESSIONS",
+            "heading_1": "CHOOSE YOUR COLOR",
             "text_1": "",
             "image_2": "shopify://shop_images/ChatGPT_Image_Sep_10_2026_12_48_48_PM_2.png",
-            "heading_2": "WE CUSTOM-MAKE THEIR GUARD",
+            "heading_2": "WE CUSTOM-MAKE YOUR GUARD",
             "text_2": "",
             "image_3": "shopify://shop_images/ChatGPT_Image_Sep_10_2026_12_36_58_PM_2.png",
-            "heading_3": "THEY GET IN THE GAME",
+            "heading_3": "PLAY WITH CONFIDENCE",
             "text_3": "",
             "section_padding": 40,
             "column_gap": 30,
@@ -814,7 +814,7 @@
           "type": "blurb_text",
           "settings": {
             "tag": "h5",
-            "text": "Includes At-Home Impression Kit",
+            "text": "For Existing Customers",
             "color": "#003659",
             "m_margin_bottom": 4,
             "d_margin_bottom": 6
@@ -824,7 +824,7 @@
           "type": "blurb_text",
           "settings": {
             "tag": "h5",
-            "text": "A custom-made sports guard created from their impressions for a secure, comfortable fit.",
+            "text": "Made from your saved digital scan — no at-home impressions or new mold.",
             "color": "#003659",
             "m_margin_bottom": 10,
             "d_margin_bottom": 16
