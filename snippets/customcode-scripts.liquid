@@ -193,9 +193,7 @@
 
     // 2. DOM Population Task
     const populateFields = () => {
-      const emailField = document.querySelector('input[name="properties[Previous-Order-Email(R)]"]');
-      const storedEmail = localStorage.getItem('previousOrderEmail');
-
+    const emailField = document.querySelector('input[name="properties[Previous-Order-Email(R)]"], input[name="properties[Previous-Order-Email]"]');      const storedEmail = localStorage.getItem('previousOrderEmail');
       if (emailField && storedEmail) {
         emailField.value = storedEmail;
       }
