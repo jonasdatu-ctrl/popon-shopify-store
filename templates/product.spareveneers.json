@@ -25,7 +25,7 @@
         "callout_w3QhQm": {
           "type": "callout",
           "settings": {
-            "text": "⭐ Welcome Back! Claim your VIP discount today!",
+            "text": "⭐ Your smile's on file — reorder in seconds!",
             "highlight": "",
             "highlight_color": "#ff5c89",
             "tooltip": "",
@@ -54,6 +54,7 @@
             "hide_option_title": "Arch",
             "hide_most_popular": "",
             "display_dynamic_variant_image": false,
+            "indicator_style": "border",
             "display_price_diff": true,
             "price_diff_settings": "whole",
             "m_margin_bottom": 10,
@@ -85,6 +86,10 @@
         "buy_button_tz3KWT": {
           "type": "buy_button",
           "settings": {
+            "button_text": "Add to Cart",
+            "sold_out_text": "Sold Out",
+            "background_color": "#02bf63",
+            "text_color": "#ffffff",
             "blurb": "",
             "display_payment": true,
             "footer_blurb": "",
