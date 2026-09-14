@@ -62,7 +62,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>What if I have sensitive teeth?</h2>",
+            "text": "<h2>Can Pop On Work With Missing Teeth?</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -89,7 +89,7 @@
           "name": "t:names.video",
           "settings": {
             "source": "uploaded",
-            "video": "shopify://files/videos/IH_260802 Sensitive teeth jessica V2 - 1min 4x5.mp4",
+            "video": "shopify://files/videos/IH_260809 missing teeth solution  - 1min 4x5 - V1_03da07a4-9633-4ca7-9891-479494511eb4.mp4",
             "video_url": "",
             "video_autoplay": true,
             "video_loop": true,
