@@ -488,6 +488,17 @@
         "desktop_count": "1"
       }
     },
+    "custom_liquid_pC3KeA": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "{% render 'customcode-video-carousel-slider', video_set: 'see-more-videos' %}",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "customcode_content_generator_AbGppG": {
       "type": "customcode-content-generator",
       "blocks": {
@@ -524,6 +535,7 @@
   "order": [
     "main",
     "customcode_featured_product_e7PeMe",
+    "custom_liquid_pC3KeA",
     "customcode_content_generator_AbGppG",
     "customode_loox_reviews_deFcAL"
   ]
