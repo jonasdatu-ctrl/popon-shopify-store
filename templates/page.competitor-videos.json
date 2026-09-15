@@ -48,7 +48,7 @@
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "{% render 'customcode-video-carousel-slider', video_set: 'color-choices' %}",
+        "custom_liquid": "{% render 'customcode-video-carousel-slider', video_set: 'competitor-videos' %}",
         "color_scheme": "",
         "section_width": "page-width",
         "padding-block-start": 0,
