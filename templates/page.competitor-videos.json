@@ -46,6 +46,9 @@
     },
     "custom_liquid_VprKWk": {
       "type": "custom-liquid",
+      "custom_css": [
+        "@media (min-width: 750px) {video-carousel-slider .vcs-track {grid-auto-columns: calc((100% - 45px) / 3) !important; }}"
+      ],
       "name": "t:names.custom_liquid",
       "settings": {
         "custom_liquid": "{% render 'customcode-video-carousel-slider', video_set: 'competitor-videos' %}",
