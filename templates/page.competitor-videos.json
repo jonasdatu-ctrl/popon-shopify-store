@@ -44,67 +44,21 @@
         "d_padding_bottom": true
       }
     },
-    "customcode_content_generator_fawCfh": {
-      "type": "customcode-content-generator",
-      "blocks": {
-        "liquid_W84DrL": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<div class=\"main-page-custom\">\n{{ page.content }}\n</div>"
-          }
-        }
-      },
-      "block_order": [
-        "liquid_W84DrL"
-      ],
-      "custom_css": [
-        "img {margin: auto;}",
-        ".content-block.block-liquid {max-width: 700px; margin: auto;}"
-      ],
-      "name": "C Content Generator",
+    "custom_liquid_VprKWk": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
       "settings": {
-        "d_padding_top": true,
-        "d_padding_bottom": true
-      }
-    },
-    "customcode_text_marquee_dnN7e6": {
-      "type": "customcode-text-marquee",
-      "blocks": {
-        "mobile_marquee_7AABEr": {
-          "type": "mobile_marquee",
-          "settings": {}
-        },
-        "mobile_marquee_NxFDGV": {
-          "type": "mobile_marquee",
-          "settings": {}
-        },
-        "mobile_marquee_tQzaAC": {
-          "type": "mobile_marquee",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "mobile_marquee_7AABEr",
-        "mobile_marquee_NxFDGV",
-        "mobile_marquee_tQzaAC"
-      ],
-      "name": "C Text Marquee",
-      "settings": {
-        "blurb": "",
-        "header": "",
-        "features_grid": "",
-        "features_grid_link": "",
-        "image_url": "",
-        "content": "",
-        "button_link": "",
-        "button_text": ""
+        "custom_liquid": "{% render 'customcode-video-carousel-slider', video_set: 'color-choices' %}",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     }
   },
   "order": [
     "main",
     "customcode_content_generator_UiQNgJ",
-    "customcode_content_generator_fawCfh",
-    "customcode_text_marquee_dnN7e6"
+    "custom_liquid_VprKWk"
   ]
 }
