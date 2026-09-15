@@ -130,21 +130,28 @@
         {% sections 'customcode-home-alt-2-group' %}
       {% endif %}
 
+      {% comment %} Display Tamar LYS {% endcomment %}
       {% if template.suffix == 'tamar-love-your-smile-1' %}
         {% sections 'customcode-home-tamar-1-group' %}
         {% sections 'customcode-home-tamar-group' %}
       {% endif %}
 
+      {% comment %} Display Pouch Group {% endcomment %}
       {% if template.suffix == 'landing-pouch' %}
         {% sections 'customcode-landing-pouch-group' %}
       {% endif %}
 
+      {% comment %} Display Shop Group {% endcomment %}
       {% if page.metafields.custom.custom_page_display == 'Shop Page' %}
         {% sections 'customcode-shop-group' %}
       {% endif %}
+
+      {% comment %} Display VIP Shop Group {% endcomment %}
       {% if page.metafields.custom.custom_page_display == 'VIP Shop Page' %}
         {% sections 'customcode-vip-shop-group' %}
       {% endif %}
+
+      {% comment %} Display Main PDP {% endcomment %}
       {% if product.handle == 'top-bottom-teeth'
         or page.metafields.custom.custom_page_display == 'Pop On Veneers with Impression Kit Template'
         or product.id == 8820560298122
