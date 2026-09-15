@@ -54,7 +54,7 @@
         "custom_liquid": "{% render 'customcode-video-carousel-slider', video_set: 'competitor-videos' %}",
         "color_scheme": "",
         "section_width": "page-width",
-        "padding-block-start": 0,
+        "padding-block-start": 40,
         "padding-block-end": 40
       }
     }
