@@ -98,6 +98,9 @@
         "block_order": [
           "content_GEfmqg"
         ],
+        "custom_css": [
+          "c-content-generator .block-content {max-width: 1400px;}"
+        ],
         "settings": {
           "d_padding_top": true,
           "d_padding_bottom": true
