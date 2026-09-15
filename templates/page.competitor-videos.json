@@ -33,6 +33,7 @@
       "block_order": [
         "section_header_9e6QRn"
       ],
+      "disabled": true,
       "custom_css": [
         "h1,h2 {text-transform: uppercase;}",
         "h2 {font-weight: normal;}"
@@ -65,11 +66,45 @@
         "d_padding_top": true,
         "d_padding_bottom": true
       }
+    },
+    "customcode_text_marquee_dnN7e6": {
+      "type": "customcode-text-marquee",
+      "blocks": {
+        "mobile_marquee_7AABEr": {
+          "type": "mobile_marquee",
+          "settings": {}
+        },
+        "mobile_marquee_NxFDGV": {
+          "type": "mobile_marquee",
+          "settings": {}
+        },
+        "mobile_marquee_tQzaAC": {
+          "type": "mobile_marquee",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "mobile_marquee_7AABEr",
+        "mobile_marquee_NxFDGV",
+        "mobile_marquee_tQzaAC"
+      ],
+      "name": "C Text Marquee",
+      "settings": {
+        "blurb": "",
+        "header": "",
+        "features_grid": "",
+        "features_grid_link": "",
+        "image_url": "",
+        "content": "",
+        "button_link": "",
+        "button_text": ""
+      }
     }
   },
   "order": [
     "main",
     "customcode_content_generator_UiQNgJ",
-    "customcode_content_generator_fawCfh"
+    "customcode_content_generator_fawCfh",
+    "customcode_text_marquee_dnN7e6"
   ]
 }
