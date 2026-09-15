@@ -4,6 +4,27 @@
   {% assign grid_items = blog %}
 {% endif %}
 
+{% if grid_items.articles.size > 0 %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for item in grid_items.articles %}
+          {
+            "@type": "Question",
+            "name": {{ item.title | json }},
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": {{ item.content | strip_html | strip_newlines | strip | json }}
+            }
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+  </script>
+{% endif %}
+
 <c-article-faq-grid>
   <div class="inner-container">
     <div class="header-container">

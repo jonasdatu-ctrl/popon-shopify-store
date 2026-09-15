@@ -60,6 +60,25 @@
   {{ article | structured_data }}
 </script>
 
+{% if template.suffix == 'blog-faq' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": {{ article.title | json }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ article.content | strip_html | strip_newlines | strip | json }}
+          }
+        }
+      ]
+    }
+  </script>
+{% endif %}
+
 {% stylesheet %}
   .blog-post-comments-container {
     width: 100%;
