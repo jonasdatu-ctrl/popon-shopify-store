@@ -508,6 +508,17 @@
         "d_padding_bottom": true
       }
     },
+    "custom_liquid_REG43G": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "{% render 'customcode-video-carousel-slider', video_set: 'see-more-videos' %}",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "customode_loox_reviews_deFcAL": {
       "type": "customode-loox-reviews",
       "name": "C Loox Reviews",
@@ -524,6 +535,7 @@
   "order": [
     "main",
     "customcode_featured_product_e7PeMe",
+    "custom_liquid_REG43G",
     "customcode_content_generator_AbGppG",
     "customode_loox_reviews_deFcAL"
   ]
