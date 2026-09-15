@@ -22,6 +22,16 @@
 
 {% assign freebie_product = section.settings.partially_additional_product | split: '|' %}
 
+{% if c_product and c_product.handle != 'propod' %}
+  <script type="application/ld+json">
+    {{ c_product | structured_data }}
+  </script>
+{% endif %}
+
+{% if product %}
+  {% render 'customcode-breadcrumb-jsonld', crumb_product: c_product %}
+{% endif %}
+
 <c-featured-product
   data-section="{{ section.id }}"
   data-partially="{{ section.settings.enable_partially }}"

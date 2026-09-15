@@ -17,6 +17,23 @@
   {% assign max_products = new_collection.products.size %}
 {% endif %}
 
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {% for product in new_collection.products limit: max_products %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "name": {{ product.title | json }},
+          "url": {{ request.origin | append: product.url | json }}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+</script>
+
 <c-main-collection data-section-id="{{ section.id }}" id="{{ section.settings.id }}">
   <div class="inner-container">
     <div class="grid-container">
