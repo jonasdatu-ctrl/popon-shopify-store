@@ -151,6 +151,11 @@
       %}
         {% sections 'customcode-top-bottom-group' %}
       {% endif %}
+
+      {% comment %} Display Rich text for competitor-videos template  {% endcomment %}
+      {% if template.suffix == "competitor-videos" %}
+        {% section 'customcode-content-generator' %}
+      {% endif %}
     </main>
 
     {% sections 'footer-group' %}
