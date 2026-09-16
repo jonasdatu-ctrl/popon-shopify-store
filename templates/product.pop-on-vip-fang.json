@@ -450,7 +450,7 @@
         "html_ACFrEk": {
           "type": "html",
           "settings": {
-            "html": "<video controls=\"\" preload=\"metadata\" width=\"100%\">\n  <source src=\"https://cdn.shopify.com/videos/c/o/v/72a944437b8342da8169017916344e03.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</source></video>",
+            "html": "<video controls=\"\" preload=\"metadata\" width=\"100%\">\n  <source src=\"https://cdn.shopify.com/videos/c/o/v/2dd3b0ef3a834543913ebe533a0284c1.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</source></video>",
             "m_margin_bottom": 10,
             "d_margin_bottom": 20
           }
