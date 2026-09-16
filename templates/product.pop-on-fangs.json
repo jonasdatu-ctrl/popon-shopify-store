@@ -450,7 +450,7 @@
         "html_cNtGUe": {
           "type": "html",
           "settings": {
-            "html": "<video controls=\"\" preload=\"metadata\" width=\"100%\">\n  <source src=\"https://cdn.shopify.com/videos/c/o/v/ec135f0da77c4dff95bd50bfc88d2a8b.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</source></video>",
+            "html": "<video controls=\"\" preload=\"metadata\" width=\"100%\">\n  <source src=\"https://cdn.shopify.com/videos/c/o/v/72a944437b8342da8169017916344e03.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</source></video>",
             "m_margin_bottom": 10,
             "d_margin_bottom": 20
           }
