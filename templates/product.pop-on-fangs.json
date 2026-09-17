@@ -317,7 +317,7 @@
             "blurb": "",
             "display_payment": true,
             "footer_blurb": "",
-            "display_compare_price": false,
+            "display_compare_price": true,
             "display_alt_financing": false,
             "alt_financing_link": "",
             "alt_financing_text": "",
