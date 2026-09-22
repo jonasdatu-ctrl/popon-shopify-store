@@ -362,6 +362,23 @@
             "custom_liquid": ""
           }
         },
+        "accordion_g43Eqr": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "<p>What about my bottom teeth?</p>",
+            "video_link": "",
+            "above_content": "<p>Complete your new look! For a limited time, customers that purchase Pop On Fangs, can get bottom veneers at a limited-time discount. You can choose the same color as your fangs. You'll see the option to add bottom veneers after you add fangs to your cart.</p>",
+            "content": "",
+            "page": "",
+            "display_html_content": false,
+            "text": "",
+            "additional_content": "",
+            "button_link": "",
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
+          }
+        },
         "accordion_Qt4mkw": {
           "type": "accordion",
           "settings": {
@@ -463,6 +480,7 @@
         "buy_button_zKRDHV",
         "accordion_vN72Lp",
         "accordion_nbUzrp",
+        "accordion_g43Eqr",
         "accordion_Qt4mkw",
         "accordion_Pw3qcf",
         "accordion_W4tMxw",
