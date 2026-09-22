@@ -4,6 +4,8 @@
   lang="{{ request.locale.iso_code }}"
 >
   <head>
+{% render 'visually_io_sdk' %}
+
     {%- render 'stylesheets' -%}
     {% render 'customcode-styles' %}
     {% render 'customcode-header-scripts' %}
