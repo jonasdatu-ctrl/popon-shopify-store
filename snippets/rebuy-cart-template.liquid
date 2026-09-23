@@ -368,7 +368,45 @@
   let orderIDInput;
   let newButton;
   let spareInput;
-  let itemInputContainer;   
+  let itemInputContainer;
+
+  // ===== EDIT HERE: "Complete Your Fangs with Matching Lower Veneers" upsell price override =====
+  // Display only. These mirror the automatic Shopify discount applied once
+  // "Pop On Fangs (With Impression Kit)" is in the cart; they do not change the price charged.
+  const LOWER_VENEERS_PRODUCT_ID = 9313765326986;
+  const LOWER_VENEERS_SALE_PRICE = "$149.00";
+  const LOWER_VENEERS_COMPARE_AT_PRICE = "$499.00";
+  // ===== END EDIT HERE =====
+  let lowerVeneersObserver = null;
+  let lowerVeneersObservedContainer = null;
+
+  function applyLowerVeneersPriceOverride() {
+    const card = document.querySelector(`.rebuy-cart__flyout-recommendations .rebuy-product-block.product-id-${LOWER_VENEERS_PRODUCT_ID}`);
+    if (!card) return;
+
+    [
+      ['.rebuy-money.sale', LOWER_VENEERS_SALE_PRICE],
+      ['.rebuy-money.compare-at', LOWER_VENEERS_COMPARE_AT_PRICE]
+    ].forEach(([selector, price]) => {
+      // Skip the sr-only label; only the visible price span is rewritten
+      const priceEl = card.querySelector(`${selector} > span:not(.sr-only)`);
+      // Only write when different so our own edit doesn't retrigger the observer
+      if (priceEl && priceEl.textContent.trim() !== price) priceEl.textContent = price;
+    });
+  }
+  function observeLowerVeneersPrice() {
+    const container = document.querySelector('.rebuy-cart__flyout-recommendations');
+    if (!container) return;
+
+    // The cart re-renders can replace the container, so re-attach if it's a new element
+    if (container !== lowerVeneersObservedContainer) {
+      if (lowerVeneersObserver) lowerVeneersObserver.disconnect();
+      lowerVeneersObserver = new MutationObserver(applyLowerVeneersPriceOverride);
+      lowerVeneersObserver.observe(container, { childList: true, subtree: true, characterData: true });
+      lowerVeneersObservedContainer = container;
+    }
+    applyLowerVeneersPriceOverride();
+  }
 
   function removeAllMessages() {
     document.querySelectorAll('.top-bottom-message, .top-only-message, .bottom-only-message').forEach((el) => el.remove());    
@@ -551,6 +589,7 @@
     setTimeout(() => {
       updateAnnouncementBar(SmartCart2);
       startVIPTimer();
+      observeLowerVeneersPrice();
     }, 500);
   });    
 
@@ -562,6 +601,7 @@
     limitItemQuantities(cart);
     setTimeout(() => {
       updateAnnouncementBar(cart);
+      observeLowerVeneersPrice();
     }, 500);
     setTimeout(() => {
       initializeSpareEmailFlow();
