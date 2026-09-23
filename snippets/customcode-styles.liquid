@@ -916,6 +916,8 @@
   c-general-variant-selector {display: flex; flex-direction: column; gap: 10px;}
   c-general-variant-selector * {margin: 0;}
   c-general-variant-selector p.option-title {color: #003659; font-weight: 600; text-transform: uppercase; font-size: 14px;}
+  c-general-variant-selector p.option-title:has(.option-title-tooltip) {display: flex; align-items: center; gap: 5px;}
+  c-general-variant-selector p.option-title .option-title-tooltip {width: 13px; height: 13px; cursor: pointer;}
   c-general-variant-selector .value-container.grid-type {display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; position: relative;}
   c-general-variant-selector .value-container.flex-type {display: flex; gap: 5px; overflow-x: scroll; position: relative;}
   c-general-variant-selector[data-indicator-style="checkmark"] .value-container {padding-top: 10px; margin-top: -10px;}

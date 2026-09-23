@@ -33,10 +33,33 @@
 
     {% assign option_value_image_overrides = product.metafields.custom.customcode_option_value_image_overrides.value %}
 
+    {% assign option_tooltip_labels = block.settings.tooltip_option_labels | split: '|' %}
+    {% assign option_tooltip_htmls = block.settings.tooltip_option_html | split: '|' %}
+
     {% for option in product.options_with_values %}
       <div class="option-container">
         {% unless block.settings.hide_option_title contains option.name %}
-          <p class="option-title">{{ option.name }}</p>
+          {%- assign option_tooltip = '' -%}
+          {%- for tooltip_label in option_tooltip_labels -%}
+            {%- assign tooltip_label_name = tooltip_label | strip -%}
+            {%- if tooltip_label_name == option.name -%}
+              {%- assign option_tooltip = option_tooltip_htmls[forloop.index0] | strip -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+          <p class="option-title">
+            {{- option.name -}}
+            {%- if option_tooltip != blank -%}
+              <img
+                class="option-title-tooltip"
+                data-tippy-content="{{ option_tooltip | escape }}"
+                data-tooltip-bg="#191D48FF"
+                data-tooltip-color="white"
+                src="https://cdn.shopify.com/s/files/1/0382/1761/3450/files/0bc57d4b-2f34-4cd5-afda-fc8378fa7a72.png?v=1756392294"
+                alt="More info"
+              >
+            {%- endif -%}
+          </p>
         {% endunless %}
         <div
           class="value-container {% if option.values.size > 3 %}more-than-three{% endif %} {{ block.settings.container_type}}"
