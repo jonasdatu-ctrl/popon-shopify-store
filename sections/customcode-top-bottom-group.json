@@ -312,7 +312,9 @@
         "accordion_kGyPtf",
         "freebies_n4mTXi"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".option-title-tooltip {display: none;}"
+      ],
       "name": "C Featured Product",
       "settings": {
         "product_override": "top-bottom-teeth",
