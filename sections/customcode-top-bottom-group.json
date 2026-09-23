@@ -49,6 +49,8 @@
             "title_placement": "within",
             "hide_thumb_images": "Color",
             "hide_option_title": "Arch",
+            "tooltip_option_labels": "Color",
+            "tooltip_option_html": "<div>\nNatural White — everyday bright<br>\nHollywood — red carpet white<br>\nMature Tan — soft, natural tone<br>\n</div>",
             "hide_most_popular": "",
             "display_dynamic_variant_image": false,
             "indicator_style": "border",
