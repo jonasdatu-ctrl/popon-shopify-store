@@ -513,7 +513,8 @@
         "liquid_VrT9WR"
       ],
       "custom_css": [
-        ".firelight-container {max-width: 1080px; margin: auto; display: none;}"
+        ".firelight-container {max-width: 1080px; margin: auto; display: none;}",
+        "@media screen and (max-width: 480px) {c-content-generator .block-button {width: fit-content; margin: auto; }}"
       ],
       "name": "C Content Generator",
       "settings": {
