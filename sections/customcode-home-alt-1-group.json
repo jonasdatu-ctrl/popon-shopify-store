@@ -1082,6 +1082,9 @@
       "block_order": [
         "button_FqWdwh"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 480px) {c-content-generator .block-button {width: fit-content; margin: auto; }}"
+      ],
       "name": "C Content Generator",
       "settings": {
         "d_padding_top": false,
