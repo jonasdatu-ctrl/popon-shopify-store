@@ -1,0 +1,11 @@
+{%- comment -%}
+  Single source of truth for the site's official social profiles.
+  Rendered (not included) so it stays scope-isolated; outputs a CSV string
+  of "name|icon|url" entries, one per profile, joined by commas.
+  Consumers: {% capture social_links_csv %}{% render 'customcode-social-links' %}{% endcapture %}
+  then split on ',' and '|' to get each profile's name, icon key, and URL.
+{%- endcomment -%}
+{%- capture social_links_csv -%}
+  Facebook|facebook|https://www.facebook.com/poponveneers,Instagram|instagram|https://www.instagram.com/poponveneers/,Youtube|youtube|https://www.youtube.com/c/poponveneers,Tiktok|tiktok|https://www.tiktok.com/@pop.on,X|x|https://x.com/PopOnVeneers,Pinterest|pinterest|https://www.pinterest.com/PopOnVeneers
+{%- endcapture -%}
+{{- social_links_csv | strip -}}

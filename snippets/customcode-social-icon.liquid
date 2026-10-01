@@ -1,35 +1,15 @@
 <c-social-icon>
   <p></p>
   <div class="inner-container">
-    <a href="https://www.facebook.com/poponveneers" class="link list-social__link">
-      {%- render 'customcode-icons', icon: 'facebook' -%}
-      <span class="visually-hidden">Facebook</span>
-    </a>
-
-    <a href="https://www.instagram.com/poponveneers/" class="link list-social__link">
-      {%- render 'customcode-icons', icon: 'instagram' -%}
-      <span class="visually-hidden">Instagram</span>
-    </a>
-
-    <a href="https://www.youtube.com/c/poponveneers" class="link list-social__link">
-      {%- render 'customcode-icons', icon: 'youtube' -%}
-      <span class="visually-hidden">Youtube</span>
-    </a>
-
-    <a href="https://www.tiktok.com/@pop.on" class="link list-social__link">
-      {%- render 'customcode-icons', icon: 'tiktok' -%}
-      <span class="visually-hidden">Tiktok</span>
-    </a>
-
-    <a href="https://x.com/PopOnVeneers" class="link list-social__link">
-      {%- render 'customcode-icons', icon: 'x' -%}
-      <span class="visually-hidden">X</span>
-    </a>
-
-    <a href="https://www.pinterest.com/PopOnVeneers" class="link list-social__link">
-      {%- render 'customcode-icons', icon: 'pinterest' -%}
-      <span class="visually-hidden">Pinterest</span>
-    </a>
+    {%- capture social_links_csv %}{% render 'customcode-social-links' %}{% endcapture -%}
+    {%- assign social_links = social_links_csv | strip | split: ',' -%}
+    {%- for social_link in social_links -%}
+      {%- assign social_link_parts = social_link | split: '|' -%}
+      <a href="{{ social_link_parts[2] }}" class="link list-social__link">
+        {%- render 'customcode-icons', icon: social_link_parts[1] -%}
+        <span class="visually-hidden">{{ social_link_parts[0] }}</span>
+      </a>
+    {%- endfor -%}
     {% comment %}
       {%- if settings.social_snapchat_link != blank -%}
         <a href="{{ settings.social_snapchat_link }}" class="link list-social__link">
