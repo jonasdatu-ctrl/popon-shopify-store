@@ -983,6 +983,7 @@
       this.dynamicVariant = this.getAttribute('data-dynamic-variant-image');
     }
     clearGaCookies() {
+      console.log("CLEARING..");
       const cookies = document.cookie.split(';');
       const host = window.location.hostname;
       const domainParts = host.split('.');
