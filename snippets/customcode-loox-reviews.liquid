@@ -1,8 +1,19 @@
-<a href="#looxReviews">
-  <div
-    class="loox-rating"
-    data-id="{{ product.id }}"
-    data-rating="{{ product.metafields.loox.avg_rating }}"
-    data-raters="{{ product.metafields.loox.num_reviews }}"
-  ></div>
-</a>
+{% if cproduct %}
+  <a href="#looxReviews">
+    <div
+      class="loox-rating"
+      data-id="{{ cproduct.id }}"
+      data-rating="{{ cproduct.metafields.loox.avg_rating }}"
+      data-raters="{{ cproduct.metafields.loox.num_reviews }}"
+    ></div>
+  </a>  
+{% else %}
+  <a href="#looxReviews">
+    <div
+      class="loox-rating"
+      data-id="{{ product.id }}"
+      data-rating="{{ product.metafields.loox.avg_rating }}"
+      data-raters="{{ product.metafields.loox.num_reviews }}"
+    ></div>
+  </a>
+{% endif %}
