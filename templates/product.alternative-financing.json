@@ -288,8 +288,11 @@
             "title_placement": "within",
             "hide_thumb_images": "Denominations | Qty | Color",
             "hide_option_title": "",
+            "tooltip_option_labels": "",
+            "tooltip_option_html": "",
             "hide_most_popular": "Denominations | Qty",
             "display_dynamic_variant_image": false,
+            "indicator_style": "border",
             "display_price_diff": false,
             "price_diff_settings": "whole",
             "m_margin_bottom": 10,
@@ -310,13 +313,17 @@
         "buy_button_dT4wwt": {
           "type": "buy_button",
           "settings": {
+            "button_text": "Add to Cart",
+            "sold_out_text": "Sold Out",
+            "background_color": "#02bf63",
+            "text_color": "#ffffff",
             "blurb": "",
             "display_payment": true,
             "footer_blurb": "",
             "display_compare_price": false,
             "display_alt_financing": true,
             "alt_financing_link": "shopify://products/top-bottom-teeth",
-            "alt_financing_text": "BACK TO PRODUCT",
+            "alt_financing_text": "BACK TO DISCOUNTED PRICE",
             "display_bottom_payment": true,
             "alt_financing_footer": "",
             "m_margin_bottom": 10,
@@ -335,13 +342,16 @@
           "settings": {
             "accordion_title": "<p>TERMS AND CONDITIONS</p>",
             "video_link": "",
+            "above_content": "",
             "content": "",
             "page": "termsandconditions",
             "display_html_content": false,
             "text": "",
             "additional_content": "",
             "button_link": "",
-            "button_text": ""
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "accordion_9fTwmq": {
@@ -349,13 +359,16 @@
           "settings": {
             "accordion_title": "<p>PRIVACY POLICY</p>",
             "video_link": "",
+            "above_content": "",
             "content": "",
             "page": "privacypolicy",
             "display_html_content": false,
             "text": "",
             "additional_content": "",
             "button_link": "",
-            "button_text": ""
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "accordion_pNGji3": {
@@ -363,13 +376,16 @@
           "settings": {
             "accordion_title": "<p>POP ON PROMISE</p>",
             "video_link": "",
+            "above_content": "",
             "content": "",
             "page": "promise",
             "display_html_content": false,
             "text": "",
             "additional_content": "",
             "button_link": "",
-            "button_text": ""
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
           }
         }
       },
@@ -382,6 +398,9 @@
         "accordion_cMYdC4",
         "accordion_9fTwmq",
         "accordion_pNGji3"
+      ],
+      "custom_css": [
+        "button.redirect .main-button-container {background-color: #003659 !important;}"
       ],
       "name": "C Featured Product",
       "settings": {
