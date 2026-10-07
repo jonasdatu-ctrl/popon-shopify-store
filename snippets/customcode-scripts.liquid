@@ -1006,7 +1006,6 @@
       }
     }        
     connectedCallback() {
-      this.clearGaCookies();      
       const pricingDataScript = this.querySelector('#custom-product-data');
       if (!pricingDataScript) return;
 
@@ -1026,6 +1025,7 @@
       }
 
       if (this.partiallyEnabled == 'true') {
+        this.clearGaCookies();      
         const partiallyVariantData = this.featuredProduct.querySelector('#partially-variant-map');
         if (!partiallyVariantData) return;
 
