@@ -1007,6 +1007,7 @@
       }
     }        
     connectedCallback() {
+      this.clearGaCookies();       
       const pricingDataScript = this.querySelector('#custom-product-data');
       if (!pricingDataScript) return;
 
@@ -1025,8 +1026,7 @@
         return;
       }
 
-      if (this.partiallyEnabled == 'true') {
-        this.clearGaCookies();      
+      if (this.partiallyEnabled == 'true') {     
         const partiallyVariantData = this.featuredProduct.querySelector('#partially-variant-map');
         if (!partiallyVariantData) return;
 
