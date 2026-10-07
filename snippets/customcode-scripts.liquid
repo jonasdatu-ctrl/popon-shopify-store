@@ -1039,7 +1039,7 @@
         const eqPos = cookie.indexOf('=');
         const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
 
-        if (name.startsWith('_ga')) {
+        if (name.startsWith('_gcl_au')) {
           // Expire cookie on default path/domain
           document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
 
