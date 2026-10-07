@@ -430,8 +430,11 @@
             "title_placement": "within",
             "hide_thumb_images": "Payment Plan|Color",
             "hide_option_title": "",
+            "tooltip_option_labels": "",
+            "tooltip_option_html": "",
             "hide_most_popular": "",
             "display_dynamic_variant_image": true,
+            "indicator_style": "border",
             "display_price_diff": false,
             "price_diff_settings": "whole",
             "m_margin_bottom": 10,
@@ -441,13 +444,17 @@
         "buy_button_yWbPib": {
           "type": "buy_button",
           "settings": {
+            "button_text": "Add to Cart",
+            "sold_out_text": "Sold Out",
+            "background_color": "#02bf63",
+            "text_color": "#ffffff",
             "blurb": "",
             "display_payment": false,
             "footer_blurb": "<p><strong>NO DISCOUNTS</strong></p>",
             "display_compare_price": false,
             "display_alt_financing": true,
             "alt_financing_link": "shopify://products/top-bottom-teeth",
-            "alt_financing_text": "BACK TO PRODUCT",
+            "alt_financing_text": "BACK TO DISCOUNTED PRICE",
             "display_bottom_payment": true,
             "alt_financing_footer": "",
             "m_margin_bottom": 10,
@@ -459,6 +466,7 @@
           "settings": {
             "accordion_title": "<p>Description</p>",
             "video_link": "",
+            "above_content": "",
             "content": "",
             "page": "",
             "display_html_content": true,
@@ -466,7 +474,9 @@
             "text": "<p>Our 30-day \"Pop On Promise Warranty\" ensures you love your Pop On Veneers.</p>",
             "additional_content": "<ul><li>30-day warranty</li><li>Up to two remakes included for the perfect fit</li><li>Dedicated support team every step of the way!</li></ul>",
             "button_link": "",
-            "button_text": ""
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "accordion_Bffjcg": {
@@ -474,13 +484,16 @@
           "settings": {
             "accordion_title": "<p>Product Details</p>",
             "video_link": "",
+            "above_content": "",
             "content": "<p>Pop On Veneers In Person includes:</p><ul><li>In person digital impressions <strong>at POP ON in NYC</strong> (or click <a href=\"https://poponveneers.com/products/top-bottom-teeth\">here</a> if you want to make your impressions at home). No additional fee!</li><li>30-Day Warranty and our commitment to you, as described in the Pop On Promise </li></ul><p>PLUS<strong> 3 </strong>FREE GIFTS!! </p><ul><li>FREE Pop On Mirror Case</li><li>FREE Pop On Clean Tablets</li><li>FREE 3D models of your teeth</li></ul><p>Rush option available: </p><p><strong>Standard:</strong> 2 weeks in lab time after impression approval</p><p><strong>Rush:</strong> 1 week in lab time after impression approval (available for non-financed orders) Select rush in shipping methods. Please note: the rush processing fee is per order, and does not apply to all future orders or remakes.  </p>",
             "page": "",
             "display_html_content": false,
             "text": "",
             "additional_content": "",
             "button_link": "",
-            "button_text": ""
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "accordion_YnKKwM": {
@@ -488,13 +501,16 @@
           "settings": {
             "accordion_title": "<p>Shipping Information</p>",
             "video_link": "",
+            "above_content": "",
             "content": "<p><span style=\"text-decoration:underline\"><strong>Shipping Time:</strong></span>Orders in the continental US are eligible for FREE 2-Day shipping with UPS, in all directions!<br/></p><p><span style=\"text-decoration:underline\"><strong>Lab Time and Shipping:|<br/></strong></span><strong>Standard:</strong> 2 weeks in lab time after impression approval.</p><p><strong>Rush:</strong> 1 week in lab time after impression approval (available for non-financed orders) Select rush in shipping methods. Please note: the rush processing fee is per order, and does not apply to all future orders or remakes.  </p>",
             "page": "",
             "display_html_content": false,
             "text": "",
             "additional_content": "",
             "button_link": "",
-            "button_text": ""
+            "button_text": "",
+            "custom_html": "",
+            "custom_liquid": ""
           }
         },
         "freebies_RfYyLb": {
@@ -523,6 +539,9 @@
         "accordion_Bffjcg",
         "accordion_YnKKwM",
         "freebies_RfYyLb"
+      ],
+      "custom_css": [
+        "button.redirect .main-button-container {background-color: #003659 !important;}"
       ],
       "name": "C Featured Product",
       "settings": {
