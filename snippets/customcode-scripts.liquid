@@ -1006,9 +1006,7 @@
         }
       }
     }        
-    connectedCallback() {
-      console.log("CONNECTED");
-      this.clearGaCookies();       
+    connectedCallback() {   
       const pricingDataScript = this.querySelector('#custom-product-data');
       if (!pricingDataScript) return;
 
