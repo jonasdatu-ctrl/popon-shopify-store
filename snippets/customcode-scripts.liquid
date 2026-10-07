@@ -249,6 +249,41 @@
       .catch((error) => console.error('[Freebie GWP]', error));
   });
 </script> {% endcomment %}
+<script>
+  function clearGaCookies() {
+    console.log("CLEARING GA COOKIES..");
+    const cookies = document.cookie.split(';');
+    const host = window.location.hostname;
+    const domainParts = host.split('.');
+
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      const eqPos = cookie.indexOf('=');
+      const name = eqPos > -1 ? cookie.slice(0, eqPos) : cookie;
+
+      if (name.startsWith('_g')) {
+        // Clear on default path
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${host};`;
+
+        // Clear across domain variations (e.g., .subdomain.domain.com, .domain.com)
+        for (let d = 0; d < domainParts.length; d++) {
+          const domain = domainParts.slice(d).join('.');
+          document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${domain};`;
+          document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${domain};`;
+        }
+      }
+    }
+  }
+
+  // 1. Run when the window finishes loading (after external scripts run)
+  window.addEventListener('load', () => {
+    clearGaCookies();
+  });
+
+  // 2. Fallback delay in case GA loads slightly after the load event
+  setTimeout(clearGaCookies, 2000);
+</script>
 
 
 {% comment %} WEB COMPONENTS {% endcomment %}
