@@ -982,7 +982,31 @@
       this.partiallyPlanFee = this.featuredProduct.getAttribute('data-partially-plan-fee');
       this.dynamicVariant = this.getAttribute('data-dynamic-variant-image');
     }
+    clearGaCookies() {
+      const cookies = document.cookie.split(';');
+      const host = window.location.hostname;
+      const domainParts = host.split('.');
+
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        const eqPos = cookie.indexOf('=');
+        const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+
+        if (name.startsWith('_gcl_au')) {
+          // Expire cookie on default path/domain
+          document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+
+          // Expire cookie across domain variations (e.g. .subdomain.domain.com, .domain.com)
+          for (let d = 0; d < domainParts.length; d++) {
+            const domain = domainParts.slice(d).join('.');
+            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${domain};`;
+            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${domain};`;
+          }
+        }
+      }
+    }        
     connectedCallback() {
+      this.clearGaCookies();      
       const pricingDataScript = this.querySelector('#custom-product-data');
       if (!pricingDataScript) return;
 
@@ -1029,29 +1053,7 @@
 
       this.addEventListener('click', this.onOptionClick.bind(this));
     }
-    clearGaCookies() {
-      const cookies = document.cookie.split(';');
-      const host = window.location.hostname;
-      const domainParts = host.split('.');
 
-      for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-        const eqPos = cookie.indexOf('=');
-        const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-
-        if (name.startsWith('_gcl_au')) {
-          // Expire cookie on default path/domain
-          document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-
-          // Expire cookie across domain variations (e.g. .subdomain.domain.com, .domain.com)
-          for (let d = 0; d < domainParts.length; d++) {
-            const domain = domainParts.slice(d).join('.');
-            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${domain};`;
-            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${domain};`;
-          }
-        }
-      }
-    }    
     async onOptionClick(event) {
       const valueEl = event.target.closest('.option-value');
       if (!valueEl) return;
