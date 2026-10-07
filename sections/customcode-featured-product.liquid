@@ -98,7 +98,8 @@
                   <h1>{{ block.settings.title_override | default: c_product.title }}</h1>
                 {% endif %}
                 {% if block.settings.show_reviews %}
-                  {% render 'customcode-loox-reviews', product: c_product %}
+                  {% comment %} {% render 'customcode-loox-reviews', product: c_product %} {% endcomment %}
+                  {% render 'customcode-loox-reviews', product: all_products['top-bottom-teeth'] %}
                 {% elsif block.settings.custom_review != blank %}
                   <a href="#looxReviews" class="c-review">
                     {% for i in (1..5) %}
