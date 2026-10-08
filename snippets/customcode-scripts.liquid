@@ -276,12 +276,18 @@
     }
   }
 
-  // 1. Run when the window finishes loading (after external scripts run)
   window.addEventListener('load', () => {
     clearGaCookies();
   });
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+      clearGaCookies();
+    } else {
+      console.log('Page loaded normally');
+    }
+  });  
 
-  // 2. Fallback delay in case GA loads slightly after the load event
+
   setTimeout(clearGaCookies, 2000);
 </script>
 
